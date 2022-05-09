@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		267A77452829558100E0EB7A /* kulturstienApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77442829558100E0EB7A /* kulturstienApp.swift */; };
+		267A77472829558100E0EB7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77462829558100E0EB7A /* ContentView.swift */; };
+		267A77492829558200E0EB7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267A77482829558200E0EB7A /* Assets.xcassets */; };
+		267A774C2829558200E0EB7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267A774B2829558200E0EB7A /* Preview Assets.xcassets */; };
+		267A77562829558200E0EB7A /* kulturstienTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77552829558200E0EB7A /* kulturstienTests.swift */; };
+		267A77602829558200E0EB7A /* kulturstienUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A775F2829558200E0EB7A /* kulturstienUITests.swift */; };
+		267A77622829558200E0EB7A /* kulturstienUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77612829558200E0EB7A /* kulturstienUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		267A77522829558200E0EB7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 267A77392829558100E0EB7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 267A77402829558100E0EB7A;
+			remoteInfo = kulturstien;
+		};
+		267A775C2829558200E0EB7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 267A77392829558100E0EB7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 267A77402829558100E0EB7A;
+			remoteInfo = kulturstien;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		267A77412829558100E0EB7A /* kulturstien.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kulturstien.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		267A77442829558100E0EB7A /* kulturstienApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kulturstienApp.swift; sourceTree = "<group>"; };
+		267A77462829558100E0EB7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		267A77482829558200E0EB7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		267A774B2829558200E0EB7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		267A77512829558200E0EB7A /* kulturstienTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kulturstienTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		267A77552829558200E0EB7A /* kulturstienTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kulturstienTests.swift; sourceTree = "<group>"; };
+		267A775B2829558200E0EB7A /* kulturstienUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kulturstienUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		267A775F2829558200E0EB7A /* kulturstienUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kulturstienUITests.swift; sourceTree = "<group>"; };
+		267A77612829558200E0EB7A /* kulturstienUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kulturstienUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		267A773E2829558100E0EB7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		267A774E2829558200E0EB7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		267A77582829558200E0EB7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		267A77382829558100E0EB7A = {
+			isa = PBXGroup;
+			children = (
+				267A77432829558100E0EB7A /* kulturstien */,
+				267A77542829558200E0EB7A /* kulturstienTests */,
+				267A775E2829558200E0EB7A /* kulturstienUITests */,
+				267A77422829558100E0EB7A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		267A77422829558100E0EB7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				267A77412829558100E0EB7A /* kulturstien.app */,
+				267A77512829558200E0EB7A /* kulturstienTests.xctest */,
+				267A775B2829558200E0EB7A /* kulturstienUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		267A77432829558100E0EB7A /* kulturstien */ = {
+			isa = PBXGroup;
+			children = (
+				267A77442829558100E0EB7A /* kulturstienApp.swift */,
+				267A77462829558100E0EB7A /* ContentView.swift */,
+				267A77482829558200E0EB7A /* Assets.xcassets */,
+				267A774A2829558200E0EB7A /* Preview Content */,
+			);
+			path = kulturstien;
+			sourceTree = "<group>";
+		};
+		267A774A2829558200E0EB7A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				267A774B2829558200E0EB7A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		267A77542829558200E0EB7A /* kulturstienTests */ = {
+			isa = PBXGroup;
+			children = (
+				267A77552829558200E0EB7A /* kulturstienTests.swift */,
+			);
+			path = kulturstienTests;
+			sourceTree = "<group>";
+		};
+		267A775E2829558200E0EB7A /* kulturstienUITests */ = {
+			isa = PBXGroup;
+			children = (
+				267A775F2829558200E0EB7A /* kulturstienUITests.swift */,
+				267A77612829558200E0EB7A /* kulturstienUITestsLaunchTests.swift */,
+			);
+			path = kulturstienUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		267A77402829558100E0EB7A /* kulturstien */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 267A77652829558200E0EB7A /* Build configuration list for PBXNativeTarget "kulturstien" */;
+			buildPhases = (
+				267A773D2829558100E0EB7A /* Sources */,
+				267A773E2829558100E0EB7A /* Frameworks */,
+				267A773F2829558100E0EB7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kulturstien;
+			productName = kulturstien;
+			productReference = 267A77412829558100E0EB7A /* kulturstien.app */;
+			productType = "com.apple.product-type.application";
+		};
+		267A77502829558200E0EB7A /* kulturstienTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 267A77682829558200E0EB7A /* Build configuration list for PBXNativeTarget "kulturstienTests" */;
+			buildPhases = (
+				267A774D2829558200E0EB7A /* Sources */,
+				267A774E2829558200E0EB7A /* Frameworks */,
+				267A774F2829558200E0EB7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				267A77532829558200E0EB7A /* PBXTargetDependency */,
+			);
+			name = kulturstienTests;
+			productName = kulturstienTests;
+			productReference = 267A77512829558200E0EB7A /* kulturstienTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		267A775A2829558200E0EB7A /* kulturstienUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 267A776B2829558200E0EB7A /* Build configuration list for PBXNativeTarget "kulturstienUITests" */;
+			buildPhases = (
+				267A77572829558200E0EB7A /* Sources */,
+				267A77582829558200E0EB7A /* Frameworks */,
+				267A77592829558200E0EB7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				267A775D2829558200E0EB7A /* PBXTargetDependency */,
+			);
+			name = kulturstienUITests;
+			productName = kulturstienUITests;
+			productReference = 267A775B2829558200E0EB7A /* kulturstienUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		267A77392829558100E0EB7A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					267A77402829558100E0EB7A = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					267A77502829558200E0EB7A = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 267A77402829558100E0EB7A;
+					};
+					267A775A2829558200E0EB7A = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 267A77402829558100E0EB7A;
+					};
+				};
+			};
+			buildConfigurationList = 267A773C2829558100E0EB7A /* Build configuration list for PBXProject "kulturstien" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 267A77382829558100E0EB7A;
+			productRefGroup = 267A77422829558100E0EB7A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				267A77402829558100E0EB7A /* kulturstien */,
+				267A77502829558200E0EB7A /* kulturstienTests */,
+				267A775A2829558200E0EB7A /* kulturstienUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		267A773F2829558100E0EB7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267A774C2829558200E0EB7A /* Preview Assets.xcassets in Resources */,
+				267A77492829558200E0EB7A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		267A774F2829558200E0EB7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		267A77592829558200E0EB7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		267A773D2829558100E0EB7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267A77472829558100E0EB7A /* ContentView.swift in Sources */,
+				267A77452829558100E0EB7A /* kulturstienApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		267A774D2829558200E0EB7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267A77562829558200E0EB7A /* kulturstienTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		267A77572829558200E0EB7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267A77602829558200E0EB7A /* kulturstienUITests.swift in Sources */,
+				267A77622829558200E0EB7A /* kulturstienUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		267A77532829558200E0EB7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 267A77402829558100E0EB7A /* kulturstien */;
+			targetProxy = 267A77522829558200E0EB7A /* PBXContainerItemProxy */;
+		};
+		267A775D2829558200E0EB7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 267A77402829558100E0EB7A /* kulturstien */;
+			targetProxy = 267A775C2829558200E0EB7A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		267A77632829558200E0EB7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		267A77642829558200E0EB7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		267A77662829558200E0EB7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"kulturstien/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = smidig.gruppe23.kulturstien;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		267A77672829558200E0EB7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"kulturstien/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = smidig.gruppe23.kulturstien;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		267A77692829558200E0EB7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = smidig.gruppe23.kulturstienTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kulturstien.app/kulturstien";
+			};
+			name = Debug;
+		};
+		267A776A2829558200E0EB7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = smidig.gruppe23.kulturstienTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kulturstien.app/kulturstien";
+			};
+			name = Release;
+		};
+		267A776C2829558200E0EB7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = smidig.gruppe23.kulturstienUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = kulturstien;
+			};
+			name = Debug;
+		};
+		267A776D2829558200E0EB7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = smidig.gruppe23.kulturstienUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = kulturstien;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		267A773C2829558100E0EB7A /* Build configuration list for PBXProject "kulturstien" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				267A77632829558200E0EB7A /* Debug */,
+				267A77642829558200E0EB7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		267A77652829558200E0EB7A /* Build configuration list for PBXNativeTarget "kulturstien" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				267A77662829558200E0EB7A /* Debug */,
+				267A77672829558200E0EB7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		267A77682829558200E0EB7A /* Build configuration list for PBXNativeTarget "kulturstienTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				267A77692829558200E0EB7A /* Debug */,
+				267A776A2829558200E0EB7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		267A776B2829558200E0EB7A /* Build configuration list for PBXNativeTarget "kulturstienUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				267A776C2829558200E0EB7A /* Debug */,
+				267A776D2829558200E0EB7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 267A77392829558100E0EB7A /* Project object */;
+}
