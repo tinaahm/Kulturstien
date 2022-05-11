@@ -14,6 +14,12 @@
 		267A77562829558200E0EB7A /* kulturstienTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77552829558200E0EB7A /* kulturstienTests.swift */; };
 		267A77602829558200E0EB7A /* kulturstienUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A775F2829558200E0EB7A /* kulturstienUITests.swift */; };
 		267A77622829558200E0EB7A /* kulturstienUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77612829558200E0EB7A /* kulturstienUITestsLaunchTests.swift */; };
+		267A7776282A7D1900E0EB7A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A7775282A7D1900E0EB7A /* MainView.swift */; };
+		267A7778282A8A4300E0EB7A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A7777282A8A4300E0EB7A /* DetailView.swift */; };
+		267A777C282ABF2C00E0EB7A /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A777B282ABF2C00E0EB7A /* MenuItem.swift */; };
+		267A7780282AE9E000E0EB7A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A777F282AE9E000E0EB7A /* MapView.swift */; };
+		267A7782282AF85200E0EB7A /* AmericanTypewriter.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */; };
+		267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,13 @@
 		267A775B2829558200E0EB7A /* kulturstienUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kulturstienUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		267A775F2829558200E0EB7A /* kulturstienUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kulturstienUITests.swift; sourceTree = "<group>"; };
 		267A77612829558200E0EB7A /* kulturstienUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kulturstienUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		267A7775282A7D1900E0EB7A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		267A7777282A8A4300E0EB7A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		267A777B282ABF2C00E0EB7A /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		267A777F282AE9E000E0EB7A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmericanTypewriter.ttc; sourceTree = "<group>"; };
+		267A7783282AF8F600E0EB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Macondo-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +107,17 @@
 		267A77432829558100E0EB7A /* kulturstien */ = {
 			isa = PBXGroup;
 			children = (
+				267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */,
+				267A7783282AF8F600E0EB7A /* Info.plist */,
+				267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */,
 				267A77442829558100E0EB7A /* kulturstienApp.swift */,
+				267A777B282ABF2C00E0EB7A /* MenuItem.swift */,
 				267A77462829558100E0EB7A /* ContentView.swift */,
 				267A77482829558200E0EB7A /* Assets.xcassets */,
 				267A774A2829558200E0EB7A /* Preview Content */,
+				267A7775282A7D1900E0EB7A /* MainView.swift */,
+				267A7777282A8A4300E0EB7A /* DetailView.swift */,
+				267A777F282AE9E000E0EB7A /* MapView.swift */,
 			);
 			path = kulturstien;
 			sourceTree = "<group>";
@@ -232,7 +252,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				267A774C2829558200E0EB7A /* Preview Assets.xcassets in Resources */,
+				267A7782282AF85200E0EB7A /* AmericanTypewriter.ttc in Resources */,
 				267A77492829558200E0EB7A /* Assets.xcassets in Resources */,
+				267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +280,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				267A77472829558100E0EB7A /* ContentView.swift in Sources */,
+				267A7780282AE9E000E0EB7A /* MapView.swift in Sources */,
+				267A7778282A8A4300E0EB7A /* DetailView.swift in Sources */,
+				267A7776282A7D1900E0EB7A /* MainView.swift in Sources */,
 				267A77452829558100E0EB7A /* kulturstienApp.swift in Sources */,
+				267A777C282ABF2C00E0EB7A /* MenuItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,11 +447,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"kulturstien/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = kulturstien/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Kulturstien;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,11 +478,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"kulturstien/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = kulturstien/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Kulturstien;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

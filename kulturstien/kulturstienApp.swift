@@ -11,7 +11,8 @@ import SwiftUI
 struct kulturstienApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+			MainView()
         }
     }
 }
