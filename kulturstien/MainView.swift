@@ -30,26 +30,11 @@ struct MainView: View {
     var body: some View {
 		NavigationView {
 			
-			List {
-				ForEach(menuItems) { item in
-					ZStack(alignment: .topLeading) {
-						Label(item.title, systemImage: item.iconName)
-						NavigationLink(destination: DetailView(page: item.page)) {
-							//Rectangle().opacity(0.0)
-						}.opacity(0.0)
-					}//.listRowBackground(item == selectedTab ? Color.accentColor : Color.gray)
-					.listRowBackground(Color("LightBlue"))
-					.listRowSeparator(.hidden)
-					.foregroundColor(Color("DarkGreen"))
-					//.font(.title3)
-					.font(Font.custom("AmericanTypewriter-Semibold", size: 20))
-				}
-			}
-			Spacer()
 		}
-		.accentColor(.black)
+			
     }
 }
+	
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
@@ -150,4 +135,29 @@ struct MainView_Previews: PreviewProvider {
  
 }
 		 
-		 }*/
+		 }
+ 
+ 
+ 
+ var body: some View {
+	 NavigationView {
+		 
+		 List {
+			 ForEach(menuItems) { item in
+				 ZStack(alignment: .topLeading) {
+					 Label(item.title, systemImage: item.iconName)
+					 NavigationLink(destination: DetailView(page: item.page)) {
+						 //Rectangle().opacity(0.0)
+					 }.opacity(0.0)
+				 }//.listRowBackground(item == selectedTab ? Color.accentColor : Color.gray)
+				 .listRowBackground(Color("LightBlue"))
+				 .listRowSeparator(.hidden)
+				 .foregroundColor(Color("DarkGreen"))
+				 //.font(.title3)
+				 .font(Font.custom("AmericanTypewriter-Semibold", size: 20))
+			 }
+		 }
+		 Spacer()
+	 }
+	 .accentColor(.black)
+ }*/

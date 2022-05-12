@@ -12,7 +12,8 @@ struct kulturstienApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()
-			MainView()
+			//MainView()
+			MainIPhoneView()
         }
     }
 }

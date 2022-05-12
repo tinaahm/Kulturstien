@@ -20,6 +20,8 @@
 		267A7780282AE9E000E0EB7A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A777F282AE9E000E0EB7A /* MapView.swift */; };
 		267A7782282AF85200E0EB7A /* AmericanTypewriter.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */; };
 		267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */; };
+		26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F6282D00E80057BBA6 /* ProfileView.swift */; };
+		26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmericanTypewriter.ttc; sourceTree = "<group>"; };
 		267A7783282AF8F600E0EB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Macondo-Regular.ttf"; sourceTree = "<group>"; };
+		26AAC9F6282D00E80057BBA6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIPhoneView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		267A77432829558100E0EB7A /* kulturstien */ = {
 			isa = PBXGroup;
 			children = (
+				26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */,
 				267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */,
 				267A7783282AF8F600E0EB7A /* Info.plist */,
 				267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */,
@@ -118,6 +123,7 @@
 				267A7775282A7D1900E0EB7A /* MainView.swift */,
 				267A7777282A8A4300E0EB7A /* DetailView.swift */,
 				267A777F282AE9E000E0EB7A /* MapView.swift */,
+				26AAC9F6282D00E80057BBA6 /* ProfileView.swift */,
 			);
 			path = kulturstien;
 			sourceTree = "<group>";
@@ -281,9 +287,11 @@
 			files = (
 				267A77472829558100E0EB7A /* ContentView.swift in Sources */,
 				267A7780282AE9E000E0EB7A /* MapView.swift in Sources */,
+				26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */,
 				267A7778282A8A4300E0EB7A /* DetailView.swift in Sources */,
 				267A7776282A7D1900E0EB7A /* MainView.swift in Sources */,
 				267A77452829558100E0EB7A /* kulturstienApp.swift in Sources */,
+				26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */,
 				267A777C282ABF2C00E0EB7A /* MenuItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,7 +468,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = smidig.gruppe23.kulturstien;
+				PRODUCT_BUNDLE_IDENTIFIER = smidig.gruppe23.Kulturstien;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -491,7 +499,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = smidig.gruppe23.kulturstien;
+				PRODUCT_BUNDLE_IDENTIFIER = smidig.gruppe23.Kulturstien;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
