@@ -1,13 +1,13 @@
 //
-//  ProfileView.swift
+//  MenuView.swift
 //  kulturstien
 //
-//  Created by Tina on 12/05/2022.
+//  Created by Tina on 13/05/2022.
 //
 
 import SwiftUI
 
-struct ProfileView: View {
+struct MenuView: View {
 	
 	@EnvironmentObject var page : ViewIndex
 	
@@ -16,8 +16,8 @@ struct ProfileView: View {
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView().environmentObject(ViewIndex())
+        MenuView().environmentObject(ViewIndex())
     }
 }

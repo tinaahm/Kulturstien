@@ -22,6 +22,9 @@
 		267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */; };
 		26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F6282D00E80057BBA6 /* ProfileView.swift */; };
 		26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */; };
+		26D72FA2282E4D8200BC3A8F /* junk.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26D72FA1282E4D8200BC3A8F /* junk.txt */; };
+		26D72FA4282E573200BC3A8F /* NavigationHandlerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FA3282E573200BC3A8F /* NavigationHandlerView.swift */; };
+		26D72FA6282E5A7500BC3A8F /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FA5282E5A7500BC3A8F /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Macondo-Regular.ttf"; sourceTree = "<group>"; };
 		26AAC9F6282D00E80057BBA6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIPhoneView.swift; sourceTree = "<group>"; };
+		26D72FA1282E4D8200BC3A8F /* junk.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = junk.txt; sourceTree = "<group>"; };
+		26D72FA3282E573200BC3A8F /* NavigationHandlerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHandlerView.swift; sourceTree = "<group>"; };
+		26D72FA5282E5A7500BC3A8F /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,7 @@
 		267A77382829558100E0EB7A = {
 			isa = PBXGroup;
 			children = (
+				26D72FA1282E4D8200BC3A8F /* junk.txt */,
 				267A77432829558100E0EB7A /* kulturstien */,
 				267A77542829558200E0EB7A /* kulturstienTests */,
 				267A775E2829558200E0EB7A /* kulturstienUITests */,
@@ -111,19 +118,16 @@
 		267A77432829558100E0EB7A /* kulturstien */ = {
 			isa = PBXGroup;
 			children = (
-				26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */,
-				267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */,
 				267A7783282AF8F600E0EB7A /* Info.plist */,
-				267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */,
+				26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */,
+				26D72FA8282E5C1D00BC3A8F /* Fonts */,
 				267A77442829558100E0EB7A /* kulturstienApp.swift */,
-				267A777B282ABF2C00E0EB7A /* MenuItem.swift */,
-				267A77462829558100E0EB7A /* ContentView.swift */,
 				267A77482829558200E0EB7A /* Assets.xcassets */,
 				267A774A2829558200E0EB7A /* Preview Content */,
-				267A7775282A7D1900E0EB7A /* MainView.swift */,
-				267A7777282A8A4300E0EB7A /* DetailView.swift */,
-				267A777F282AE9E000E0EB7A /* MapView.swift */,
+				26D72FA7282E5B2200BC3A8F /* OldViews */,
 				26AAC9F6282D00E80057BBA6 /* ProfileView.swift */,
+				26D72FA3282E573200BC3A8F /* NavigationHandlerView.swift */,
+				26D72FA5282E5A7500BC3A8F /* MenuView.swift */,
 			);
 			path = kulturstien;
 			sourceTree = "<group>";
@@ -151,6 +155,27 @@
 				267A77612829558200E0EB7A /* kulturstienUITestsLaunchTests.swift */,
 			);
 			path = kulturstienUITests;
+			sourceTree = "<group>";
+		};
+		26D72FA7282E5B2200BC3A8F /* OldViews */ = {
+			isa = PBXGroup;
+			children = (
+				267A777B282ABF2C00E0EB7A /* MenuItem.swift */,
+				267A77462829558100E0EB7A /* ContentView.swift */,
+				267A7775282A7D1900E0EB7A /* MainView.swift */,
+				267A7777282A8A4300E0EB7A /* DetailView.swift */,
+				267A777F282AE9E000E0EB7A /* MapView.swift */,
+			);
+			path = OldViews;
+			sourceTree = "<group>";
+		};
+		26D72FA8282E5C1D00BC3A8F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */,
+				267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +286,7 @@
 				267A7782282AF85200E0EB7A /* AmericanTypewriter.ttc in Resources */,
 				267A77492829558200E0EB7A /* Assets.xcassets in Resources */,
 				267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */,
+				26D72FA2282E4D8200BC3A8F /* junk.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,9 +316,11 @@
 				26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */,
 				267A7778282A8A4300E0EB7A /* DetailView.swift in Sources */,
 				267A7776282A7D1900E0EB7A /* MainView.swift in Sources */,
+				26D72FA6282E5A7500BC3A8F /* MenuView.swift in Sources */,
 				267A77452829558100E0EB7A /* kulturstienApp.swift in Sources */,
 				26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */,
 				267A777C282ABF2C00E0EB7A /* MenuItem.swift in Sources */,
+				26D72FA4282E573200BC3A8F /* NavigationHandlerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

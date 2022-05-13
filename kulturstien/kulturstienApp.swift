@@ -9,11 +9,12 @@ import SwiftUI
 
 @main
 struct kulturstienApp: App {
+	
+	@StateObject var viewIndex = ViewIndex()
+	
     var body: some Scene {
         WindowGroup {
-            //ContentView()
-			//MainView()
-			MainIPhoneView()
+			NavigationHandlerView().environmentObject(viewIndex)
         }
     }
 }

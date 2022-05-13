@@ -18,5 +18,5 @@ struct MenuItem: Identifiable, Hashable {
 		Image(iconName)
 	}
 	
-	var page: Page
+	var page: Pages
 }

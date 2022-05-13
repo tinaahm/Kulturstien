@@ -7,13 +7,14 @@
 
 import SwiftUI
 
-enum Page {
+
+enum Pages {
 	case map, achievments, readingMaterial, profile
 }
 
 struct DetailView: View {
 	
-	@State var page : Page = .map
+	@State var page : Pages = .map
 	
     var body: some View {
 		switch self.page {
