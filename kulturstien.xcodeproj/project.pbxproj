@@ -25,6 +25,8 @@
 		26D72FA2282E4D8200BC3A8F /* junk.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26D72FA1282E4D8200BC3A8F /* junk.txt */; };
 		26D72FA4282E573200BC3A8F /* NavigationHandlerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FA3282E573200BC3A8F /* NavigationHandlerView.swift */; };
 		26D72FA6282E5A7500BC3A8F /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FA5282E5A7500BC3A8F /* MenuView.swift */; };
+		26D72FAA282E65C800BC3A8F /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FA9282E65C800BC3A8F /* AchievementsView.swift */; };
+		26D72FAC282E65DE00BC3A8F /* TextsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FAB282E65DE00BC3A8F /* TextsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		26D72FA1282E4D8200BC3A8F /* junk.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = junk.txt; sourceTree = "<group>"; };
 		26D72FA3282E573200BC3A8F /* NavigationHandlerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHandlerView.swift; sourceTree = "<group>"; };
 		26D72FA5282E5A7500BC3A8F /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		26D72FA9282E65C800BC3A8F /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		26D72FAB282E65DE00BC3A8F /* TextsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			children = (
 				26D72FA1282E4D8200BC3A8F /* junk.txt */,
 				267A77432829558100E0EB7A /* kulturstien */,
+				26D72FA7282E5B2200BC3A8F /* OldViews */,
 				267A77542829558200E0EB7A /* kulturstienTests */,
 				267A775E2829558200E0EB7A /* kulturstienUITests */,
 				267A77422829558100E0EB7A /* Products */,
@@ -119,15 +124,11 @@
 			isa = PBXGroup;
 			children = (
 				267A7783282AF8F600E0EB7A /* Info.plist */,
-				26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */,
+				26D72FAE282E666900BC3A8F /* MainViews */,
+				26D72FAD282E663B00BC3A8F /* MenuViews */,
 				26D72FA8282E5C1D00BC3A8F /* Fonts */,
-				267A77442829558100E0EB7A /* kulturstienApp.swift */,
 				267A77482829558200E0EB7A /* Assets.xcassets */,
-				267A774A2829558200E0EB7A /* Preview Content */,
-				26D72FA7282E5B2200BC3A8F /* OldViews */,
-				26AAC9F6282D00E80057BBA6 /* ProfileView.swift */,
-				26D72FA3282E573200BC3A8F /* NavigationHandlerView.swift */,
-				26D72FA5282E5A7500BC3A8F /* MenuView.swift */,
+				267A774B2829558200E0EB7A /* Preview Assets.xcassets */,
 			);
 			path = kulturstien;
 			sourceTree = "<group>";
@@ -135,7 +136,6 @@
 		267A774A2829558200E0EB7A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				267A774B2829558200E0EB7A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -172,10 +172,32 @@
 		26D72FA8282E5C1D00BC3A8F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				267A774A2829558200E0EB7A /* Preview Content */,
 				267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */,
 				267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		26D72FAD282E663B00BC3A8F /* MenuViews */ = {
+			isa = PBXGroup;
+			children = (
+				26AAC9F6282D00E80057BBA6 /* ProfileView.swift */,
+				26D72FA9282E65C800BC3A8F /* AchievementsView.swift */,
+				26D72FAB282E65DE00BC3A8F /* TextsView.swift */,
+			);
+			path = MenuViews;
+			sourceTree = "<group>";
+		};
+		26D72FAE282E666900BC3A8F /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				267A77442829558100E0EB7A /* kulturstienApp.swift */,
+				26D72FA3282E573200BC3A8F /* NavigationHandlerView.swift */,
+				26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */,
+				26D72FA5282E5A7500BC3A8F /* MenuView.swift */,
+			);
+			path = MainViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				267A77472829558100E0EB7A /* ContentView.swift in Sources */,
+				26D72FAC282E65DE00BC3A8F /* TextsView.swift in Sources */,
 				267A7780282AE9E000E0EB7A /* MapView.swift in Sources */,
 				26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */,
 				267A7778282A8A4300E0EB7A /* DetailView.swift in Sources */,
@@ -320,6 +343,7 @@
 				267A77452829558100E0EB7A /* kulturstienApp.swift in Sources */,
 				26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */,
 				267A777C282ABF2C00E0EB7A /* MenuItem.swift in Sources */,
+				26D72FAA282E65C800BC3A8F /* AchievementsView.swift in Sources */,
 				26D72FA4282E573200BC3A8F /* NavigationHandlerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

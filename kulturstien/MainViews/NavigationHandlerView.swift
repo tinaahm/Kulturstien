@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum Page {
-	case main, profile, menu
+	case main, profile, menu, achievements, texts
 }
 
 class ViewIndex: ObservableObject {
@@ -26,6 +26,10 @@ struct NavigationHandlerView: View {
 		case .profile:
 			ProfileView()
 		case .menu:
+			MenuView()
+		case .achievements:
+			MenuView()
+		case .texts:
 			MenuView()
 		}
     }
