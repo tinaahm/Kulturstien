@@ -7,17 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		267A77452829558100E0EB7A /* kulturstienApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77442829558100E0EB7A /* kulturstienApp.swift */; };
-		267A77472829558100E0EB7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77462829558100E0EB7A /* ContentView.swift */; };
+		267A77452829558100E0EB7A /* KulturstienApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77442829558100E0EB7A /* KulturstienApp.swift */; };
 		267A77492829558200E0EB7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267A77482829558200E0EB7A /* Assets.xcassets */; };
 		267A774C2829558200E0EB7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267A774B2829558200E0EB7A /* Preview Assets.xcassets */; };
-		267A77562829558200E0EB7A /* kulturstienTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77552829558200E0EB7A /* kulturstienTests.swift */; };
-		267A77602829558200E0EB7A /* kulturstienUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A775F2829558200E0EB7A /* kulturstienUITests.swift */; };
-		267A77622829558200E0EB7A /* kulturstienUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77612829558200E0EB7A /* kulturstienUITestsLaunchTests.swift */; };
-		267A7776282A7D1900E0EB7A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A7775282A7D1900E0EB7A /* MainView.swift */; };
-		267A7778282A8A4300E0EB7A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A7777282A8A4300E0EB7A /* DetailView.swift */; };
-		267A777C282ABF2C00E0EB7A /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A777B282ABF2C00E0EB7A /* MenuItem.swift */; };
-		267A7780282AE9E000E0EB7A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A777F282AE9E000E0EB7A /* MapView.swift */; };
+		267A77562829558200E0EB7A /* KulturstienTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77552829558200E0EB7A /* KulturstienTests.swift */; };
+		267A77602829558200E0EB7A /* KulturstienUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A775F2829558200E0EB7A /* KulturstienUITests.swift */; };
+		267A77622829558200E0EB7A /* KulturstienUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77612829558200E0EB7A /* KulturstienUITestsLaunchTests.swift */; };
 		267A7782282AF85200E0EB7A /* AmericanTypewriter.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */; };
 		267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */; };
 		26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F6282D00E80057BBA6 /* ProfileView.swift */; };
@@ -47,20 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		267A77412829558100E0EB7A /* kulturstien.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kulturstien.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		267A77442829558100E0EB7A /* kulturstienApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kulturstienApp.swift; sourceTree = "<group>"; };
-		267A77462829558100E0EB7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		267A77412829558100E0EB7A /* Kulturstien.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kulturstien.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		267A77442829558100E0EB7A /* KulturstienApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturstienApp.swift; sourceTree = "<group>"; };
 		267A77482829558200E0EB7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		267A774B2829558200E0EB7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		267A77512829558200E0EB7A /* kulturstienTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kulturstienTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		267A77552829558200E0EB7A /* kulturstienTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kulturstienTests.swift; sourceTree = "<group>"; };
-		267A775B2829558200E0EB7A /* kulturstienUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kulturstienUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		267A775F2829558200E0EB7A /* kulturstienUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kulturstienUITests.swift; sourceTree = "<group>"; };
-		267A77612829558200E0EB7A /* kulturstienUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kulturstienUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		267A7775282A7D1900E0EB7A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		267A7777282A8A4300E0EB7A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		267A777B282ABF2C00E0EB7A /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
-		267A777F282AE9E000E0EB7A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		267A77512829558200E0EB7A /* KulturstienTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KulturstienTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		267A77552829558200E0EB7A /* KulturstienTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturstienTests.swift; sourceTree = "<group>"; };
+		267A775B2829558200E0EB7A /* KulturstienUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KulturstienUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		267A775F2829558200E0EB7A /* KulturstienUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturstienUITests.swift; sourceTree = "<group>"; };
+		267A77612829558200E0EB7A /* KulturstienUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturstienUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmericanTypewriter.ttc; sourceTree = "<group>"; };
 		267A7783282AF8F600E0EB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Macondo-Regular.ttf"; sourceTree = "<group>"; };
@@ -102,10 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				26D72FA1282E4D8200BC3A8F /* junk.txt */,
-				267A77432829558100E0EB7A /* kulturstien */,
-				26D72FA7282E5B2200BC3A8F /* OldViews */,
-				267A77542829558200E0EB7A /* kulturstienTests */,
-				267A775E2829558200E0EB7A /* kulturstienUITests */,
+				267A77432829558100E0EB7A /* Kulturstien */,
+				267A77542829558200E0EB7A /* KulturstienTests */,
+				267A775E2829558200E0EB7A /* KulturstienUITests */,
 				267A77422829558100E0EB7A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,14 +102,14 @@
 		267A77422829558100E0EB7A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				267A77412829558100E0EB7A /* kulturstien.app */,
-				267A77512829558200E0EB7A /* kulturstienTests.xctest */,
-				267A775B2829558200E0EB7A /* kulturstienUITests.xctest */,
+				267A77412829558100E0EB7A /* Kulturstien.app */,
+				267A77512829558200E0EB7A /* KulturstienTests.xctest */,
+				267A775B2829558200E0EB7A /* KulturstienUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		267A77432829558100E0EB7A /* kulturstien */ = {
+		267A77432829558100E0EB7A /* Kulturstien */ = {
 			isa = PBXGroup;
 			children = (
 				267A7783282AF8F600E0EB7A /* Info.plist */,
@@ -129,8 +118,9 @@
 				26D72FA8282E5C1D00BC3A8F /* Fonts */,
 				267A77482829558200E0EB7A /* Assets.xcassets */,
 				267A774B2829558200E0EB7A /* Preview Assets.xcassets */,
+				267A774A2829558200E0EB7A /* Preview Content */,
 			);
-			path = kulturstien;
+			path = Kulturstien;
 			sourceTree = "<group>";
 		};
 		267A774A2829558200E0EB7A /* Preview Content */ = {
@@ -140,39 +130,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		267A77542829558200E0EB7A /* kulturstienTests */ = {
+		267A77542829558200E0EB7A /* KulturstienTests */ = {
 			isa = PBXGroup;
 			children = (
-				267A77552829558200E0EB7A /* kulturstienTests.swift */,
+				267A77552829558200E0EB7A /* KulturstienTests.swift */,
 			);
-			path = kulturstienTests;
+			path = KulturstienTests;
 			sourceTree = "<group>";
 		};
-		267A775E2829558200E0EB7A /* kulturstienUITests */ = {
+		267A775E2829558200E0EB7A /* KulturstienUITests */ = {
 			isa = PBXGroup;
 			children = (
-				267A775F2829558200E0EB7A /* kulturstienUITests.swift */,
-				267A77612829558200E0EB7A /* kulturstienUITestsLaunchTests.swift */,
+				267A775F2829558200E0EB7A /* KulturstienUITests.swift */,
+				267A77612829558200E0EB7A /* KulturstienUITestsLaunchTests.swift */,
 			);
-			path = kulturstienUITests;
-			sourceTree = "<group>";
-		};
-		26D72FA7282E5B2200BC3A8F /* OldViews */ = {
-			isa = PBXGroup;
-			children = (
-				267A777B282ABF2C00E0EB7A /* MenuItem.swift */,
-				267A77462829558100E0EB7A /* ContentView.swift */,
-				267A7775282A7D1900E0EB7A /* MainView.swift */,
-				267A7777282A8A4300E0EB7A /* DetailView.swift */,
-				267A777F282AE9E000E0EB7A /* MapView.swift */,
-			);
-			path = OldViews;
+			path = KulturstienUITests;
 			sourceTree = "<group>";
 		};
 		26D72FA8282E5C1D00BC3A8F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				267A774A2829558200E0EB7A /* Preview Content */,
 				267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */,
 				267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */,
 			);
@@ -192,7 +169,7 @@
 		26D72FAE282E666900BC3A8F /* MainViews */ = {
 			isa = PBXGroup;
 			children = (
-				267A77442829558100E0EB7A /* kulturstienApp.swift */,
+				267A77442829558100E0EB7A /* KulturstienApp.swift */,
 				26D72FA3282E573200BC3A8F /* NavigationHandlerView.swift */,
 				26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */,
 				26D72FA5282E5A7500BC3A8F /* MenuView.swift */,
@@ -203,9 +180,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		267A77402829558100E0EB7A /* kulturstien */ = {
+		267A77402829558100E0EB7A /* Kulturstien */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 267A77652829558200E0EB7A /* Build configuration list for PBXNativeTarget "kulturstien" */;
+			buildConfigurationList = 267A77652829558200E0EB7A /* Build configuration list for PBXNativeTarget "Kulturstien" */;
 			buildPhases = (
 				267A773D2829558100E0EB7A /* Sources */,
 				267A773E2829558100E0EB7A /* Frameworks */,
@@ -215,14 +192,14 @@
 			);
 			dependencies = (
 			);
-			name = kulturstien;
+			name = Kulturstien;
 			productName = kulturstien;
-			productReference = 267A77412829558100E0EB7A /* kulturstien.app */;
+			productReference = 267A77412829558100E0EB7A /* Kulturstien.app */;
 			productType = "com.apple.product-type.application";
 		};
-		267A77502829558200E0EB7A /* kulturstienTests */ = {
+		267A77502829558200E0EB7A /* KulturstienTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 267A77682829558200E0EB7A /* Build configuration list for PBXNativeTarget "kulturstienTests" */;
+			buildConfigurationList = 267A77682829558200E0EB7A /* Build configuration list for PBXNativeTarget "KulturstienTests" */;
 			buildPhases = (
 				267A774D2829558200E0EB7A /* Sources */,
 				267A774E2829558200E0EB7A /* Frameworks */,
@@ -233,14 +210,14 @@
 			dependencies = (
 				267A77532829558200E0EB7A /* PBXTargetDependency */,
 			);
-			name = kulturstienTests;
+			name = KulturstienTests;
 			productName = kulturstienTests;
-			productReference = 267A77512829558200E0EB7A /* kulturstienTests.xctest */;
+			productReference = 267A77512829558200E0EB7A /* KulturstienTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		267A775A2829558200E0EB7A /* kulturstienUITests */ = {
+		267A775A2829558200E0EB7A /* KulturstienUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 267A776B2829558200E0EB7A /* Build configuration list for PBXNativeTarget "kulturstienUITests" */;
+			buildConfigurationList = 267A776B2829558200E0EB7A /* Build configuration list for PBXNativeTarget "KulturstienUITests" */;
 			buildPhases = (
 				267A77572829558200E0EB7A /* Sources */,
 				267A77582829558200E0EB7A /* Frameworks */,
@@ -251,9 +228,9 @@
 			dependencies = (
 				267A775D2829558200E0EB7A /* PBXTargetDependency */,
 			);
-			name = kulturstienUITests;
+			name = KulturstienUITests;
 			productName = kulturstienUITests;
-			productReference = 267A775B2829558200E0EB7A /* kulturstienUITests.xctest */;
+			productReference = 267A775B2829558200E0EB7A /* KulturstienUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -279,7 +256,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 267A773C2829558100E0EB7A /* Build configuration list for PBXProject "kulturstien" */;
+			buildConfigurationList = 267A773C2829558100E0EB7A /* Build configuration list for PBXProject "Kulturstien" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -292,9 +269,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				267A77402829558100E0EB7A /* kulturstien */,
-				267A77502829558200E0EB7A /* kulturstienTests */,
-				267A775A2829558200E0EB7A /* kulturstienUITests */,
+				267A77402829558100E0EB7A /* Kulturstien */,
+				267A77502829558200E0EB7A /* KulturstienTests */,
+				267A775A2829558200E0EB7A /* KulturstienUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -333,16 +310,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				267A77472829558100E0EB7A /* ContentView.swift in Sources */,
 				26D72FAC282E65DE00BC3A8F /* TextsView.swift in Sources */,
-				267A7780282AE9E000E0EB7A /* MapView.swift in Sources */,
 				26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */,
-				267A7778282A8A4300E0EB7A /* DetailView.swift in Sources */,
-				267A7776282A7D1900E0EB7A /* MainView.swift in Sources */,
 				26D72FA6282E5A7500BC3A8F /* MenuView.swift in Sources */,
-				267A77452829558100E0EB7A /* kulturstienApp.swift in Sources */,
+				267A77452829558100E0EB7A /* KulturstienApp.swift in Sources */,
 				26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */,
-				267A777C282ABF2C00E0EB7A /* MenuItem.swift in Sources */,
 				26D72FAA282E65C800BC3A8F /* AchievementsView.swift in Sources */,
 				26D72FA4282E573200BC3A8F /* NavigationHandlerView.swift in Sources */,
 			);
@@ -352,7 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				267A77562829558200E0EB7A /* kulturstienTests.swift in Sources */,
+				267A77562829558200E0EB7A /* KulturstienTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,8 +332,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				267A77602829558200E0EB7A /* kulturstienUITests.swift in Sources */,
-				267A77622829558200E0EB7A /* kulturstienUITestsLaunchTests.swift in Sources */,
+				267A77602829558200E0EB7A /* KulturstienUITests.swift in Sources */,
+				267A77622829558200E0EB7A /* KulturstienUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,12 +342,12 @@
 /* Begin PBXTargetDependency section */
 		267A77532829558200E0EB7A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 267A77402829558100E0EB7A /* kulturstien */;
+			target = 267A77402829558100E0EB7A /* Kulturstien */;
 			targetProxy = 267A77522829558200E0EB7A /* PBXContainerItemProxy */;
 		};
 		267A775D2829558200E0EB7A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 267A77402829558100E0EB7A /* kulturstien */;
+			target = 267A77402829558100E0EB7A /* Kulturstien */;
 			targetProxy = 267A775C2829558200E0EB7A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -574,7 +546,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kulturstien.app/kulturstien";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kulturstien.app/Kulturstien";
 			};
 			name = Debug;
 		};
@@ -593,7 +565,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kulturstien.app/kulturstien";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kulturstien.app/Kulturstien";
 			};
 			name = Release;
 		};
@@ -634,7 +606,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		267A773C2829558100E0EB7A /* Build configuration list for PBXProject "kulturstien" */ = {
+		267A773C2829558100E0EB7A /* Build configuration list for PBXProject "Kulturstien" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				267A77632829558200E0EB7A /* Debug */,
@@ -643,7 +615,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		267A77652829558200E0EB7A /* Build configuration list for PBXNativeTarget "kulturstien" */ = {
+		267A77652829558200E0EB7A /* Build configuration list for PBXNativeTarget "Kulturstien" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				267A77662829558200E0EB7A /* Debug */,
@@ -652,7 +624,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		267A77682829558200E0EB7A /* Build configuration list for PBXNativeTarget "kulturstienTests" */ = {
+		267A77682829558200E0EB7A /* Build configuration list for PBXNativeTarget "KulturstienTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				267A77692829558200E0EB7A /* Debug */,
@@ -661,7 +633,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		267A776B2829558200E0EB7A /* Build configuration list for PBXNativeTarget "kulturstienUITests" */ = {
+		267A776B2829558200E0EB7A /* Build configuration list for PBXNativeTarget "KulturstienUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				267A776C2829558200E0EB7A /* Debug */,

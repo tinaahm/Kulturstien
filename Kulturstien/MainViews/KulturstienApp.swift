@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct kulturstienApp: App {
+struct KulturstienApp: App {
 	
 	@StateObject var viewIndex = ViewIndex()
 	

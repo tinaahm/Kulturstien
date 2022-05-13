@@ -6,9 +6,9 @@
 //
 
 import XCTest
-@testable import kulturstien
+@testable import Kulturstien
 
-class kulturstienTests: XCTestCase {
+class KulturstienTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

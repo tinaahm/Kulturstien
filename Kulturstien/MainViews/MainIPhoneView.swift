@@ -35,7 +35,9 @@ struct MainIPhoneView: View {
 						Spacer(minLength: 0)
 						
 						Button (action: {
-							page.pageIndex = .menu
+							withAnimation {
+								page.pageIndex = .menu
+							}
 						}) {
 							Image(systemName: "line.3.horizontal")
 							.resizable()

@@ -27,6 +27,7 @@ struct NavigationHandlerView: View {
 			ProfileView()
 		case .menu:
 			MenuView()
+				.transition(.backslide)
 		case .achievements:
 			MenuView()
 		case .texts:
@@ -39,4 +40,11 @@ struct NavigationHandlerView_Previews: PreviewProvider {
     static var previews: some View {
 		NavigationHandlerView().environmentObject(ViewIndex())
     }
+}
+
+extension AnyTransition {
+	static var backslide: AnyTransition {
+		AnyTransition.asymmetric(
+			insertion: .move(edge: .trailing),
+			removal: .move(edge: .leading))}
 }
