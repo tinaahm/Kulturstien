@@ -1,6 +1,6 @@
 //
 //  AchievementsView.swift
-//  kulturstien
+//  Kulturstien
 //
 //  Created by Tina on 13/05/2022.
 //

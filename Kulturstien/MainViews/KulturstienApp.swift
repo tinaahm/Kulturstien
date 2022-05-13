@@ -1,6 +1,6 @@
 //
-//  kulturstienApp.swift
-//  kulturstien
+//  KulturstienApp.swift
+//  Kulturstien
 //
 //  Created by Tina on 09/05/2022.
 //

@@ -1,6 +1,6 @@
 //
 //  ProfileView.swift
-//  kulturstien
+//  Kulturstien
 //
 //  Created by Tina on 12/05/2022.
 //

@@ -1,6 +1,6 @@
 //
-//  kulturstienTests.swift
-//  kulturstienTests
+//  KulturstienTests.swift
+//  KulturstienTests
 //
 //  Created by Tina on 09/05/2022.
 //
