@@ -110,11 +110,11 @@
 			isa = PBXGroup;
 			children = (
 				267A7783282AF8F600E0EB7A /* Info.plist */,
-				26D72FAE282E666900BC3A8F /* MainViews */,
-				26D72FAD282E663B00BC3A8F /* MenuViews */,
-				26D72FA8282E5C1D00BC3A8F /* Fonts */,
+				26D72FB0282E716A00BC3A8F /* MenuViews */,
+				26D72FAF282E714F00BC3A8F /* MainViews */,
 				267A77482829558200E0EB7A /* Assets.xcassets */,
 				267A774B2829558200E0EB7A /* Preview Assets.xcassets */,
+				26D72FB1282E719000BC3A8F /* Fonts */,
 				267A774A2829558200E0EB7A /* Preview Content */,
 			);
 			path = Kulturstien;
@@ -144,34 +144,34 @@
 			path = KulturstienUITests;
 			sourceTree = "<group>";
 		};
-		26D72FA8282E5C1D00BC3A8F /* Fonts */ = {
+		26D72FAF282E714F00BC3A8F /* MainViews */ = {
 			isa = PBXGroup;
 			children = (
-				267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */,
-				267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */,
+				26D72FA3282E573200BC3A8F /* NavigationHandlerView.swift */,
+				26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */,
+				26D72FA5282E5A7500BC3A8F /* MenuView.swift */,
+				267A77442829558100E0EB7A /* KulturstienApp.swift */,
 			);
-			path = Fonts;
+			name = MainViews;
 			sourceTree = "<group>";
 		};
-		26D72FAD282E663B00BC3A8F /* MenuViews */ = {
+		26D72FB0282E716A00BC3A8F /* MenuViews */ = {
 			isa = PBXGroup;
 			children = (
 				26AAC9F6282D00E80057BBA6 /* ProfileView.swift */,
 				26D72FA9282E65C800BC3A8F /* AchievementsView.swift */,
 				26D72FAB282E65DE00BC3A8F /* TextsView.swift */,
 			);
-			path = MenuViews;
+			name = MenuViews;
 			sourceTree = "<group>";
 		};
-		26D72FAE282E666900BC3A8F /* MainViews */ = {
+		26D72FB1282E719000BC3A8F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				267A77442829558100E0EB7A /* KulturstienApp.swift */,
-				26D72FA3282E573200BC3A8F /* NavigationHandlerView.swift */,
-				26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */,
-				26D72FA5282E5A7500BC3A8F /* MenuView.swift */,
+				267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */,
+				267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */,
 			);
-			path = MainViews;
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
