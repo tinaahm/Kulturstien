@@ -18,20 +18,12 @@ struct MainIPhoneView: View {
 			VStack {
 				Group {
 					HStack {
-						Button (action: {
-							page.pageIndex = .profile
-						}) {
-							Image(systemName: "person")
-							.resizable()
-							.frame(width: 25, height: 25)
-							.padding(15)
-							.overlay(
-									RoundedRectangle(cornerRadius: 30)
-									.stroke(lineWidth: 2)
-								)
-						}
+						Image(systemName: "person")
+						.resizable()
+						.frame(width: 30, height: 30)
+						.padding(15)
 						.padding(.leading, 30)
-						
+				
 						Spacer(minLength: 0)
 						
 						Button (action: {

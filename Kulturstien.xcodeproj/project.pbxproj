@@ -17,7 +17,6 @@
 		267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */; };
 		26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F6282D00E80057BBA6 /* ProfileView.swift */; };
 		26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */; };
-		26D72FA2282E4D8200BC3A8F /* junk.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26D72FA1282E4D8200BC3A8F /* junk.txt */; };
 		26D72FA4282E573200BC3A8F /* NavigationHandlerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FA3282E573200BC3A8F /* NavigationHandlerView.swift */; };
 		26D72FA6282E5A7500BC3A8F /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FA5282E5A7500BC3A8F /* MenuView.swift */; };
 		26D72FAA282E65C800BC3A8F /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FA9282E65C800BC3A8F /* AchievementsView.swift */; };
@@ -56,7 +55,6 @@
 		267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Macondo-Regular.ttf"; sourceTree = "<group>"; };
 		26AAC9F6282D00E80057BBA6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIPhoneView.swift; sourceTree = "<group>"; };
-		26D72FA1282E4D8200BC3A8F /* junk.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = junk.txt; sourceTree = "<group>"; };
 		26D72FA3282E573200BC3A8F /* NavigationHandlerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHandlerView.swift; sourceTree = "<group>"; };
 		26D72FA5282E5A7500BC3A8F /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		26D72FA9282E65C800BC3A8F /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 		267A77382829558100E0EB7A = {
 			isa = PBXGroup;
 			children = (
-				26D72FA1282E4D8200BC3A8F /* junk.txt */,
 				267A77432829558100E0EB7A /* Kulturstien */,
 				267A77542829558200E0EB7A /* KulturstienTests */,
 				267A775E2829558200E0EB7A /* KulturstienUITests */,
@@ -285,7 +282,6 @@
 				267A7782282AF85200E0EB7A /* AmericanTypewriter.ttc in Resources */,
 				267A77492829558200E0EB7A /* Assets.xcassets in Resources */,
 				267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */,
-				26D72FA2282E4D8200BC3A8F /* junk.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
