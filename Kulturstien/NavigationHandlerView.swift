@@ -8,8 +8,12 @@
 import SwiftUI
 
 enum Page {
-	case main, profile, menu, achievements, texts
+	case main, profile, menu, achievements, texts, quiz, quizEnd
 }
+
+var quizSelection : QuizType = .none
+
+var quizes = Quizes()
 
 class ViewIndex: ObservableObject {
 	@Published var pageIndex : Page = .main
@@ -32,6 +36,10 @@ struct NavigationHandlerView: View {
 			MenuView()
 		case .texts:
 			MenuView()
+		case .quiz:
+			QuizView(quizType: quizSelection)
+		case .quizEnd:
+			QuizEndView()
 		}
     }
 }

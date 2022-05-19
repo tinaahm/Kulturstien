@@ -11,6 +11,12 @@ struct MainIPhoneView: View {
 	
 	@EnvironmentObject var page : ViewIndex
 	@State private var showDarkMap = false
+	@State var timeOfDayIndex = 0
+	
+	/*var moon : String = "moon.stars.fill"
+	var sun : String = "sun.max"*/
+	
+	var timeOfDayImages : [[String]] = [["sun.max", "DayTimeMap"], ["moon.stars.fill", "NightTimeMap"]]
 	
 	
     var body: some View {
@@ -46,10 +52,61 @@ struct MainIPhoneView: View {
 				.background(.white.opacity(0.5))
 				Spacer(minLength: 0)
 				
+				VStack {
+					Button (action: {
+						quizSelection = .sawmill
+						page.pageIndex = .quiz
+					}) {
+						Image(systemName: "camera.macro")
+							.resizable()
+							.frame(width: 20, height: 20)
+							.padding(15)
+							.background(Color.white)
+							.foregroundColor(.black)
+						.clipShape(Circle())
+					}
+					Button (action: {}) {
+						Image(systemName: "sparkles")
+							.resizable()
+							.frame(width: 20, height: 20)
+							.padding(15)
+							.background(Color.white)
+							.foregroundColor(.black)
+						.clipShape(Circle())
+					}
+					Button (action: {}) {
+						Image(systemName: "tortoise")
+							.resizable()
+							.frame(width: 30, height: 20)
+							.padding(15)
+							.background(Color.white)
+							.foregroundColor(.black)
+						.clipShape(Circle())
+					}
+					Button (action: {}) {
+						Image(systemName: "hare")
+							.resizable()
+							.frame(width: 30, height: 20)
+							.padding(15)
+							.background(Color.white)
+							.foregroundColor(.black)
+						.clipShape(Circle())
+					}
+					
+				}
+				Spacer(minLength: 0)
 				HStack {
 					Spacer()
-					Button (action: {}) {
-						Image(systemName: "sun.max")
+					Button (action: {
+						if !showDarkMap {
+							timeOfDayIndex = 1
+							showDarkMap = true
+						} else {
+							timeOfDayIndex = 0
+							showDarkMap = false
+						}
+					}) {
+						Image(systemName: timeOfDayImages[timeOfDayIndex][0])
 							.resizable()
 							.frame(width: 30, height: 30)
 							.padding(15)
@@ -62,7 +119,7 @@ struct MainIPhoneView: View {
 			}
 		}
 		.background(
-				Image("Map2")
+				Image(timeOfDayImages[timeOfDayIndex][1])
 					.resizable()
 					.scaledToFill()
 					.edgesIgnoringSafeArea(.all)

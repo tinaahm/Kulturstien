@@ -1,0 +1,87 @@
+{
+	"QuizQuestions": [{
+			"type": "mill",
+			"question": "",
+			"correctOption": "",
+			"wrongOptionOne": "",
+			"wrongOptionTwo": ""
+		},
+		{
+			"type": "mill",
+			"question": "",
+			"correctOption": "",
+			"wrongOptionOne": "",
+			"wrongOptionTwo": ""
+		},
+		{
+			"type": "mill",
+			"question": "",
+			"correctOption": "",
+			"wrongOptionOne": "",
+			"wrongOptionTwo": ""
+		},
+		{
+			"type": "sawmill",
+			"question": "Når kom sagbruket til Norge?",
+			"correctOption": "1500-tallet",
+			"wrongOptionOne": "1400-tallet",
+			"wrongOptionTwo": "1600-tallet"
+		},
+		{
+			"type": "sawmill",
+			"question": "Hva ble sagen kalt?",
+			"correctOption": "Oppgangssaga ",
+			"wrongOptionOne": "Nedgangssaga ",
+			"wrongOptionTwo": "Oppnedsaga"
+		},
+		{
+			"type": "sawmill",
+			"question": "Hva var en \"sagdreng\"?",
+			"correctOption": "Tenåringsgutt som var ansatt til å arbeide i sagbruket",
+			"wrongOptionOne": "En tømmerstokk",
+			"wrongOptionTwo": "Kallenavn for et sagblad"
+		},
+		{
+			"type": "dam",
+			"question": "",
+			"correctOption": "",
+			"wrongOptionOne": "",
+			"wrongOptionTwo": ""
+		},
+		{
+			"type": "dam",
+			"question": "",
+			"correctOption": "",
+			"wrongOptionOne": "",
+			"wrongOptionTwo": ""
+		},
+		{
+			"type": "dam",
+			"question": "",
+			"correctOption": "",
+			"wrongOptionOne": "",
+			"wrongOptionTwo": ""
+		},
+		{
+			"type": "logBooms",
+			"question": "",
+			"correctOption": "",
+			"wrongOptionOne": "",
+			"wrongOptionTwo": ""
+		},
+		{
+			"type": "logBooms",
+			"question": "",
+			"correctOption": "",
+			"wrongOptionOne": "",
+			"wrongOptionTwo": ""
+		},
+		{
+			"type": "logBooms",
+			"question": "",
+			"correctOption": "",
+			"wrongOptionOne": "",
+			"wrongOptionTwo": ""
+		}
+	]
+}

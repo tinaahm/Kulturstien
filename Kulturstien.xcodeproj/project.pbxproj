@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2669457B283252E200B25AF7 /* LoadQuizQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669457A283252E200B25AF7 /* LoadQuizQuestions.swift */; };
+		2669457D283255B700B25AF7 /* QuizQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2669457C283255B700B25AF7 /* QuizQuestions.json */; };
+		2669458028325DBA00B25AF7 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669457F28325DBA00B25AF7 /* QuizView.swift */; };
+		26694582283260AF00B25AF7 /* QuizQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26694581283260AF00B25AF7 /* QuizQuestions.swift */; };
+		266945842832655800B25AF7 /* Quizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266945832832655800B25AF7 /* Quizes.swift */; };
 		267A77452829558100E0EB7A /* KulturstienApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77442829558100E0EB7A /* KulturstienApp.swift */; };
 		267A77492829558200E0EB7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267A77482829558200E0EB7A /* Assets.xcassets */; };
 		267A774C2829558200E0EB7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267A774B2829558200E0EB7A /* Preview Assets.xcassets */; };
@@ -21,6 +26,9 @@
 		26D72FA6282E5A7500BC3A8F /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FA5282E5A7500BC3A8F /* MenuView.swift */; };
 		26D72FAA282E65C800BC3A8F /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FA9282E65C800BC3A8F /* AchievementsView.swift */; };
 		26D72FAC282E65DE00BC3A8F /* TextsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FAB282E65DE00BC3A8F /* TextsView.swift */; };
+		26D72FB3282E722900BC3A8F /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FB2282E722900BC3A8F /* TextView.swift */; };
+		26D72FB5282E7ED800BC3A8F /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FB4282E7ED800BC3A8F /* QuizQuestion.swift */; };
+		26D72FB7282E870D00BC3A8F /* QuizQuestions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26D72FB6282E870D00BC3A8F /* QuizQuestions.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2669457A283252E200B25AF7 /* LoadQuizQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadQuizQuestions.swift; sourceTree = "<group>"; };
+		2669457C283255B700B25AF7 /* QuizQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuizQuestions.json; sourceTree = "<group>"; };
+		2669457F28325DBA00B25AF7 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		26694581283260AF00B25AF7 /* QuizQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestions.swift; sourceTree = "<group>"; };
+		266945832832655800B25AF7 /* Quizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizes.swift; sourceTree = "<group>"; };
 		267A77412829558100E0EB7A /* Kulturstien.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kulturstien.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		267A77442829558100E0EB7A /* KulturstienApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturstienApp.swift; sourceTree = "<group>"; };
 		267A77482829558200E0EB7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +72,9 @@
 		26D72FA5282E5A7500BC3A8F /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		26D72FA9282E65C800BC3A8F /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		26D72FAB282E65DE00BC3A8F /* TextsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextsView.swift; sourceTree = "<group>"; };
+		26D72FB2282E722900BC3A8F /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		26D72FB4282E7ED800BC3A8F /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
+		26D72FB6282E870D00BC3A8F /* QuizQuestions.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = QuizQuestions.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +102,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2669457E2832562400B25AF7 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				26D72FB4282E7ED800BC3A8F /* QuizQuestion.swift */,
+				2669457C283255B700B25AF7 /* QuizQuestions.json */,
+				26D72FB6282E870D00BC3A8F /* QuizQuestions.txt */,
+				2669457A283252E200B25AF7 /* LoadQuizQuestions.swift */,
+				2669457F28325DBA00B25AF7 /* QuizView.swift */,
+				26694581283260AF00B25AF7 /* QuizQuestions.swift */,
+				266945832832655800B25AF7 /* Quizes.swift */,
+			);
+			name = Quiz;
+			sourceTree = "<group>";
+		};
 		267A77382829558100E0EB7A = {
 			isa = PBXGroup;
 			children = (
@@ -109,13 +139,15 @@
 		267A77432829558100E0EB7A /* Kulturstien */ = {
 			isa = PBXGroup;
 			children = (
+				2669457E2832562400B25AF7 /* Quiz */,
 				267A7783282AF8F600E0EB7A /* Info.plist */,
-				26D72FB0282E716A00BC3A8F /* MenuViews */,
 				26D72FAF282E714F00BC3A8F /* MainViews */,
+				26D72FB0282E716A00BC3A8F /* MenuViews */,
 				267A77482829558200E0EB7A /* Assets.xcassets */,
 				267A774B2829558200E0EB7A /* Preview Assets.xcassets */,
 				26D72FB1282E719000BC3A8F /* Fonts */,
 				267A774A2829558200E0EB7A /* Preview Content */,
+				26D72FB2282E722900BC3A8F /* TextView.swift */,
 			);
 			path = Kulturstien;
 			sourceTree = "<group>";
@@ -278,8 +310,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2669457D283255B700B25AF7 /* QuizQuestions.json in Resources */,
 				267A774C2829558200E0EB7A /* Preview Assets.xcassets in Resources */,
 				267A7782282AF85200E0EB7A /* AmericanTypewriter.ttc in Resources */,
+				26D72FB7282E870D00BC3A8F /* QuizQuestions.txt in Resources */,
 				267A77492829558200E0EB7A /* Assets.xcassets in Resources */,
 				267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */,
 			);
@@ -307,11 +341,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				26D72FAC282E65DE00BC3A8F /* TextsView.swift in Sources */,
+				26D72FB5282E7ED800BC3A8F /* QuizQuestion.swift in Sources */,
+				266945842832655800B25AF7 /* Quizes.swift in Sources */,
+				2669458028325DBA00B25AF7 /* QuizView.swift in Sources */,
+				26D72FB3282E722900BC3A8F /* TextView.swift in Sources */,
 				26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */,
 				26D72FA6282E5A7500BC3A8F /* MenuView.swift in Sources */,
 				267A77452829558100E0EB7A /* KulturstienApp.swift in Sources */,
+				2669457B283252E200B25AF7 /* LoadQuizQuestions.swift in Sources */,
 				26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */,
 				26D72FAA282E65C800BC3A8F /* AchievementsView.swift in Sources */,
+				26694582283260AF00B25AF7 /* QuizQuestions.swift in Sources */,
 				26D72FA4282E573200BC3A8F /* NavigationHandlerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
