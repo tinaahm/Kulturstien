@@ -92,6 +92,16 @@ struct MainIPhoneView: View {
 							.foregroundColor(.black)
 						.clipShape(Circle())
 					}
+                    Button (action: {
+                        page.pageIndex = .sagtuft
+                    }) {
+                        Image("SawmillButton")
+                            .resizable()
+                            .frame(width: 60, height: 60)
+                            .padding(15)
+                        
+                        
+                    }
 					
 				}
 				Spacer(minLength: 0)

@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum Page {
-	case main, profile, menu, achievements, texts, quiz, quizEnd
+	case main, profile, menu, achievements, texts, quiz, quizEnd, sagtuft
 }
 
 var quizSelection : QuizType = .none
@@ -40,6 +40,9 @@ struct NavigationHandlerView: View {
 			QuizView(quizType: quizSelection)
 		case .quizEnd:
 			QuizEndView(resultArray: [], title: "hey")
+        case .sagtuft:
+            SagbrukView()
+                .transition(.backslide)
 		}
     }
 }
