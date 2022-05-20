@@ -72,7 +72,7 @@ func getImageTitleFromSelection(selectionType: Structure) -> String {
 	case .mill:
 		return "MillIcon"
 	case .sawmill:
-		return ""
+		return "SawmillIcon"
 	case .dam:
 		return ""
 	case .logBooms:
@@ -84,6 +84,6 @@ func getImageTitleFromSelection(selectionType: Structure) -> String {
 
 struct SelectionView_Previews: PreviewProvider {
     static var previews: some View {
-		SelectionView(selectionType: .mill).environmentObject(ViewIndex())
+		SelectionView(selectionType: .sawmill).environmentObject(ViewIndex())
     }
 }

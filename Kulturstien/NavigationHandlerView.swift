@@ -49,11 +49,11 @@ struct NavigationHandlerView: View {
     }
 }
 
-struct NavigationHandlerView_Previews: PreviewProvider {
+/*struct NavigationHandlerView_Previews: PreviewProvider {
     static var previews: some View {
 		NavigationHandlerView().environmentObject(ViewIndex())
     }
-}
+}*/
 
 extension AnyTransition {
 	static var backslide: AnyTransition {

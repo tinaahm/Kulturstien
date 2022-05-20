@@ -33,8 +33,8 @@ struct ButtonView: View {
 	}
 }
 
-struct ButtonView_Previews: PreviewProvider {
+/*struct ButtonView_Previews: PreviewProvider {
 	static var previews: some View {
 		ButtonView(selectionType: .none, image: "", width: 0, height: 0, posX: 0, posY: 0).environmentObject(ViewIndex())
 	}
-}
+}*/

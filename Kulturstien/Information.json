@@ -1,6 +1,6 @@
 [
   {
-	"type": "Sagmølle",
+	"type": "sagbruk",
 	"title": "Sagbruk",
 	"image1": "Sawmill",
 	"image2": "Sawmill",
@@ -10,7 +10,7 @@
 	"text3": ""
   },
   {
-	"type": "Mølle",
+	"type": "mølla",
 	"title": "title",
 	"image1": "",
 	"image2": "",
@@ -20,7 +20,7 @@
 	"text3": ""
   },
   {
-	"type": "Demning",
+	"type": "demning",
 	"title": "title",
 	"image1": "",
 	"image2": "",
@@ -30,7 +30,7 @@
 	"text3": ""
   },
   {
-	"type": "Lenseanlegg",
+	"type": "lenseanlegg",
 	"title": "title",
 	"image1": "",
 	"image2": "",

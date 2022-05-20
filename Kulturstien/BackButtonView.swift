@@ -14,7 +14,7 @@ struct BackButtonView: View {
 	var body: some View {
 		HStack (alignment: .top) {
 			Button (action: {
-				let tempPage : Page = page.previousPage
+				let tempPage: Page = page.previousPage
 				page.previousPage = .main
 				page.pageIndex = tempPage
 			}) {
@@ -31,8 +31,8 @@ struct BackButtonView: View {
 	}
 }
 
-struct BackButtonView_Previews: PreviewProvider {
-	static var previews: some View {
-		BackButtonView().environmentObject(ViewIndex())
-	}
-}
+//struct BackButtonView_Previews: PreviewProvider {
+//	static var previews: some View {
+//		BackButtonView().environmentObject(ViewIndex())
+//	}
+//}

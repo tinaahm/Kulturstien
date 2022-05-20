@@ -8,10 +8,10 @@
 import Foundation
 
 enum Structure: String, Codable/*, CustomStringConvertible*/ {
-	case mill = "Mølle"
-	case sawmill = "Sagmølle"
-	case dam = "Demning"
-	case logBooms = "Lenseanlegg"
+	case mill = "mølla"
+	case sawmill = "sagbruk"
+	case dam = "demning"
+	case logBooms = "lenseanlegg"
 	case none = ""
 	
 	/*var description : String {

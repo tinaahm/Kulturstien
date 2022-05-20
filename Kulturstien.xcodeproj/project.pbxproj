@@ -113,8 +113,6 @@
 		0E17588F283683D900E8F9C4 /* InfoViews */ = {
 			isa = PBXGroup;
 			children = (
-				26F93BC62837BF29005F5F9E /* Information.json */,
-				26F93BC02837AEF7005F5F9E /* InformationBAD.json */,
 				0E17588D2836832B00E8F9C4 /* InformationView.swift */,
 				26F93BBC2837AC9B005F5F9E /* Information.swift */,
 			);
@@ -126,7 +124,6 @@
 			children = (
 				2669457F28325DBA00B25AF7 /* QuizView.swift */,
 				26D72FB4282E7ED800BC3A8F /* QuizQuestion.swift */,
-				2669457C283255B700B25AF7 /* QuizQuestions.json */,
 				266945832832655800B25AF7 /* Quizes.swift */,
 			);
 			name = Quiz;
@@ -155,6 +152,7 @@
 		267A77432829558100E0EB7A /* Kulturstien */ = {
 			isa = PBXGroup;
 			children = (
+				26D4A4E32837ED3D0022D49F /* Data */,
 				26D4A4E22837EAD10022D49F /* ButtonViews */,
 				0E17588F283683D900E8F9C4 /* InfoViews */,
 				2669457E2832562400B25AF7 /* Quiz */,
@@ -201,6 +199,16 @@
 				26D4A4E02837EA8D0022D49F /* BackButtonView.swift */,
 			);
 			name = ButtonViews;
+			sourceTree = "<group>";
+		};
+		26D4A4E32837ED3D0022D49F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				26F93BC02837AEF7005F5F9E /* InformationBAD.json */,
+				26F93BC62837BF29005F5F9E /* Information.json */,
+				2669457C283255B700B25AF7 /* QuizQuestions.json */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		26D72FAF282E714F00BC3A8F /* MainViews */ = {
