@@ -20,12 +20,12 @@ struct InformationView: View {
     
     var body: some View {
 		
-		var images : [String] = getImages(information: information)
-		var texts : [String] = getTexts(information: information)
+		let images : [String] = getImages(information: information)
+		let texts : [String] = getTexts(information: information)
 		
         ScrollView {
             VStack {
-                ZStack(alignment: .topLeading) {
+                /*ZStack(alignment: .topLeading) {
 					Color.clear
 					VStack(alignment: .leading) {
 						Button (action: {
@@ -41,7 +41,9 @@ struct InformationView: View {
 					}
 			
 				}
-                .padding(.bottom, -20)
+                .padding(.bottom, -20)*/
+				
+				BackButtonView() //TODO: title inline with back button?
 				
 				VStack(alignment: .leading) {
 					Text(information.title)

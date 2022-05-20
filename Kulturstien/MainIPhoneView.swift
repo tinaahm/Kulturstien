@@ -52,7 +52,7 @@ struct MainIPhoneView: View {
 				.background(.white.opacity(0.5))
 				Spacer(minLength: 0)
 				
-				VStack {
+				ZStack {/*
 					Button (action: {
 						quizSelection = .sawmill
 						page.pageIndex = .quiz
@@ -100,10 +100,18 @@ struct MainIPhoneView: View {
                             .resizable()
                             .frame(width: 60, height: 60)
                             .padding(15)
-                    }
+                    }*/
+					ButtonView(selectionType: .sawmill, image: "SawmillButton", width: 60, height: 60, posX: 190, posY: 120)
+					ButtonView(selectionType: .sawmill, image: "SawmillButton", width: 60, height: 60, posX: 70, posY: 280)
+					ButtonView(selectionType: .dam, image: "DamButton", width: 60, height: 60, posX: 110, posY: 520)
 					
+					ButtonView(selectionType: .mill, image: "MillIcon", width: 122, height: 79, posX: 310, posY: 555)
+					ButtonView(selectionType: .mill, image: "Button", width: 32, height: 26, posX: 370, posY: 620)
+					
+					ButtonView(selectionType: .none, image: "Button", width: 32, height: 26, posX: 250, posY: 650)
+					ButtonView(selectionType: .none, image: "Button", width: 32, height: 26, posX: 140, posY: 630)
 				}
-				Spacer(minLength: 0)
+				Spacer()
 				HStack {
 					Spacer()
 					Button (action: {
@@ -123,8 +131,9 @@ struct MainIPhoneView: View {
 							.foregroundColor(.black)
 						.clipShape(Circle())
 					}
-					//.padding(.trailing)
-					.padding()
+					.padding(.trailing)
+					.padding(.top)
+					
 				}
 			}
 		}
@@ -138,8 +147,72 @@ struct MainIPhoneView: View {
 
 }
 
+struct ButtonView: View {
+	
+	@EnvironmentObject var page : ViewIndex
+	
+	var selectionType : Structure
+	var image: String
+	var width: CGFloat
+	var height: CGFloat
+	var posX: CGFloat
+	var posY: CGFloat
+	
+	var body: some View {
+		Button (action: {
+			page.previousPage = page.pageIndex
+			informationSelection = selectionType
+			page.pageIndex = .selection
+		}) {
+			Image(image)
+				.resizable()
+				.frame(width: width, height: height)
+				.padding(15)
+		}
+		.position(x: posX, y: posY)
+	}
+}
+
+struct BackButtonView: View {
+	
+	@EnvironmentObject var page : ViewIndex
+	
+	var body: some View {
+		HStack (alignment: .top) {
+			Button (action: {
+				var tempPage : Page = page.previousPage
+				page.previousPage = .main
+				page.pageIndex = tempPage
+			}) {
+				Image(systemName: "chevron.left")
+				.resizable()
+				.frame(width: 20, height: 25)
+				.padding(15)
+			}
+			.padding(.leading)
+			Spacer()
+		}
+		.foregroundColor(.black)
+		//.padding()
+	}
+}
+
+
 struct MainIPhoneView_Previews: PreviewProvider {
     static var previews: some View {
         MainIPhoneView().environmentObject(ViewIndex())
     }
 }
+
+struct ButtonView_Previews: PreviewProvider {
+	static var previews: some View {
+		ButtonView(selectionType: .none, image: "", width: 0, height: 0, posX: 0, posY: 0).environmentObject(ViewIndex())
+	}
+}
+
+struct BackButtonView_Previews: PreviewProvider {
+	static var previews: some View {
+		BackButtonView().environmentObject(ViewIndex())
+	}
+}
+

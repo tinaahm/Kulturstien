@@ -7,8 +7,22 @@
 
 import Foundation
 
-enum Structure: String, Codable {
-	case mill, sawmill, dam, logBooms, none
+enum Structure: String, Codable/*, CustomStringConvertible*/ {
+	case mill = "Mølle"
+	case sawmill = "Sagmølle"
+	case dam = "Demning"
+	case logBooms = "Lenseanlegg"
+	case none = ""
+	
+	/*var description : String {
+		switch self {
+		case .mill: return "Mølle"
+		case .sawmill: return "Sagmølle"
+		case .dam: return "Demning"
+		case .logBooms: return "Lenseanlegg"
+		case .none: return ""
+		}
+	}*/
 }
 
 struct QuizQuestion: Codable {

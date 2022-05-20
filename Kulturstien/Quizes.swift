@@ -9,7 +9,7 @@ import Foundation
 
 struct Quizes {
 	var millQuiz : Quiz = Quiz(name: "Mølle Quiz", type: .mill)
-	var sawmillQuiz : Quiz  = Quiz(name: "Sag Mølle Quiz", type: .sawmill)
+	var sawmillQuiz : Quiz  = Quiz(name: "Sagmølle Quiz", type: .sawmill)
 	var damQuiz : Quiz = Quiz(name: "Demning Quiz", type: .dam)
 	var logBoomsQuiz : Quiz  = Quiz(name: "Lenseanlegg Quiz", type: .logBooms)
 }
@@ -43,3 +43,34 @@ func shuffleArray(questions : [QuizQuestion]) -> [[String]] {
 	
 	return array
 }
+
+import Foundation
+
+func sortQuizQuestionsByType(quizType: Structure) -> [QuizQuestion] {
+	
+	var sortedQuiz: [QuizQuestion] = []
+	
+	for question in quizQuestions {
+		if question.type == quizType {
+			sortedQuiz.append(question)
+		}
+	}
+	
+	return sortedQuiz
+}
+
+func getQuizByType(quizType: Structure) -> Quiz {
+	switch quizType {
+	case .mill:
+		return quizes.millQuiz
+	case .sawmill:
+		return quizes.sawmillQuiz
+	case .dam:
+		return quizes.damQuiz
+	case .logBooms:
+		return quizes.logBoomsQuiz
+	case .none:
+		return Quiz.init(name: "none", type: .none)
+	}
+}
+

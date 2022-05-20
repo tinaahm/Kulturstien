@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum Page {
-	case main, profile, menu, achievements, texts, quiz, quizEnd, information
+	case main, profile, menu, achievements, texts, quiz, selection, information
 }
 
 var quizSelection : Structure = .none
@@ -18,6 +18,7 @@ var quizes = Quizes()
 
 class ViewIndex: ObservableObject {
 	@Published var pageIndex : Page = .main
+	@Published var previousPage : Page = .main
 }
 
 struct NavigationHandlerView: View {
@@ -39,8 +40,8 @@ struct NavigationHandlerView: View {
 			MenuView()
 		case .quiz:
 			QuizView(quizType: quizSelection)
-		case .quizEnd:
-			QuizEndView(resultArray: [], title: "hey")
+		case .selection:
+			SelectionView(selectionType: informationSelection)
         case .information:
 			InformationView(type: informationSelection)
                 .transition(.backslide)
@@ -58,5 +59,6 @@ extension AnyTransition {
 	static var backslide: AnyTransition {
 		AnyTransition.asymmetric(
 			insertion: .move(edge: .trailing),
-			removal: .move(edge: .leading))}
+			removal: .move(edge: .leading))
+	}
 }

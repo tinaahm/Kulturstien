@@ -30,11 +30,14 @@ struct QuizView: View {
 	
     var body: some View {
 		
-		var numberOfQuestions = quiz.questions.count
-		var correctAnswer: String = quiz.questions[questionIndex].correctOption
-		var answers: [String] = quiz.shuffledAnswers[questionIndex]
+		let numberOfQuestions = quiz.questions.count
+		let correctAnswer: String = quiz.questions[questionIndex].correctOption
+		let answers: [String] = quiz.shuffledAnswers[questionIndex]
 		
 		VStack {
+			
+			BackButtonView()
+			
 			if !finished {
 			HStack {
 				Text(quiz.name)
@@ -152,7 +155,7 @@ struct QuizEndView: View {
 	
 	var body: some View {
 		
-		var numberOfCorrectAnswers : Int = getNumberOfCorrectAnswers(resultArray: resultArray)
+		let numberOfCorrectAnswers : Int = getNumberOfCorrectAnswers(resultArray: resultArray)
 		
 		VStack (spacing: 20) {
 			HStack (alignment: .top) {
