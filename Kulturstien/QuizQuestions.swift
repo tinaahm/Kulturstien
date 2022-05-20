@@ -7,7 +7,7 @@
 
 import Foundation
 
-func sortQuizQuestionsByType(quizType: QuizType) -> [QuizQuestion] {
+func sortQuizQuestionsByType(quizType: Structure) -> [QuizQuestion] {
 	
 	var sortedQuiz: [QuizQuestion] = []
 	
@@ -20,7 +20,7 @@ func sortQuizQuestionsByType(quizType: QuizType) -> [QuizQuestion] {
 	return sortedQuiz
 }
 
-func getQuizByType(quizType: QuizType) -> Quiz {
+func getQuizByType(quizType: Structure) -> Quiz {
 	switch quizType {
 	case .mill:
 		return quizes.millQuiz

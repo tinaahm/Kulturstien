@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E17588E2836832B00E8F9C4 /* SagbrukView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E17588D2836832B00E8F9C4 /* SagbrukView.swift */; };
-		2669457B283252E200B25AF7 /* LoadQuizQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669457A283252E200B25AF7 /* LoadQuizQuestions.swift */; };
+		0E17588E2836832B00E8F9C4 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E17588D2836832B00E8F9C4 /* InformationView.swift */; };
 		2669457D283255B700B25AF7 /* QuizQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2669457C283255B700B25AF7 /* QuizQuestions.json */; };
 		2669458028325DBA00B25AF7 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669457F28325DBA00B25AF7 /* QuizView.swift */; };
 		26694582283260AF00B25AF7 /* QuizQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26694581283260AF00B25AF7 /* QuizQuestions.swift */; };
@@ -27,9 +26,13 @@
 		26D72FA6282E5A7500BC3A8F /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FA5282E5A7500BC3A8F /* MenuView.swift */; };
 		26D72FAA282E65C800BC3A8F /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FA9282E65C800BC3A8F /* AchievementsView.swift */; };
 		26D72FAC282E65DE00BC3A8F /* TextsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FAB282E65DE00BC3A8F /* TextsView.swift */; };
-		26D72FB3282E722900BC3A8F /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FB2282E722900BC3A8F /* TextView.swift */; };
 		26D72FB5282E7ED800BC3A8F /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FB4282E7ED800BC3A8F /* QuizQuestion.swift */; };
 		26D72FB7282E870D00BC3A8F /* QuizQuestions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26D72FB6282E870D00BC3A8F /* QuizQuestions.txt */; };
+		26F93BBD2837AC9B005F5F9E /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F93BBC2837AC9B005F5F9E /* Information.swift */; };
+		26F93BBF2837AD36005F5F9E /* Text.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26F93BBE2837AD36005F5F9E /* Text.txt */; };
+		26F93BC12837AEF7005F5F9E /* InformationBAD.json in Resources */ = {isa = PBXBuildFile; fileRef = 26F93BC02837AEF7005F5F9E /* InformationBAD.json */; };
+		26F93BC52837AF98005F5F9E /* LoadJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F93BC42837AF98005F5F9E /* LoadJSON.swift */; };
+		26F93BC72837BF29005F5F9E /* Information.json in Resources */ = {isa = PBXBuildFile; fileRef = 26F93BC62837BF29005F5F9E /* Information.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E17588D2836832B00E8F9C4 /* SagbrukView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SagbrukView.swift; sourceTree = "<group>"; };
-		2669457A283252E200B25AF7 /* LoadQuizQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadQuizQuestions.swift; sourceTree = "<group>"; };
+		0E17588D2836832B00E8F9C4 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		2669457C283255B700B25AF7 /* QuizQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuizQuestions.json; sourceTree = "<group>"; };
 		2669457F28325DBA00B25AF7 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		26694581283260AF00B25AF7 /* QuizQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestions.swift; sourceTree = "<group>"; };
@@ -74,9 +76,13 @@
 		26D72FA5282E5A7500BC3A8F /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		26D72FA9282E65C800BC3A8F /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		26D72FAB282E65DE00BC3A8F /* TextsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextsView.swift; sourceTree = "<group>"; };
-		26D72FB2282E722900BC3A8F /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		26D72FB4282E7ED800BC3A8F /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
 		26D72FB6282E870D00BC3A8F /* QuizQuestions.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = QuizQuestions.txt; sourceTree = "<group>"; };
+		26F93BBC2837AC9B005F5F9E /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		26F93BBE2837AD36005F5F9E /* Text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Text.txt; sourceTree = "<group>"; };
+		26F93BC02837AEF7005F5F9E /* InformationBAD.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = InformationBAD.json; sourceTree = "<group>"; };
+		26F93BC42837AF98005F5F9E /* LoadJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJSON.swift; sourceTree = "<group>"; };
+		26F93BC62837BF29005F5F9E /* Information.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Information.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +113,11 @@
 		0E17588F283683D900E8F9C4 /* InfoViews */ = {
 			isa = PBXGroup;
 			children = (
-				0E17588D2836832B00E8F9C4 /* SagbrukView.swift */,
+				26F93BC62837BF29005F5F9E /* Information.json */,
+				26F93BC02837AEF7005F5F9E /* InformationBAD.json */,
+				0E17588D2836832B00E8F9C4 /* InformationView.swift */,
+				26F93BBC2837AC9B005F5F9E /* Information.swift */,
+				26F93BBE2837AD36005F5F9E /* Text.txt */,
 			);
 			name = InfoViews;
 			sourceTree = "<group>";
@@ -118,7 +128,6 @@
 				26D72FB4282E7ED800BC3A8F /* QuizQuestion.swift */,
 				2669457C283255B700B25AF7 /* QuizQuestions.json */,
 				26D72FB6282E870D00BC3A8F /* QuizQuestions.txt */,
-				2669457A283252E200B25AF7 /* LoadQuizQuestions.swift */,
 				2669457F28325DBA00B25AF7 /* QuizView.swift */,
 				26694581283260AF00B25AF7 /* QuizQuestions.swift */,
 				266945832832655800B25AF7 /* Quizes.swift */,
@@ -158,7 +167,7 @@
 				267A774B2829558200E0EB7A /* Preview Assets.xcassets */,
 				26D72FB1282E719000BC3A8F /* Fonts */,
 				267A774A2829558200E0EB7A /* Preview Content */,
-				26D72FB2282E722900BC3A8F /* TextView.swift */,
+				26F93BC42837AF98005F5F9E /* LoadJSON.swift */,
 			);
 			path = Kulturstien;
 			sourceTree = "<group>";
@@ -325,7 +334,10 @@
 				267A774C2829558200E0EB7A /* Preview Assets.xcassets in Resources */,
 				267A7782282AF85200E0EB7A /* AmericanTypewriter.ttc in Resources */,
 				26D72FB7282E870D00BC3A8F /* QuizQuestions.txt in Resources */,
+				26F93BBF2837AD36005F5F9E /* Text.txt in Resources */,
 				267A77492829558200E0EB7A /* Assets.xcassets in Resources */,
+				26F93BC72837BF29005F5F9E /* Information.json in Resources */,
+				26F93BC12837AEF7005F5F9E /* InformationBAD.json in Resources */,
 				267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,14 +366,14 @@
 				26D72FAC282E65DE00BC3A8F /* TextsView.swift in Sources */,
 				26D72FB5282E7ED800BC3A8F /* QuizQuestion.swift in Sources */,
 				266945842832655800B25AF7 /* Quizes.swift in Sources */,
+				26F93BC52837AF98005F5F9E /* LoadJSON.swift in Sources */,
 				2669458028325DBA00B25AF7 /* QuizView.swift in Sources */,
-				26D72FB3282E722900BC3A8F /* TextView.swift in Sources */,
 				26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */,
 				26D72FA6282E5A7500BC3A8F /* MenuView.swift in Sources */,
 				267A77452829558100E0EB7A /* KulturstienApp.swift in Sources */,
-				0E17588E2836832B00E8F9C4 /* SagbrukView.swift in Sources */,
-				2669457B283252E200B25AF7 /* LoadQuizQuestions.swift in Sources */,
+				0E17588E2836832B00E8F9C4 /* InformationView.swift in Sources */,
 				26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */,
+				26F93BBD2837AC9B005F5F9E /* Information.swift in Sources */,
 				26D72FAA282E65C800BC3A8F /* AchievementsView.swift in Sources */,
 				26694582283260AF00B25AF7 /* QuizQuestions.swift in Sources */,
 				26D72FA4282E573200BC3A8F /* NavigationHandlerView.swift in Sources */,

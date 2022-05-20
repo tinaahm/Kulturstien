@@ -16,12 +16,12 @@ struct Quizes {
 
 struct Quiz {
 	let name: String
-	let type : QuizType
+	let type : Structure
 	let questions : [QuizQuestion]
 	var questionAnswers : [Bool]
 	var shuffledAnswers : [[String]]
 	
-	init(name: String, type: QuizType) {
+	init(name: String, type: Structure) {
 		self.name = name
 		self.type = type
 		self.questions = sortQuizQuestionsByType(quizType: self.type)

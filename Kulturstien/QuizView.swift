@@ -14,7 +14,7 @@ struct QuizView: View {
 	
 	@EnvironmentObject var page : ViewIndex
 	
-	var quizType: QuizType
+	var quizType: Structure
 	@State var questionIndex = 0
 	@State var answered : Bool = false
 	@State var quiz: Quiz
@@ -22,7 +22,7 @@ struct QuizView: View {
 	@State var guessedAnswer : String? = nil
 	@State var finished : Bool = false
 	
-	init(quizType: QuizType) {
+	init(quizType: Structure) {
 		self.quizType = quizType
 		self.quiz = getQuizByType(quizType: quizType)
 	}

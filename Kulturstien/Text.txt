@@ -1,0 +1,18 @@
+[
+	{
+		"title": "title"
+		"images": ["cloud.snow.fill", "hurricane", "suit.club.fill"],
+		"text": ["Ford", "BMW", "Fiat"]
+	},
+	{
+		"title": "title"
+		"images": ["cloud.snow.fill", "hurricane", "suit.club.fill"],
+		"text": ["Ford", "BMW", "Fiat"]
+	},
+	{
+		"title": "title"
+		"images": ["cloud.snow.fill", "hurricane", "suit.club.fill"],
+		"text": ["Ford", "BMW", "Fiat"]
+	}
+	
+]

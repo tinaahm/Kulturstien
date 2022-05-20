@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum QuizType: String, Codable {
+enum Structure: String, Codable {
 	case mill, sawmill, dam, logBooms, none
 }
 
 struct QuizQuestion: Codable {
-	var type: QuizType
+	var type: Structure
 	var question: String
 	var correctOption: String
 	var wrongOptionOne: String

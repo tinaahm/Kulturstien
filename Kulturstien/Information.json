@@ -1,0 +1,42 @@
+[
+   {
+	   "type": "sawmill",
+	  "title": "Sagbruk",
+	  "image1": "Sawmill",
+	  "image2": "Sawmill",
+	  "image3": "Sawmill",
+	  "text1": "Ifølge bygdehistorien til Rælingen skal det på det meste ha vært 7 sagbruk i drift langs Byåa. I dag er det fortsatt mulig å se spor etter 4 av sagbrukene ved ruiner som står igjen. Sagbruksvirksomheten i Byåa tok trolig slutt om kring 1860 eller noe senere.",
+	  "text2": "Norge har eksportert trelast helt siden middelalderen, men på 1500-tallet skjedde det noe som skulle gjøre denne næringen mye større og lønnsom enn den var. Oppgangssagen ble nemlig oppfunnet og benyttet i mange elver og fosser rundt om i Norge.",
+	  "text3": "Norge har eksportert trelast helt siden middelalderen, men på 1500-tallet skjedde det noe som skulle gjøre denne næringen mye større og lønnsom enn den var. Oppgangssagen ble nemlig oppfunnet og benyttet i mange elver og fosser rundt om i Norge."
+   },
+   {
+	   "type": "mill",
+	   "title":"title",
+	   "image1": "cloud.snow.fill",
+	   "image2": "cloud.snow.fill",
+	   "image3": "cloud.snow.fill",
+	   "text1": "Ford",
+	   "text2": "BMW",
+	   "text3": "Fiat"
+   },
+   {
+	   "type": "mill",
+	   "title":"title",
+		"image1": "cloud.snow.fill",
+		"image2": "cloud.snow.fill",
+		"image3": "cloud.snow.fill",
+		"text1": "Ford",
+		"text2": "Ford",
+		"text3": "Ford"
+   },
+   {
+	   "type": "mill",
+	 "title":"title",
+	 "image1": "cloud.snow.fill",
+	 "image2": "cloud.snow.fill",
+	 "image3": "cloud.snow.fill",
+	 "text1": "Ford",
+	 "text2": "BMW",
+	 "text3": "Fiat"
+	}
+]

@@ -1,12 +1,13 @@
 //
-//  LoadQuizQuestions.swift
+//  LoadJSON.swift
 //  Kulturstien
 //
-//  Created by Tina on 16/05/2022.
+//  Created by Tina on 20/05/2022.
 //
 
 import Foundation
 
+var texts: [Information] = load("Information.json")
 var quizQuestions: [QuizQuestion] = load("QuizQuestions.json")
 
 func load<T: Decodable>(_ filename: String) -> T {

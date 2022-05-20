@@ -93,14 +93,13 @@ struct MainIPhoneView: View {
 						.clipShape(Circle())
 					}
                     Button (action: {
-                        page.pageIndex = .sagtuft
+						informationSelection = .sawmill
+                        page.pageIndex = .information
                     }) {
                         Image("SawmillButton")
                             .resizable()
                             .frame(width: 60, height: 60)
                             .padding(15)
-                        
-                        
                     }
 					
 				}
