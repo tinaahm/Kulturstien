@@ -13,10 +13,7 @@ struct MainIPhoneView: View {
 	@State private var showDarkMap = false
 	@State var timeOfDayIndex = 0
 	
-	/*var moon : String = "moon.stars.fill"
-	var sun : String = "sun.max"*/
-	
-	var timeOfDayImages : [[String]] = [["sun.max", "DayTimeMap"], ["moon.stars.fill", "NightTimeMap"]]
+	var timeOfDayImages : [[String]] = [["moon.stars.fill", "DayTimeMap"], ["sun.max.fill", "NightTimeMap"]]
 	
 	
     var body: some View {
@@ -24,11 +21,12 @@ struct MainIPhoneView: View {
 			VStack {
 				Group {
 					HStack {
+						//Spacer(minLength: 0)
 						Image(systemName: "person")
 						.resizable()
 						.frame(width: 30, height: 30)
 						.padding(15)
-						.padding(.leading, 30)
+						//.padding(.leading, 30)
 				
 						Spacer(minLength: 0)
 						
@@ -42,10 +40,12 @@ struct MainIPhoneView: View {
 							.frame(width: 25, height: 25)
 							.padding(15)
 						}
-						.padding(.trailing, 30)
+						//.padding(.trailing, 30)
+						
+						//Spacer(minLength: 0)
 					}
 					.foregroundColor(.black)
-					.frame(width: 425, height: 60)
+					//.frame(width: 425, height: 60)
 					//.padding()
 				}
 				.padding()
@@ -114,7 +114,8 @@ struct MainIPhoneView: View {
 							.foregroundColor(.black)
 						.clipShape(Circle())
 					}
-					.padding(.trailing)
+					//.padding(.trailing)
+					.padding()
 				}
 			}
 		}

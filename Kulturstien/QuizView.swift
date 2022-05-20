@@ -8,6 +8,7 @@
 import SwiftUI
 
 var shuffled: Bool = false
+var answeredCorrectly = false
 
 struct QuizView: View {
 	
@@ -16,14 +17,14 @@ struct QuizView: View {
 	var quizType: QuizType
 	@State var questionIndex = 0
 	@State var answered : Bool = false
-	
-	//@State var answers: [String] = [String]()
 	@State var quiz: Quiz
+	@State var guessedIndex : Int? = nil
+	@State var guessedAnswer : String? = nil
+	@State var finished : Bool = false
 	
 	init(quizType: QuizType) {
 		self.quizType = quizType
 		self.quiz = getQuizByType(quizType: quizType)
-		//self.answers = quiz.shuffledAnswers[questionIndex]
 	}
 	
 	
@@ -34,6 +35,7 @@ struct QuizView: View {
 		var answers: [String] = quiz.shuffledAnswers[questionIndex]
 		
 		VStack {
+			if !finished {
 			HStack {
 				Text(quiz.name)
 					.font(.title)
@@ -48,16 +50,18 @@ struct QuizView: View {
 			
 			Group {
 				ForEach(0 ..< numberOfQuestions) {
-					value in
+					index in
 					Button (action: {
 						self.answered = true
+						self.guessedAnswer = answers[index]
+						self.guessedIndex = index
 					}) {
-						Text(answers[value])
+						Text(answers[index])
 							.foregroundColor(.black)
 							.padding()
 							.overlay(
 								RoundedRectangle(cornerRadius: 20)
-									.stroke(showAnswer(answered: answered, guessedAnswer: answers[value], correctAnswer: correctAnswer), lineWidth: 3)
+									.stroke(showAnswer(answered: answered, guessedAnswer: guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: guessedIndex, quiz: quiz, quizIndex: questionIndex), lineWidth: 3)
 							)
 					}
 					//.padding(.vertical, 25)
@@ -72,8 +76,12 @@ struct QuizView: View {
 					self.answered = false
 					if self.questionIndex != (numberOfQuestions - 1) {
 						self.questionIndex += 1
+						self.guessedIndex = nil
+						self.guessedAnswer = nil
+						quiz.questionAnswers[questionIndex] = answeredCorrectly
+						
 					} else {
-						page.pageIndex = .quizEnd
+						self.finished = true
 					}
 				}) {
 					Image(systemName: "chevron.right")
@@ -87,6 +95,9 @@ struct QuizView: View {
 			}
 			
 			Spacer()
+			} else {
+				QuizEndView(resultArray: quiz.questionAnswers, title: quiz.name)
+			}
 			
 		}
 		
@@ -94,32 +105,35 @@ struct QuizView: View {
     }
 
 }
+/*
+func getRightAnswerIndex(answerArray: [String], correctAnswer: String) -> Int {
+	var i : Int = 0
+	for answer in answerArray {
+		if answer == correctAnswer {
+			break
+		}
+		i += 1
+	}
+	return i
+}
+*/
 
-
-func showAnswer(answered: Bool, guessedAnswer: String, correctAnswer: String) -> Color {
+func showAnswer(answered: Bool, guessedAnswer: String?, correctAnswer: String, currentIndex: Int, guessedIndex: Int?, quiz: Quiz, quizIndex: Int) -> Color {
 	if !answered {
 		return Color.gray
 	} else {
+		
+		if guessedIndex != currentIndex {
+			return Color.gray
+		}
+		
 		if guessedAnswer == correctAnswer {
+			answeredCorrectly = true
 			return Color.green
 		} else {
+			answeredCorrectly = false
 			return Color.red
 		}
-	}
-}
-
-struct QuizEndView: View {
-	
-	@EnvironmentObject var page : ViewIndex
-	
-	var body: some View {
-		Text("Done!")
-	}
-}
-
-struct QuizEndViewPreviews: PreviewProvider {
-	static var previews: some View {
-		QuizEndView().environmentObject(ViewIndex())
 	}
 }
 
@@ -129,3 +143,71 @@ struct QuizView_Previews: PreviewProvider {
     }
 }
 
+struct QuizEndView: View {
+	
+	@EnvironmentObject var page : ViewIndex
+	
+	var resultArray: [Bool]
+	var title: String
+	
+	var body: some View {
+		
+		var numberOfCorrectAnswers : Int = getNumberOfCorrectAnswers(resultArray: resultArray)
+		
+		VStack (spacing: 20) {
+			HStack (alignment: .top) {
+				Button (action: {
+					
+				}) {
+					Image(systemName: "chevron.left")
+					.resizable()
+					.frame(width: 20, height: 25)
+					.padding(15)
+				}
+				.padding(.leading)
+				Spacer()
+			}
+			.foregroundColor(.black)
+			.padding()
+			//Spacer()
+			VStack (spacing: 30) {
+				Image(systemName: resultImageToDisplay(numberOfCorrectAnswers: numberOfCorrectAnswers, numberOfQuestions: resultArray.count))
+					.resizable()
+					.frame(width: 120, height: 100)
+					.padding(15)
+				VStack {
+					Text("Ditt resultat")
+						.font(.title)
+					Text(String(numberOfCorrectAnswers) + "/" + String(resultArray.count))
+						.font(.title2)
+				}
+				Spacer()
+			}
+			//Spacer()
+		}
+	}
+}
+
+func getNumberOfCorrectAnswers(resultArray: [Bool]) -> Int {
+	var i : Int = 0
+	for result in resultArray {
+		if result {
+			i += 1
+		}
+	}
+	return i
+}
+
+func resultImageToDisplay(numberOfCorrectAnswers: Int, numberOfQuestions: Int) -> String {
+	if numberOfCorrectAnswers == numberOfQuestions {
+		return "crown.fill"
+	} else {
+		return "trash"
+	}
+}
+
+struct QuizEndViewPreviews: PreviewProvider {
+	static var previews: some View {
+		QuizEndView(resultArray: [], title: "Bye").environmentObject(ViewIndex())
+	}
+}

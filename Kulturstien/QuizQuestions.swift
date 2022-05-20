@@ -7,11 +7,6 @@
 
 import Foundation
 
-var millQuizQuestions: [QuizQuestion] = sortQuizQuestionsByType(quizType: .mill)
-var sawmillQuizQuestions: [QuizQuestion] = sortQuizQuestionsByType(quizType: .sawmill)
-var damQuizQuestions: [QuizQuestion] = sortQuizQuestionsByType(quizType: .dam)
-var logBoomQuizQuestions: [QuizQuestion] = sortQuizQuestionsByType(quizType: .logBooms)
-
 func sortQuizQuestionsByType(quizType: QuizType) -> [QuizQuestion] {
 	
 	var sortedQuiz: [QuizQuestion] = []

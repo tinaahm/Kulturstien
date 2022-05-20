@@ -39,7 +39,7 @@ struct NavigationHandlerView: View {
 		case .quiz:
 			QuizView(quizType: quizSelection)
 		case .quizEnd:
-			QuizEndView()
+			QuizEndView(resultArray: [], title: "hey")
 		}
     }
 }
