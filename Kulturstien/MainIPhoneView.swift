@@ -147,72 +147,8 @@ struct MainIPhoneView: View {
 
 }
 
-struct ButtonView: View {
-	
-	@EnvironmentObject var page : ViewIndex
-	
-	var selectionType : Structure
-	var image: String
-	var width: CGFloat
-	var height: CGFloat
-	var posX: CGFloat
-	var posY: CGFloat
-	
-	var body: some View {
-		Button (action: {
-			page.previousPage = page.pageIndex
-			informationSelection = selectionType
-			page.pageIndex = .selection
-		}) {
-			Image(image)
-				.resizable()
-				.frame(width: width, height: height)
-				.padding(15)
-		}
-		.position(x: posX, y: posY)
-	}
-}
-
-struct BackButtonView: View {
-	
-	@EnvironmentObject var page : ViewIndex
-	
-	var body: some View {
-		HStack (alignment: .top) {
-			Button (action: {
-				var tempPage : Page = page.previousPage
-				page.previousPage = .main
-				page.pageIndex = tempPage
-			}) {
-				Image(systemName: "chevron.left")
-				.resizable()
-				.frame(width: 20, height: 25)
-				.padding(15)
-			}
-			.padding(.leading)
-			Spacer()
-		}
-		.foregroundColor(.black)
-		//.padding()
-	}
-}
-
-
 struct MainIPhoneView_Previews: PreviewProvider {
     static var previews: some View {
         MainIPhoneView().environmentObject(ViewIndex())
     }
 }
-
-struct ButtonView_Previews: PreviewProvider {
-	static var previews: some View {
-		ButtonView(selectionType: .none, image: "", width: 0, height: 0, posX: 0, posY: 0).environmentObject(ViewIndex())
-	}
-}
-
-struct BackButtonView_Previews: PreviewProvider {
-	static var previews: some View {
-		BackButtonView().environmentObject(ViewIndex())
-	}
-}
-

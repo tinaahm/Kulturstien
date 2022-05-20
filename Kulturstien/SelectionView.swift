@@ -23,6 +23,7 @@ struct SelectionView: View {
 			BackButtonView()
 			
 			Image(imageTitle)
+			
 			Button (action: {
 				page.previousPage = page.pageIndex
 				page.pageIndex = .information
