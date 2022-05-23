@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum Page {
-	case main, profile, menu, achievements, texts, quiz, selection, information
+	case main, profile, menu, achievements, texts, quiz, selection, information, cardGame
 }
 
 var quizSelection : Structure = .none
@@ -44,6 +44,9 @@ struct NavigationHandlerView: View {
 			SelectionView(selectionType: informationSelection)
         case .information:
 			InformationView(type: informationSelection)
+                .transition(.backslide)
+        case .cardGame:
+            ThemeSelectionView(tcManager: ThemeCollectionManager())
                 .transition(.backslide)
 		}
     }

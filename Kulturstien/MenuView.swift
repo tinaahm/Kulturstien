@@ -12,7 +12,19 @@ struct MenuView: View {
 	@EnvironmentObject var page : ViewIndex
 	
     var body: some View {
-        Text("Meny! :)")
+        
+        Button (action: {
+            page.pageIndex = .cardGame
+        }) {
+            Text("Spill kortspill")
+                .foregroundColor(.black)
+                .padding()
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(.gray, lineWidth: 3)
+                )
+        }
+     
     }
 }
 
