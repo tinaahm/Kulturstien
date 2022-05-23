@@ -14,7 +14,7 @@ struct MenuView: View {
     var body: some View {
         
         Button (action: {
-            //page.pageIndex = .cardGame
+            page.pageIndex = .cardGame
         }) {
             Text("Spill kortspill")
                 .foregroundColor(.black)
