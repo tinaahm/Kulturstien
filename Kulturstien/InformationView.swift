@@ -11,17 +11,16 @@ struct InformationView: View {
     
     @EnvironmentObject var page : ViewIndex
 	@State var type: Structure
-	@State var information: Information
+	@State var information: [Paragraph]
+	@State var title: String
 	
 	init(type: Structure) {
 		self.type = type
 		self.information = getInformationByType(type: type)
+		self.title = type.rawValue.capitalized
 	}
     
     var body: some View {
-		
-		let images : [String] = getImages(information: information)
-		let texts : [String] = getTexts(information: information)
 		
         ScrollView {
             VStack {
@@ -46,21 +45,21 @@ struct InformationView: View {
 				BackButtonView() //TODO: title inline with back button?
 				
 				VStack(alignment: .leading) {
-					Text(information.title)
+					Text(self.title)
 						.font(.title)
 				}
 				.padding(.bottom, 30)
 				
-				ForEach(0 ..< images.count) {
+				ForEach(0 ..< self.information.count) {
 					index in
 					
 					
-					Image(information.image1)
+					Image(self.information[index].imageTitle)
 						.resizable()
 						.scaledToFit()
 						.aspectRatio(contentMode: .fill)
 						.frame(width: 350, height: 250)
-						.shadow(radius: 7)
+						//.shadow(radius: 7)
 					
 						VStack(alignment: .leading) {
 							
@@ -75,23 +74,19 @@ struct InformationView: View {
 										.shadow(radius: 7, x: -2, y: 5)
 
 									VStack {
-										Text(texts[index])
+										Text(self.information[index].text)
 											.font(.body)
 											.foregroundColor(.black)
-
-										
 									}
 									.padding(20)
 									.multilineTextAlignment(.center)
 								}
-								.frame(width: 350, height: 250)
+								.frame(width: 350)
 								.padding(20)
 							}
 						}
 						.padding()
 							Spacer()
-					
-					
 					}
 				}
         }
@@ -99,33 +94,20 @@ struct InformationView: View {
     }
 }
 
-func getImages(information: Information) -> [String] {
-	var images = [String]()
+func getInformationByType(type: Structure) -> [Paragraph] {
 	
-	images.append(information.image1)
-	images.append(information.image2)
-	images.append(information.image3)
-	
-	return images
-}
-
-func getTexts(information: Information) -> [String] {
-	var texts = [String]()
-	
-	texts.append(information.text1)
-	texts.append(information.text2)
-	texts.append(information.text3)
-	
-	return texts
-}
-
-func getInformationByType(type: Structure) -> Information {
-	for information in texts {
-		if information.type == type {
-			return information
-		}
+	switch type {
+	case .mill:
+		return millInformationTexts
+	case .sawmill:
+		return sawmillInformationTexts
+	case .dam:
+		return damInformationTexts
+	case .logBooms:
+		return logBoomsInformationTexts
+	case .none:
+		return []
 	}
-	return Information.init(type: .none, title: "", image1: "", image2: "", image3: "", text1: "", text2: "", text3: "")
 }
 
 struct InformationView_Previews: PreviewProvider {

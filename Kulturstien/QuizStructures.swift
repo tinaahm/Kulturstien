@@ -1,11 +1,19 @@
 //
-//  Quizes.swift
+//  QuizQuestion.swift
 //  Kulturstien
 //
-//  Created by Tina on 16/05/2022.
+//  Created by Tina on 13/05/2022.
 //
 
 import Foundation
+
+enum Structure: String, Codable {
+	case mill = "kvernhus"
+	case sawmill = "sagbruk"
+	case dam = "demning"
+	case logBooms = "lenseanlegg"
+	case none = ""
+}
 
 struct Quizes {
 	var millQuiz : Quiz = Quiz(name: "Mølle Quiz", type: .mill)
@@ -31,6 +39,24 @@ struct Quiz {
 	
 }
 
+struct QuizQuestion: Codable {
+	var type: Structure
+	var question: String
+	var correctOption: String
+	var wrongOptionOne: String
+	var wrongOptionTwo: String
+	
+	/*init(type: QuizType, question: String, correctOption: String, wrongOptionOne: String,
+		 wrongOptionTwo: String) {
+		self.type = type
+		self.question = question
+		self.correctOption = correctOption
+		self.wrongOptionOne = wrongOptionOne
+		self.wrongOptionTwo = wrongOptionTwo
+	}*/
+	
+}
+
 func shuffleArray(questions : [QuizQuestion]) -> [[String]] {
 	var array = [[String]]()
 	
@@ -43,8 +69,6 @@ func shuffleArray(questions : [QuizQuestion]) -> [[String]] {
 	
 	return array
 }
-
-import Foundation
 
 func sortQuizQuestionsByType(quizType: Structure) -> [QuizQuestion] {
 	
@@ -73,4 +97,3 @@ func getQuizByType(quizType: Structure) -> Quiz {
 		return Quiz.init(name: "none", type: .none)
 	}
 }
-
