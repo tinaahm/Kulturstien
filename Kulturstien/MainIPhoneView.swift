@@ -101,15 +101,15 @@ struct MainIPhoneView: View {
                             .frame(width: 60, height: 60)
                             .padding(15)
                     }*/
-					ButtonView(selectionType: .sawmill, image: "SawmillButton", width: 60, height: 60, posX: 190, posY: 120)
-					ButtonView(selectionType: .sawmill, image: "SawmillButton", width: 60, height: 60, posX: 70, posY: 280)
-					ButtonView(selectionType: .dam, image: "DamButton", width: 60, height: 60, posX: 110, posY: 520)
+					ButtonView(selectionType: .sawmill, image: "SawmillButton", width: 60, height: 60, posX: 200, posY: 230)
+					ButtonView(selectionType: .sawmill, image: "SawmillButton", width: 60, height: 60, posX: 70, posY: 370)
+					ButtonView(selectionType: .dam, image: "DamButton", width: 60, height: 60, posX: 110, posY: 620)
 					
-					ButtonView(selectionType: .mill, image: "MillIcon", width: 122, height: 79, posX: 310, posY: 555)
-					ButtonView(selectionType: .mill, image: "Button", width: 32, height: 26, posX: 370, posY: 620)
+					ButtonView(selectionType: .mill, image: "MillIcon", width: 122, height: 79, posX: 350, posY: 660)
+					ButtonView(selectionType: .mill, image: "KirstiButton", width: 45, height: 70, posX: 65, posY: 65)
 					
-					ButtonView(selectionType: .none, image: "Button", width: 32, height: 26, posX: 250, posY: 650)
-					ButtonView(selectionType: .none, image: "Button", width: 32, height: 26, posX: 140, posY: 630)
+					ButtonView(selectionType: .none, image: "TrondButton", width: 45, height: 90, posX: 250, posY: 490)
+					ButtonView(selectionType: .none, image: "RagnhildButton", width: 45, height: 90, posX: 145, posY: 695)
 				}
 				Spacer()
 				HStack {
