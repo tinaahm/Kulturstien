@@ -48,7 +48,7 @@ struct QuizView: View {
 				.font(.title3)
 				.padding(.bottom)
 			Text(quiz.questions[questionIndex].question)
-				.font(.title2)
+				.font(.title3)
 				.padding(.bottom)
 			
 			Group {
@@ -61,10 +61,15 @@ struct QuizView: View {
 					}) {
 						Text(answers[index])
 							.foregroundColor(.black)
-							.padding()
+							.padding(25)
+                            .frame(minWidth: 0, maxWidth: 400)
+                            .background(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+                                            .shadow(color: .gray, radius: 2, x: 0, y: 2))
 							.overlay(
-								RoundedRectangle(cornerRadius: 20)
-									.stroke(showAnswer(answered: answered, guessedAnswer: guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: guessedIndex, quiz: quiz, quizIndex: questionIndex), lineWidth: 3)
+								RoundedRectangle(cornerRadius: 15)
+									.stroke(showAnswer(answered: answered, guessedAnswer: guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: guessedIndex, quiz: quiz, quizIndex: questionIndex), lineWidth: 0)
 							)
 					}
 					//.padding(.vertical, 25)
