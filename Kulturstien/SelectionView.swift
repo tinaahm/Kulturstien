@@ -30,11 +30,13 @@ struct SelectionView: View {
 			}) {
 				Text("Lær om " + structureName)
 					.foregroundColor(.black)
-					.padding()
-					.overlay(
-						RoundedRectangle(cornerRadius: 20)
-							.stroke(.gray, lineWidth: 3)
-					)
+					.padding(20)
+                    .frame(minWidth: 0, maxWidth: 400)
+                    .background(
+                                RoundedRectangle(cornerRadius: 15)
+                                    .fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+                                    .shadow(color: .gray, radius: 2, x: 0, y: 2))
+                
 			}
 			Button (action: {
 				page.previousPage = page.pageIndex
@@ -43,11 +45,12 @@ struct SelectionView: View {
 			}) {
 				Text("Ta quiz om " + structureName)
 					.foregroundColor(.black)
-					.padding()
-					.overlay(
-						RoundedRectangle(cornerRadius: 20)
-							.stroke(.gray, lineWidth: 3)
-					)
+					.padding(20)
+                    .frame(minWidth: 0, maxWidth: 400)
+                    .background(
+                            RoundedRectangle(cornerRadius: 15)
+                                .fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+                                .shadow(color: .gray, radius: 2, x: 0, y: 2))
 			}
 			if self.selectionType == .mill {
 				Button (action: {
@@ -55,11 +58,12 @@ struct SelectionView: View {
 				}) {
 					Text("Se i AR")
 						.foregroundColor(.black)
-						.padding()
-						.overlay(
-							RoundedRectangle(cornerRadius: 20)
-								.stroke(.gray, lineWidth: 3)
-						)
+						.padding(20)
+                        .frame(minWidth: 0, maxWidth: 400)
+                        .background(
+                                RoundedRectangle(cornerRadius: 15)
+                                    .fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+                                    .shadow(color: .gray, radius: 2, x: 0, y: 2))
 				}
 			}
 			Spacer()

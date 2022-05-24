@@ -28,6 +28,8 @@ struct ButtonView: View {
 				.resizable()
 				.frame(width: width, height: height)
 				.padding(15)
+                .padding(.bottom, 100)
+
 		}
 		.position(x: posX, y: posY)
 	}
