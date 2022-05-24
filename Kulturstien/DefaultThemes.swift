@@ -17,9 +17,9 @@ import SwiftUI
 struct DefaultThemes {
 
     static let theme0 = ThemeCollection.Theme (
-        name: "Fruits in Basket",
+        name: "embla er en tann",
         accentColor: UIColor(Color.pink),
-        emojiSet: ["🍎", "🍊", "🍋", "🍌", "🍉", "🍇"]
+        emojiSet: ["🦷", "🍊", "🍋", "🍌", "🍉", "🍇"]
     )
     
     static let theme1 = ThemeCollection.Theme (
