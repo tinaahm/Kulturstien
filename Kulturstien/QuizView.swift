@@ -66,7 +66,7 @@ struct QuizView: View {
                             .background(
                                         RoundedRectangle(cornerRadius: 15)
                                             .fill(Color(red: 0.984, green: 0.984, blue: 0.984))
-                                            .shadow(color: .gray, radius: 2, x: 0, y: 2))
+                                            .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.82), radius: 2, x: 0, y: 2))
 							.overlay(
 								RoundedRectangle(cornerRadius: 15)
 									.stroke(showAnswer(answered: answered, guessedAnswer: guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: guessedIndex, quiz: quiz, quizIndex: questionIndex), lineWidth: 0)
