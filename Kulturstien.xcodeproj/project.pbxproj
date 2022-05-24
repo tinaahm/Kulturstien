@@ -47,9 +47,9 @@
 		26D72FB5282E7ED800BC3A8F /* QuizStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FB4282E7ED800BC3A8F /* QuizStructures.swift */; };
 		26F0498C283B82A200FBA117 /* Paragraphs.json in Resources */ = {isa = PBXBuildFile; fileRef = 26F0498B283B82A200FBA117 /* Paragraphs.json */; };
 		26F0498E283B830B00FBA117 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0498D283B830B00FBA117 /* Paragraph.swift */; };
+		26F04990283CC16D00FBA117 /* WackANokkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0498F283CC16D00FBA117 /* WackANokkView.swift */; };
 		26F93BC52837AF98005F5F9E /* LoadJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F93BC42837AF98005F5F9E /* LoadJSON.swift */; };
 		A03E75DC283CC32500289F88 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03E75CE283CC32500289F88 /* GameViewController.swift */; };
-		A03E75DD283CC32500289F88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A03E75CF283CC32500289F88 /* Assets.xcassets */; };
 		A03E75DE283CC32500289F88 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03E75D0283CC32500289F88 /* GameOverScene.swift */; };
 		A03E75DF283CC32500289F88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03E75D1283CC32500289F88 /* LaunchScreen.storyboard */; };
 		A03E75E0283CC32500289F88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03E75D3283CC32500289F88 /* Main.storyboard */; };
@@ -123,9 +123,9 @@
 		26D72FB4282E7ED800BC3A8F /* QuizStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizStructures.swift; sourceTree = "<group>"; };
 		26F0498B283B82A200FBA117 /* Paragraphs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Paragraphs.json; sourceTree = "<group>"; };
 		26F0498D283B830B00FBA117 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
+		26F0498F283CC16D00FBA117 /* WackANokkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WackANokkView.swift; sourceTree = "<group>"; };
 		26F93BC42837AF98005F5F9E /* LoadJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJSON.swift; sourceTree = "<group>"; };
 		A03E75CE283CC32500289F88 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		A03E75CF283CC32500289F88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A03E75D0283CC32500289F88 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		A03E75D2283CC32500289F88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A03E75D4283CC32500289F88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -285,6 +285,7 @@
 				267A77482829558200E0EB7A /* Assets.xcassets */,
 				267A774B2829558200E0EB7A /* Preview Assets.xcassets */,
 				26D72FB1282E719000BC3A8F /* Fonts */,
+				26F0498F283CC16D00FBA117 /* WackANokkView.swift */,
 			);
 			path = Kulturstien;
 			sourceTree = "<group>";
@@ -362,7 +363,6 @@
 			isa = PBXGroup;
 			children = (
 				A03E75CE283CC32500289F88 /* GameViewController.swift */,
-				A03E75CF283CC32500289F88 /* Assets.xcassets */,
 				A03E75D0283CC32500289F88 /* GameOverScene.swift */,
 				A03E75D1283CC32500289F88 /* LaunchScreen.storyboard */,
 				A03E75D3283CC32500289F88 /* Main.storyboard */,
@@ -496,7 +496,6 @@
 				267A77492829558200E0EB7A /* Assets.xcassets in Resources */,
 				A03E75E2283CC32500289F88 /* backgroundmusic.mp3 in Resources */,
 				A03E75E6283CC32500289F88 /* Actions.sks in Resources */,
-				A03E75DD283CC32500289F88 /* Assets.xcassets in Resources */,
 				A03E75E0283CC32500289F88 /* Main.storyboard in Resources */,
 				A03E75E1283CC32500289F88 /* skyteflamme.mp3 in Resources */,
 				26F0498C283B82A200FBA117 /* Paragraphs.json in Resources */,
@@ -541,6 +540,7 @@
 				26D72FA6282E5A7500BC3A8F /* MenuView.swift in Sources */,
 				267A77452829558100E0EB7A /* KulturstienApp.swift in Sources */,
 				0E62D2E1283BB0D90002148D /* MemoryGame.swift in Sources */,
+				26F04990283CC16D00FBA117 /* WackANokkView.swift in Sources */,
 				0E62D2E9283BB2A20002148D /* Int+RandomExcludingSome.swift in Sources */,
 				26F0498E283B830B00FBA117 /* Paragraph.swift in Sources */,
 				A03E75E4283CC32500289F88 /* AppDelegate.swift in Sources */,

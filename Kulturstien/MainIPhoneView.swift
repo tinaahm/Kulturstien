@@ -13,7 +13,7 @@ struct MainIPhoneView: View {
 	@State private var showDarkMap = false
 	@State var timeOfDayIndex = 0
 	
-	var timeOfDayImages : [[String]] = [["moon.stars.fill", "DayTimeMapHalved"], ["sun.max.fill", "NightTimeMap"]]
+	var timeOfDayImages : [[String]] = [["moon.stars.fill", "DayTimeMap"], ["sun.max.fill", "NightTimeMap"]]
 	
 	
     var body: some View {
@@ -31,14 +31,23 @@ struct MainIPhoneView: View {
 				ButtonView(selectionType: .none, image: "RagnhildButton", width: 45, height: 90, posX: 145, posY: 695)
 				ButtonView(selectionType: .none, image: "FlagButton", width: 35, height: 60, posX: 290, posY: 735)
 				ButtonView(selectionType: .none, image: "FlagButton", width: 35, height: 60, posX: 195, posY: 45)
+					Button (action: {
+						page.pageIndex = .wackANokk
+					}) {
+						Image("Button")
+							.resizable()
+							.frame(width: 35, height: 60)
+							.padding(15)
+					}
+					.position(x: 300, y: 200)
 				}
 			.background(
 					Image(timeOfDayImages[timeOfDayIndex][1])
-						//.resizable()
-						//.scaledToFill()
+						.resizable()
+						.scaledToFill()
 						.edgesIgnoringSafeArea(.all)
 				)
-			.draggable()
+			//.draggable()
 			
 			VStack {
 				//ZStack {
