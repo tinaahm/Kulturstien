@@ -48,7 +48,7 @@ struct QuizView: View {
 				.font(.title3)
 				.padding(.bottom)
 			Text(quiz.questions[questionIndex].question)
-				.font(.title2)
+				.font(.title3)
 				.padding(.bottom)
 			
 			Group {
