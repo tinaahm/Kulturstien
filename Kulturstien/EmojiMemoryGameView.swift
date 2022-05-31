@@ -34,12 +34,12 @@ struct EmojiMemoryGameView: View {
                     viewModel.resetGame()
                 }
             }, label: {
-                Text("New Game")
+                Text("Nytt spill")
                     .font(.headline)
             })
         }
         .navigationTitle(viewModel.theme.name)
-        .navigationBarItems(trailing:Group{Text("Score: \(viewModel.getScore())")})
+        .navigationBarItems(trailing:Group{Text("Poeng: \(viewModel.getScore())")})
         .accentColor(Color(viewModel.theme.accentColor))
     }
 }

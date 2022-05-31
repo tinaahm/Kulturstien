@@ -28,22 +28,6 @@ class ThemeCollectionManager: ObservableObject {
     var themes: [ThemeCollection.Theme] { themeCollection.themes }
     
     
-    // MARK: - Intents
-    func addTheme(name: String, accentColor: UIColor, emojiSet: [String]) {
-        themeCollection.addTheme(name: name, accentColor: accentColor, emojiSet: emojiSet)
-    }
-    func moveTheme(fromOffsets: IndexSet, toOffset: Int) {
-        themeCollection.moveTheme(fromOffsets: fromOffsets, toOffset: toOffset)
-    }
-    func editTheme(id: UUID, name: String, accentColor: UIColor, emojiSet: [String]) {
-        themeCollection.editTheme(id: id, name: name, accentColor: accentColor, emojiSet: emojiSet)
-    }
-    func resetThemes() {
-        themeCollection.resetThemes()
-    }
-    func removeTheme(atOffsets: IndexSet) {
-        themeCollection.removeTheme(atOffsets: atOffsets)
-    }
     
 }
 
