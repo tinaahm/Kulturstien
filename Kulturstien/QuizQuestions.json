@@ -1,24 +1,24 @@
 [
 		{
 			"type": "kvernhus",
-			"question": "",
-			"correctOption": "",
-			"wrongOptionOne": "",
-			"wrongOptionTwo": ""
+			"question": "Hva kverner man i et kvernhus?",
+			"correctOption": "Korn",
+			"wrongOptionOne": "Stein",
+			"wrongOptionTwo": "Gress"
 		},
 		{
 			"type": "kvernhus",
-			"question": "",
-			"correctOption": "",
-			"wrongOptionOne": "",
-			"wrongOptionTwo": ""
+			"question": "Hva ble kvernen gjerne kalt?",
+			"correctOption": "Bekkekvern",
+			"wrongOptionOne": "Elvekvern",
+			"wrongOptionTwo": "Kornkvern"
 		},
 		{
 			"type": "kvernhus",
-			"question": "",
-			"correctOption": "",
-			"wrongOptionOne": "",
-			"wrongOptionTwo": ""
+			"question": "Hvor lenge har det vært kvernhus i Norge?",
+			"correctOption": "Siden middelalderen",
+			"wrongOptionOne": "Siden renessansen",
+			"wrongOptionTwo": "Siden jernalderen"
 		},
 		{
 			"type": "sagbruk",
@@ -43,44 +43,44 @@
 		},
 		{
 			"type": "demning",
-			"question": "",
-			"correctOption": "",
-			"wrongOptionOne": "",
-			"wrongOptionTwo": ""
+			"question": "Hvilken norsk sagnkonge skal ha lagd Norges første demning?",
+			"correctOption": "Olav den hellige",
+			"wrongOptionOne": "Harald Hårfagre",
+			"wrongOptionTwo": "Knut den mektige"
 		},
 		{
 			"type": "demning",
-			"question": "",
-			"correctOption": "",
-			"wrongOptionOne": "",
-			"wrongOptionTwo": ""
+			"question": "Når fikk demningen sitt store gjennombrudd i Norge?",
+			"correctOption": "1600-tallet",
+			"wrongOptionOne": "1400-tallet",
+			"wrongOptionTwo": "1500-tallet"
 		},
 		{
 			"type": "demning",
-			"question": "",
-			"correctOption": "",
-			"wrongOptionOne": "",
-			"wrongOptionTwo": ""
+			"question": "Hva ble demningene i Byåa laget av?",
+			"correctOption": "Tre og stein",
+			"wrongOptionOne": "Tre og jord",
+			"wrongOptionTwo": "Stein og jord"
 		},
 		{
 			"type": "lenseanlegg",
-			"question": "",
-			"correctOption": "",
-			"wrongOptionOne": "",
-			"wrongOptionTwo": ""
+			"question": "Hva ble lenseanleggene også kalt?",
+			"correctOption": "Oppsamlingsanlegg",
+			"wrongOptionOne": "Tømmeranlegg",
+			"wrongOptionTwo": "Lensefester"
 		},
 		{
 			"type": "lenseanlegg",
-			"question": "",
-			"correctOption": "",
-			"wrongOptionOne": "",
-			"wrongOptionTwo": ""
+			"question": "Hva heter vassdraget som Øyeren henger sammen med?",
+			"correctOption": "Glommavassdraget",
+			"wrongOptionOne": "Mossevassdraget",
+			"wrongOptionTwo": "Gaularvassdraget"
 		},
 		{
 			"type": "lenseanlegg",
-			"question": "",
-			"correctOption": "",
-			"wrongOptionOne": "",
-			"wrongOptionTwo": ""
+			"question": "Hvor stor prosentandel av tømmeret ble solgt til Storbritannia?",
+			"correctOption": "70%",
+			"wrongOptionOne": "60%",
+			"wrongOptionTwo": "50%"
 		}
 ]
