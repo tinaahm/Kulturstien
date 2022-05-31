@@ -32,7 +32,7 @@ struct MainIPhoneView: View {
 				ButtonView(selectionType: .none, image: "FlagButton", width: 35, height: 60, posX: 290, posY: 735)
 				ButtonView(selectionType: .none, image: "FlagButton", width: 35, height: 60, posX: 195, posY: 45)
 					Button (action: {
-						page.pageIndex = .wackANokk
+						page.pageIndex = .AR
 					}) {
 						Image("Button")
 							.resizable()

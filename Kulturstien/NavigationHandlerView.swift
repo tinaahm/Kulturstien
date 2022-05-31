@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum Page {
-	case main, profile, menu, achievements, texts, quiz, selection, information, cardGame, wackANokk
+	case main, profile, menu, achievements, texts, quiz, selection, information, cardGame, wackANokk, AR
 }
 
 var quizSelection : Structure = .none
@@ -50,6 +50,8 @@ struct NavigationHandlerView: View {
                 .transition(.backslide)
 		case .wackANokk:
 			WackANokkView()
+		case .AR:
+			MillARView()
 		}
     }
 }
