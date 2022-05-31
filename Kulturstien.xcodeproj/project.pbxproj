@@ -49,6 +49,12 @@
 		26F0498E283B830B00FBA117 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0498D283B830B00FBA117 /* Paragraph.swift */; };
 		26F04990283CC16D00FBA117 /* WackANokkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0498F283CC16D00FBA117 /* WackANokkView.swift */; };
 		26F93BC52837AF98005F5F9E /* LoadJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F93BC42837AF98005F5F9E /* LoadJSON.swift */; };
+		840180F028451F580067E6E5 /* MillGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840180EF28451F580067E6E5 /* MillGame.swift */; };
+		8414EEDD2846184C00BE89B3 /* mill-w-supports.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8414EED82846184B00BE89B3 /* mill-w-supports.usdz */; };
+		8414EEDE2846184C00BE89B3 /* mill-functional.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8414EED92846184B00BE89B3 /* mill-functional.usdz */; };
+		8414EEDF2846184C00BE89B3 /* mill-parts in Resources */ = {isa = PBXBuildFile; fileRef = 8414EEDA2846184B00BE89B3 /* mill-parts */; };
+		8414EEE02846184C00BE89B3 /* mill-broken.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8414EEDB2846184C00BE89B3 /* mill-broken.usdz */; };
+		8414EEE12846184C00BE89B3 /* mill-w-supports-spoke-parts.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8414EEDC2846184C00BE89B3 /* mill-w-supports-spoke-parts.usdz */; };
 		A03E75DC283CC32500289F88 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03E75CE283CC32500289F88 /* GameViewController.swift */; };
 		A03E75DE283CC32500289F88 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03E75D0283CC32500289F88 /* GameOverScene.swift */; };
 		A03E75DF283CC32500289F88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03E75D1283CC32500289F88 /* LaunchScreen.storyboard */; };
@@ -125,6 +131,12 @@
 		26F0498D283B830B00FBA117 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
 		26F0498F283CC16D00FBA117 /* WackANokkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WackANokkView.swift; sourceTree = "<group>"; };
 		26F93BC42837AF98005F5F9E /* LoadJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJSON.swift; sourceTree = "<group>"; };
+		840180EF28451F580067E6E5 /* MillGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillGame.swift; sourceTree = "<group>"; };
+		8414EED82846184B00BE89B3 /* mill-w-supports.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "mill-w-supports.usdz"; sourceTree = "<group>"; };
+		8414EED92846184B00BE89B3 /* mill-functional.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "mill-functional.usdz"; sourceTree = "<group>"; };
+		8414EEDA2846184B00BE89B3 /* mill-parts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "mill-parts"; sourceTree = "<group>"; };
+		8414EEDB2846184C00BE89B3 /* mill-broken.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "mill-broken.usdz"; sourceTree = "<group>"; };
+		8414EEDC2846184C00BE89B3 /* mill-w-supports-spoke-parts.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "mill-w-supports-spoke-parts.usdz"; sourceTree = "<group>"; };
 		A03E75CE283CC32500289F88 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A03E75D0283CC32500289F88 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		A03E75D2283CC32500289F88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -273,6 +285,7 @@
 		267A77432829558100E0EB7A /* Kulturstien */ = {
 			isa = PBXGroup;
 			children = (
+				8414EED62846104C00BE89B3 /* AR */,
 				A03E75CD283CC32500289F88 /* SkremBortHuldra */,
 				0E62D2D1283BAEED0002148D /* MemoryCardGame */,
 				26D4A4E32837ED3D0022D49F /* Data */,
@@ -357,6 +370,27 @@
 				267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		8414EED62846104C00BE89B3 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				8414EED72846182500BE89B3 /* Models */,
+				840180EF28451F580067E6E5 /* MillGame.swift */,
+			);
+			name = AR;
+			sourceTree = "<group>";
+		};
+		8414EED72846182500BE89B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8414EEDB2846184C00BE89B3 /* mill-broken.usdz */,
+				8414EED92846184B00BE89B3 /* mill-functional.usdz */,
+				8414EEDA2846184B00BE89B3 /* mill-parts */,
+				8414EEDC2846184C00BE89B3 /* mill-w-supports-spoke-parts.usdz */,
+				8414EED82846184B00BE89B3 /* mill-w-supports.usdz */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		A03E75CD283CC32500289F88 /* SkremBortHuldra */ = {
@@ -488,14 +522,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8414EEE02846184C00BE89B3 /* mill-broken.usdz in Resources */,
 				2669457D283255B700B25AF7 /* QuizQuestions.json in Resources */,
 				A03E75DF283CC32500289F88 /* LaunchScreen.storyboard in Resources */,
+				8414EEDE2846184C00BE89B3 /* mill-functional.usdz in Resources */,
 				267A774C2829558200E0EB7A /* Preview Assets.xcassets in Resources */,
+				8414EEDD2846184C00BE89B3 /* mill-w-supports.usdz in Resources */,
 				267A7782282AF85200E0EB7A /* AmericanTypewriter.ttc in Resources */,
 				A03E75E3283CC32500289F88 /* GameScene.sks in Resources */,
 				267A77492829558200E0EB7A /* Assets.xcassets in Resources */,
 				A03E75E2283CC32500289F88 /* backgroundmusic.mp3 in Resources */,
 				A03E75E6283CC32500289F88 /* Actions.sks in Resources */,
+				8414EEDF2846184C00BE89B3 /* mill-parts in Resources */,
+				8414EEE12846184C00BE89B3 /* mill-w-supports-spoke-parts.usdz in Resources */,
 				A03E75E0283CC32500289F88 /* Main.storyboard in Resources */,
 				A03E75E1283CC32500289F88 /* skyteflamme.mp3 in Resources */,
 				26F0498C283B82A200FBA117 /* Paragraphs.json in Resources */,
@@ -553,6 +592,7 @@
 				0E62D2F1283BB33C0002148D /* Pie.swift in Sources */,
 				0E62D2E5283BB25E0002148D /* Array+Identifiable.swift in Sources */,
 				0E62D2DB283BB04E0002148D /* ThemeCollectionManager.swift in Sources */,
+				840180F028451F580067E6E5 /* MillGame.swift in Sources */,
 				26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */,
 				26D72FAA282E65C800BC3A8F /* AchievementsView.swift in Sources */,
 				A03E75E5283CC32500289F88 /* GameScene.swift in Sources */,
