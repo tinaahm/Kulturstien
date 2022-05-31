@@ -16,23 +16,24 @@ enum Structure: String, Codable {
 }
 
 struct Quizes {
-	var millQuiz : Quiz = Quiz(name: "Kvernhus Quiz", type: .mill)
-	var sawmillQuiz : Quiz  = Quiz(name: "Sagmølle Quiz", type: .sawmill)
-	var damQuiz : Quiz = Quiz(name: "Demning Quiz", type: .dam)
-	var logBoomsQuiz : Quiz  = Quiz(name: "Lenseanlegg Quiz", type: .logBooms)
+	var millQuiz : Quiz = Quiz(name: "Kvernhus Quiz", type: .mill, imageTitle: "WaterMillIcon")
+	var sawmillQuiz : Quiz  = Quiz(name: "Sagmølle Quiz", type: .sawmill, imageTitle: "SawmillIcon")
+	var damQuiz : Quiz = Quiz(name: "Demning Quiz", type: .dam, imageTitle: "DamIcon")
+	var logBoomsQuiz : Quiz  = Quiz(name: "Lenseanlegg Quiz", type: .logBooms, imageTitle: "LogBoomsIcon")
 }
 
 struct Quiz {
 	let name: String
-    
 	let type : Structure
+    let imageTitle: String
 	let questions : [QuizQuestion]
 	var questionAnswers : [Bool]
 	var shuffledAnswers : [[String]]
 	
-	init(name: String, type: Structure) {
+	init(name: String, type: Structure, imageTitle: String) {
 		self.name = name
 		self.type = type
+        self.imageTitle = imageTitle
 		self.questions = sortQuizQuestionsByType(quizType: self.type)
 		self.questionAnswers = Array(repeating: false, count: self.questions.count) // TODO: change name
 		self.shuffledAnswers = shuffleArray(questions: questions)
@@ -95,6 +96,6 @@ func getQuizByType(quizType: Structure) -> Quiz {
 	case .logBooms:
 		return quizes.logBoomsQuiz
 	case .none:
-		return Quiz.init(name: "none", type: .none)
+		return Quiz.init(name: "none", type: .none, imageTitle: "none")
 	}
 }

@@ -11,7 +11,8 @@ var shuffled: Bool = false
 var answeredCorrectly = false
 
 struct QuizView: View {
-	
+    
+   
 	@EnvironmentObject var page : ViewIndex
 	
 	var quizType: Structure
@@ -44,6 +45,7 @@ struct QuizView: View {
 					.font(.title)
 			}
 			.padding()
+                Image(self.quiz.imageTitle)
 			Text(String(questionIndex + 1) + "/" + String(numberOfQuestions))
 				.font(.title3)
 				.padding(.bottom)
@@ -195,6 +197,7 @@ struct QuizEndView: View {
 		}
 	}
 }
+
 
 func getNumberOfCorrectAnswers(resultArray: [Bool]) -> Int {
 	var i : Int = 0
