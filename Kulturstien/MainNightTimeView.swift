@@ -1,17 +1,22 @@
 //
-//  MainIPhoneView.swift
+//  MainNightTimeView.swift
 //  Kulturstien
 //
-//  Created by Tina on 12/05/2022.
+//  Created by Tina on 31/05/2022.
 //
 
 import SwiftUI
 
-struct MainIPhoneView: View {
+struct MainNightTimeView: View {
 	
 	@EnvironmentObject var page: ViewIndex
+	@State private var showDarkMap = false
+	@State var timeOfDayIndex = 0
 	
-    var body: some View {
+	var timeOfDayImages : [[String]] = [["moon.stars.fill", "DayTimeMap"], ["sun.max.fill", "NightTimeMap"]]
+	
+	
+	var body: some View {
 		ZStack {
 				
 			ZStack {
@@ -37,7 +42,7 @@ struct MainIPhoneView: View {
 					.position(x: 300, y: 200)
 				}
 			.background(
-					Image("DayTimeMap")
+					Image("NightTimeMap")
 						.resizable()
 						.scaledToFill()
 						.edgesIgnoringSafeArea(.all)
@@ -55,8 +60,8 @@ struct MainIPhoneView: View {
 						//.padding(.leading, 30)
 				
 						Spacer(minLength: 0)
-                        
-                        
+						
+						
 						
 						Button (action: {
 							withAnimation {
@@ -86,9 +91,9 @@ struct MainIPhoneView: View {
 				HStack {
 					Spacer()
 					Button (action: {
-						page.pageIndex = .mainNight
+						page.pageIndex = .main
 					}) {
-						Image(systemName: "moon.stars.fill")
+						Image(systemName: "sun.max.fill")
 							.resizable()
 							.frame(width: 30, height: 30)
 							.padding(15)
@@ -107,28 +112,9 @@ struct MainIPhoneView: View {
 
 }
 
-struct MainIPhoneView_Previews: PreviewProvider {
+
+struct MainNightTimeView_Previews: PreviewProvider {
     static var previews: some View {
-        MainIPhoneView().environmentObject(ViewIndex())
+        MainNightTimeView().environmentObject(ViewIndex())
     }
-}
-
-struct DraggableView: ViewModifier {
-	@State var offset = CGPoint(x: 0, y: 0)
-	
-	func body(content: Content) -> some View {
-		content
-			.gesture(DragGesture(minimumDistance: 0)
-				.onChanged { value in
-					self.offset.x += value.location.x - value.startLocation.x
-					self.offset.y += value.location.y - value.startLocation.y
-			})
-			.offset(x: offset.x, y: offset.y)
-	}
-}
-
-extension View {
-	func draggable() -> some View {
-		return modifier(DraggableView())
-	}
 }

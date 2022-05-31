@@ -25,6 +25,8 @@
 		0E62D2F7283BB4BC0002148D /* ThemeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E62D2F6283BB4BC0002148D /* ThemeSelectionView.swift */; };
 		0E62D2F9283BB5070002148D /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E62D2F8283BB5070002148D /* EmojiMemoryGameView.swift */; };
 		0E62D2FB283BB5320002148D /* ThemeEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E62D2FA283BB5320002148D /* ThemeEditorView.swift */; };
+		263B3E6828461831005919D7 /* PersonInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E6728461831005919D7 /* PersonInformationView.swift */; };
+		263B3E6A28461C4E005919D7 /* MainNightTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E6928461C4E005919D7 /* MainNightTimeView.swift */; };
 		2669457D283255B700B25AF7 /* QuizQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2669457C283255B700B25AF7 /* QuizQuestions.json */; };
 		2669458028325DBA00B25AF7 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669457F28325DBA00B25AF7 /* QuizView.swift */; };
 		267A77452829558100E0EB7A /* KulturstienApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77442829558100E0EB7A /* KulturstienApp.swift */; };
@@ -97,6 +99,8 @@
 		0E62D2F6283BB4BC0002148D /* ThemeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionView.swift; sourceTree = "<group>"; };
 		0E62D2F8283BB5070002148D /* EmojiMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameView.swift; sourceTree = "<group>"; };
 		0E62D2FA283BB5320002148D /* ThemeEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEditorView.swift; sourceTree = "<group>"; };
+		263B3E6728461831005919D7 /* PersonInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInformationView.swift; sourceTree = "<group>"; };
+		263B3E6928461C4E005919D7 /* MainNightTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNightTimeView.swift; sourceTree = "<group>"; };
 		2669457C283255B700B25AF7 /* QuizQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuizQuestions.json; sourceTree = "<group>"; };
 		2669457F28325DBA00B25AF7 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		267A77412829558100E0EB7A /* Kulturstien.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kulturstien.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				0E17588D2836832B00E8F9C4 /* InformationView.swift */,
+				263B3E6728461831005919D7 /* PersonInformationView.swift */,
 			);
 			name = InfoViews;
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 				26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */,
 				26D72FA5282E5A7500BC3A8F /* MenuView.swift */,
 				26D4A4DC2837D5630022D49F /* SelectionView.swift */,
+				263B3E6928461C4E005919D7 /* MainNightTimeView.swift */,
 			);
 			name = MainViews;
 			sourceTree = "<group>";
@@ -362,6 +368,7 @@
 		A03E75CD283CC32500289F88 /* SkremBortHuldra */ = {
 			isa = PBXGroup;
 			children = (
+				A03E75DA283CC32500289F88 /* GameScene.swift */,
 				A03E75CE283CC32500289F88 /* GameViewController.swift */,
 				A03E75D0283CC32500289F88 /* GameOverScene.swift */,
 				A03E75D1283CC32500289F88 /* LaunchScreen.storyboard */,
@@ -369,7 +376,6 @@
 				A03E75D5283CC32500289F88 /* Sounds */,
 				A03E75D8283CC32500289F88 /* GameScene.sks */,
 				A03E75D9283CC32500289F88 /* AppDelegate.swift */,
-				A03E75DA283CC32500289F88 /* GameScene.swift */,
 				A03E75DB283CC32500289F88 /* Actions.sks */,
 			);
 			path = SkremBortHuldra;
@@ -542,6 +548,7 @@
 				0E62D2E1283BB0D90002148D /* MemoryGame.swift in Sources */,
 				26F04990283CC16D00FBA117 /* WackANokkView.swift in Sources */,
 				0E62D2E9283BB2A20002148D /* Int+RandomExcludingSome.swift in Sources */,
+				263B3E6828461831005919D7 /* PersonInformationView.swift in Sources */,
 				26F0498E283B830B00FBA117 /* Paragraph.swift in Sources */,
 				A03E75E4283CC32500289F88 /* AppDelegate.swift in Sources */,
 				0E62D2E3283BB23A0002148D /* String+ToArray.swift in Sources */,
@@ -560,6 +567,7 @@
 				0E62D2E7283BB2800002148D /* Array+Only.swift in Sources */,
 				26D72FA4282E573200BC3A8F /* NavigationHandlerView.swift in Sources */,
 				A03E75DC283CC32500289F88 /* GameViewController.swift in Sources */,
+				263B3E6A28461C4E005919D7 /* MainNightTimeView.swift in Sources */,
 				0E62D2F3283BB3670002148D /* Grid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
