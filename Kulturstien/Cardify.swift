@@ -34,7 +34,7 @@ struct Cardify: AnimatableModifier { // == (ViewModifier, Animatable)
         ZStack {
             Group {
                 RoundedRectangle(cornerRadius: CORNER_RADIUS)
-                    .fill(Color.accentColor)
+                    .fill(Color.white)
                 RoundedRectangle(cornerRadius: CORNER_RADIUS)
                     .stroke(lineWidth: 3)
 

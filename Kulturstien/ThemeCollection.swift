@@ -27,7 +27,6 @@ struct ThemeCollection: Codable {
             self.name = name
             self.accentColor = accentColor.rgb
             self.emojiSet = emojiSet
-            
         }
     }
     var json: Data? {
@@ -43,6 +42,29 @@ struct ThemeCollection: Codable {
     }
     
     init() {
-        self.themes = [DefaultThemes.theme0, DefaultThemes.theme1]
+        self.themes = [DefaultThemes.theme0, DefaultThemes.theme1, DefaultThemes.theme2, DefaultThemes.theme3, DefaultThemes.theme4, DefaultThemes.theme5]
+    }
+    
+    mutating func addTheme(name: String, accentColor: UIColor, emojiSet: [String]) {
+        themes.append(Theme(name: name, accentColor: accentColor, emojiSet: emojiSet))
+    }
+    mutating func moveTheme(fromOffsets: IndexSet, toOffset: Int) {
+        themes.move(fromOffsets: fromOffsets, toOffset: toOffset)
+    }
+    mutating func editTheme(id: UUID, name: String, accentColor: UIColor, emojiSet: [String]) {
+        for index in themes.indices {
+            if themes[index].id == id {
+                themes[index].name = name
+                themes[index].accentColor = accentColor.rgb
+                themes[index].emojiSet = emojiSet
+            }
+        }
+    }
+    mutating func resetThemes() {
+        self.themes = [DefaultThemes.theme0, DefaultThemes.theme1, DefaultThemes.theme2, DefaultThemes.theme3, DefaultThemes.theme4, DefaultThemes.theme5]
+    }
+    mutating func removeTheme(atOffsets: IndexSet) {
+        themes.remove(atOffsets: atOffsets)
+        
     }
 }
