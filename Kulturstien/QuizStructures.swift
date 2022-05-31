@@ -16,7 +16,7 @@ enum Structure: String, Codable {
 }
 
 struct Quizes {
-	var millQuiz : Quiz = Quiz(name: "Mølle Quiz", type: .mill)
+	var millQuiz : Quiz = Quiz(name: "Kvernhus Quiz", type: .mill)
 	var sawmillQuiz : Quiz  = Quiz(name: "Sagmølle Quiz", type: .sawmill)
 	var damQuiz : Quiz = Quiz(name: "Demning Quiz", type: .dam)
 	var logBoomsQuiz : Quiz  = Quiz(name: "Lenseanlegg Quiz", type: .logBooms)
@@ -24,6 +24,7 @@ struct Quizes {
 
 struct Quiz {
 	let name: String
+    
 	let type : Structure
 	let questions : [QuizQuestion]
 	var questionAnswers : [Bool]

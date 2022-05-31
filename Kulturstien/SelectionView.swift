@@ -74,13 +74,13 @@ struct SelectionView: View {
 func getImageTitleFromSelection(selectionType: Structure) -> String {
 	switch selectionType {
 	case .mill:
-		return "MillIcon"
+		return "WaterMillIcon"
 	case .sawmill:
 		return "SawmillIcon"
 	case .dam:
-		return ""
+		return "DamIcon"
 	case .logBooms:
-		return ""
+		return "LogBoomsIcon"
 	case .none:
 		return ""
 	}

@@ -15,26 +15,26 @@ struct MainIPhoneView: View {
 		ZStack {
 				
 			ZStack {
-				ButtonView(selectionType: .sawmill, image: "SawmillButton", width: 60, height: 60, posX: 200, posY: 230)
-				ButtonView(selectionType: .sawmill, image: "SawmillButton", width: 60, height: 60, posX: 70, posY: 370)
-				ButtonView(selectionType: .dam, image: "DamButton", width: 60, height: 60, posX: 110, posY: 620)
+				ButtonView(selectionType: .sawmill, image: "SawmillButton", width: 60, height: 60, posX: 200, posY: 200)
+				ButtonView(selectionType: .sawmill, image: "SawmillButton", width: 60, height: 60, posX: 70, posY: 520)
+				ButtonView(selectionType: .dam, image: "DamButton", width: 60, height: 60, posX: 40, posY: 740)
 				
-				ButtonView(selectionType: .mill, image: "MillIcon", width: 122, height: 79, posX: 350, posY: 660)
-				ButtonView(selectionType: .mill, image: "KirstiButton", width: 50, height: 65, posX: 65, posY: 65)
+				ButtonView(selectionType: .mill, image: "MillIcon", width: 122, height: 79, posX: 350, posY: 800)
+				ButtonView(selectionType: .mill, image: "KirstiButton", width: 50, height: 65, posX: 65, posY: 205)
 				
-				ButtonView(selectionType: .none, image: "TrondButton", width: 45, height: 90, posX: 250, posY: 490)
-				ButtonView(selectionType: .none, image: "RagnhildButton", width: 45, height: 90, posX: 145, posY: 695)
-				ButtonView(selectionType: .none, image: "FlagButton", width: 35, height: 60, posX: 290, posY: 735)
+				ButtonView(selectionType: .none, image: "TrondButton", width: 45, height: 90, posX: 230, posY: 670)
+				ButtonView(selectionType: .none, image: "RagnhildButton", width: 45, height: 90, posX: 145, posY: 840)
+				ButtonView(selectionType: .none, image: "FlagButton", width: 35, height: 60, posX: 290, posY: 875)
 				ButtonView(selectionType: .none, image: "Group 28", width: 35, height: 60, posX: 195, posY: 300)
 					Button (action: {
 						page.pageIndex = .wackANokk
 					}) {
-						Image("Button")
+						Image("FlagButton")
 							.resizable()
 							.frame(width: 35, height: 60)
 							.padding(15)
 					}
-					.position(x: 300, y: 200)
+					.position(x: 190, y: 320)
 				}
 			.background(
 					Image("DayTimeMap")
