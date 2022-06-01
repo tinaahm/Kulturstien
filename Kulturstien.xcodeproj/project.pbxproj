@@ -28,6 +28,7 @@
 		263B3E6A28461C4E005919D7 /* MainNightTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E6928461C4E005919D7 /* MainNightTimeView.swift */; };
 		263B3E6E28462ECD005919D7 /* PersonInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E6D28462ECD005919D7 /* PersonInformation.swift */; };
 		263B3E7028462FF9005919D7 /* PersonInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = 263B3E6F28462FF9005919D7 /* PersonInformation.json */; };
+		263B3E7228475A94005919D7 /* ProfilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E7128475A94005919D7 /* ProfilePickerView.swift */; };
 		2669457D283255B700B25AF7 /* QuizQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2669457C283255B700B25AF7 /* QuizQuestions.json */; };
 		2669458028325DBA00B25AF7 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669457F28325DBA00B25AF7 /* QuizView.swift */; };
 		267A77452829558100E0EB7A /* KulturstienApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77442829558100E0EB7A /* KulturstienApp.swift */; };
@@ -103,6 +104,7 @@
 		263B3E6928461C4E005919D7 /* MainNightTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNightTimeView.swift; sourceTree = "<group>"; };
 		263B3E6D28462ECD005919D7 /* PersonInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInformation.swift; sourceTree = "<group>"; };
 		263B3E6F28462FF9005919D7 /* PersonInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PersonInformation.json; sourceTree = "<group>"; };
+		263B3E7128475A94005919D7 /* ProfilePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickerView.swift; sourceTree = "<group>"; };
 		2669457C283255B700B25AF7 /* QuizQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuizQuestions.json; sourceTree = "<group>"; };
 		2669457F28325DBA00B25AF7 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		267A77412829558100E0EB7A /* Kulturstien.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kulturstien.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -355,6 +357,7 @@
 				26AAC9F6282D00E80057BBA6 /* ProfileView.swift */,
 				26D72FA9282E65C800BC3A8F /* AchievementsView.swift */,
 				26D72FAB282E65DE00BC3A8F /* TextsView.swift */,
+				263B3E7128475A94005919D7 /* ProfilePickerView.swift */,
 			);
 			name = MenuViews;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				0E17588E2836832B00E8F9C4 /* InformationView.swift in Sources */,
 				0E62D2F1283BB33C0002148D /* Pie.swift in Sources */,
 				0E62D2E5283BB25E0002148D /* Array+Identifiable.swift in Sources */,
+				263B3E7228475A94005919D7 /* ProfilePickerView.swift in Sources */,
 				0E62D2DB283BB04E0002148D /* ThemeCollectionManager.swift in Sources */,
 				26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */,
 				263B3E6E28462ECD005919D7 /* PersonInformation.swift in Sources */,

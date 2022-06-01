@@ -17,7 +17,7 @@ enum Structure: String, Codable {
 
 struct Quizes {
 	var millQuiz : Quiz = Quiz(name: "Kvernhus Quiz", type: .mill, imageTitle: "WaterMillIcon")
-	var sawmillQuiz : Quiz  = Quiz(name: "Sagmølle Quiz", type: .sawmill, imageTitle: "SawmillIcon")
+	var sawmillQuiz : Quiz  = Quiz(name: "Sagbruk Quiz", type: .sawmill, imageTitle: "SawmillIcon")
 	var damQuiz : Quiz = Quiz(name: "Demning Quiz", type: .dam, imageTitle: "DamIcon")
 	var logBoomsQuiz : Quiz  = Quiz(name: "Lenseanlegg Quiz", type: .logBooms, imageTitle: "LogBoomsIcon")
 }
