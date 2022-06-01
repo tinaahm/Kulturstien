@@ -64,7 +64,7 @@ struct QuizView: View {
 						Text(answers[index])
 							.foregroundColor(.black)
 							.padding(25)
-                            .frame(minWidth: 0, maxWidth: 400)
+                            .padding(.horizontal, 80)
 							.overlay(
 								RoundedRectangle(cornerRadius: 15)
                                     .stroke(showAnswer(answered: answered, guessedAnswer: guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: guessedIndex, quiz: quiz, quizIndex: questionIndex), lineWidth: 1)
