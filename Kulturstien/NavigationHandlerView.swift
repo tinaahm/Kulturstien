@@ -51,7 +51,7 @@ struct NavigationHandlerView: View {
 		case .wackANokk:
 			WackANokkView()
 		case .AR:
-			MillARView()
+			MillGameView()
 		}
     }
 }

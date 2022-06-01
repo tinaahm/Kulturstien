@@ -25,7 +25,7 @@
 		0E62D2F7283BB4BC0002148D /* ThemeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E62D2F6283BB4BC0002148D /* ThemeSelectionView.swift */; };
 		0E62D2F9283BB5070002148D /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E62D2F8283BB5070002148D /* EmojiMemoryGameView.swift */; };
 		0E62D2FB283BB5320002148D /* ThemeEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E62D2FA283BB5320002148D /* ThemeEditorView.swift */; };
-		263B3E6C28462BD1005919D7 /* MillARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E6B28462BD1005919D7 /* MillARView.swift */; };
+		263B3E6C28462BD1005919D7 /* MillGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E6B28462BD1005919D7 /* MillGameView.swift */; };
 		2669457D283255B700B25AF7 /* QuizQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2669457C283255B700B25AF7 /* QuizQuestions.json */; };
 		2669458028325DBA00B25AF7 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669457F28325DBA00B25AF7 /* QuizView.swift */; };
 		267A77452829558100E0EB7A /* KulturstienApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77442829558100E0EB7A /* KulturstienApp.swift */; };
@@ -50,7 +50,7 @@
 		26F0498E283B830B00FBA117 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0498D283B830B00FBA117 /* Paragraph.swift */; };
 		26F04990283CC16D00FBA117 /* WackANokkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0498F283CC16D00FBA117 /* WackANokkView.swift */; };
 		26F93BC52837AF98005F5F9E /* LoadJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F93BC42837AF98005F5F9E /* LoadJSON.swift */; };
-		840180F028451F580067E6E5 /* MillGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840180EF28451F580067E6E5 /* MillGame.swift */; };
+		840180F028451F580067E6E5 /* MillGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840180EF28451F580067E6E5 /* MillGameScene.swift */; };
 		8414EEDD2846184C00BE89B3 /* mill-w-supports.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8414EED82846184B00BE89B3 /* mill-w-supports.usdz */; };
 		8414EEDE2846184C00BE89B3 /* mill-functional.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8414EED92846184B00BE89B3 /* mill-functional.usdz */; };
 		8414EEDF2846184C00BE89B3 /* mill-parts in Resources */ = {isa = PBXBuildFile; fileRef = 8414EEDA2846184B00BE89B3 /* mill-parts */; };
@@ -104,7 +104,7 @@
 		0E62D2F6283BB4BC0002148D /* ThemeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionView.swift; sourceTree = "<group>"; };
 		0E62D2F8283BB5070002148D /* EmojiMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameView.swift; sourceTree = "<group>"; };
 		0E62D2FA283BB5320002148D /* ThemeEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEditorView.swift; sourceTree = "<group>"; };
-		263B3E6B28462BD1005919D7 /* MillARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillARView.swift; sourceTree = "<group>"; };
+		263B3E6B28462BD1005919D7 /* MillGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillGameView.swift; sourceTree = "<group>"; };
 		2669457C283255B700B25AF7 /* QuizQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuizQuestions.json; sourceTree = "<group>"; };
 		2669457F28325DBA00B25AF7 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		267A77412829558100E0EB7A /* Kulturstien.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kulturstien.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,7 +133,7 @@
 		26F0498D283B830B00FBA117 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
 		26F0498F283CC16D00FBA117 /* WackANokkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WackANokkView.swift; sourceTree = "<group>"; };
 		26F93BC42837AF98005F5F9E /* LoadJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJSON.swift; sourceTree = "<group>"; };
-		840180EF28451F580067E6E5 /* MillGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillGame.swift; sourceTree = "<group>"; };
+		840180EF28451F580067E6E5 /* MillGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillGameScene.swift; sourceTree = "<group>"; };
 		8414EED82846184B00BE89B3 /* mill-w-supports.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "mill-w-supports.usdz"; sourceTree = "<group>"; };
 		8414EED92846184B00BE89B3 /* mill-functional.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "mill-functional.usdz"; sourceTree = "<group>"; };
 		8414EEDA2846184B00BE89B3 /* mill-parts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "mill-parts"; sourceTree = "<group>"; };
@@ -378,8 +378,8 @@
 			isa = PBXGroup;
 			children = (
 				8414EED72846182500BE89B3 /* Models */,
-				840180EF28451F580067E6E5 /* MillGame.swift */,
-				263B3E6B28462BD1005919D7 /* MillARView.swift */,
+				840180EF28451F580067E6E5 /* MillGameScene.swift */,
+				263B3E6B28462BD1005919D7 /* MillGameView.swift */,
 			);
 			name = AR;
 			sourceTree = "<group>";
@@ -580,7 +580,7 @@
 				0E62D2FB283BB5320002148D /* ThemeEditorView.swift in Sources */,
 				0E62D2F7283BB4BC0002148D /* ThemeSelectionView.swift in Sources */,
 				26D72FA6282E5A7500BC3A8F /* MenuView.swift in Sources */,
-				263B3E6C28462BD1005919D7 /* MillARView.swift in Sources */,
+				263B3E6C28462BD1005919D7 /* MillGameView.swift in Sources */,
 				267A77452829558100E0EB7A /* KulturstienApp.swift in Sources */,
 				0E62D2E1283BB0D90002148D /* MemoryGame.swift in Sources */,
 				26F04990283CC16D00FBA117 /* WackANokkView.swift in Sources */,
@@ -596,7 +596,7 @@
 				0E62D2F1283BB33C0002148D /* Pie.swift in Sources */,
 				0E62D2E5283BB25E0002148D /* Array+Identifiable.swift in Sources */,
 				0E62D2DB283BB04E0002148D /* ThemeCollectionManager.swift in Sources */,
-				840180F028451F580067E6E5 /* MillGame.swift in Sources */,
+				840180F028451F580067E6E5 /* MillGameScene.swift in Sources */,
 				26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */,
 				26D72FAA282E65C800BC3A8F /* AchievementsView.swift in Sources */,
 				A03E75E5283CC32500289F88 /* GameScene.swift in Sources */,
