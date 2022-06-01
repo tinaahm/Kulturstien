@@ -15,17 +15,17 @@ struct MainIPhoneView: View {
 		ZStack {
 				
 			ZStack {
-				ButtonView(selectionType: .sawmill, image: "SawmillButton", width: 60, height: 60, posX: 200, posY: 200)
-				ButtonView(selectionType: .sawmill, image: "SawmillButton", width: 60, height: 60, posX: 70, posY: 520)
-				ButtonView(selectionType: .dam, image: "DamButton", width: 60, height: 60, posX: 40, posY: 740)
+				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "SawmillButton", width: 60, height: 60, posX: 200, posY: 200)
+				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "SawmillButton", width: 60, height: 60, posX: 70, posY: 520)
+				ButtonView(selectedStructure: .dam, selectedPerson: .none, image: "DamButton", width: 60, height: 60, posX: 40, posY: 740)
 				
-				ButtonView(selectionType: .mill, image: "MillIcon", width: 122, height: 79, posX: 350, posY: 800)
-				ButtonView(selectionType: .mill, image: "KirstiButton", width: 50, height: 65, posX: 65, posY: 205)
+				ButtonView(selectedStructure: .mill, selectedPerson: .none, image: "MillIcon", width: 122, height: 79, posX: 350, posY: 800)
+				ButtonView(selectedStructure: .none, selectedPerson: .kirsti, image: "KirstiButton", width: 50, height: 65, posX: 65, posY: 205)
 				
-				ButtonView(selectionType: .none, image: "TrondButton", width: 45, height: 90, posX: 230, posY: 670)
-				ButtonView(selectionType: .none, image: "RagnhildButton", width: 45, height: 90, posX: 145, posY: 840)
-				ButtonView(selectionType: .none, image: "FlagButton", width: 35, height: 60, posX: 290, posY: 875)
-				ButtonView(selectionType: .none, image: "Group 28", width: 35, height: 60, posX: 195, posY: 300)
+				ButtonView(selectedStructure: .none, selectedPerson: .trond, image: "TrondButton", width: 45, height: 90, posX: 230, posY: 670)
+				ButtonView(selectedStructure: .none, selectedPerson: .ragnhild, image: "RagnhildButton", width: 45, height: 90, posX: 145, posY: 840)
+				ButtonView(selectedStructure: .none, selectedPerson: .none, image: "FlagButton", width: 35, height: 60, posX: 290, posY: 875)
+				//ButtonView(selectedStructure:  .none, selectedPerson: .none, image: "Group 28", width: 35, height: 60, posX: 195, posY: 300)
 					Button (action: {
 						page.pageIndex = .wackANokk
 					}) {
@@ -86,6 +86,7 @@ struct MainIPhoneView: View {
 				HStack {
 					Spacer()
 					Button (action: {
+						page.lightMode = false
 						page.pageIndex = .mainNight
 					}) {
 						Image(systemName: "moon.stars.fill")

@@ -8,17 +8,19 @@
 import SwiftUI
 
 enum Page {
-	case main, mainNight, profile, menu, achievements, texts, quiz, selection, information, cardGame, wackANokk, huldraGame
+	case main, mainNight, profile, menu, achievements, texts, quiz, selection, information, cardGame, wackANokk, huldraGame, personInformation
 }
 
-var quizSelection : Structure = .none
-var informationSelection : Structure = .none
+var quizSelection: Structure = .none
+var informationSelection: Structure = .none
+var personSelection: Person = .none
 
 var quizes = Quizes()
 
 class ViewIndex: ObservableObject {
 	@Published var pageIndex : Page = .main
 	@Published var previousPage : Page = .main
+	@Published var lightMode: Bool = true
 }
 
 struct NavigationHandlerView: View {
@@ -54,6 +56,8 @@ struct NavigationHandlerView: View {
 			WackANokkView()
 		case .huldraGame:
 			MenuView()
+		case .personInformation:
+			PersonInformationView(personType: personSelection)
 		}
     }
 }

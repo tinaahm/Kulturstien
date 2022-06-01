@@ -11,7 +11,8 @@ struct ButtonView: View {
 	
 	@EnvironmentObject var page : ViewIndex
 	
-	var selectionType : Structure
+	var selectedStructure: Structure
+	var selectedPerson: Person
 	var image: String
 	var width: CGFloat
 	var height: CGFloat
@@ -20,9 +21,15 @@ struct ButtonView: View {
 	
 	var body: some View {
 		Button (action: {
-			page.previousPage = page.pageIndex
-			informationSelection = selectionType
-			page.pageIndex = .selection
+			if selectedStructure != .none {
+				page.previousPage = page.pageIndex
+				informationSelection = selectedStructure
+				page.pageIndex = .selection
+			} else if selectedPerson != .none {
+				page.previousPage = page.pageIndex
+				personSelection = selectedPerson
+				page.pageIndex = .personInformation
+			}
 		}) {
 			Image(image)
 				.resizable()
