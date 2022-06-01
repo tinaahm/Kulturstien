@@ -65,14 +65,15 @@ struct QuizView: View {
 							.foregroundColor(.black)
 							.padding(25)
                             .frame(minWidth: 0, maxWidth: 400)
-                            .background(
-                                        RoundedRectangle(cornerRadius: 15)
-                                            .fill(Color(red: 0.984, green: 0.984, blue: 0.984))
-                                            .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.82), radius: 2, x: 0, y: 2))
 							.overlay(
 								RoundedRectangle(cornerRadius: 15)
                                     .stroke(showAnswer(answered: answered, guessedAnswer: guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: guessedIndex, quiz: quiz, quizIndex: questionIndex), lineWidth: 1)
 							)
+							.background(
+										RoundedRectangle(cornerRadius: 15)
+											//.fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+											.fill(showAnswer(answered: answered, guessedAnswer: guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: guessedIndex, quiz: quiz, quizIndex: questionIndex))
+											.shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.82), radius: 2, x: 0, y: 2))
 					}
 					//.padding(.vertical, 25)
 					//.background(showAnswer(answered: answered, guessedAnswer: guessedAnswer, correctAnswer: correctAnswer))
@@ -165,7 +166,7 @@ struct QuizEndView: View {
 		let numberOfCorrectAnswers : Int = getNumberOfCorrectAnswers(resultArray: resultArray)
 		
 		VStack (spacing: 20) {
-			HStack (alignment: .top) {
+			/*HStack (alignment: .top) {
 				Button (action: {
 					
 				}) {
@@ -178,7 +179,7 @@ struct QuizEndView: View {
 				Spacer()
 			}
 			.foregroundColor(.black)
-			.padding()
+			.padding()*/
 			//Spacer()
 			VStack (spacing: 30) {
 				Image(systemName: resultImageToDisplay(numberOfCorrectAnswers: numberOfCorrectAnswers, numberOfQuestions: resultArray.count))
