@@ -21,8 +21,8 @@ struct ProfilePickerView: View {
 	
 	@EnvironmentObject var page : ViewIndex
 	
-	@State var name: String = ""
-	@State var selectedColour: Colour = .none
+	//@State var name: String = ""
+	//@State var selectedColour: Colour = .none
 	@State var pressedNext: Bool = false
 	
     var body: some View {
@@ -33,7 +33,7 @@ struct ProfilePickerView: View {
 				.padding(.bottom, 50)
 			VStack {
 				HStack {
-					TextField("Hva er navnet ditt?", text: $name)
+					TextField("Hva er navnet ditt?", text: $page.user.name)
 				}
 				.frame(width: 250)
 				.padding()
@@ -53,7 +53,7 @@ struct ProfilePickerView: View {
 				Menu {
 					ForEach(Colour.allCases) { colour in
 						Button(action: {
-							self.selectedColour = colour
+							page.user.selectedColour = colour
 						}) {
 							Label(colour == .none ? colour.rawValue : colour.rawValue.capitalized, systemImage: "")
 						}
@@ -66,7 +66,7 @@ struct ProfilePickerView: View {
 					}
 				} label: {
 					HStack {
-						Text(selectedColour == .none ? selectedColour.rawValue : selectedColour.rawValue.capitalized)
+						Text(page.user.selectedColour == .none ? page.user.selectedColour.rawValue : page.user.selectedColour.rawValue.capitalized)
 						Spacer()
 						Image(systemName: "chevron.down")
 					}
@@ -81,7 +81,7 @@ struct ProfilePickerView: View {
 			Spacer()
 			Spacer()
 			
-			if !name.isEmpty && selectedColour != .none {
+				if !page.user.name.isEmpty && page.user.selectedColour != .none {
 				Button(action: {
 					self.pressedNext = true
 				}) {
@@ -97,12 +97,12 @@ struct ProfilePickerView: View {
 			Spacer()
 			} else {
 				
-				Image(getImageTitleByColour(colour: self.selectedColour))
+				Image(getImageTitleByColour(colour: page.user.selectedColour))
 					.resizable()
 					.scaledToFit()
 					.padding([.leading, .top, .trailing], 90)
 					.padding(.bottom, 20)
-				Text("Hei " + self.name.capitalized)
+				Text("Hei " + page.user.name.capitalized)
 					.padding([.leading, .top, .trailing])
 					.padding(.bottom, 90)
 				Button(action: {

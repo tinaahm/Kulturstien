@@ -12,7 +12,57 @@ struct ProfileView: View {
 	@EnvironmentObject var page : ViewIndex
 	
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		VStack {
+			
+			BackButtonView()
+			
+			Spacer()
+			
+			Image(getImageTitleByColour(colour: page.user.selectedColour))
+			.resizable()
+			.frame(width: 60, height: 60)
+			.padding(5)
+			
+			Text("Hei " + page.user.name.capitalized)
+				.padding([.leading, .top, .trailing])
+				.padding(.bottom, 90)
+			
+			Button(action: {
+				
+			}) {
+				Text("Start")
+			}
+			.frame(width: 100)
+			.padding()
+			.background(RoundedRectangle(cornerRadius: 15)
+				.stroke(Color.gray, lineWidth: 1)
+			)
+			.foregroundColor(.black)
+			Button(action: {
+				
+			}) {
+				Text("Start")
+			}
+			.frame(width: 100)
+			.padding()
+			.background(RoundedRectangle(cornerRadius: 15)
+				.stroke(Color.gray, lineWidth: 1)
+			)
+			.foregroundColor(.black)
+			Button(action: {
+				
+			}) {
+				Text("Start")
+			}
+			.frame(width: 100)
+			.padding()
+			.background(RoundedRectangle(cornerRadius: 15)
+				.stroke(Color.gray, lineWidth: 1)
+			)
+			.foregroundColor(.black)
+			
+			Spacer()
+		}
     }
 }
 

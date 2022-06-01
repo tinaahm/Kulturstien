@@ -8,11 +8,6 @@
 	</array>
 	<key>UILaunchScreen</key>
 	<dict>
-		<key>UINavigationBar</key>
-		<dict>
-			<key>UIImageName</key>
-			<string></string>
-		</dict>
 		<key>UIImageName</key>
 		<string>Rælingen2</string>
 		<key>UIColorName</key>

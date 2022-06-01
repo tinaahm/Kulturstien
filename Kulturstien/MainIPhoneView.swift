@@ -25,7 +25,6 @@ struct MainIPhoneView: View {
 				ButtonView(selectedStructure: .none, selectedPerson: .trond, image: "TrondButton", width: 52, height: 101, posX: 290, posY: 670)
 				ButtonView(selectedStructure: .none, selectedPerson: .ragnhild, image: "RagnhildButton", width: 47, height: 90, posX: 145, posY: 840)
 				ButtonView(selectedStructure: .none, selectedPerson: .none, image: "TrophyButton", width: 40, height: 52, posX: 290, posY: 885)
-				//ButtonView(selectedStructure:  .none, selectedPerson: .none, image: "Group 28", width: 35, height: 60, posX: 195, posY: 300)
 					Button (action: {
 						page.pageIndex = .wackANokk
 					}) {
@@ -42,16 +41,20 @@ struct MainIPhoneView: View {
 						.scaledToFill()
 						.edgesIgnoringSafeArea(.all)
 				)
-			//.draggable()
+			.draggable()
 			
 			VStack {
 				//ZStack {
 					HStack {
 						//Spacer(minLength: 0)
-						Image(systemName: "person")
-						.resizable()
-						.frame(width: 30, height: 30)
-						.padding(15)
+						Button (action: {
+							page.pageIndex = .profile
+						}) {
+							Image(getImageTitleByColour(colour: page.user.selectedColour))
+							.resizable()
+							.frame(width: 60, height: 60)
+							//.padding(5)
+						}
 						//.padding(.leading, 30)
 				
 						Spacer(minLength: 0)

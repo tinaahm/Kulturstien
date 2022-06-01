@@ -15,6 +15,7 @@ struct KulturstienApp: App {
     var body: some Scene {
         WindowGroup {
 			NavigationHandlerView().environmentObject(viewIndex)
+				.preferredColorScheme(.light)
         }
     }
 }

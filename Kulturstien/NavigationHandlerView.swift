@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+struct User {
+	var name: String = ""
+	var selectedColour: Colour = .none
+	var wackANokkGameScore: Int = 0
+	var frightenHuldraGameScore: Int = 0
+	var memoryGameScore: Int = 0
+}
+
 enum Page {
 	case start, main, mainNight, profile, menu, achievements, texts, quiz, selection, information, cardGame, wackANokk, huldraGame, personInformation
 }
@@ -21,6 +29,7 @@ class ViewIndex: ObservableObject {
 	@Published var pageIndex : Page = .start //TODO: if user has profile do not show start/ProfilePickerView.
 	@Published var previousPage : Page = .main
 	@Published var lightMode: Bool = true
+	@Published var user: User = User()
 }
 
 struct NavigationHandlerView: View {
