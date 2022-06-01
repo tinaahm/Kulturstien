@@ -5,21 +5,29 @@
 //  Created by Tina on 31/05/2022.
 //
 
+import UIKit
 import SpriteKit
 import SwiftUI
 
 struct MillGameView: View {
     
     var gameScene: SKScene {
-        let scene = Kulturstien.GameScene()
+        //let view = self as SKView
+        //let scene = SKScene(fileNamed: "MillGameScene")
+        
+        //scene!.scaleMode = .aspectFill
+        //presentScene(scene)
+        
+        let scene = MillGameScene()
+        
         scene.size = CGSize(width: 216, height: 216)
-        scene.scaleMode = .fill
+        scene.scaleMode = .aspectFit
         
         return scene
     }
     
     var body: some View {
-        SpriteView(scene: self.gameScene).frame(width: 256, height: 256)
+        SpriteView(scene: self.gameScene)
             .ignoresSafeArea()
     }
 }
