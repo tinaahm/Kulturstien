@@ -26,35 +26,35 @@ struct ThemeSelectionView: View {
                         NavigationLink(destination: DestinationPageView(theme: theme)) {
                             VStack(alignment: .leading) {
 
-                                                           HStack {
+							   HStack {
 
-                                                               RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                                                   .fill(.white)
+								   RoundedRectangle(cornerRadius: 25, style: .continuous)
+									   .fill(.white)
 
-                                                               ZStack {
-                                                                   RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                                                       .fill(Color("Grey"))
-                                                                       .shadow(radius: 7, x: -2, y: 5)
+								   ZStack {
+									   RoundedRectangle(cornerRadius: 25, style: .continuous)
+										   .fill(Color("Grey"))
+										   .shadow(radius: 7, x: -2, y: 5)
 
-                                                                   HStack {
-                                                                       VStack(alignment: .center, spacing: 8) {
+									   HStack {
+										   VStack(alignment: .center, spacing: 8) {
 
-                                                                           Image("Troll")
-                                                                               .resizable()
-                                                                               .scaledToFit()
-                                                                               .frame(width: 100, height: 100)
+											   Image("Troll")
+												   .resizable()
+												   .scaledToFit()
+												   .frame(width: 100, height: 100)
 
-                                                                           Text(theme.name)
+											   Text(theme.name)
 
-                                                                       }.font(.headline).padding()
-                                                                   }
+										   }.font(.headline).padding()
+									   }
 
-                                                                   .padding(20)
-                                                                   .multilineTextAlignment(.center)
-                                                               }
-                                                               .frame(width: 250)
-                                                               .padding(20)
-                                                           }
+									   .padding(20)
+									   .multilineTextAlignment(.center)
+								   }
+								   .frame(width: 250)
+								   .padding(20)
+							   }
                             }
                         }
                     

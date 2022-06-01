@@ -18,22 +18,11 @@ struct MainIPhoneView: View {
 				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "LogboomsButton", width: 71, height: 59, posX: 210, posY: 190)
 				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "SawmillButton", width: 51, height: 60, posX: 70, posY: 520)
 				ButtonView(selectedStructure: .dam, selectedPerson: .none, image: "DamButton", width: 55, height: 60, posX: 40, posY: 740)
-				
-				ButtonView(selectedStructure: .mill, selectedPerson: .none, image: "WatermillButton", width: 70, height: 60, posX: 345, posY: 815)
-				ButtonView(selectedStructure: .none, selectedPerson: .kirsti, image: "KirstiButton", width: 60, height: 73, posX: 65, posY: 210)
-				
-				ButtonView(selectedStructure: .none, selectedPerson: .trond, image: "TrondButton", width: 52, height: 101, posX: 290, posY: 670)
-				ButtonView(selectedStructure: .none, selectedPerson: .ragnhild, image: "RagnhildButton", width: 47, height: 90, posX: 145, posY: 840)
-				ButtonView(selectedStructure: .none, selectedPerson: .none, image: "TrophyButton", width: 40, height: 52, posX: 290, posY: 885)
-					Button (action: {
-						page.pageIndex = .wackANokk
-					}) {
-						Image("TrophyButton")
-							.resizable()
-							.frame(width: 40, height: 52)
-							.padding(15)
-					}
-					.position(x: 190, y: 320)
+				ButtonView(selectedStructure: .mill, image: "WatermillButton", width: 70, height: 60, posX: 345, posY: 815)
+				ButtonView(selectedPerson: .kirsti, image: "KirstiButton", width: 60, height: 73, posX: 65, posY: 210)
+				ButtonView(selectedPerson: .trond, image: "TrondButton", width: 52, height: 101, posX: 290, posY: 670)
+				ButtonView(selectedPerson: .ragnhild, image: "RagnhildButton", width: 47, height: 90, posX: 145, posY: 840)
+				ButtonView(selectedGame: .farmMemoryGame, image: "TrophyButton", width: 40, height: 52, posX: 190, posY: 320)
 				}
 			.background(
 					Image("dayMap")
@@ -58,8 +47,6 @@ struct MainIPhoneView: View {
 						//.padding(.leading, 30)
 				
 						Spacer(minLength: 0)
-                        
-                        
 						
 						Button (action: {
 							withAnimation {
@@ -83,9 +70,6 @@ struct MainIPhoneView: View {
 				.background(.white.opacity(0.5))
 				//Spacer(minLength: 0)
 				
-	
-
-				Spacer()
 				HStack {
 					Spacer()
 					Button (action: {
@@ -96,7 +80,7 @@ struct MainIPhoneView: View {
 							.resizable()
 							.frame(width: 30, height: 30)
 							.padding(15)
-							.background(Color.white)
+							.background(.white.opacity(0.7))
 							.foregroundColor(.black)
 						.clipShape(Circle())
 					}
@@ -104,6 +88,7 @@ struct MainIPhoneView: View {
 					.padding(.top)
 					
 				}
+				Spacer()
 			}
 			
 		}

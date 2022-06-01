@@ -13,17 +13,7 @@ struct MenuView: View {
 	
     var body: some View {
         
-        Button (action: {
-            page.pageIndex = .cardGame
-        }) {
-            Text("Spill kortspill")
-                .foregroundColor(.black)
-                .padding()
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(.gray, lineWidth: 3)
-                )
-        }
+        Text("Meny")
      
     }
 }

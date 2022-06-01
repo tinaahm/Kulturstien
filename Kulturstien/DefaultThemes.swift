@@ -18,13 +18,13 @@ struct DefaultThemes {
 
     static let theme0 = ThemeCollection.Theme (
         name: "Bondens redskaper",
-        accentColor: UIColor(Color.orange),
-        emojiSet: ["🦷", "🍊", "🍋", "🍌", "🍉", "🍇"]
+        accentColor: UIColor(Color("MemoryGameYellow")),
+        emojiSet: ["WaterMillIcon", "Pitchfork", "HorseShoe", "SawmillIcon", "DamIcon", "Logs"]
     )
     
     static let theme1 = ThemeCollection.Theme (
         name: "Underjordiske vesener",
-        accentColor: UIColor(Color.green),
-        emojiSet: ["🦊", "🐻", "🐼", "🐨", "🐯", "🦁"]
+        accentColor: UIColor(Color("MemoryGameDarkBlue")),
+		emojiSet: ["Elf", "Troll", "Nokken", "HuldraWoman", "OldMan", "Frame"]
     )
 }

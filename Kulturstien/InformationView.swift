@@ -63,10 +63,10 @@ struct InformationView: View {
 					
 						VStack(alignment: .leading) {
 							
-							HStack {
+							/*HStack {
 								
 								RoundedRectangle(cornerRadius: 25, style: .continuous)
-									.fill(.white)
+									.fill(.white)*/
 
 								ZStack {
 									RoundedRectangle(cornerRadius: 25, style: .continuous)
@@ -83,7 +83,7 @@ struct InformationView: View {
 								}
 								.frame(width: 350)
 								.padding(20)
-							}
+							//}
 						}
 						.padding()
 							Spacer()

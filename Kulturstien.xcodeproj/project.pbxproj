@@ -29,6 +29,9 @@
 		263B3E6E28462ECD005919D7 /* PersonInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E6D28462ECD005919D7 /* PersonInformation.swift */; };
 		263B3E7028462FF9005919D7 /* PersonInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = 263B3E6F28462FF9005919D7 /* PersonInformation.json */; };
 		263B3E7228475A94005919D7 /* ProfilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E7128475A94005919D7 /* ProfilePickerView.swift */; };
+		263B3E742847A1AF005919D7 /* FarmMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E732847A1AF005919D7 /* FarmMemoryGameView.swift */; };
+		263B3E762847A2F4005919D7 /* FairytaleMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E752847A2F4005919D7 /* FairytaleMemoryGameView.swift */; };
+		263B3E782847AD7F005919D7 /* CreaturesInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E772847AD7F005919D7 /* CreaturesInformationView.swift */; };
 		2669457D283255B700B25AF7 /* QuizQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2669457C283255B700B25AF7 /* QuizQuestions.json */; };
 		2669458028325DBA00B25AF7 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669457F28325DBA00B25AF7 /* QuizView.swift */; };
 		267A77452829558100E0EB7A /* KulturstienApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77442829558100E0EB7A /* KulturstienApp.swift */; };
@@ -105,6 +108,9 @@
 		263B3E6D28462ECD005919D7 /* PersonInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInformation.swift; sourceTree = "<group>"; };
 		263B3E6F28462FF9005919D7 /* PersonInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PersonInformation.json; sourceTree = "<group>"; };
 		263B3E7128475A94005919D7 /* ProfilePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickerView.swift; sourceTree = "<group>"; };
+		263B3E732847A1AF005919D7 /* FarmMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmMemoryGameView.swift; sourceTree = "<group>"; };
+		263B3E752847A2F4005919D7 /* FairytaleMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairytaleMemoryGameView.swift; sourceTree = "<group>"; };
+		263B3E772847AD7F005919D7 /* CreaturesInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreaturesInformationView.swift; sourceTree = "<group>"; };
 		2669457C283255B700B25AF7 /* QuizQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuizQuestions.json; sourceTree = "<group>"; };
 		2669457F28325DBA00B25AF7 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		267A77412829558100E0EB7A /* Kulturstien.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kulturstien.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +181,7 @@
 			children = (
 				0E17588D2836832B00E8F9C4 /* InformationView.swift */,
 				263B3E6728461831005919D7 /* PersonInformationView.swift */,
+				263B3E772847AD7F005919D7 /* CreaturesInformationView.swift */,
 			);
 			name = InfoViews;
 			sourceTree = "<group>";
@@ -188,6 +195,8 @@
 				0E62D2D4283BAF2B0002148D /* Extensions */,
 				0E62D2D3283BAF180002148D /* Models */,
 				0E62D2D2283BAF0E0002148D /* ViewModels */,
+				263B3E732847A1AF005919D7 /* FarmMemoryGameView.swift */,
+				263B3E752847A2F4005919D7 /* FairytaleMemoryGameView.swift */,
 			);
 			name = MemoryCardGame;
 			sourceTree = "<group>";
@@ -537,10 +546,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				263B3E782847AD7F005919D7 /* CreaturesInformationView.swift in Sources */,
 				26D72FAC282E65DE00BC3A8F /* TextsView.swift in Sources */,
 				26D72FB5282E7ED800BC3A8F /* QuizStructures.swift in Sources */,
 				0E62D2EF283BB3210002148D /* Cardify.swift in Sources */,
 				26D4A4DF2837EA230022D49F /* ButtonView.swift in Sources */,
+				263B3E742847A1AF005919D7 /* FarmMemoryGameView.swift in Sources */,
 				0E62D2D9283BAFDF0002148D /* EmojiMemoryGameViewModel.swift in Sources */,
 				26F93BC52837AF98005F5F9E /* LoadJSON.swift in Sources */,
 				2669458028325DBA00B25AF7 /* QuizView.swift in Sources */,
@@ -567,6 +578,7 @@
 				0E62D2E5283BB25E0002148D /* Array+Identifiable.swift in Sources */,
 				263B3E7228475A94005919D7 /* ProfilePickerView.swift in Sources */,
 				0E62D2DB283BB04E0002148D /* ThemeCollectionManager.swift in Sources */,
+				263B3E762847A2F4005919D7 /* FairytaleMemoryGameView.swift in Sources */,
 				26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */,
 				263B3E6E28462ECD005919D7 /* PersonInformation.swift in Sources */,
 				26D72FAA282E65C800BC3A8F /* AchievementsView.swift in Sources */,

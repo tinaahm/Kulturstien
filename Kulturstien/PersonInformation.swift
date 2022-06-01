@@ -11,6 +11,10 @@ enum Person: String, Codable {
 	case kirsti = "Kirsti"
 	case trond = "Trond"
 	case ragnhild = "Ragnhild"
+	case huldra = "Huldra"
+	case nokken = "Nøkken"
+	case troll = "Troll"
+	case tusse = "Tusse"
 	case none = ""
 }
 

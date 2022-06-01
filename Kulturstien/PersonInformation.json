@@ -19,5 +19,33 @@
 		"p1": "Hei, jeg heter Trond og det er jeg som er bonden på By gård. På gården min driver vi med mye forskjellig. Vi har kuer, hester og sauer, og vi produserer også korn og poteter.",
 		"p2": "Kuene våre er vi veldig glad i, de gir oss melk så vi kan lage smør og ost, og fra sauene får vi ull som holder oss varme gjennom vinteren. Hestene hjelper til med å dra plogen så vi får pløyd jorda, og de trekker kjerra som frakter tømmer til sagene våre.",
 		"p3": "Jeg er også med på å drifte de fine sagbrukene her i Byåa. Sagbrukene er viktige inntektskilder, og dessuten er det spennende arbeid. Om våren og på sommeren jobber vi ofte døgnet rundt, for det er da det meste av skogen hugges."
+	},
+	{
+		"type": "Huldra",
+		"imageTitle": "HuldraWoman",
+		"p1": "Huldra er navnet på kvinnelige skapninger som lever inne i skogen eller på fjellet. Foran ser de ut som mennesker og er veldig vakre, og karakteriseres med sitt lange blonde hår. Bakfra er det derimot mulig å ane at disse skapningene ikke er faktiske mennesker. Huldra har kuhale og ryggen kan minne om en råtnende trestamme.",
+		"p2": "Å møte på Huldra kan være farlig og vil i verste fall bringe ulykke. Huldra lokker nemlig mennesker til seg med mål om å lure de. Hun har evner som gjør at hun kan forvrenge menneskers syn slik at de ikke klarer å finne veien ut av skogen igjen, og hun er også kjent for å stjele menneskebarn og bytte de ut med sine egne.",
+		"p3": ""
+	},
+	{
+		"type": "Nøkken",
+		"imageTitle": "Nokken",
+		"p1": "Nøkken er et vesen som lever i elver og sjøer. Den er usynlig, men tar ofte form som en trestokk som flyter på vannet. Nøkken er veldig farlig. Den er forbundet med drukning, og forsøker å lokke mennesker ut i vannet.",
+		"p2": "Nøkken kan også ta form som en hvit hest eller som en ung gutt som spiller vakker musikk for å trollbinde ofrene sine. Nøkken er særlig farlig etter solnedgang.",
+		"p3": ""
+	},
+	{
+		"type": "Troll",
+		"imageTitle": "Troll",
+		"p1": "Troll er overnaturlige vesener som bor i fjell og i grotter. De beskrives ofte som store og stygge, og som veldig dumme. Trollene kjennetegnes ved at de har store neser og øyne på størrelse med tallerkener. De kan også ha flere hoder eller bare et øye.",
+		"p2": "Trollene er kun ute når det er mørkt. Det er fordi de i møte med sollys blir til stein. Mange av de store steinene man ser ute i skogen og på fjellene er nettopp troll som har blitt forsteinet.",
+		"p3": ""
+	},
+	{
+		"type": "Tusse",
+		"imageTitle": "OldMan",
+		"p1": "Tusser er små kortvokste skapninger som lever under jorda og de blir derfor ofte kalt for “de underjordiske”. Tussene befinner seg gjerne i områder nær gårder og setre. Føler de seg truet kan de forsøke å sabotere gårdsdriften, men de kan også være til hjelp dersom man er snille mot de.",
+		"p2": "Tussene er usynlige, men kan noen ganger velge å vise seg frem for mennesker. De som har sett tusser beskriver de som et lite, skjeggete folk, ofte kledd i grått.",
+		"p3": ""
 	}
 ]

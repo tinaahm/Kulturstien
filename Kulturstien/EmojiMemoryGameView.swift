@@ -21,7 +21,7 @@ struct EmojiMemoryGameView: View {
         return VStack{
             Grid(items: viewModel.cards) { card in
                 CardView(card: card).onTapGesture {
-                    withAnimation(.easeInOut(duration: 0.5)) {
+                    withAnimation(.easeInOut(duration: 0.3)) {
                             viewModel.choose(card: card)
                         }
                     }
@@ -82,11 +82,12 @@ struct CardView: View {
                         )
                     }
                 }.padding(5).opacity(0.25).transition(.identity)
-                
-                Text(card.content)
-                    .font(Font.system(size: fontSize(for: size)))
-                    .rotationEffect(Angle.degrees(card.isMatched ? 360:0))
-                    .animation(card.isMatched ? Animation.linear(duration: 1).repeatForever(autoreverses: false) : .default)
+				
+				Image(card.content)
+					.resizable()
+					.scaledToFit()
+					.rotationEffect(Angle.degrees(card.isMatched ? 360:0))
+					.animation(card.isMatched ? Animation.linear(duration: 1).repeatForever(autoreverses: false) : .default)
             }
             .cardify(isFaceUp: card.isFaceUp)
             .transition(.scale)

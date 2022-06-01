@@ -7,12 +7,22 @@
 
 import SwiftUI
 
+enum Game {
+	case wackANokk
+	case frightenHuldra
+	case farmMemoryGame
+	case fairytaleCreaturesMemoryGame
+	case none
+}
+
 struct ButtonView: View {
 	
 	@EnvironmentObject var page : ViewIndex
 	
-	var selectedStructure: Structure
-	var selectedPerson: Person
+	var selectedStructure: Structure = .none
+	var selectedPerson: Person = .none
+	var selectedGame: Game = .none
+	var selectedCreature: Person = .none
 	var image: String
 	var width: CGFloat
 	var height: CGFloat
@@ -29,6 +39,13 @@ struct ButtonView: View {
 				page.previousPage = page.pageIndex
 				personSelection = selectedPerson
 				page.pageIndex = .personInformation
+			} else if selectedGame != .none {
+				page.previousPage = page.pageIndex
+				page.pageIndex = getPageByGameSelection(game: selectedGame)
+			} else if selectedCreature != .none {
+				page.previousPage = page.pageIndex
+				personSelection = selectedCreature
+				page.pageIndex = .creatureInformation
 			}
 		}) {
 			Image(image)
@@ -39,6 +56,21 @@ struct ButtonView: View {
 
 		}
 		.position(x: posX, y: posY)
+	}
+}
+
+func getPageByGameSelection(game: Game) -> Page {
+	switch game {
+	case .wackANokk:
+		return .wackANokk
+	case .frightenHuldra:
+		return .huldraGame
+	case .farmMemoryGame:
+		return .farmMemoryGame
+	case .fairytaleCreaturesMemoryGame:
+		return .fairytaleCreaturesMemoryGame
+	case .none:
+		return .main
 	}
 }
 

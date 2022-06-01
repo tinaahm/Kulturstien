@@ -15,26 +15,13 @@ struct MainNightTimeView: View {
 		ZStack {
 				
 			ZStack {
-				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "", width: 60, height: 60, posX: 200, posY: 200)
-				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "TrollButton", width: 39, height: 71, posX: 75, posY: 590)
-				ButtonView(selectedStructure: .dam, selectedPerson: .none, image: "HuldraButton", width: 47, height: 80, posX: 200, posY: 510)
-				
-				ButtonView(selectedStructure: .mill, selectedPerson: .none, image: "", width: 122, height: 79, posX: 350, posY: 800)
-				ButtonView(selectedStructure: .none, selectedPerson: .kirsti, image: "NøkkenButton", width: 44, height: 30, posX: 65, posY: 227)
-				
-				ButtonView(selectedStructure: .none, selectedPerson: .trond, image: "BonfireButton", width: 32, height: 52, posX: 230, posY: 660)
-				ButtonView(selectedStructure: .none, selectedPerson: .ragnhild, image: "TusseButton", width: 32, height: 52, posX: 230, posY: 800)
-				ButtonView(selectedStructure: .none, selectedPerson: .none, image: "BonfireButton", width: 32, height: 46, posX: 110, posY: 770)
-				ButtonView(selectedStructure:  .none, selectedPerson: .none, image: "Group 28", width: 35, height: 60, posX: 195, posY: 300)
-					Button (action: {
-						page.pageIndex = .wackANokk
-					}) {
-						Image("BonfireButton")
-							.resizable()
-							.frame(width: 32, height: 46)
-							.padding(15)
-					}
-					.position(x: 90, y: 340)
+				ButtonView(selectedCreature: .troll, image: "TrollButton", width: 39, height: 71, posX: 75, posY: 590)
+				ButtonView(selectedCreature: .huldra, image: "HuldraButton", width: 47, height: 80, posX: 200, posY: 510)
+				ButtonView(selectedCreature: .nokken, image: "NøkkenButton", width: 44, height: 30, posX: 65, posY: 227)
+				ButtonView(selectedGame: .wackANokk, image: "BonfireButton", width: 32, height: 52, posX: 90, posY: 340)
+				ButtonView(selectedGame: .fairytaleCreaturesMemoryGame, image: "BonfireButton", width: 32, height: 52, posX: 230, posY: 660)
+				ButtonView(selectedCreature: .tusse, image: "TusseButton", width: 32, height: 52, posX: 230, posY: 800)
+				ButtonView(selectedGame: .frightenHuldra, image: "BonfireButton", width: 32, height: 46, posX: 110, posY: 770)
 				}
 			.background(
 					Image("NightTimeMap")
@@ -47,12 +34,13 @@ struct MainNightTimeView: View {
 			VStack {
 				//ZStack {
 					HStack {
-						//Spacer(minLength: 0)
-						Image(systemName: "person")
-						.resizable()
-						.frame(width: 30, height: 30)
-						.padding(15)
-						//.padding(.leading, 30)
+						Button (action: {
+							page.pageIndex = .profile
+						}) {
+							Image(getImageTitleByColour(colour: page.user.selectedColour))
+							.resizable()
+							.frame(width: 60, height: 60)
+						}
 				
 						Spacer(minLength: 0)
 						
@@ -73,16 +61,10 @@ struct MainNightTimeView: View {
 						//Spacer(minLength: 0)
 					}
 					.foregroundColor(.black)
-					//.frame(width: 425, height: 60)
-					//.padding()
-				//}
+				
 				.padding()
 				.background(.white.opacity(0.5))
-				//Spacer(minLength: 0)
 				
-	
-
-				Spacer()
 				HStack {
 					Spacer()
 					Button (action: {
@@ -93,7 +75,7 @@ struct MainNightTimeView: View {
 							.resizable()
 							.frame(width: 30, height: 30)
 							.padding(15)
-							.background(Color.white)
+							.background(.white.opacity(0.7))
 							.foregroundColor(.black)
 						.clipShape(Circle())
 					}
@@ -101,6 +83,7 @@ struct MainNightTimeView: View {
 					.padding(.top)
 					
 				}
+				Spacer()
 			}
 			
 		}
