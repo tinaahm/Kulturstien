@@ -15,26 +15,26 @@ struct MainNightTimeView: View {
 		ZStack {
 				
 			ZStack {
-				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "SawmillButton", width: 60, height: 60, posX: 200, posY: 200)
-				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "SawmillButton", width: 60, height: 60, posX: 70, posY: 520)
-				ButtonView(selectedStructure: .dam, selectedPerson: .none, image: "DamButton", width: 60, height: 60, posX: 40, posY: 740)
+				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "", width: 60, height: 60, posX: 200, posY: 200)
+				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "TrollButton", width: 39, height: 71, posX: 75, posY: 590)
+				ButtonView(selectedStructure: .dam, selectedPerson: .none, image: "HuldraButton", width: 47, height: 80, posX: 200, posY: 510)
 				
-				ButtonView(selectedStructure: .mill, selectedPerson: .none, image: "MillIcon", width: 122, height: 79, posX: 350, posY: 800)
-				ButtonView(selectedStructure: .none, selectedPerson: .kirsti, image: "KirstiButton", width: 50, height: 65, posX: 65, posY: 205)
+				ButtonView(selectedStructure: .mill, selectedPerson: .none, image: "", width: 122, height: 79, posX: 350, posY: 800)
+				ButtonView(selectedStructure: .none, selectedPerson: .kirsti, image: "NøkkenButton", width: 44, height: 30, posX: 65, posY: 227)
 				
-				ButtonView(selectedStructure: .none, selectedPerson: .trond, image: "TrondButton", width: 45, height: 90, posX: 230, posY: 670)
-				ButtonView(selectedStructure: .none, selectedPerson: .ragnhild, image: "RagnhildButton", width: 45, height: 90, posX: 145, posY: 840)
-				ButtonView(selectedStructure: .none, selectedPerson: .none, image: "FlagButton", width: 35, height: 60, posX: 290, posY: 875)
+				ButtonView(selectedStructure: .none, selectedPerson: .trond, image: "BonfireButton", width: 32, height: 52, posX: 230, posY: 660)
+				ButtonView(selectedStructure: .none, selectedPerson: .ragnhild, image: "TusseButton", width: 32, height: 52, posX: 230, posY: 800)
+				ButtonView(selectedStructure: .none, selectedPerson: .none, image: "BonfireButton", width: 32, height: 46, posX: 110, posY: 770)
 				ButtonView(selectedStructure:  .none, selectedPerson: .none, image: "Group 28", width: 35, height: 60, posX: 195, posY: 300)
 					Button (action: {
 						page.pageIndex = .wackANokk
 					}) {
-						Image("Button")
+						Image("BonfireButton")
 							.resizable()
-							.frame(width: 35, height: 60)
+							.frame(width: 32, height: 46)
 							.padding(15)
 					}
-					.position(x: 300, y: 200)
+					.position(x: 90, y: 340)
 				}
 			.background(
 					Image("NightTimeMap")
