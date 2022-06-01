@@ -15,29 +15,29 @@ struct MainIPhoneView: View {
 		ZStack {
 				
 			ZStack {
-				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "SawmillButton", width: 60, height: 60, posX: 200, posY: 200)
-				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "SawmillButton", width: 60, height: 60, posX: 70, posY: 520)
-				ButtonView(selectedStructure: .dam, selectedPerson: .none, image: "DamButton", width: 60, height: 60, posX: 40, posY: 740)
+				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "LogboomsButton", width: 71, height: 59, posX: 210, posY: 190)
+				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "SawmillButton", width: 51, height: 60, posX: 70, posY: 520)
+				ButtonView(selectedStructure: .dam, selectedPerson: .none, image: "DamButton", width: 55, height: 60, posX: 40, posY: 740)
 				
-				ButtonView(selectedStructure: .mill, selectedPerson: .none, image: "MillIcon", width: 122, height: 79, posX: 350, posY: 800)
-				ButtonView(selectedStructure: .none, selectedPerson: .kirsti, image: "KirstiButton", width: 50, height: 65, posX: 65, posY: 205)
+				ButtonView(selectedStructure: .mill, selectedPerson: .none, image: "WatermillButton", width: 70, height: 60, posX: 345, posY: 815)
+				ButtonView(selectedStructure: .none, selectedPerson: .kirsti, image: "KirstiButton", width: 60, height: 73, posX: 65, posY: 210)
 				
-				ButtonView(selectedStructure: .none, selectedPerson: .trond, image: "TrondButton", width: 45, height: 90, posX: 230, posY: 670)
-				ButtonView(selectedStructure: .none, selectedPerson: .ragnhild, image: "RagnhildButton", width: 45, height: 90, posX: 145, posY: 840)
-				ButtonView(selectedStructure: .none, selectedPerson: .none, image: "FlagButton", width: 35, height: 60, posX: 290, posY: 875)
+				ButtonView(selectedStructure: .none, selectedPerson: .trond, image: "TrondButton", width: 52, height: 101, posX: 290, posY: 670)
+				ButtonView(selectedStructure: .none, selectedPerson: .ragnhild, image: "RagnhildButton", width: 47, height: 90, posX: 145, posY: 840)
+				ButtonView(selectedStructure: .none, selectedPerson: .none, image: "TrophyButton", width: 40, height: 52, posX: 290, posY: 885)
 				//ButtonView(selectedStructure:  .none, selectedPerson: .none, image: "Group 28", width: 35, height: 60, posX: 195, posY: 300)
 					Button (action: {
 						page.pageIndex = .wackANokk
 					}) {
-						Image("FlagButton")
+						Image("TrophyButton")
 							.resizable()
-							.frame(width: 35, height: 60)
+							.frame(width: 40, height: 52)
 							.padding(15)
 					}
 					.position(x: 190, y: 320)
 				}
 			.background(
-					Image("DayTimeMap")
+					Image("dayMap")
 						.resizable()
 						.scaledToFill()
 						.edgesIgnoringSafeArea(.all)

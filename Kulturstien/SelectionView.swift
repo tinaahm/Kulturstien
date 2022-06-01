@@ -80,7 +80,7 @@ func getImageTitleFromSelection(selectionType: Structure) -> String {
 	case .dam:
 		return "DamIcon"
 	case .logBooms:
-		return "LogBoomsIcon"
+		return "LogBoomsSignIcon"
 	case .none:
 		return ""
 	}
