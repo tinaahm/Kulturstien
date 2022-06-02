@@ -74,7 +74,6 @@
 		A0EA0C4B2848B46D00A2B524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C3E2848B46D00A2B524 /* Main.storyboard */; };
 		A0EA0C4C2848B46D00A2B524 /* skyteflamme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C412848B46D00A2B524 /* skyteflamme.mp3 */; };
 		A0EA0C4E2848B46D00A2B524 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C432848B46D00A2B524 /* GameScene.sks */; };
-		A0EA0C4F2848B46D00A2B524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA0C442848B46D00A2B524 /* AppDelegate.swift */; };
 		A0EA0C502848B46D00A2B524 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA0C452848B46D00A2B524 /* GameScene.swift */; };
 		A0EA0C512848B46D00A2B524 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C462848B46D00A2B524 /* Actions.sks */; };
 /* End PBXBuildFile section */
@@ -168,7 +167,6 @@
 		A0EA0C3F2848B46D00A2B524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0EA0C412848B46D00A2B524 /* skyteflamme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = skyteflamme.mp3; sourceTree = "<group>"; };
 		A0EA0C432848B46D00A2B524 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		A0EA0C442848B46D00A2B524 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0EA0C452848B46D00A2B524 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		A0EA0C462848B46D00A2B524 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -430,7 +428,6 @@
 				A0EA0C3E2848B46D00A2B524 /* Main.storyboard */,
 				A0EA0C402848B46D00A2B524 /* Sounds */,
 				A0EA0C432848B46D00A2B524 /* GameScene.sks */,
-				A0EA0C442848B46D00A2B524 /* AppDelegate.swift */,
 				A0EA0C452848B46D00A2B524 /* GameScene.swift */,
 				A0EA0C462848B46D00A2B524 /* Actions.sks */,
 			);
@@ -613,7 +610,6 @@
 				0E62D2E1283BB0D90002148D /* MemoryGame.swift in Sources */,
 				A04024E72848C8F1001B4D18 /* FrightenHuldraGameView.swift in Sources */,
 				A0EA0C492848B46D00A2B524 /* GameOverScene.swift in Sources */,
-				A0EA0C4F2848B46D00A2B524 /* AppDelegate.swift in Sources */,
 				26F04990283CC16D00FBA117 /* WackANokkView.swift in Sources */,
 				0E62D2E9283BB2A20002148D /* Int+RandomExcludingSome.swift in Sources */,
 				263B3E6828461831005919D7 /* PersonInformationView.swift in Sources */,

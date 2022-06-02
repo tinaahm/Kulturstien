@@ -1,5 +1,5 @@
 //
-//  GameScene.swift
+//  WackGameScene.swift
 //  WackANoekken
 //
 //  Created by Lucas on 24/05/2022.

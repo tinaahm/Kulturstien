@@ -12,11 +12,24 @@ import SpriteKit
 import UIKit
 
 struct WackANokkView: View {
+	
+	var theWackScene: SKScene {
+		let theWackScene = WackGameScene()
+		theWackScene.size = CGSize(width: 400, height: 800)
+		theWackScene.scaleMode = .aspectFit
+		theWackScene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+		return theWackScene
+	}
     
-	var theWackScene = SKScene(fileNamed: "WackGameScene")
+	//var theWackScene = SKScene(fileNamed: "WackGameScene")
 	
 	var body: some View {
-		SpriteView(scene: theWackScene!)
+		ZStack {
+			SpriteView(scene: self.theWackScene)
+				.ignoresSafeArea()
+				//.padding(.all)
+				//.frame(width: 500, height: 800)
+		}
 	}
 	
 }
