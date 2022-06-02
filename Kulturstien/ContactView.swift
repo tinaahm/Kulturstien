@@ -37,8 +37,18 @@ struct ContactView: View {
             }
                 
             VStack (spacing: 25){
-            HStack {
-                TextField("Tilbakemelding...", text: $feedBack)
+				ZStack(alignment: .leading) {
+                //TextField("Tilbakemelding...", text: $feedBack)
+				TextEditor(text: $feedBack)
+						.padding()
+				if feedBack.isEmpty {
+					VStack {
+						Text("Tilbakemelding...")
+							.foregroundColor(.gray)
+							.padding()
+						Spacer()
+					}
+				}
             }
             .frame(width: 300, height: 200)
             .padding()

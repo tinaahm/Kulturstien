@@ -20,19 +20,6 @@ struct MenuView: View {
             Spacer()
             
             Button(action: {
-                page.previousPage = page.pageIndex
-                page.pageIndex = .contact
-            }) {
-                Text("Kontakt oss")
-					.foregroundColor(.black)
-					.frame(width: 200)
-					.padding()
-					.background(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1))
-            }
-            
-            
-            Button(action: {
 				page.previousPage = page.pageIndex
 				page.pageIndex = .history
             }) {
@@ -43,6 +30,18 @@ struct MenuView: View {
 					.background(RoundedRectangle(cornerRadius: 15)
 						.stroke(Color.gray, lineWidth: 1))
             }
+			
+			Button(action: {
+				page.previousPage = page.pageIndex
+				page.pageIndex = .contact
+			}) {
+				Text("Kontakt oss")
+					.foregroundColor(.black)
+					.frame(width: 200)
+					.padding()
+					.background(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1))
+			}
             
             Spacer()
         }
