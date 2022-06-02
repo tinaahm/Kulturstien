@@ -13,6 +13,8 @@ import SwiftUI
 struct AvatarEditorView: View {
     
     @EnvironmentObject var page: ViewIndex
+	
+	var avatarArray = [["Cow", "blå"], ["Troll-1", "grønn"], ["Bunny", "rosa"], ["Reindeer", "oransje"], ["Chicken", "gul"]]
     
     var body: some View {
         VStack () {
@@ -25,63 +27,53 @@ struct AvatarEditorView: View {
             HStack (alignment: .top) {
                 
                 VStack () {
-                    Button (action: {
-                        
-                        page.pageIndex = .profile
-                    }) {
-                        Image("Cow")
-                        .resizable()
-                        .frame(width: 130, height: 130)
-                    }
-                    Button (action: {
-                        
-                        page.pageIndex = .profile
-                    }) {
-                        Image("Troll-1")
-                        .resizable()
-                        .frame(width: 130, height: 130)
-                    }
-                    .padding()
-                    Button (action: {
-                        
-                        page.pageIndex = .profile
-                    }) {
-                        Image("Bunny")
-                        .resizable()
-                        .frame(width: 130, height: 130)
-                    }
+					
+					ForEach(0 ..< 3) { index in
+						Button (action: {
+							page.user.selectedColour = Colour(rawValue: avatarArray[index][1])!
+						}) {
+							Image(avatarArray[index][0])
+							.resizable()
+							.frame(width: 130, height: 130)
+							.overlay(
+									RoundedRectangle(cornerRadius: 200)
+										.stroke(selectedAvatar(currentColour: page.user.selectedColour, buttontColour: Colour(rawValue: avatarArray[index][1])!), lineWidth: 4)
+								)
+						}
+					}
+					.padding()
                 }
                 .padding()
                 
                 VStack () {
-                    Button (action: {
-                        
-                        page.pageIndex = .profile
-                    }) {
-                        Image("Chicken")
-                        .resizable()
-                        .frame(width: 130, height: 130)
-                    }
-                    
-                    Button (action: {
-                        
-                        page.pageIndex = .profile
-                    }) {
-                        Image("Reindeer")
-                        .resizable()
-                        .frame(width: 130, height: 130)
+					ForEach(3 ..< 5) { index in
+						Button (action: {
+							page.user.selectedColour = Colour(rawValue: avatarArray[index][1])!
+						}) {
+							Image(avatarArray[index][0])
+							.resizable()
+							.frame(width: 130, height: 130)
+							.overlay(
+									RoundedRectangle(cornerRadius: 200)
+										.stroke(selectedAvatar(currentColour: page.user.selectedColour, buttontColour: Colour(rawValue: avatarArray[index][1])!), lineWidth: 4)
+								)
+						}
                     }
                     .padding()
                 }
                 .padding()
-                
             }
-            
-        
             
           Spacer()
         }
     }
+}
+
+func selectedAvatar(currentColour: Colour, buttontColour: Colour) -> Color {
+	if currentColour == buttontColour {
+		return .green
+	}
+	return .clear
 }
 
 struct AvatarEditorView_Previews: PreviewProvider {

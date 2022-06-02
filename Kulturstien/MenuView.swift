@@ -33,7 +33,8 @@ struct MenuView: View {
             
             
             Button(action: {
-                
+				page.previousPage = page.pageIndex
+				page.pageIndex = .history
             }) {
                 Text("Byåas historie")
             }

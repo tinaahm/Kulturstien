@@ -28,8 +28,9 @@ struct HistoryView: View {
                 
                 VStack () {
                     Button (action: {
-                        
-                        page.pageIndex = .profile
+						page.previousPage = page.pageIndex
+						informationSelection = .mill
+						page.pageIndex = .information
                     }) {
                         VStack () {
                         Image("Corn")
@@ -46,8 +47,9 @@ struct HistoryView: View {
                     
                 }
                     Button (action: {
-                        
-                        page.pageIndex = .profile
+						page.previousPage = page.pageIndex
+						informationSelection = .sawmill
+						page.pageIndex = .information
                     }) {
                         VStack () {
                         Image("Saw")
@@ -70,8 +72,9 @@ struct HistoryView: View {
                 
                 VStack () {
                     Button (action: {
-                        
-                        page.pageIndex = .profile
+						page.previousPage = page.pageIndex
+						informationSelection = .dam
+						page.pageIndex = .information
                     }) {
                         VStack () {
                         Image("WaterMill")
@@ -89,8 +92,9 @@ struct HistoryView: View {
                 }
                     
                     Button (action: {
-                        
-                        page.pageIndex = .profile
+						page.previousPage = page.pageIndex
+						informationSelection = .logBooms
+						page.pageIndex = .information
                     }) {
                         VStack () {
                         Image("LogBoomsIcon")

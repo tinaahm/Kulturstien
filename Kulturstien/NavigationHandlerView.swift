@@ -17,7 +17,7 @@ struct User {
 }
 
 enum Page {
-	case start, main, mainNight, profile, menu, achievements, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, quizProgression, avatarChanger, gameEnd
+	case start, main, mainNight, profile, menu, achievements, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, quizProgression, avatarChanger, gameEnd, history
 }
 
 var quizSelection: Structure = .none
@@ -82,6 +82,8 @@ struct NavigationHandlerView: View {
             AvatarEditorView()
 		case .gameEnd:
 			GameEndView(gameType: selectedGame)
+		case .history:
+			HistoryView()
 		}
     }
 }
