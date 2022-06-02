@@ -24,7 +24,6 @@
 		0E62D2F5283BB4650002148D /* DefaultThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E62D2F4283BB4650002148D /* DefaultThemes.swift */; };
 		0E62D2F7283BB4BC0002148D /* ThemeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E62D2F6283BB4BC0002148D /* ThemeSelectionView.swift */; };
 		0E62D2F9283BB5070002148D /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E62D2F8283BB5070002148D /* EmojiMemoryGameView.swift */; };
-		2620627F2848B25100AEF535 /* SkremBortHuldra in Resources */ = {isa = PBXBuildFile; fileRef = 2620627E2848B25100AEF535 /* SkremBortHuldra */; };
 		263B3E6828461831005919D7 /* PersonInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E6728461831005919D7 /* PersonInformationView.swift */; };
 		263B3E6A28461C4E005919D7 /* MainNightTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E6928461C4E005919D7 /* MainNightTimeView.swift */; };
 		263B3E6E28462ECD005919D7 /* PersonInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E6D28462ECD005919D7 /* PersonInformation.swift */; };
@@ -94,7 +93,6 @@
 		0E62D2F4283BB4650002148D /* DefaultThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultThemes.swift; sourceTree = "<group>"; };
 		0E62D2F6283BB4BC0002148D /* ThemeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionView.swift; sourceTree = "<group>"; };
 		0E62D2F8283BB5070002148D /* EmojiMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameView.swift; sourceTree = "<group>"; };
-		2620627E2848B25100AEF535 /* SkremBortHuldra */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SkremBortHuldra; sourceTree = "<group>"; };
 		263B3E6728461831005919D7 /* PersonInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInformationView.swift; sourceTree = "<group>"; };
 		263B3E6928461C4E005919D7 /* MainNightTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNightTimeView.swift; sourceTree = "<group>"; };
 		263B3E6D28462ECD005919D7 /* PersonInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInformation.swift; sourceTree = "<group>"; };
@@ -272,7 +270,6 @@
 		267A77432829558100E0EB7A /* Kulturstien */ = {
 			isa = PBXGroup;
 			children = (
-				2620627E2848B25100AEF535 /* SkremBortHuldra */,
 				0E62D2D1283BAEED0002148D /* MemoryCardGame */,
 				26D4A4E32837ED3D0022D49F /* Data */,
 				26D4A4E22837EAD10022D49F /* ButtonViews */,
@@ -466,7 +463,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2620627F2848B25100AEF535 /* SkremBortHuldra in Resources */,
 				2669457D283255B700B25AF7 /* QuizQuestions.json in Resources */,
 				263B3E7028462FF9005919D7 /* PersonInformation.json in Resources */,
 				267A774C2829558200E0EB7A /* Preview Assets.xcassets in Resources */,
