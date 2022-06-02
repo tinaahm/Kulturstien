@@ -57,6 +57,17 @@
 		26F0498E283B830B00FBA117 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0498D283B830B00FBA117 /* Paragraph.swift */; };
 		26F04990283CC16D00FBA117 /* WackANokkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0498F283CC16D00FBA117 /* WackANokkView.swift */; };
 		26F93BC52837AF98005F5F9E /* LoadJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F93BC42837AF98005F5F9E /* LoadJSON.swift */; };
+		A04024DC2848C81F001B4D18 /* WackMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04024D22848C81E001B4D18 /* WackMain.storyboard */; };
+		A04024DD2848C81F001B4D18 /* whackBad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A04024D32848C81E001B4D18 /* whackBad.mp3 */; };
+		A04024DE2848C81F001B4D18 /* WackGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04024D42848C81E001B4D18 /* WackGameScene.swift */; };
+		A04024DF2848C81F001B4D18 /* WhackSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04024D52848C81E001B4D18 /* WhackSlot.swift */; };
+		A04024E02848C81F001B4D18 /* WackActions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A04024D62848C81F001B4D18 /* WackActions.sks */; };
+		A04024E12848C81F001B4D18 /* WackGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A04024D72848C81F001B4D18 /* WackGameScene.sks */; };
+		A04024E22848C81F001B4D18 /* WackGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04024D82848C81F001B4D18 /* WackGameViewController.swift */; };
+		A04024E32848C81F001B4D18 /* WackLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04024D92848C81F001B4D18 /* WackLaunchScreen.storyboard */; };
+		A04024E42848C81F001B4D18 /* WackGameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04024DA2848C81F001B4D18 /* WackGameOverScene.swift */; };
+		A04024E52848C81F001B4D18 /* whack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A04024DB2848C81F001B4D18 /* whack.mp3 */; };
+		A04024E72848C8F1001B4D18 /* FrightenHuldraGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04024E62848C8F1001B4D18 /* FrightenHuldraGameView.swift */; };
 		A0EA0C472848B46D00A2B524 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA0C392848B46D00A2B524 /* GameViewController.swift */; };
 		A0EA0C492848B46D00A2B524 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA0C3B2848B46D00A2B524 /* GameOverScene.swift */; };
 		A0EA0C4A2848B46D00A2B524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C3C2848B46D00A2B524 /* LaunchScreen.storyboard */; };
@@ -141,6 +152,17 @@
 		26F0498D283B830B00FBA117 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
 		26F0498F283CC16D00FBA117 /* WackANokkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WackANokkView.swift; sourceTree = "<group>"; };
 		26F93BC42837AF98005F5F9E /* LoadJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJSON.swift; sourceTree = "<group>"; };
+		A04024D22848C81E001B4D18 /* WackMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WackMain.storyboard; sourceTree = "<group>"; };
+		A04024D32848C81E001B4D18 /* whackBad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whackBad.mp3; sourceTree = "<group>"; };
+		A04024D42848C81E001B4D18 /* WackGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WackGameScene.swift; sourceTree = "<group>"; };
+		A04024D52848C81E001B4D18 /* WhackSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhackSlot.swift; sourceTree = "<group>"; };
+		A04024D62848C81F001B4D18 /* WackActions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WackActions.sks; sourceTree = "<group>"; };
+		A04024D72848C81F001B4D18 /* WackGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WackGameScene.sks; sourceTree = "<group>"; };
+		A04024D82848C81F001B4D18 /* WackGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WackGameViewController.swift; sourceTree = "<group>"; };
+		A04024D92848C81F001B4D18 /* WackLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WackLaunchScreen.storyboard; sourceTree = "<group>"; };
+		A04024DA2848C81F001B4D18 /* WackGameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WackGameOverScene.swift; sourceTree = "<group>"; };
+		A04024DB2848C81F001B4D18 /* whack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whack.mp3; sourceTree = "<group>"; };
+		A04024E62848C8F1001B4D18 /* FrightenHuldraGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrightenHuldraGameView.swift; sourceTree = "<group>"; };
 		A0EA0C392848B46D00A2B524 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A0EA0C3B2848B46D00A2B524 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		A0EA0C3D2848B46D00A2B524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -292,6 +314,7 @@
 		267A77432829558100E0EB7A /* Kulturstien */ = {
 			isa = PBXGroup;
 			children = (
+				A04024D12848C7F7001B4D18 /* WackANokk */,
 				A0EA0C382848B46D00A2B524 /* SkremBortHuldra */,
 				0E62D2D1283BAEED0002148D /* MemoryCardGame */,
 				26D4A4E32837ED3D0022D49F /* Data */,
@@ -305,6 +328,7 @@
 				267A774B2829558200E0EB7A /* Preview Assets.xcassets */,
 				26D72FB1282E719000BC3A8F /* Fonts */,
 				26F0498F283CC16D00FBA117 /* WackANokkView.swift */,
+				A04024E62848C8F1001B4D18 /* FrightenHuldraGameView.swift */,
 			);
 			path = Kulturstien;
 			sourceTree = "<group>";
@@ -381,6 +405,23 @@
 				267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		A04024D12848C7F7001B4D18 /* WackANokk */ = {
+			isa = PBXGroup;
+			children = (
+				A04024D62848C81F001B4D18 /* WackActions.sks */,
+				A04024DA2848C81F001B4D18 /* WackGameOverScene.swift */,
+				A04024D72848C81F001B4D18 /* WackGameScene.sks */,
+				A04024D42848C81E001B4D18 /* WackGameScene.swift */,
+				A04024D82848C81F001B4D18 /* WackGameViewController.swift */,
+				A04024D92848C81F001B4D18 /* WackLaunchScreen.storyboard */,
+				A04024D22848C81E001B4D18 /* WackMain.storyboard */,
+				A04024DB2848C81F001B4D18 /* whack.mp3 */,
+				A04024D32848C81E001B4D18 /* whackBad.mp3 */,
+				A04024D52848C81E001B4D18 /* WhackSlot.swift */,
+			);
+			name = WackANokk;
 			sourceTree = "<group>";
 		};
 		A0EA0C382848B46D00A2B524 /* SkremBortHuldra */ = {
@@ -515,15 +556,21 @@
 				A0EA0C4A2848B46D00A2B524 /* LaunchScreen.storyboard in Resources */,
 				A0EA0C4B2848B46D00A2B524 /* Main.storyboard in Resources */,
 				2669457D283255B700B25AF7 /* QuizQuestions.json in Resources */,
+				A04024DC2848C81F001B4D18 /* WackMain.storyboard in Resources */,
 				263B3E7028462FF9005919D7 /* PersonInformation.json in Resources */,
+				A04024E02848C81F001B4D18 /* WackActions.sks in Resources */,
 				A0EA0C532848B4D300A2B524 /* backgroundmusic.mp3 in Resources */,
 				267A774C2829558200E0EB7A /* Preview Assets.xcassets in Resources */,
 				267A7782282AF85200E0EB7A /* AmericanTypewriter.ttc in Resources */,
 				A0EA0C4C2848B46D00A2B524 /* skyteflamme.mp3 in Resources */,
+				A04024E12848C81F001B4D18 /* WackGameScene.sks in Resources */,
 				A0EA0C512848B46D00A2B524 /* Actions.sks in Resources */,
 				267A77492829558200E0EB7A /* Assets.xcassets in Resources */,
+				A04024E52848C81F001B4D18 /* whack.mp3 in Resources */,
+				A04024E32848C81F001B4D18 /* WackLaunchScreen.storyboard in Resources */,
 				26F0498C283B82A200FBA117 /* Paragraphs.json in Resources */,
 				A0EA0C4E2848B46D00A2B524 /* GameScene.sks in Resources */,
+				A04024DD2848C81F001B4D18 /* whackBad.mp3 in Resources */,
 				267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,12 +608,14 @@
 				2669458028325DBA00B25AF7 /* QuizView.swift in Sources */,
 				26D4A4DD2837D5630022D49F /* SelectionView.swift in Sources */,
 				26D4A4E12837EA8D0022D49F /* BackButtonView.swift in Sources */,
+				A04024E42848C81F001B4D18 /* WackGameOverScene.swift in Sources */,
 				0E62D2DD283BB07E0002148D /* ThemeCollection.swift in Sources */,
 				26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */,
 				0E62D2F7283BB4BC0002148D /* ThemeSelectionView.swift in Sources */,
 				26D72FA6282E5A7500BC3A8F /* MenuView.swift in Sources */,
 				267A77452829558100E0EB7A /* KulturstienApp.swift in Sources */,
 				0E62D2E1283BB0D90002148D /* MemoryGame.swift in Sources */,
+				A04024E72848C8F1001B4D18 /* FrightenHuldraGameView.swift in Sources */,
 				A0EA0C492848B46D00A2B524 /* GameOverScene.swift in Sources */,
 				A0EA0C4F2848B46D00A2B524 /* AppDelegate.swift in Sources */,
 				26F04990283CC16D00FBA117 /* WackANokkView.swift in Sources */,
@@ -577,17 +626,20 @@
 				0E62D2E3283BB23A0002148D /* String+ToArray.swift in Sources */,
 				0E62D2ED283BB3090002148D /* GridLayout.swift in Sources */,
 				0E62D2F9283BB5070002148D /* EmojiMemoryGameView.swift in Sources */,
+				A04024E22848C81F001B4D18 /* WackGameViewController.swift in Sources */,
 				0E62D2EB283BB2C40002148D /* UIColor+RGBA.swift in Sources */,
 				0E17588E2836832B00E8F9C4 /* InformationView.swift in Sources */,
 				0E62D2F1283BB33C0002148D /* Pie.swift in Sources */,
 				0E62D2E5283BB25E0002148D /* Array+Identifiable.swift in Sources */,
 				263B3E7228475A94005919D7 /* ProfilePickerView.swift in Sources */,
 				0E62D2DB283BB04E0002148D /* ThemeCollectionManager.swift in Sources */,
+				A04024DE2848C81F001B4D18 /* WackGameScene.swift in Sources */,
 				263B3E762847A2F4005919D7 /* FairytaleMemoryGameView.swift in Sources */,
 				26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */,
 				263B3E6E28462ECD005919D7 /* PersonInformation.swift in Sources */,
 				26D72FAA282E65C800BC3A8F /* AchievementsView.swift in Sources */,
 				0E62D2F5283BB4650002148D /* DefaultThemes.swift in Sources */,
+				A04024DF2848C81F001B4D18 /* WhackSlot.swift in Sources */,
 				0E62D2E7283BB2800002148D /* Array+Only.swift in Sources */,
 				26D72FA4282E573200BC3A8F /* NavigationHandlerView.swift in Sources */,
 				263B3E6A28461C4E005919D7 /* MainNightTimeView.swift in Sources */,

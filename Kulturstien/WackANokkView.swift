@@ -12,10 +12,11 @@ import SpriteKit
 import UIKit
 
 struct WackANokkView: View {
-	var theScene = SKScene(fileNamed: "GameScene")
+    
+	var theWackScene = SKScene(fileNamed: "WackGameScene")
 	
 	var body: some View {
-		SpriteView(scene: theScene!)
+		SpriteView(scene: theWackScene!)
 	}
 	
 }

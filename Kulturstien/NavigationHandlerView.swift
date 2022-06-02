@@ -67,7 +67,7 @@ struct NavigationHandlerView: View {
 		case .wackANokk:
 			WackANokkView()
 		case .huldraGame:
-			MenuView()
+            FrightenHuldraGameView()
 		case .personInformation:
 			PersonInformationView(personType: personSelection)
 		case .creatureInformation:
