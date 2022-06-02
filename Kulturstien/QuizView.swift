@@ -62,7 +62,6 @@ struct QuizView: View {
 						self.guessedIndex = index
 					}) {
 						Text(answers[index])
-							.foregroundColor(.black)
                             .frame(width: 200)
                             .padding()
                             .background(RoundedRectangle(cornerRadius: 15)
@@ -164,7 +163,7 @@ struct QuizEndView: View {
 		
 		VStack (spacing: 20) {
 			VStack (spacing: 30) {
-				Image(systemName: resultImageToDisplay(numberOfCorrectAnswers: numberOfCorrectAnswers, numberOfQuestions: resultArray.count))
+				Image(resultImageToDisplay(numberOfCorrectAnswers: numberOfCorrectAnswers, numberOfQuestions: resultArray.count))
 					.resizable()
 					.frame(width: 120, height: 100)
 					.padding(15)
@@ -193,9 +192,9 @@ func getNumberOfCorrectAnswers(resultArray: [Bool]) -> Int {
 
 func resultImageToDisplay(numberOfCorrectAnswers: Int, numberOfQuestions: Int) -> String {
 	if numberOfCorrectAnswers == numberOfQuestions {
-		return "crown.fill"
+		return "trophy"
 	} else {
-		return "trash"
+		return "sadTroll"
 	}
 }
 
