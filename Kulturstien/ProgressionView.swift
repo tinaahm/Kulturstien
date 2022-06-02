@@ -9,8 +9,11 @@ import SwiftUI
 
 struct ProgressionView: View {
     
+    @EnvironmentObject var page: ViewIndex
+    
     var imageArray = ["GreyRectangleLeft", "GreyRectangleCenter", "GreyRectangleRight"]
     var quizArray = ["Kvernhus", "Sagbruket", "Demning", "Lenseanlegg"]
+    var cardGameSum: Int = 200
     
     var body: some View {
         VStack () {
@@ -19,7 +22,9 @@ struct ProgressionView: View {
             
             
             Text("Quiz progresjon")
-            Spacer()
+                .font(.system(size: 25))
+
+            
             VStack (alignment: .leading) {
             
             ForEach(0 ..< 4) { index in
@@ -59,14 +64,25 @@ struct ProgressionView: View {
         
             
             
+            
+            Text("Poeng")
+                .font(.system(size: 25))
+                .padding()
+            HStack () {
+                
+                Text("Minnespill -")
+                Text("\(cardGameSum)")
+                
+                
+            }
             Spacer()
         }
-        
     }
 }
 
 struct ProgressionView_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressionView()
+        ProgressionView().environmentObject(ViewIndex())
+
     }
 }

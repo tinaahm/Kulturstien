@@ -119,8 +119,6 @@ struct ProfilePickerView: View {
 				Spacer()
 			}
 		}
-		
-		
     }
 }
 
