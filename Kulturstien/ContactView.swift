@@ -10,10 +10,13 @@ import SwiftUI
 struct ContactView: View {
     
     @EnvironmentObject var page : ViewIndex
+    @State private var feedBack: String = ""
     
     var body: some View {
         
         VStack (spacing: 40) {
+            
+        BackButtonView()
         
         Image("RælingenKommune")
         
@@ -26,7 +29,7 @@ struct ContactView: View {
                 
             VStack (spacing: 25){
             HStack {
-                TextField("Tilbakemelding...", text: $page.user.name)
+                TextField("Tilbakemelding...", text: $feedBack)
             }
             .frame(width: 300, height: 200)
             .padding()
