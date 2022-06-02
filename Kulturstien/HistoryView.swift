@@ -1,16 +1,16 @@
 //
-//  MenuView.swift
+//  HistoryView.swift
 //  Kulturstien
 //
-//  Created by Tina on 13/05/2022.
+//  Created by Christina Engene on 02/06/2022.
 //
 
 import SwiftUI
 
-struct MenuView: View {
-	
-	@EnvironmentObject var page : ViewIndex
-	
+struct HistoryView: View {
+    
+    @EnvironmentObject var page : ViewIndex
+    
     var body: some View {
         
         VStack (spacing: 20){
@@ -20,8 +20,7 @@ struct MenuView: View {
             Spacer()
             
             Button(action: {
-                page.previousPage = page.pageIndex
-                page.pageIndex = .contact
+                
             }) {
                 Text("Kontakt oss")
             }
@@ -33,8 +32,7 @@ struct MenuView: View {
             
             
             Button(action: {
-                page.previousPage = page.pageIndex
-                page.pageIndex = .history
+                
             }) {
                 Text("Byåas historie")
             }
@@ -49,11 +47,10 @@ struct MenuView: View {
     }
 }
 
-struct MenuView_Previews: PreviewProvider {
+struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuView().environmentObject(ViewIndex())
+        HistoryView().environmentObject(ViewIndex())
     }
 }
-
-
     
+

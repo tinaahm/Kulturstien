@@ -41,7 +41,7 @@ struct ProfileView: View {
             
             
 			Button(action: {
-				
+                page.pageIndex = .avatarChanger
 			}) {
 				Text("Endre avatar")
 			}
@@ -56,7 +56,7 @@ struct ProfileView: View {
             .padding()
             
 			Button(action: {
-				
+                page.pageIndex = .quizProgression
 			}) {
 				Text("Quiz progresjon")
 			}
