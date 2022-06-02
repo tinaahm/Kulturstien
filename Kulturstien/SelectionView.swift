@@ -18,11 +18,12 @@ struct SelectionView: View {
 		let structureName: String = self.selectionType.rawValue
 		let imageTitle = getImageTitleFromSelection(selectionType: selectionType)
 		
-		VStack (spacing: 20) {
+		VStack (spacing: 15) {
 			
 			BackButtonView()
 			
 			Image(imageTitle)
+                .padding(60)
 			
 			Button (action: {
 				page.previousPage = page.pageIndex

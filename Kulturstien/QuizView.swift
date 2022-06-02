@@ -35,7 +35,7 @@ struct QuizView: View {
 		let correctAnswer: String = quiz.questions[questionIndex].correctOption
 		let answers: [String] = quiz.shuffledAnswers[questionIndex]
 		
-		VStack {
+		VStack (spacing: 15){
 			
 			BackButtonView()
 			

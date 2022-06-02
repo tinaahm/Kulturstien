@@ -71,7 +71,7 @@ struct InformationView: View {
 								ZStack {
 									RoundedRectangle(cornerRadius: 25, style: .continuous)
 										.fill(Color("Grey"))
-										.shadow(radius: 7, x: -2, y: 5)
+										.shadow(radius: 2, x: 0, y: 3)
 
 									VStack {
 										Text(self.information[index].text)
