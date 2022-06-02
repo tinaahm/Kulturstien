@@ -2,7 +2,7 @@
 //  MillGameScene.swift
 //  Kulturstien
 //
-//  Created by admin on 01/06/2022.
+//  Created by Embla on 01/06/2022.
 //
 
 import SpriteKit
@@ -33,7 +33,7 @@ class MillGameScene: SKScene {
         
         self.addChild(plank)
         
-        _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(addPlank), userInfo: nil, repeats: true)
+        _ = Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(addPlank), userInfo: nil, repeats: true)
         
         }
 

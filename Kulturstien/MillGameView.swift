@@ -11,12 +11,6 @@ import SwiftUI
 
 struct MillGameView: View {
     var gameScene: SKScene {
-        //let view = self as SKView
-        //let scene = SKScene(fileNamed: "MillGameScene")
-        
-        //scene!.scaleMode = .aspectFill
-        //presentScene(scene)
-        
         let screenSize: CGRect = UIScreen.main.bounds
         
         let screenWidth = screenSize.width
