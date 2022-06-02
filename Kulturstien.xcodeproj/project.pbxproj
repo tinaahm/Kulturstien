@@ -62,11 +62,11 @@
 		A0EA0C4A2848B46D00A2B524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C3C2848B46D00A2B524 /* LaunchScreen.storyboard */; };
 		A0EA0C4B2848B46D00A2B524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C3E2848B46D00A2B524 /* Main.storyboard */; };
 		A0EA0C4C2848B46D00A2B524 /* skyteflamme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C412848B46D00A2B524 /* skyteflamme.mp3 */; };
-		A0EA0C4D2848B46D00A2B524 /* .backgroundmusic.mp3.icloud in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C422848B46D00A2B524 /* .backgroundmusic.mp3.icloud */; };
 		A0EA0C4E2848B46D00A2B524 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C432848B46D00A2B524 /* GameScene.sks */; };
 		A0EA0C4F2848B46D00A2B524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA0C442848B46D00A2B524 /* AppDelegate.swift */; };
 		A0EA0C502848B46D00A2B524 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA0C452848B46D00A2B524 /* GameScene.swift */; };
 		A0EA0C512848B46D00A2B524 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C462848B46D00A2B524 /* Actions.sks */; };
+		A0EA0C532848B4D300A2B524 /* backgroundmusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C522848B4D300A2B524 /* backgroundmusic.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,11 +146,11 @@
 		A0EA0C3D2848B46D00A2B524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0EA0C3F2848B46D00A2B524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0EA0C412848B46D00A2B524 /* skyteflamme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = skyteflamme.mp3; sourceTree = "<group>"; };
-		A0EA0C422848B46D00A2B524 /* .backgroundmusic.mp3.icloud */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = .backgroundmusic.mp3.icloud; sourceTree = "<group>"; };
 		A0EA0C432848B46D00A2B524 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		A0EA0C442848B46D00A2B524 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0EA0C452848B46D00A2B524 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		A0EA0C462848B46D00A2B524 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		A0EA0C522848B4D300A2B524 /* backgroundmusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundmusic.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,7 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				A0EA0C412848B46D00A2B524 /* skyteflamme.mp3 */,
-				A0EA0C422848B46D00A2B524 /* .backgroundmusic.mp3.icloud */,
+				A0EA0C522848B4D300A2B524 /* backgroundmusic.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -516,6 +516,7 @@
 				A0EA0C4B2848B46D00A2B524 /* Main.storyboard in Resources */,
 				2669457D283255B700B25AF7 /* QuizQuestions.json in Resources */,
 				263B3E7028462FF9005919D7 /* PersonInformation.json in Resources */,
+				A0EA0C532848B4D300A2B524 /* backgroundmusic.mp3 in Resources */,
 				267A774C2829558200E0EB7A /* Preview Assets.xcassets in Resources */,
 				267A7782282AF85200E0EB7A /* AmericanTypewriter.ttc in Resources */,
 				A0EA0C4C2848B46D00A2B524 /* skyteflamme.mp3 in Resources */,
@@ -523,7 +524,6 @@
 				267A77492829558200E0EB7A /* Assets.xcassets in Resources */,
 				26F0498C283B82A200FBA117 /* Paragraphs.json in Resources */,
 				A0EA0C482848B46D00A2B524 /* Assets.xcassets in Resources */,
-				A0EA0C4D2848B46D00A2B524 /* .backgroundmusic.mp3.icloud in Resources */,
 				A0EA0C4E2848B46D00A2B524 /* GameScene.sks in Resources */,
 				267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */,
 			);
