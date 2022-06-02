@@ -78,7 +78,7 @@ struct InformationView: View {
 											.font(.body)
 											.foregroundColor(.black)
 									}
-									.padding(20)
+									.padding(30)
 									.multilineTextAlignment(.center)
 								}
 								.frame(width: 350)

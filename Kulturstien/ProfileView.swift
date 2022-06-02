@@ -16,50 +16,61 @@ struct ProfileView: View {
 			
 			BackButtonView()
 			
-			Spacer()
+			
 			
 			Image(getImageTitleByColour(colour: page.user.selectedColour))
 			.resizable()
-			.frame(width: 60, height: 60)
+			.frame(width: 100, height: 100)
 			.padding(5)
 			
-			Text("Hei " + page.user.name.capitalized)
+			Text("Hei " + page.user.name.capitalized + "!")
 				.padding([.leading, .top, .trailing])
 				.padding(.bottom, 90)
 			
 			Button(action: {
 				
 			}) {
-				Text("Start")
+				Text("Slik spiller du")
 			}
-			.frame(width: 100)
-			.padding()
-			.background(RoundedRectangle(cornerRadius: 15)
-				.stroke(Color.gray, lineWidth: 1)
-			)
-			.foregroundColor(.black)
+            .frame(width: 275, height: 25)
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 15)
+                .fill(Color("Grey"))
+                .shadow(color: Color.gray.opacity(0.2), radius: 2, x: 0, y: 3)
+               
+            )
+            .foregroundColor(.black)
+            
+            
 			Button(action: {
 				
 			}) {
-				Text("Start")
+				Text("Endre avatar")
 			}
-			.frame(width: 100)
-			.padding()
-			.background(RoundedRectangle(cornerRadius: 15)
-				.stroke(Color.gray, lineWidth: 1)
-			)
-			.foregroundColor(.black)
+            .frame(width: 275, height: 25)
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 15)
+                .fill(Color("Grey"))
+                .shadow(color: Color.gray.opacity(0.2), radius: 2, x: 0, y: 3)
+               
+            )
+            .foregroundColor(.black)
+            .padding()
+            
 			Button(action: {
 				
 			}) {
-				Text("Start")
+				Text("Quiz progresjon")
 			}
-			.frame(width: 100)
+			.frame(width: 275, height: 25)
 			.padding()
 			.background(RoundedRectangle(cornerRadius: 15)
-				.stroke(Color.gray, lineWidth: 1)
+                .fill(Color("Grey"))
+                .shadow(color: Color.gray.opacity(0.2), radius: 2, x: 0, y: 3)
+               
 			)
 			.foregroundColor(.black)
+            
 			
 			Spacer()
 		}

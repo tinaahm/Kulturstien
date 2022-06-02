@@ -20,7 +20,9 @@ struct BackButtonView: View {
 			}) {
 				Image(systemName: "chevron.left")
 				.resizable()
-				.frame(width: 20, height: 25)
+                .scaledToFill()
+                            .frame(width: 13, height: 13)
+                            
 				.padding(15)
 			}
 			.padding(.leading)
