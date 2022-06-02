@@ -30,44 +30,40 @@ struct ProfileView: View {
 			}) {
 				Text("Slik spiller du")
 			}
-            .frame(width: 275, height: 25)
+            .frame(width: 275)
             .padding()
             .background(RoundedRectangle(cornerRadius: 15)
-                .fill(Color("Grey"))
-                .shadow(color: Color.gray.opacity(0.2), radius: 2, x: 0, y: 3)
-               
+                .stroke(Color.gray, lineWidth: 1)
             )
             .foregroundColor(.black)
             
             
 			Button(action: {
 				
+                page.pageIndex = .avatarChanger
 			}) {
 				Text("Endre avatar")
 			}
-            .frame(width: 275, height: 25)
+            .frame(width: 275)
             .padding()
             .background(RoundedRectangle(cornerRadius: 15)
-                .fill(Color("Grey"))
-                .shadow(color: Color.gray.opacity(0.2), radius: 2, x: 0, y: 3)
-               
+                .stroke(Color.gray, lineWidth: 1)
             )
             .foregroundColor(.black)
             .padding()
             
 			Button(action: {
-				
+                
+                page.pageIndex = .quizProgression
 			}) {
 				Text("Quiz progresjon")
 			}
-			.frame(width: 275, height: 25)
-			.padding()
-			.background(RoundedRectangle(cornerRadius: 15)
-                .fill(Color("Grey"))
-                .shadow(color: Color.gray.opacity(0.2), radius: 2, x: 0, y: 3)
-               
-			)
-			.foregroundColor(.black)
+            .frame(width: 275)
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 15)
+                .stroke(Color.gray, lineWidth: 1)
+            )
+            .foregroundColor(.black)
             
 			
 			Spacer()
