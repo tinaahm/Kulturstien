@@ -15,7 +15,7 @@ struct MainIPhoneView: View {
 		ZStack {
 				
 			ZStack {
-				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "LogboomsButton", width: 71, height: 59, posX: 210, posY: 190)
+				ButtonView(selectedStructure: .logBooms, selectedPerson: .none, image: "LogboomsButton", width: 71, height: 59, posX: 210, posY: 190)
 				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "SawmillButton", width: 51, height: 60, posX: 70, posY: 520)
 				ButtonView(selectedStructure: .dam, selectedPerson: .none, image: "DamButton", width: 55, height: 60, posX: 40, posY: 740)
 				ButtonView(selectedStructure: .mill, image: "WatermillButton", width: 70, height: 60, posX: 345, posY: 815)
