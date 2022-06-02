@@ -11,27 +11,11 @@ import GameplayKit
 
 class MillGameScene: SKScene {
     
-    var basket = SKSpriteNode()
-    
-    let container = SKSpriteNode()
-    let plank = SKSpriteNode(imageNamed: "nice-plank")
-    
     override func update(_ currentTime: TimeInterval) {
     }
     
     override func didMove(to view: SKView) {
-        physicsWorld.gravity = CGVector(dx: 0, dy: -10)
-
-        
-        let screenWidth = UIScreen.main.bounds.width
-        let screenHeight = UIScreen.main.bounds.height
-        
-        plank.size = CGSize(width: 68, height: 33)
-    
-        plank.position = CGPoint(x: screenWidth / 2, y: screenHeight)
-        plank.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 68, height: 32))
-        
-        self.addChild(plank)
+        physicsWorld.gravity = CGVector(dx: 0, dy: -15)
         
         _ = Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(addPlank), userInfo: nil, repeats: true)
         
@@ -46,21 +30,37 @@ class MillGameScene: SKScene {
         addChild(box)
     }
     
-    @objc func addPlank(){
-        let plank = SKSpriteNode(imageNamed: "nice-plank")
+    func generateAssets() {
+
+        
+    }
+    
+    @objc func addPlank() {
+        
+        let randomAssetNum = GKRandomDistribution(lowestValue: 0, highestValue: 1)
+        
+        var asset: SKSpriteNode
+        
+        if (randomAssetNum.nextInt() == 0) {
+            asset = SKSpriteNode(imageNamed: "nail")
+            asset.size = CGSize(width: 14, height: 80)
+        }
+        else {
+            asset = SKSpriteNode(imageNamed: "nice-plank")
+            asset.size = CGSize(width: 68, height: 32)
+        }
         
         let random = GKRandomDistribution(lowestValue: 0, highestValue: Int(self.frame.size.width))
         
         let randomRadian = GKRandomDistribution(lowestValue: 0, highestValue: 7)
-                
-        plank.size = CGSize(width: 68, height: 32)
         
-        plank.position = CGPoint(x: CGFloat(random.nextInt()), y: self.frame.size.height)
+        asset.position = CGPoint(x: CGFloat(random.nextInt()), y: self.frame.size.height)
         
-        plank.zRotation = CGFloat(randomRadian.nextInt())
+        asset.zRotation = CGFloat(randomRadian.nextInt())
         
-        plank.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 68, height: 32))
+        asset.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 68, height: 32))
         
-        self.addChild(plank)
+        self.addChild(asset)
     }
+    
 }
