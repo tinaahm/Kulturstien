@@ -29,13 +29,13 @@ struct ProfileView: View {
 				
 			}) {
 				Text("Slik spiller du")
+					.frame(width: 275)
+					.padding()
+					.background(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1)
+					)
+					.foregroundColor(.black)
 			}
-            .frame(width: 275)
-            .padding()
-            .background(RoundedRectangle(cornerRadius: 15)
-                .stroke(Color.gray, lineWidth: 1)
-            )
-            .foregroundColor(.black)
             
             
 			Button(action: {
@@ -43,27 +43,27 @@ struct ProfileView: View {
                 page.pageIndex = .avatarChanger
 			}) {
 				Text("Endre avatar")
+					.frame(width: 275)
+					.padding()
+					.background(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1)
+					)
+					.foregroundColor(.black)
+					.padding()
 			}
-            .frame(width: 275)
-            .padding()
-            .background(RoundedRectangle(cornerRadius: 15)
-                .stroke(Color.gray, lineWidth: 1)
-            )
-            .foregroundColor(.black)
-            .padding()
             
 			Button(action: {
 				page.previousPage = page.pageIndex
-                page.pageIndex = .quizProgression
+                page.pageIndex = .achievements
 			}) {
-				Text("Quiz progresjon")
+				Text("Prestasjoner")
+					.frame(width: 275)
+					.padding()
+					.background(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1)
+					)
+					.foregroundColor(.black)
 			}
-            .frame(width: 275)
-            .padding()
-            .background(RoundedRectangle(cornerRadius: 15)
-                .stroke(Color.gray, lineWidth: 1)
-            )
-            .foregroundColor(.black)
             
 			
 			Spacer()

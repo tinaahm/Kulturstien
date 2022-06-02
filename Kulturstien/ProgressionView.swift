@@ -27,7 +27,7 @@ struct ProgressionView: View {
                 .font(.system(size: 25))
 
             
-            VStack (alignment: .leading) {
+            VStack(alignment: .leading) {
             
 				ForEach(0 ..< 4) { outerIndex in
                 HStack (){
@@ -74,15 +74,47 @@ struct ProgressionView: View {
             
             .padding()
             
-            Text("Poeng")
-                            .font(.system(size: 25))
-                            .padding()
-                        HStack () {
-                            
-                            Text("Minnespill -")
-                            Text("\(cardGameSum)")
-                            
-                        }
+			VStack(alignment: .center) {
+				Text("Poeng")
+					.font(.system(size: 25))
+					.padding(10)
+				
+				VStack {
+					Text("Minnespill")
+						.font(.title3)
+						.padding(5)
+					HStack () {
+						Text("Bondens Redskaper - " + String(page.user.farmMemoryGameScore) + " poeng")
+							.padding(2)
+					}
+					HStack () {
+						Text("Underjordiske Vesen - " + String(page.user.fairtytaleMemoryGameScore) + " poeng")
+							.padding(2)
+					}
+				}
+				.padding(.bottom)
+				
+				VStack {
+					Text("Wack A Nøkk")
+						.font(.title3)
+						.padding(5)
+					HStack () {
+						Text(String(page.user.wackANokkGameScore) + " poeng")
+							.padding(2)
+					}
+				}
+				.padding(.bottom)
+				VStack {
+					Text("Skrem Bort Huldra")
+						.font(.title3)
+						.padding(5)
+					HStack () {
+						Text(String(page.user.frightenHuldraGameScore) + " poeng")
+							.padding(2)
+					}
+				}
+				
+			}
             
             Spacer()
         }

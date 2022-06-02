@@ -24,12 +24,12 @@ struct MenuView: View {
                 page.pageIndex = .contact
             }) {
                 Text("Kontakt oss")
+					.foregroundColor(.black)
+					.frame(width: 200)
+					.padding()
+					.background(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1))
             }
-            .foregroundColor(.black)
-            .frame(width: 200)
-            .padding()
-            .background(RoundedRectangle(cornerRadius: 15)
-                .stroke(Color.gray, lineWidth: 1))
             
             
             Button(action: {
@@ -37,12 +37,12 @@ struct MenuView: View {
 				page.pageIndex = .history
             }) {
                 Text("Byåas historie")
+					.foregroundColor(.black)
+					.frame(width: 200)
+					.padding()
+					.background(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1))
             }
-            .foregroundColor(.black)
-            .frame(width: 200)
-            .padding()
-            .background(RoundedRectangle(cornerRadius: 15)
-                .stroke(Color.gray, lineWidth: 1))
             
             Spacer()
         }

@@ -50,12 +50,13 @@ struct ContactView: View {
                 self.sentFeedBAck = true
             }) {
                 Text("Send")
+					.foregroundColor(.black)
+					.frame(width: 200)
+					.padding()
+					.background(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1))
             }
-            .foregroundColor(.black)
-            .frame(width: 200)
-            .padding()
-            .background(RoundedRectangle(cornerRadius: 15)
-                .stroke(Color.gray, lineWidth: 1))
+			Spacer()
     }
 }
 }

@@ -86,13 +86,13 @@ struct ProfilePickerView: View {
 					self.pressedNext = true
 				}) {
 					Text("Neste")
+						.frame(width: 100)
+						.padding()
+						.background(RoundedRectangle(cornerRadius: 15)
+							.stroke(Color.gray, lineWidth: 1)
+						)
+						.foregroundColor(.black)
 				}
-				.frame(width: 100)
-				.padding()
-				.background(RoundedRectangle(cornerRadius: 15)
-					.stroke(Color.gray, lineWidth: 1)
-				)
-				.foregroundColor(.black)
 			}
 			Spacer()
 			} else {
@@ -109,13 +109,13 @@ struct ProfilePickerView: View {
 					page.pageIndex = .main
 				}) {
 					Text("Start")
+						.frame(width: 100)
+						.padding()
+						.background(RoundedRectangle(cornerRadius: 15)
+							.stroke(Color.gray, lineWidth: 1)
+						)
+						.foregroundColor(.black)
 				}
-				.frame(width: 100)
-				.padding()
-				.background(RoundedRectangle(cornerRadius: 15)
-					.stroke(Color.gray, lineWidth: 1)
-				)
-				.foregroundColor(.black)
 				Spacer()
 			}
 		}

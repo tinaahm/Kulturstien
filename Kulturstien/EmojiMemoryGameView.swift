@@ -43,17 +43,6 @@ struct EmojiMemoryGameView: View {
             }
                 .padding()
             .foregroundColor(Color(viewModel.theme.accentColor))
-            /*Button(action: {
-                withAnimation(.easeInOut) {
-                    viewModel.resetGame()
-                }
-            }, label: {
-                Text("Nytt Spill")
-                    .font(.headline)
-            })
-        }*/
-        //.navigationTitle(viewModel.theme.name)
-        /*.navigationBarItems(trailing:Group{Text("Poeng: \(viewModel.getScore())")})*/
         .accentColor(Color(viewModel.theme.accentColor))
 			if viewModel.gameDone() {
 				Image(endGame(handler: page, gameTheme: viewModel.theme.name, score: viewModel.getScore()))

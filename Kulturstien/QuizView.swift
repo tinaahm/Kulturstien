@@ -118,7 +118,7 @@ struct QuizView: View {
 						.padding()
 						.overlay(
 							Circle()
-								.stroke(.blue, lineWidth: 3)
+								.stroke(.gray, lineWidth: 3)
 						)
 				}
 			}

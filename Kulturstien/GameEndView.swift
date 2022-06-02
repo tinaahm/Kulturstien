@@ -27,25 +27,25 @@ struct GameEndView: View {
 				page.pageIndex = getPageByGameSelection(game: selectedGame)
 			}) {
 				Text("Spill på nytt")
+					.frame(width: 150)
+					.padding()
+					.background(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1)
+					)
+					.foregroundColor(.black)
 			}
-			.frame(width: 150)
-			.padding()
-			.background(RoundedRectangle(cornerRadius: 15)
-				.stroke(Color.gray, lineWidth: 1)
-			)
-			.foregroundColor(.black)
 			
 			Button(action: {
 				page.pageIndex = .main
 			}) {
 				Text("Gå tilbake til kartet")
+					.frame(width: 150)
+					.padding()
+					.background(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1)
+					)
+					.foregroundColor(.black)
 			}
-			.frame(width: 150)
-			.padding()
-			.background(RoundedRectangle(cornerRadius: 15)
-				.stroke(Color.gray, lineWidth: 1)
-			)
-			.foregroundColor(.black)
 		}
 		
     }

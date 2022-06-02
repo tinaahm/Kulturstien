@@ -24,24 +24,6 @@ struct InformationView: View {
 		
         ScrollView {
             VStack {
-                /*ZStack(alignment: .topLeading) {
-					Color.clear
-					VStack(alignment: .leading) {
-						Button (action: {
-							page.pageIndex = .main
-						}) {
-							Image(systemName: "chevron.left")
-								.resizable()
-								.frame(width: 15, height: 25)
-								.padding(.leading, 25)
-								.foregroundColor(.black)
-						}
-						
-					}
-			
-				}
-                .padding(.bottom, -20)*/
-				
 				BackButtonView() //TODO: title inline with back button?
 				
 				VStack(alignment: .leading) {
