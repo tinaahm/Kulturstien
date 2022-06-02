@@ -16,11 +16,7 @@ struct User {
 }
 
 enum Page {
-<<<<<<< Updated upstream
-	case start, main, mainNight, profile, menu, achievements, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, quizProgression, avatarChanger
-=======
-	case start, main, mainNight, profile, menu, achievements, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, history
->>>>>>> Stashed changes
+	case start, main, mainNight, profile, menu, achievements, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation
 }
 
 var quizSelection: Structure = .none
@@ -76,19 +72,7 @@ struct NavigationHandlerView: View {
 			PersonInformationView(personType: personSelection)
 		case .creatureInformation:
 			CreaturesInformationView(creatureType: personSelection)
-<<<<<<< Updated upstream
-        case .quizProgression:
-            ProgressionView()
-        case .avatarChanger:
-            AvatarEditorView()
-=======
-        case .contact:
-            ContactView()
-        case .history:
-            HistoryView()
->>>>>>> Stashed changes
 		}
-        
     }
 }
 

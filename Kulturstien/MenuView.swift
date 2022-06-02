@@ -20,8 +20,7 @@ struct MenuView: View {
             Spacer()
             
             Button(action: {
-                page.previousPage = page.pageIndex
-                page.pageIndex = .contact
+                
             }) {
                 Text("Kontakt oss")
             }
@@ -33,8 +32,7 @@ struct MenuView: View {
             
             
             Button(action: {
-                page.previousPage = page.pageIndex
-                page.pageIndex = .history
+                
             }) {
                 Text("Byåas historie")
             }
@@ -54,6 +52,4 @@ struct MenuView_Previews: PreviewProvider {
         MenuView().environmentObject(ViewIndex())
     }
 }
-
-
     
