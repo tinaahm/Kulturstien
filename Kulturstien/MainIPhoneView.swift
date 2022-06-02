@@ -9,59 +9,44 @@ import SwiftUI
 
 struct MainIPhoneView: View {
 	
-	@EnvironmentObject var page : ViewIndex
-	@State private var showDarkMap = false
-	@State var timeOfDayIndex = 0
-	
-	var timeOfDayImages : [[String]] = [["moon.stars.fill", "DayTimeMap"], ["sun.max.fill", "NightTimeMap"]]
-	
+	@EnvironmentObject var page: ViewIndex
 	
     var body: some View {
 		ZStack {
 				
 			ZStack {
-				ButtonView(selectionType: .sawmill, image: "SawmillButton", width: 60, height: 60, posX: 200, posY: 230)
-				ButtonView(selectionType: .sawmill, image: "SawmillButton", width: 60, height: 60, posX: 70, posY: 370)
-				ButtonView(selectionType: .dam, image: "DamButton", width: 60, height: 60, posX: 110, posY: 620)
-				
-				ButtonView(selectionType: .mill, image: "MillIcon", width: 122, height: 79, posX: 350, posY: 660)
-				ButtonView(selectionType: .mill, image: "KirstiButton", width: 50, height: 65, posX: 65, posY: 65)
-				
-				ButtonView(selectionType: .none, image: "TrondButton", width: 45, height: 90, posX: 250, posY: 490)
-				ButtonView(selectionType: .none, image: "RagnhildButton", width: 45, height: 90, posX: 145, posY: 695)
-				ButtonView(selectionType: .none, image: "FlagButton", width: 35, height: 60, posX: 290, posY: 735)
-				ButtonView(selectionType: .none, image: "FlagButton", width: 35, height: 60, posX: 195, posY: 45)
-					Button (action: {
-						page.pageIndex = .AR
-					}) {
-						Image("Button")
-							.resizable()
-							.frame(width: 35, height: 60)
-							.padding(15)
-					}
-					.position(x: 300, y: 200)
+				ButtonView(selectedStructure: .logBooms, selectedPerson: .none, image: "LogboomsButton", width: 71, height: 59, posX: 210, posY: 190)
+				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "SawmillButton", width: 51, height: 60, posX: 70, posY: 520)
+				ButtonView(selectedStructure: .dam, selectedPerson: .none, image: "DamButton", width: 55, height: 60, posX: 40, posY: 740)
+				ButtonView(selectedStructure: .mill, image: "WatermillButton", width: 70, height: 60, posX: 345, posY: 815)
+				ButtonView(selectedPerson: .kirsti, image: "KirstiButton", width: 60, height: 73, posX: 65, posY: 210)
+				ButtonView(selectedPerson: .trond, image: "TrondButton", width: 52, height: 101, posX: 290, posY: 670)
+				ButtonView(selectedPerson: .ragnhild, image: "RagnhildButton", width: 47, height: 90, posX: 145, posY: 840)
+				ButtonView(selectedGame: .farmMemoryGame, image: "TrophyButton", width: 40, height: 52, posX: 190, posY: 320)
 				}
 			.background(
-					Image(timeOfDayImages[timeOfDayIndex][1])
+					Image("dayMap")
 						.resizable()
 						.scaledToFill()
 						.edgesIgnoringSafeArea(.all)
 				)
-			//.draggable()
+			.draggable()
 			
 			VStack {
 				//ZStack {
 					HStack {
 						//Spacer(minLength: 0)
-						Image(systemName: "person")
-						.resizable()
-						.frame(width: 30, height: 30)
-						.padding(15)
+						Button (action: {
+							page.pageIndex = .profile
+						}) {
+							Image(getImageTitleByColour(colour: page.user.selectedColour))
+							.resizable()
+							.frame(width: 60, height: 60)
+							//.padding(5)
+						}
 						//.padding(.leading, 30)
 				
 						Spacer(minLength: 0)
-                        
-                        
 						
 						Button (action: {
 							withAnimation {
@@ -85,25 +70,17 @@ struct MainIPhoneView: View {
 				.background(.white.opacity(0.5))
 				//Spacer(minLength: 0)
 				
-	
-
-				Spacer()
 				HStack {
 					Spacer()
 					Button (action: {
-						if !showDarkMap {
-							timeOfDayIndex = 1
-							showDarkMap = true
-						} else {
-							timeOfDayIndex = 0
-							showDarkMap = false
-						}
+						page.lightMode = false
+						page.pageIndex = .mainNight
 					}) {
-						Image(systemName: timeOfDayImages[timeOfDayIndex][0])
+						Image(systemName: "moon.stars.fill")
 							.resizable()
 							.frame(width: 30, height: 30)
 							.padding(15)
-							.background(Color.white)
+							.background(.white.opacity(0.7))
 							.foregroundColor(.black)
 						.clipShape(Circle())
 					}
@@ -111,6 +88,7 @@ struct MainIPhoneView: View {
 					.padding(.top)
 					
 				}
+				Spacer()
 			}
 			
 		}

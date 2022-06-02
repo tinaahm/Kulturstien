@@ -7,18 +7,29 @@
 
 import SwiftUI
 
-enum Page {
-	case main, profile, menu, achievements, texts, quiz, selection, information, cardGame, wackANokk, AR
+struct User {
+	var name: String = ""
+	var selectedColour: Colour = .none
+	var wackANokkGameScore: Int = 0
+	var frightenHuldraGameScore: Int = 0
+	var memoryGameScore: Int = 0
 }
 
-var quizSelection : Structure = .none
-var informationSelection : Structure = .none
+enum Page {
+	case start, main, mainNight, profile, menu, achievements, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation
+}
+
+var quizSelection: Structure = .none
+var informationSelection: Structure = .none
+var personSelection: Person = .none
 
 var quizes = Quizes()
 
 class ViewIndex: ObservableObject {
-	@Published var pageIndex : Page = .main
+	@Published var pageIndex : Page = .start //TODO: if user has profile do not show start/ProfilePickerView.
 	@Published var previousPage : Page = .main
+	@Published var lightMode: Bool = true
+	@Published var user: User = User()
 }
 
 struct NavigationHandlerView: View {
@@ -27,8 +38,12 @@ struct NavigationHandlerView: View {
 	
     var body: some View {
 		switch page.pageIndex {
+		case .start:
+			ProfilePickerView()
 		case .main:
 			MainIPhoneView()
+		case .mainNight:
+			MainNightTimeView()
 		case .profile:
 			ProfileView()
 		case .menu:
@@ -45,13 +60,18 @@ struct NavigationHandlerView: View {
         case .information:
 			InformationView(type: informationSelection)
                 .transition(.backslide)
-        case .cardGame:
-            ThemeSelectionView(tcManager: ThemeCollectionManager())
-                .transition(.backslide)
+        case .farmMemoryGame:
+			FarmMemoryGameView()
+		case .fairytaleCreaturesMemoryGame:
+			FairytaleMemoryGameView()
 		case .wackANokk:
 			WackANokkView()
-		case .AR:
-			MillGameView()
+		case .huldraGame:
+            FrightenHuldraGameView()
+		case .personInformation:
+			PersonInformationView(personType: personSelection)
+		case .creatureInformation:
+			CreaturesInformationView(creatureType: personSelection)
 		}
     }
 }

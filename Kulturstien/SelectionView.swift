@@ -18,25 +18,23 @@ struct SelectionView: View {
 		let structureName: String = self.selectionType.rawValue
 		let imageTitle = getImageTitleFromSelection(selectionType: selectionType)
 		
-		VStack (spacing: 20) {
+		VStack (spacing: 15) {
 			
 			BackButtonView()
 			
 			Image(imageTitle)
+                .padding(60)
 			
 			Button (action: {
 				page.previousPage = page.pageIndex
 				page.pageIndex = .information
 			}) {
 				Text("Lær om " + structureName)
-					.foregroundColor(.black)
-					.padding(20)
-                    .frame(minWidth: 0, maxWidth: 400)
-                    .background(
-                                RoundedRectangle(cornerRadius: 15)
-                                    .fill(Color(red: 0.984, green: 0.984, blue: 0.984))
-                                    .shadow(color: .gray, radius: 2, x: 0, y: 2))
-                
+                    .foregroundColor(.black)
+                    .frame(width: 200)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 15)
+                        .stroke(Color.gray, lineWidth: 1))
 			}
 			Button (action: {
 				page.previousPage = page.pageIndex
@@ -44,26 +42,22 @@ struct SelectionView: View {
 				page.pageIndex = .quiz
 			}) {
 				Text("Ta quiz om " + structureName)
-					.foregroundColor(.black)
-					.padding(20)
-                    .frame(minWidth: 0, maxWidth: 400)
-                    .background(
-                            RoundedRectangle(cornerRadius: 15)
-                                .fill(Color(red: 0.984, green: 0.984, blue: 0.984))
-                                .shadow(color: .gray, radius: 2, x: 0, y: 2))
+                    .foregroundColor(.black)
+                    .frame(width: 200)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 15)
+                        .stroke(Color.gray, lineWidth: 1))
 			}
 			if self.selectionType == .mill {
 				Button (action: {
 					page.previousPage = page.pageIndex
 				}) {
 					Text("Se i AR")
-						.foregroundColor(.black)
-						.padding(20)
-                        .frame(minWidth: 0, maxWidth: 400)
-                        .background(
-                                RoundedRectangle(cornerRadius: 15)
-                                    .fill(Color(red: 0.984, green: 0.984, blue: 0.984))
-                                    .shadow(color: .gray, radius: 2, x: 0, y: 2))
+                        .foregroundColor(.black)
+                        .frame(width: 200)
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color.gray, lineWidth: 1))
 				}
 			}
 			Spacer()
@@ -74,13 +68,13 @@ struct SelectionView: View {
 func getImageTitleFromSelection(selectionType: Structure) -> String {
 	switch selectionType {
 	case .mill:
-		return "MillIcon"
+		return "WaterMillIcon"
 	case .sawmill:
 		return "SawmillIcon"
 	case .dam:
-		return ""
+		return "DamIcon"
 	case .logBooms:
-		return ""
+		return "LogBoomsIcon"
 	case .none:
 		return ""
 	}

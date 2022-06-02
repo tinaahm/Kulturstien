@@ -47,8 +47,16 @@ extension CGPoint {
 }
 
 class GameScene: SKScene {
-  
-  var monstersDestroyed = 0
+    
+    var gameScore: SKLabelNode!
+    
+    var monstersDestroyed = 0 {
+                  didSet {
+                      gameScore.text = "Poeng: \(monstersDestroyed)"
+                  }
+              }
+
+    
   let player = SKSpriteNode(imageNamed: "turtleavatar")
     
   override func didMove(to view: SKView) {
@@ -59,25 +67,33 @@ class GameScene: SKScene {
     addChild(background)
       
     // 3
-    player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
+      player.position = CGPoint(x: size.height * 0.235, y: size.height * 0.1)
     // 4
     addChild(player)
     
     physicsWorld.gravity = .zero
     physicsWorld.contactDelegate = self
     
-    run(SKAction.repeatForever(
+   run(SKAction.repeatForever(
           SKAction.sequence([
             SKAction.run(addMonster),
-            SKAction.wait(forDuration: 0.4)
+            SKAction.wait(forDuration: 0.430)
             ])
         ))
     
     let backgroundMusic = SKAudioNode(fileNamed: "backgroundmusic")
     backgroundMusic.autoplayLooped = true
     addChild(backgroundMusic)
+      
+      gameScore = SKLabelNode(fontNamed: "Chalkduster")
+      gameScore.text = "Poeng: 0"
+      gameScore.position = CGPoint(x: 140, y: 750)
+      gameScore.horizontalAlignmentMode = .left
+      gameScore.fontSize = 20
+      addChild(gameScore)
     
   }
+    
   
   func random() -> CGFloat {
     return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
@@ -98,12 +114,12 @@ class GameScene: SKScene {
     monster.physicsBody?.contactTestBitMask = PhysicsCategory.projectile // 4
     monster.physicsBody?.collisionBitMask = PhysicsCategory.none // 5
     
-    // Determine where to spawn the monster along the Y axis
-    let actualY = random(min: monster.size.height/2, max: size.height - monster.size.height/2)
+    // Determine where to spawn the monster along the X axis
+      let actualX = random(min: monster.size.width, max: monster.size.height*7)
     
-    // Position the monster slightly off-screen along the right edge,
-    // and along a random position along the Y axis as calculated above
-    monster.position = CGPoint(x: size.width + monster.size.width/2, y: actualY)
+    // Position the monster slightly off-screen along the top,
+    // and along a random position along the X axis as calculated above
+    monster.position = CGPoint(x: actualX, y: size.height + monster.size.height/2)
     
     // Add the monster to the scene
     addChild(monster)
@@ -112,20 +128,21 @@ class GameScene: SKScene {
     let actualDuration = random(min: CGFloat(2.0), max: CGFloat(4.0))
     
     // Create the actions
-    let actionMove = SKAction.move(to: CGPoint(x: -monster.size.width/2, y: actualY),
+    let actionMove = SKAction.move(to: CGPoint(x: actualX, y: -monster.size.height/2),
                                    duration: TimeInterval(actualDuration))
     let actionMoveDone = SKAction.removeFromParent()
     
     let loseAction = SKAction.run() { [weak self] in
       guard let `self` = self else { return }
       let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-      let gameOverScene = GameOverScene(size: self.size, won: false)
+      let gameOverScene = GameOverScene(size: self.size)
       self.view?.presentScene(gameOverScene, transition: reveal)
     }
     
     monster.run(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
 
   }
+
   
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     // 1 - Choose one of the touches to work with
@@ -152,7 +169,7 @@ class GameScene: SKScene {
     let offset = touchLocation - projectile.position
     
     // 4 - Bail out if you are shooting down or backwards
-    if offset.x < 0 { return }
+    if offset.y < 0 { return }
     
     // 5 - OK to add now - you've double checked position
     addChild(projectile)
@@ -167,7 +184,7 @@ class GameScene: SKScene {
     let realDest = shootAmount + projectile.position
     
     // 9 - Create the actions
-    let actionMove = SKAction.move(to: realDest, duration: 2.0)
+      let actionMove = SKAction.move(to: realDest, duration: 0.8)
     let actionMoveDone = SKAction.removeFromParent()
     projectile.run(SKAction.sequence([actionMove, actionMoveDone]))
   }
@@ -178,12 +195,14 @@ class GameScene: SKScene {
     monster.removeFromParent()
     
     monstersDestroyed += 1
-    if monstersDestroyed > 50 {
+    if monstersDestroyed > 99999 {
+        
       let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-      let gameOverScene = GameOverScene(size: self.size, won: true)
-      view?.presentScene(gameOverScene, transition: reveal)
+      let gameOverScene = GameOverScene(size: self.size)
+        self.view?.presentScene(gameOverScene, transition: reveal)
     }
   }
+
 }
 
 extension GameScene: SKPhysicsContactDelegate {

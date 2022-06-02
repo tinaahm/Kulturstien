@@ -63,27 +63,27 @@ struct InformationView: View {
 					
 						VStack(alignment: .leading) {
 							
-							HStack {
+							/*HStack {
 								
 								RoundedRectangle(cornerRadius: 25, style: .continuous)
-									.fill(.white)
+									.fill(.white)*/
 
 								ZStack {
 									RoundedRectangle(cornerRadius: 25, style: .continuous)
 										.fill(Color("Grey"))
-										.shadow(radius: 7, x: -2, y: 5)
+										.shadow(radius: 2, x: 0, y: 3)
 
 									VStack {
 										Text(self.information[index].text)
 											.font(.body)
 											.foregroundColor(.black)
 									}
-									.padding(20)
+									.padding(30)
 									.multilineTextAlignment(.center)
 								}
 								.frame(width: 350)
 								.padding(20)
-							}
+							//}
 						}
 						.padding()
 							Spacer()

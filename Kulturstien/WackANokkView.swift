@@ -7,70 +7,35 @@
 
 import SwiftUI
 import SceneKit
+import SpriteKit
 
 import UIKit
-import SwiftUI
 
-// 1.
-struct WackANokkView: UIViewControllerRepresentable {
-
-	// 2.
-	func makeUIViewController(context: Context) -> GameViewController {
-		return GameViewController()
-	}
-	
-	// 3.
-	func updateUIViewController(_ uiViewController: GameViewController, context: Context) {
-		
-	}
-}
-
-
-/*
 struct WackANokkView: View {
 	
-	/*var scene = SCNScene(named: "GameScene")
-	var cameraNode: SCNNode? {
-			scene?.rootNode.childNode(withName: "camera", recursively: false)
+	var theWackScene: SKScene {
+		let theWackScene = WackGameScene()
+		theWackScene.size = CGSize(width: 400, height: 800)
+		theWackScene.scaleMode = .aspectFit
+		theWackScene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+		return theWackScene
 	}
+    
+	//var theWackScene = SKScene(fileNamed: "WackGameScene")
 	
-    var body: some View {
-		SceneView(
-			scene: scene,
-			pointOfView: cameraNode,
-			options: []
-		)
-    }*/
-	
-	
-	var scene: SCNScene? {
-		   SCNScene(named: "Models.scnassets/Avatar.scn")
-	   }
-
-	   var cameraNode: SCNNode? {
-		   let cameraNode = SCNNode()
-		   cameraNode.camera = SCNCamera()
-		   cameraNode.position = SCNVector3(x: 0, y: 0, z: 2)
-		   return cameraNode
-	   }
-
-	   var body: some View {
-		   SceneView(
-			   scene: scene,
-			   pointOfView: cameraNode,
-			   options: [
-				   .allowsCameraControl,
-				   .autoenablesDefaultLighting,
-				   .temporalAntialiasingEnabled
-			   ]
-		   )
-	   }
+	var body: some View {
+		ZStack {
+			SpriteView(scene: self.theWackScene)
+				.ignoresSafeArea()
+				//.padding(.all)
+				//.frame(width: 500, height: 800)
+		}
+	}
 	
 }
 
 struct WackANokkView_Previews: PreviewProvider {
-    static var previews: some View {
-        WackANokkView()
-    }
+	static var previews: some View {
+		WackANokkView()
+	}
 }
-*/

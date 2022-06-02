@@ -17,39 +17,14 @@ import SwiftUI
 struct DefaultThemes {
 
     static let theme0 = ThemeCollection.Theme (
-        name: "embla er en tann",
-        accentColor: UIColor(Color.pink),
-        emojiSet: ["🦷", "🍊", "🍋", "🍌", "🍉", "🍇"]
+        name: "Bondens redskaper",
+        accentColor: UIColor(Color("MemoryGameYellow")),
+        emojiSet: ["WaterMillIcon", "Pitchfork", "HorseShoe", "SawmillIcon", "DamIcon", "Logs"]
     )
     
     static let theme1 = ThemeCollection.Theme (
-        name: "Animals in Zoo",
-        accentColor: UIColor(Color.orange),
-        emojiSet: ["🦊", "🐻", "🐼", "🐨", "🐯", "🦁"]
-    )
-    
-    static let theme2 = ThemeCollection.Theme (
-        name: "Balls on Playground",
-        accentColor: UIColor(Color.yellow),
-        emojiSet: ["⚽️", "🏀", "🏈", "🎾", "🏐", "🎱"]
-    )
-    
-    
-    static let theme3 = ThemeCollection.Theme (
-        name: "Vegetables on Farm",
-        accentColor: UIColor(Color.green),
-        emojiSet: ["🥦","🥬","🥒","🫑","🌽","🍆"]
-    )
-    
-    static let theme4 = ThemeCollection.Theme (
-        name: "Countries in World",
-        accentColor: UIColor(Color.blue),
-        emojiSet: ["🇨🇦", "🇺🇸", "🇨🇳", "🇫🇷", "🇷🇺", "🇬🇧"]
-    )
-    
-    static let theme5 = ThemeCollection.Theme (
-        name: "Vehicles on Road",
-        accentColor: UIColor(Color.purple),
-        emojiSet: ["🚎","🛵","🚕","🚓","🚑","🚚","🚒"]
+        name: "Underjordiske vesener",
+        accentColor: UIColor(Color("MemoryGameDarkBlue")),
+		emojiSet: ["Elf", "Troll", "Nokken", "HuldraWoman", "OldMan", "Frame"]
     )
 }

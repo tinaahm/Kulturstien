@@ -11,7 +11,8 @@ var shuffled: Bool = false
 var answeredCorrectly = false
 
 struct QuizView: View {
-	
+    
+   
 	@EnvironmentObject var page : ViewIndex
 	
 	var quizType: Structure
@@ -30,24 +31,25 @@ struct QuizView: View {
 	
     var body: some View {
 		
-		let numberOfQuestions = quiz.questions.count
-		let correctAnswer: String = quiz.questions[questionIndex].correctOption
-		let answers: [String] = quiz.shuffledAnswers[questionIndex]
+		let numberOfQuestions = self.quiz.questions.count
+		let correctAnswer: String = self.quiz.questions[questionIndex].correctOption
+		let answers: [String] = self.quiz.shuffledAnswers[questionIndex]
 		
-		VStack {
+		VStack (spacing: 15){
 			
 			BackButtonView()
 			
 			if !finished {
 			HStack {
-				Text(quiz.name)
+				Text(self.quiz.name)
 					.font(.title)
 			}
 			.padding()
-			Text(String(questionIndex + 1) + "/" + String(numberOfQuestions))
+                Image(self.quiz.imageTitle)
+				Text(String(self.questionIndex + 1) + "/" + String(numberOfQuestions))
 				.font(.title3)
 				.padding(.bottom)
-			Text(quiz.questions[questionIndex].question)
+				Text(self.quiz.questions[questionIndex].question)
 				.font(.title3)
 				.padding(.bottom)
 			
@@ -60,39 +62,40 @@ struct QuizView: View {
 						self.guessedIndex = index
 					}) {
 						Text(answers[index])
-							.foregroundColor(.black)
-							.padding(25)
-                            .frame(minWidth: 0, maxWidth: 400)
-                            .background(
-                                        RoundedRectangle(cornerRadius: 15)
-                                            .fill(Color(red: 0.984, green: 0.984, blue: 0.984))
-                                            .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.82), radius: 2, x: 0, y: 2))
-							.overlay(
-								RoundedRectangle(cornerRadius: 15)
-									.stroke(showAnswer(answered: answered, guessedAnswer: guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: guessedIndex, quiz: quiz, quizIndex: questionIndex), lineWidth: 0)
-							)
+                            .frame(width: 200)
+                            .padding()
+                            .background(RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color.gray, lineWidth: 1)
+                            )
+                            .foregroundColor(.black)
+							.background(
+										RoundedRectangle(cornerRadius: 15)
+											.fill(showAnswer(answered: self.answered, guessedAnswer: self.guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: self.guessedIndex, quiz: self.quiz, quizIndex: self.questionIndex))
+											)
 					}
-					//.padding(.vertical, 25)
-					//.background(showAnswer(answered: answered, guessedAnswer: guessedAnswer, correctAnswer: correctAnswer))
-					.disabled(answered)
+					.disabled(self.answered)
 				}
 			}
 			
 			
-			if answered {
+				if self.answered {
 				Button (action: {
 					self.answered = false
 					if self.questionIndex != (numberOfQuestions - 1) {
-						self.questionIndex += 1
+						
+						self.quiz.questionAnswers[questionIndex] = answeredCorrectly
 						self.guessedIndex = nil
 						self.guessedAnswer = nil
-						quiz.questionAnswers[questionIndex] = answeredCorrectly
+						self.questionIndex += 1
 						
 					} else {
+						self.quiz.questionAnswers[questionIndex] = answeredCorrectly
+						self.guessedIndex = nil
+						self.guessedAnswer = nil
 						self.finished = true
 					}
 				}) {
-					Image(systemName: "chevron.right")
+					Image(systemName: "chevron.right") //FIXME: change to "neste" button
 						.foregroundColor(.black)
 						.padding()
 						.overlay(
@@ -104,7 +107,7 @@ struct QuizView: View {
 			
 			Spacer()
 			} else {
-				QuizEndView(resultArray: quiz.questionAnswers, title: quiz.name)
+				QuizEndView(resultArray: self.quiz.questionAnswers, title: self.quiz.name)
 			}
 			
 		}
@@ -128,11 +131,11 @@ func getRightAnswerIndex(answerArray: [String], correctAnswer: String) -> Int {
 
 func showAnswer(answered: Bool, guessedAnswer: String?, correctAnswer: String, currentIndex: Int, guessedIndex: Int?, quiz: Quiz, quizIndex: Int) -> Color {
 	if !answered {
-		return Color.gray
+		return (Color.white)
 	} else {
 		
 		if guessedIndex != currentIndex {
-			return Color.gray
+			return (Color.white)
 		}
 		
 		if guessedAnswer == correctAnswer {
@@ -163,23 +166,8 @@ struct QuizEndView: View {
 		let numberOfCorrectAnswers : Int = getNumberOfCorrectAnswers(resultArray: resultArray)
 		
 		VStack (spacing: 20) {
-			HStack (alignment: .top) {
-				Button (action: {
-					
-				}) {
-					Image(systemName: "chevron.left")
-					.resizable()
-					.frame(width: 20, height: 25)
-					.padding(15)
-				}
-				.padding(.leading)
-				Spacer()
-			}
-			.foregroundColor(.black)
-			.padding()
-			//Spacer()
 			VStack (spacing: 30) {
-				Image(systemName: resultImageToDisplay(numberOfCorrectAnswers: numberOfCorrectAnswers, numberOfQuestions: resultArray.count))
+				Image(resultImageToDisplay(numberOfCorrectAnswers: numberOfCorrectAnswers, numberOfQuestions: resultArray.count))
 					.resizable()
 					.frame(width: 120, height: 100)
 					.padding(15)
@@ -191,15 +179,15 @@ struct QuizEndView: View {
 				}
 				Spacer()
 			}
-			//Spacer()
 		}
 	}
 }
 
+
 func getNumberOfCorrectAnswers(resultArray: [Bool]) -> Int {
 	var i : Int = 0
 	for result in resultArray {
-		if result {
+		if result == true {
 			i += 1
 		}
 	}
@@ -208,9 +196,9 @@ func getNumberOfCorrectAnswers(resultArray: [Bool]) -> Int {
 
 func resultImageToDisplay(numberOfCorrectAnswers: Int, numberOfQuestions: Int) -> String {
 	if numberOfCorrectAnswers == numberOfQuestions {
-		return "crown.fill"
+		return "trophy"
 	} else {
-		return "trash"
+		return "sadTroll"
 	}
 }
 
