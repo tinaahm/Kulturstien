@@ -18,8 +18,6 @@ struct ProgressionView: View {
     
     var body: some View {
 		
-		/*let quizesArray: [Quiz] = [page.sawmillQuiz, page.millQuiz, page.damQuiz, page.logBoomsQuiz]*/
-		
         VStack () {
             
             BackButtonView()
@@ -49,13 +47,26 @@ struct ProgressionView: View {
                         
                         
                     }
+					
+					if page.quizesArray[outerIndex].informationPageRead {
+						Image(systemName: "arrow.right")
+							.resizable()
+							.frame(width: 25, height: 20)
+							.padding(.leading, 5)
+							.onTapGesture {
+								page.previousPage = page.pageIndex
+								quizSelection = page.quizesArray[outerIndex].type
+								page.pageIndex = .quiz
+							}
+					} else {
+						Image(systemName: "lock.fill")
+							.resizable()
+							.frame(width: 20, height: 27)
+							.padding(.leading, 5)
+					}
+					
                 }
                     .padding(.trailing, 13)
-					.onTapGesture {
-						page.previousPage = page.pageIndex
-						quizSelection = page.quizesArray[outerIndex].type // FIXME: user should be able to click on anywhere on the "box", even the spacer.
-						page.pageIndex = .quiz
-					}
                 }
             
             }

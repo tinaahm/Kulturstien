@@ -10,6 +10,8 @@ import SwiftUI
 struct SelectionView: View {
 	
 	@EnvironmentObject var page : ViewIndex
+	@State var quizButtonColour = Color.gray
+	@State var showQuizButtonInformationText = false
 	
 	var selectionType: Structure
 	
@@ -26,6 +28,11 @@ struct SelectionView: View {
                 .padding(60)
 			
 			Button (action: {
+				for i in 0...(page.quizesArray.count - 1) {
+					if page.quizesArray[i].type == self.selectionType {
+						page.quizesArray[i].informationPageRead = true
+					}
+				}
 				page.previousPage = page.pageIndex
 				page.pageIndex = .information
 			}) {
@@ -36,18 +43,44 @@ struct SelectionView: View {
                     .background(RoundedRectangle(cornerRadius: 15)
                         .stroke(Color.gray, lineWidth: 1))
 			}
+			
 			Button (action: {
-				page.previousPage = page.pageIndex
-				quizSelection = selectionType
-				page.pageIndex = .quiz
+				
+				var informationPageRead: Bool = false
+				
+				for i in 0...(page.quizesArray.count - 1) {
+					if page.quizesArray[i].type == self.selectionType {
+						informationPageRead = page.quizesArray[i].informationPageRead
+					}
+				}
+				
+				
+				if informationPageRead {
+					page.previousPage = page.pageIndex
+					quizSelection = selectionType
+					page.pageIndex = .quiz
+				} else {
+					self.quizButtonColour = .red
+					self.showQuizButtonInformationText = true
+				}
 			}) {
 				Text("Ta quiz om " + structureName)
                     .foregroundColor(.black)
                     .frame(width: 200)
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 15)
-                        .stroke(Color.gray, lineWidth: 1))
+						.stroke(self.quizButtonColour, lineWidth: 1))
 			}
+			
+			if self.showQuizButtonInformationText {
+				Text("For å låse opp quiz så må du først lese teksten over!")
+					.foregroundColor(.red)
+					.font(.callout)
+					.frame(width: 200)
+					.padding()
+			}
+			
+			
 			if self.selectionType == .mill {
 				Button (action: {
 					page.previousPage = page.pageIndex

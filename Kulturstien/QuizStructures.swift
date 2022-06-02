@@ -24,11 +24,12 @@ struct Quizes {
 
 class Quiz: ObservableObject {
 	let name: String
-	let type : Structure
+	let type: Structure
     let imageTitle: String
-	var questions : [QuizQuestion]
-	var questionAnswers : [Bool]
-	var shuffledAnswers : [[String]]
+	var questions: [QuizQuestion]
+	var questionAnswers: [Bool]
+	var shuffledAnswers: [[String]]
+	var informationPageRead: Bool
 	
 	init(name: String, type: Structure, imageTitle: String) {
 		self.name = name
@@ -37,6 +38,7 @@ class Quiz: ObservableObject {
 		self.questions = sortQuizQuestionsByType(quizType: self.type)
 		self.questionAnswers = Array(repeating: false, count: self.questions.count) // TODO: change name
 		self.shuffledAnswers = shuffleArray(questions: questions)
+		self.informationPageRead = false
 	}
 	
 }
