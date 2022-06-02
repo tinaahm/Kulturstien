@@ -41,7 +41,6 @@
 		267A77562829558200E0EB7A /* KulturstienTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77552829558200E0EB7A /* KulturstienTests.swift */; };
 		267A77602829558200E0EB7A /* KulturstienUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A775F2829558200E0EB7A /* KulturstienUITests.swift */; };
 		267A77622829558200E0EB7A /* KulturstienUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77612829558200E0EB7A /* KulturstienUITestsLaunchTests.swift */; };
-		267A7782282AF85200E0EB7A /* AmericanTypewriter.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */; };
 		267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */; };
 		26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F6282D00E80057BBA6 /* ProfileView.swift */; };
 		26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */; };
@@ -135,7 +134,6 @@
 		267A775B2829558200E0EB7A /* KulturstienUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KulturstienUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		267A775F2829558200E0EB7A /* KulturstienUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturstienUITests.swift; sourceTree = "<group>"; };
 		267A77612829558200E0EB7A /* KulturstienUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturstienUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmericanTypewriter.ttc; sourceTree = "<group>"; };
 		267A7783282AF8F600E0EB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Macondo-Regular.ttf"; sourceTree = "<group>"; };
 		26AAC9F6282D00E80057BBA6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -379,9 +377,9 @@
 				267A77442829558100E0EB7A /* KulturstienApp.swift */,
 				26D72FA3282E573200BC3A8F /* NavigationHandlerView.swift */,
 				26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */,
+				263B3E6928461C4E005919D7 /* MainNightTimeView.swift */,
 				26D72FA5282E5A7500BC3A8F /* MenuView.swift */,
 				26D4A4DC2837D5630022D49F /* SelectionView.swift */,
-				263B3E6928461C4E005919D7 /* MainNightTimeView.swift */,
 			);
 			name = MainViews;
 			sourceTree = "<group>";
@@ -402,7 +400,6 @@
 			isa = PBXGroup;
 			children = (
 				267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */,
-				267A7781282AF85200E0EB7A /* AmericanTypewriter.ttc */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -560,7 +557,6 @@
 				263B3E7028462FF9005919D7 /* PersonInformation.json in Resources */,
 				A04024E02848C81F001B4D18 /* WackActions.sks in Resources */,
 				267A774C2829558200E0EB7A /* Preview Assets.xcassets in Resources */,
-				267A7782282AF85200E0EB7A /* AmericanTypewriter.ttc in Resources */,
 				A0EA0C4C2848B46D00A2B524 /* skyteflamme.mp3 in Resources */,
 				A04024E12848C81F001B4D18 /* WackGameScene.sks in Resources */,
 				A0EA0C512848B46D00A2B524 /* Actions.sks in Resources */,

@@ -31,9 +31,9 @@ struct QuizView: View {
 	
     var body: some View {
 		
-		let numberOfQuestions = quiz.questions.count
-		let correctAnswer: String = quiz.questions[questionIndex].correctOption
-		let answers: [String] = quiz.shuffledAnswers[questionIndex]
+		let numberOfQuestions = self.quiz.questions.count
+		let correctAnswer: String = self.quiz.questions[questionIndex].correctOption
+		let answers: [String] = self.quiz.shuffledAnswers[questionIndex]
 		
 		VStack {
 			
@@ -41,15 +41,15 @@ struct QuizView: View {
 			
 			if !finished {
 			HStack {
-				Text(quiz.name)
+				Text(self.quiz.name)
 					.font(.title)
 			}
 			.padding()
                 Image(self.quiz.imageTitle)
-			Text(String(questionIndex + 1) + "/" + String(numberOfQuestions))
+				Text(String(self.questionIndex + 1) + "/" + String(numberOfQuestions))
 				.font(.title3)
 				.padding(.bottom)
-			Text(quiz.questions[questionIndex].question)
+				Text(self.quiz.questions[questionIndex].question)
 				.font(.title3)
 				.padding(.bottom)
 			
@@ -70,24 +70,28 @@ struct QuizView: View {
                             .foregroundColor(.black)
 							.background(
 										RoundedRectangle(cornerRadius: 15)
-											.fill(showAnswer(answered: answered, guessedAnswer: guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: guessedIndex, quiz: quiz, quizIndex: questionIndex))
+											.fill(showAnswer(answered: self.answered, guessedAnswer: self.guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: self.guessedIndex, quiz: self.quiz, quizIndex: self.questionIndex))
 											)
 					}
-					.disabled(answered)
+					.disabled(self.answered)
 				}
 			}
 			
 			
-			if answered {
+				if self.answered {
 				Button (action: {
 					self.answered = false
 					if self.questionIndex != (numberOfQuestions - 1) {
-						self.questionIndex += 1
+						
+						self.quiz.questionAnswers[questionIndex] = answeredCorrectly
 						self.guessedIndex = nil
 						self.guessedAnswer = nil
-						quiz.questionAnswers[questionIndex] = answeredCorrectly
+						self.questionIndex += 1
 						
 					} else {
+						self.quiz.questionAnswers[questionIndex] = answeredCorrectly
+						self.guessedIndex = nil
+						self.guessedAnswer = nil
 						self.finished = true
 					}
 				}) {
@@ -103,7 +107,7 @@ struct QuizView: View {
 			
 			Spacer()
 			} else {
-				QuizEndView(resultArray: quiz.questionAnswers, title: quiz.name)
+				QuizEndView(resultArray: self.quiz.questionAnswers, title: self.quiz.name)
 			}
 			
 		}
@@ -183,7 +187,7 @@ struct QuizEndView: View {
 func getNumberOfCorrectAnswers(resultArray: [Bool]) -> Int {
 	var i : Int = 0
 	for result in resultArray {
-		if result {
+		if result == true {
 			i += 1
 		}
 	}
