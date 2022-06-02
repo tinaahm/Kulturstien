@@ -63,17 +63,17 @@ struct QuizView: View {
 					}) {
 						Text(answers[index])
 							.foregroundColor(.black)
-							.padding(25)
-                            .padding(.horizontal, 80)
-							.overlay(
-								RoundedRectangle(cornerRadius: 15)
-                                    .stroke(showAnswer(answered: answered, guessedAnswer: guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: guessedIndex, quiz: quiz, quizIndex: questionIndex), lineWidth: 1)
-							)
+                            .frame(width: 200)
+                            .padding()
+                            .background(RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color.gray, lineWidth: 1)
+                            )
+                            .foregroundColor(.black)
 							.background(
 										RoundedRectangle(cornerRadius: 15)
 											//.fill(Color(red: 0.984, green: 0.984, blue: 0.984))
 											.fill(showAnswer(answered: answered, guessedAnswer: guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: guessedIndex, quiz: quiz, quizIndex: questionIndex))
-											.shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.82), radius: 2, x: 0, y: 2))
+											)
 					}
 					//.padding(.vertical, 25)
 					//.background(showAnswer(answered: answered, guessedAnswer: guessedAnswer, correctAnswer: correctAnswer))
@@ -131,11 +131,11 @@ func getRightAnswerIndex(answerArray: [String], correctAnswer: String) -> Int {
 
 func showAnswer(answered: Bool, guessedAnswer: String?, correctAnswer: String, currentIndex: Int, guessedIndex: Int?, quiz: Quiz, quizIndex: Int) -> Color {
 	if !answered {
-		return (Color(red: 0.984, green: 0.984, blue: 0.984))
+		return (Color.white)
 	} else {
 		
 		if guessedIndex != currentIndex {
-			return (Color(red: 0.984, green: 0.984, blue: 0.984))
+			return (Color.white)
 		}
 		
 		if guessedAnswer == correctAnswer {
