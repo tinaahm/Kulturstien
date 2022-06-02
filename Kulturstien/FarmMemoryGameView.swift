@@ -11,9 +11,9 @@ struct FarmMemoryGameView: View {
     var body: some View {
 		VStack {
 			BackButtonView()
-			Image("WaterMillIcon")
 			Text("Huske spill")
 			Text("Bondens redskaper")
+			Image("WaterMillIcon")
 			DestinationPageView(theme: DefaultThemes.theme0)
 		}
     }

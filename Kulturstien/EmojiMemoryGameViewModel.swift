@@ -16,6 +16,9 @@ import SwiftUI
 
 // An Example of ViewModel
 class EmojiMemoryGameViewModel: ObservableObject {
+	
+	@EnvironmentObject var page : ViewIndex
+	
     @Published private var model: MemoryGame<String>
     var theme: ThemeCollection.Theme
     init(theme: ThemeCollection.Theme) {
@@ -25,7 +28,7 @@ class EmojiMemoryGameViewModel: ObservableObject {
     
     private static func createMemoryGame(theme: ThemeCollection.Theme) -> MemoryGame<String> {
         //return MemoryGame<String>(numberOfPairsOfCards: Int.random(in: 2...theme.emojiSet.count)) { pairIndex in
-        return MemoryGame<String>(numberOfPairsOfCards: theme.emojiSet.count) { pairIndex in
+		return MemoryGame<String>(numberOfPairsOfCards: theme.emojiSet.count, themeName: theme.name) { pairIndex in
             return theme.emojiSet[pairIndex]
         }
     }
@@ -52,4 +55,9 @@ class EmojiMemoryGameViewModel: ObservableObject {
     func getScore() -> Int {
         return model.getScore()
     }
+	
+	func gameDone() -> Bool {
+		return model.gameOver
+	}
+	
 }

@@ -12,16 +12,18 @@ struct User {
 	var selectedColour: Colour = .none
 	var wackANokkGameScore: Int = 0
 	var frightenHuldraGameScore: Int = 0
-	var memoryGameScore: Int = 0
+	var farmMemoryGameScore: Int = 0
+	var fairtytaleMemoryGameScore: Int = 0
 }
 
 enum Page {
-	case start, main, mainNight, profile, menu, achievements, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation
+	case start, main, mainNight, profile, menu, achievements, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, gameEnd
 }
 
 var quizSelection: Structure = .none
 var informationSelection: Structure = .none
 var personSelection: Person = .none
+var selectedGame: Game = .none
 
 var quizes = Quizes()
 
@@ -72,6 +74,8 @@ struct NavigationHandlerView: View {
 			PersonInformationView(personType: personSelection)
 		case .creatureInformation:
 			CreaturesInformationView(creatureType: personSelection)
+		case .gameEnd:
+			GameEndView(gameType: selectedGame)
 		}
     }
 }

@@ -14,11 +14,25 @@
 
 import SwiftUI
 
+func endGame(handler: ViewIndex, gameTheme: String, score: Int) -> String {
+	if gameTheme == "Bondens redskaper" {
+		handler.user.farmMemoryGameScore = score
+		selectedGame = .farmMemoryGame
+	} else {
+		handler.user.fairtytaleMemoryGameScore = score
+		selectedGame = .fairytaleCreaturesMemoryGame
+	}
+	handler.pageIndex = .gameEnd
+	return ""
+}
+
 struct EmojiMemoryGameView: View {
     @ObservedObject var viewModel: EmojiMemoryGameViewModel
+	@EnvironmentObject var page : ViewIndex
     
     var body: some View {
         return VStack{
+			Text("Poeng: \(viewModel.getScore())")
             Grid(items: viewModel.cards) { card in
                 CardView(card: card).onTapGesture {
                     withAnimation(.easeInOut(duration: 0.3)) {
@@ -29,7 +43,7 @@ struct EmojiMemoryGameView: View {
             }
                 .padding()
             .foregroundColor(Color(viewModel.theme.accentColor))
-            Button(action: {
+            /*Button(action: {
                 withAnimation(.easeInOut) {
                     viewModel.resetGame()
                 }
@@ -37,15 +51,20 @@ struct EmojiMemoryGameView: View {
                 Text("Nytt Spill")
                     .font(.headline)
             })
-        }
-        .navigationTitle(viewModel.theme.name)
-        .navigationBarItems(trailing:Group{Text("Poeng: \(viewModel.getScore())")})
+        }*/
+        //.navigationTitle(viewModel.theme.name)
+        /*.navigationBarItems(trailing:Group{Text("Poeng: \(viewModel.getScore())")})*/
         .accentColor(Color(viewModel.theme.accentColor))
+			if viewModel.gameDone() {
+				Image(endGame(handler: page, gameTheme: viewModel.theme.name, score: viewModel.getScore()))
+			}
     }
 }
 
 struct CardView: View {
     var card: MemoryGame<String>.Card
+	@EnvironmentObject var page : ViewIndex
+	
     var body: some View {
         GeometryReader { geometry in
             body(for: geometry.size)
@@ -82,17 +101,16 @@ struct CardView: View {
                         )
                     }
                 }.padding(5).opacity(0.25).transition(.identity)
-				
 				Image(card.content)
 					.resizable()
 					.scaledToFit()
 					.rotationEffect(Angle.degrees(card.isMatched ? 360:0))
 					.animation(card.isMatched ? Animation.linear(duration: 1).repeatForever(autoreverses: false) : .default)
+
             }
             .cardify(isFaceUp: card.isFaceUp)
             .transition(.scale)
-
-        }
+		}
     }
     // MARK: - drawing constants
     
@@ -112,3 +130,4 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+}

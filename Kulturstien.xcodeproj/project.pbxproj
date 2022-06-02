@@ -45,6 +45,7 @@
 		267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */; };
 		26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F6282D00E80057BBA6 /* ProfileView.swift */; };
 		26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */; };
+		26D3DF7F2848F7FC009EECE3 /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */; };
 		26D4A4DD2837D5630022D49F /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4A4DC2837D5630022D49F /* SelectionView.swift */; };
 		26D4A4DF2837EA230022D49F /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4A4DE2837EA230022D49F /* ButtonView.swift */; };
 		26D4A4E12837EA8D0022D49F /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4A4E02837EA8D0022D49F /* BackButtonView.swift */; };
@@ -139,6 +140,7 @@
 		267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Macondo-Regular.ttf"; sourceTree = "<group>"; };
 		26AAC9F6282D00E80057BBA6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIPhoneView.swift; sourceTree = "<group>"; };
+		26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndView.swift; sourceTree = "<group>"; };
 		26D4A4DC2837D5630022D49F /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		26D4A4DE2837EA230022D49F /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		26D4A4E02837EA8D0022D49F /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 				26D72FB1282E719000BC3A8F /* Fonts */,
 				26F0498F283CC16D00FBA117 /* WackANokkView.swift */,
 				A04024E62848C8F1001B4D18 /* FrightenHuldraGameView.swift */,
+				26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */,
 			);
 			path = Kulturstien;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				0E62D2EB283BB2C40002148D /* UIColor+RGBA.swift in Sources */,
 				0E17588E2836832B00E8F9C4 /* InformationView.swift in Sources */,
 				0E62D2F1283BB33C0002148D /* Pie.swift in Sources */,
+				26D3DF7F2848F7FC009EECE3 /* GameEndView.swift in Sources */,
 				0E62D2E5283BB25E0002148D /* Array+Identifiable.swift in Sources */,
 				263B3E7228475A94005919D7 /* ProfilePickerView.swift in Sources */,
 				0E62D2DB283BB04E0002148D /* ThemeCollectionManager.swift in Sources */,

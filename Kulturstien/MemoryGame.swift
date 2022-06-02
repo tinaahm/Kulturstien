@@ -13,11 +13,19 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct MemoryGame<CardContent> where CardContent: Equatable {
+	
+	@EnvironmentObject var page : ViewIndex
     
     private(set) var cards: Array<Card>
     private(set) var score: Int
+	
+	var numberOfPossibleMatches: Int
+	var numberOfMatches: Int
+	var cardTheme: String
+	var gameOver: Bool
     
     private var indexOfTheOneAndOnlyFaceUpCard: Int? {
         get { cards.indices.filter { index in cards[index].isFaceUp }.only }
@@ -33,12 +41,13 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         
         // print("card chosen: \(card)")
         if let chosenIndex = cards.firstIndex(matching: card), !cards[chosenIndex].isFaceUp, !cards[chosenIndex].isMatched {
-            
             if let potentialMatchIndex = indexOfTheOneAndOnlyFaceUpCard {
                 if cards[chosenIndex].content == cards[potentialMatchIndex].content {
                     cards[chosenIndex].isMatched = true
                     cards[potentialMatchIndex].isMatched = true
                     changeScore(to: score + MATCH_POINT_CHANGE + Int(Double(MAX_BONUS_POINT) * min(cards[chosenIndex].bonusRemaining, cards[potentialMatchIndex].bonusRemaining)))
+					numberOfMatches += 1
+					
                 } else if cards[chosenIndex].bonusRemaining < 1 {
                     changeScore(to: score + MISMATCH_POINT_CHANGE)
                 }
@@ -48,10 +57,22 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
                 indexOfTheOneAndOnlyFaceUpCard = chosenIndex
             }
         }
+		if numberOfMatches == numberOfPossibleMatches {
+			/*if cardTheme == "Bondens Redskaper" {
+				page.user.farmMemoryGameScore = score
+				selectedGame = .farmMemoryGame
+			} else {
+				page.user.fairtytaleMemoryGameScore = score
+				selectedGame = .fairytaleCreaturesMemoryGame
+			}
+			page.pageIndex = .gameEnd*/
+			gameOver = true
+		}
+		
     }
     
     // "implicitly" mutating itself
-    init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
+    init(numberOfPairsOfCards: Int, themeName: String, cardContentFactory: (Int) -> CardContent) {
         cards = Array<Card>()
         score = 0
         for pairIndex in 0 ..< numberOfPairsOfCards {
@@ -60,6 +81,10 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
             cards.append(Card(content: content, id: pairIndex*2 + 1))
         }
         cards.shuffle()
+		cardTheme = themeName
+		numberOfPossibleMatches = numberOfPairsOfCards
+		numberOfMatches = 0
+		gameOver = false
     }
     
     // MARK: - Implementing score
@@ -70,7 +95,14 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
     mutating func changeScore(to newScore: Int) {
         score = newScore
     }
-    
+	
+	func gameDone() -> Bool {
+		return gameOver
+	}
+	
+	mutating func changeisGameOver(to value: Bool) {
+		gameOver = value
+	}
     
     struct Card: Identifiable { // Identifiable is a protocol
         
