@@ -87,7 +87,10 @@ struct QuizView: View {
 						
 						for i in 0...(page.quizesArray.count - 1) {
 							if page.quizesArray[i].type == self.quiz.type {
-								page.quizesArray[i].questionAnswers = self.quiz.questionAnswers
+								
+								if !checkPreviouslyAnsweredQuestions(answerArray: page.quizesArray[i].questionAnswers) {
+									page.quizesArray[i].questionAnswers = self.quiz.questionAnswers
+								}
 							}
 						}
 						
@@ -99,7 +102,10 @@ struct QuizView: View {
 						self.quiz.questionAnswers[questionIndex] = answeredCorrectly
 						for i in 0...(page.quizesArray.count - 1) {
 							if page.quizesArray[i].type == self.quiz.type {
-								page.quizesArray[i].questionAnswers = self.quiz.questionAnswers
+								
+								if !checkPreviouslyAnsweredQuestions(answerArray: page.quizesArray[i].questionAnswers) {
+									page.quizesArray[i].questionAnswers = self.quiz.questionAnswers
+								}
 							}
 						}
 						self.guessedIndex = nil
@@ -140,6 +146,15 @@ func getRightAnswerIndex(answerArray: [String], correctAnswer: String) -> Int {
 	return i
 }
 */
+
+func checkPreviouslyAnsweredQuestions(answerArray: [Bool]) -> Bool {
+	for answer in answerArray {
+		if !answer {
+			return false
+		}
+	}
+	return true
+}
 
 func showAnswer(answered: Bool, guessedAnswer: String?, correctAnswer: String, currentIndex: Int, guessedIndex: Int?, quiz: Quiz, quizIndex: Int) -> Color {
 	if !answered {

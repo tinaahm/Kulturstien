@@ -51,6 +51,11 @@ struct ProgressionView: View {
                     }
                 }
                     .padding(.trailing, 13)
+					.onTapGesture {
+						page.previousPage = page.pageIndex
+						quizSelection = page.quizesArray[outerIndex].type // FIXME: user should be able to click on anywhere on the "box", even the spacer.
+						page.pageIndex = .quiz
+					}
                 }
             
             }
