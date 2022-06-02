@@ -20,7 +20,8 @@ struct MenuView: View {
             Spacer()
             
             Button(action: {
-                
+                page.previousPage = page.pageIndex
+                page.pageIndex = .contact
             }) {
                 Text("Kontakt oss")
             }
