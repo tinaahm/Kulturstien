@@ -38,10 +38,10 @@ class WhackSlot: SKNode {
     
     func show(hideTime: Double) {
         
-        random.append(SKTexture(imageNamed: "kylling"))
-        random.append(SKTexture(imageNamed: "kanin"))
-        random.append(SKTexture(imageNamed: "hjort"))
-        random.append(SKTexture(imageNamed: "ku"))
+        random.append(SKTexture(imageNamed: "Cow"))
+        random.append(SKTexture(imageNamed: "Reindeer"))
+        random.append(SKTexture(imageNamed: "Bunny"))
+        random.append(SKTexture(imageNamed: "Chicken"))
         let rand = Int(arc4random_uniform(UInt32(random.count)))
         let texture = random[rand] as SKTexture
         
