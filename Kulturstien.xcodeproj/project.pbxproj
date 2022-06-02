@@ -25,6 +25,7 @@
 		0E62D2F5283BB4650002148D /* DefaultThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E62D2F4283BB4650002148D /* DefaultThemes.swift */; };
 		0E62D2F7283BB4BC0002148D /* ThemeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E62D2F6283BB4BC0002148D /* ThemeSelectionView.swift */; };
 		0E62D2F9283BB5070002148D /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E62D2F8283BB5070002148D /* EmojiMemoryGameView.swift */; };
+		237B3CC62848E1B600CF9777 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B3CC52848E1B600CF9777 /* ContactView.swift */; };
 		263B3E6828461831005919D7 /* PersonInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E6728461831005919D7 /* PersonInformationView.swift */; };
 		263B3E6A28461C4E005919D7 /* MainNightTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E6928461C4E005919D7 /* MainNightTimeView.swift */; };
 		263B3E6E28462ECD005919D7 /* PersonInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E6D28462ECD005919D7 /* PersonInformation.swift */; };
@@ -114,6 +115,7 @@
 		0E62D2F4283BB4650002148D /* DefaultThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultThemes.swift; sourceTree = "<group>"; };
 		0E62D2F6283BB4BC0002148D /* ThemeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionView.swift; sourceTree = "<group>"; };
 		0E62D2F8283BB5070002148D /* EmojiMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameView.swift; sourceTree = "<group>"; };
+		237B3CC52848E1B600CF9777 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		263B3E6728461831005919D7 /* PersonInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInformationView.swift; sourceTree = "<group>"; };
 		263B3E6928461C4E005919D7 /* MainNightTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNightTimeView.swift; sourceTree = "<group>"; };
 		263B3E6D28462ECD005919D7 /* PersonInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInformation.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 		26D72FB0282E716A00BC3A8F /* MenuViews */ = {
 			isa = PBXGroup;
 			children = (
+				237B3CC52848E1B600CF9777 /* ContactView.swift */,
 				26AAC9F6282D00E80057BBA6 /* ProfileView.swift */,
 				26D72FA9282E65C800BC3A8F /* AchievementsView.swift */,
 				26D72FAB282E65DE00BC3A8F /* TextsView.swift */,
@@ -592,6 +595,7 @@
 				A0EA0C502848B46D00A2B524 /* GameScene.swift in Sources */,
 				263B3E782847AD7F005919D7 /* CreaturesInformationView.swift in Sources */,
 				26D72FAC282E65DE00BC3A8F /* TextsView.swift in Sources */,
+				237B3CC62848E1B600CF9777 /* ContactView.swift in Sources */,
 				26D72FB5282E7ED800BC3A8F /* QuizStructures.swift in Sources */,
 				0E62D2EF283BB3210002148D /* Cardify.swift in Sources */,
 				26D4A4DF2837EA230022D49F /* ButtonView.swift in Sources */,

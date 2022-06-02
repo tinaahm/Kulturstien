@@ -16,8 +16,6 @@ struct ProfileView: View {
 			
 			BackButtonView()
 			
-			
-			
 			Image(getImageTitleByColour(colour: page.user.selectedColour))
 			.resizable()
 			.frame(width: 100, height: 100)
