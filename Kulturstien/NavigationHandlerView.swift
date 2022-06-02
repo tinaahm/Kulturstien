@@ -61,8 +61,6 @@ struct NavigationHandlerView: View {
 			InformationView(type: informationSelection)
                 .transition(.backslide)
         case .farmMemoryGame:
-            /*ThemeSelectionView(tcManager: ThemeCollectionManager())
-                .transition(.backslide)*/
 			FarmMemoryGameView()
 		case .fairytaleCreaturesMemoryGame:
 			FairytaleMemoryGameView()

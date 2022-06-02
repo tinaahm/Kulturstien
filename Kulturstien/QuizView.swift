@@ -71,12 +71,9 @@ struct QuizView: View {
                             .foregroundColor(.black)
 							.background(
 										RoundedRectangle(cornerRadius: 15)
-											//.fill(Color(red: 0.984, green: 0.984, blue: 0.984))
 											.fill(showAnswer(answered: answered, guessedAnswer: guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: guessedIndex, quiz: quiz, quizIndex: questionIndex))
 											)
 					}
-					//.padding(.vertical, 25)
-					//.background(showAnswer(answered: answered, guessedAnswer: guessedAnswer, correctAnswer: correctAnswer))
 					.disabled(answered)
 				}
 			}
@@ -95,7 +92,7 @@ struct QuizView: View {
 						self.finished = true
 					}
 				}) {
-					Image(systemName: "chevron.right")
+					Image(systemName: "chevron.right") //FIXME: change to "neste" button
 						.foregroundColor(.black)
 						.padding()
 						.overlay(
@@ -166,21 +163,6 @@ struct QuizEndView: View {
 		let numberOfCorrectAnswers : Int = getNumberOfCorrectAnswers(resultArray: resultArray)
 		
 		VStack (spacing: 20) {
-			/*HStack (alignment: .top) {
-				Button (action: {
-					
-				}) {
-					Image(systemName: "chevron.left")
-					.resizable()
-					.frame(width: 20, height: 25)
-					.padding(15)
-				}
-				.padding(.leading)
-				Spacer()
-			}
-			.foregroundColor(.black)
-			.padding()*/
-			//Spacer()
 			VStack (spacing: 30) {
 				Image(systemName: resultImageToDisplay(numberOfCorrectAnswers: numberOfCorrectAnswers, numberOfQuestions: resultArray.count))
 					.resizable()
@@ -194,7 +176,6 @@ struct QuizEndView: View {
 				}
 				Spacer()
 			}
-			//Spacer()
 		}
 	}
 }
