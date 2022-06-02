@@ -10,7 +10,6 @@ import SpriteKit
 import SwiftUI
 
 struct MillGameView: View {
-    
     var gameScene: SKScene {
         //let view = self as SKView
         //let scene = SKScene(fileNamed: "MillGameScene")
@@ -18,10 +17,15 @@ struct MillGameView: View {
         //scene!.scaleMode = .aspectFill
         //presentScene(scene)
         
+        let screenSize: CGRect = UIScreen.main.bounds
+        
+        let screenWidth = screenSize.width
+        let screenHeight = screenSize.height
+        
         let scene = MillGameScene()
         
-        scene.size = CGSize(width: 216, height: 216)
-        scene.scaleMode = .aspectFit
+        scene.size = CGSize(width: screenWidth, height: screenHeight)
+        scene.scaleMode = .fill
         
         return scene
     }

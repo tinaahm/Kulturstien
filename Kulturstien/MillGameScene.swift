@@ -6,41 +6,35 @@
 //
 
 import SpriteKit
+import SwiftUI
+import GameplayKit
 
 class MillGameScene: SKScene {
-    /*override func didMove(to view: SKView) {
-        
-        print("You are in the scene!")
-        
-        let label = SKLabelNode()
-        label.text = "Hello World!"
-        label.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        label.fontSize = 30
-        label.fontColor = SKColor.red
-        self.addChild(label)
-        
-     
-     }
-    */
     
     var basket = SKSpriteNode()
     
+    let container = SKSpriteNode()
+    let plank = SKSpriteNode(imageNamed: "nice-plank")
+    
     override func update(_ currentTime: TimeInterval) {
-        backgroundColor = .black
     }
     
     override func didMove(to view: SKView) {
-        physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
+        physicsWorld.gravity = CGVector(dx: 0, dy: -10)
+
         
-        // PLANK SPRITE
-        let plank = SKSpriteNode(imageNamed: "nice-plank")
-        plank.size = CGSize(width: 32, height: 32)
-        plank.anchorPoint = CGPoint(x: 50, y: 1)
+        let screenWidth = UIScreen.main.bounds.width
+        let screenHeight = UIScreen.main.bounds.height
+        
+        plank.size = CGSize(width: 68, height: 33)
     
-        plank.position = CGPoint(x: 50, y: 100)
-        plank.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 32, height: 32))
+        plank.position = CGPoint(x: screenWidth / 2, y: screenHeight)
+        plank.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 68, height: 32))
         
-        addChild(plank)
+        self.addChild(plank)
+        
+        _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(addPlank), userInfo: nil, repeats: true)
+        
         }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -50,5 +44,23 @@ class MillGameScene: SKScene {
         box.position = location
         box.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 50))
         addChild(box)
+    }
+    
+    @objc func addPlank(){
+        let plank = SKSpriteNode(imageNamed: "nice-plank")
+        
+        let random = GKRandomDistribution(lowestValue: 0, highestValue: Int(self.frame.size.width))
+        
+        let randomRadian = GKRandomDistribution(lowestValue: 0, highestValue: 7)
+                
+        plank.size = CGSize(width: 68, height: 32)
+        
+        plank.position = CGPoint(x: CGFloat(random.nextInt()), y: self.frame.size.height)
+        
+        plank.zRotation = CGFloat(randomRadian.nextInt())
+        
+        plank.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 68, height: 32))
+        
+        self.addChild(plank)
     }
 }
