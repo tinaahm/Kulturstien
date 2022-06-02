@@ -22,11 +22,11 @@ struct Quizes {
 	var logBoomsQuiz : Quiz  = Quiz(name: "Lenseanlegg Quiz", type: .logBooms, imageTitle: "LogBoomsIcon")
 }
 
-struct Quiz {
+class Quiz: ObservableObject {
 	let name: String
 	let type : Structure
     let imageTitle: String
-	let questions : [QuizQuestion]
+	var questions : [QuizQuestion]
 	var questionAnswers : [Bool]
 	var shuffledAnswers : [[String]]
 	

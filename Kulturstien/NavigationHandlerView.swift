@@ -32,6 +32,8 @@ class ViewIndex: ObservableObject {
 	@Published var previousPage : Page = .main
 	@Published var lightMode: Bool = true
 	@Published var user: User = User()
+	//@Published var quizes = Quizes()
+	@Published var quizesArray: [Quiz] = [Quiz(name: "Kvernhus Quiz", type: .mill, imageTitle: "WaterMillIcon"), Quiz(name: "Sagbruk Quiz", type: .sawmill, imageTitle: "SawmillIcon"), Quiz(name: "Demning Quiz", type: .dam, imageTitle: "DamIcon"), Quiz(name: "Lenseanlegg Quiz", type: .logBooms, imageTitle: "LogBoomsIcon")]
 }
 
 struct NavigationHandlerView: View {

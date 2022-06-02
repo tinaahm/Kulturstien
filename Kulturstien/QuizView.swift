@@ -84,12 +84,24 @@ struct QuizView: View {
 					if self.questionIndex != (numberOfQuestions - 1) {
 						
 						self.quiz.questionAnswers[questionIndex] = answeredCorrectly
+						
+						for i in 0...(page.quizesArray.count - 1) {
+							if page.quizesArray[i].type == self.quiz.type {
+								page.quizesArray[i].questionAnswers = self.quiz.questionAnswers
+							}
+						}
+						
 						self.guessedIndex = nil
 						self.guessedAnswer = nil
 						self.questionIndex += 1
 						
 					} else {
 						self.quiz.questionAnswers[questionIndex] = answeredCorrectly
+						for i in 0...(page.quizesArray.count - 1) {
+							if page.quizesArray[i].type == self.quiz.type {
+								page.quizesArray[i].questionAnswers = self.quiz.questionAnswers
+							}
+						}
 						self.guessedIndex = nil
 						self.guessedAnswer = nil
 						self.finished = true
@@ -148,11 +160,11 @@ func showAnswer(answered: Bool, guessedAnswer: String?, correctAnswer: String, c
 	}
 }
 
-struct QuizView_Previews: PreviewProvider {
+/*struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
 		QuizView(quizType: .sawmill).environmentObject(ViewIndex())
     }
-}
+}*/
 
 struct QuizEndView: View {
 	
