@@ -1,21 +1,21 @@
 [
 	{
 		"type": "Kirsti",
-		"imageTitle": "KirstiBackground",
+		"imageTitle": "KirstiBlueBackground",
 		"p1": "Hei! Jeg heter Kirsti og er 9 år gammel. Jeg bor på By gård sammen med moren og faren min. Når jeg blir voksen skal jeg bli bonde, akkurat som faren min. Jeg har nemlig odelsrett til gården og skogene rundt.",
 		"p2": "Å ha odel vil si at man eier en eiendom som det drives landbruk på. Odelsretten er til for at gården forblir i familiens eie. For å ha odelsrett som meg, må gården ha vært eid av familien i minst 20 år!",
 		"p3": "Noen ganger må jeg hjelpe de voksne med å åpne demningen som styrer sagbruket og kvernhuset. Det er fordi de er store og ikke kommer til like lett som meg. Det kan være skummelt å åpne demningen, for vannet kommer i en rasende fart!"
 	},
 	{
 		"type": "Ragnhild",
-		"imageTitle": "RagnhildBackground",
+		"imageTitle": "RagnhildBlueBackground",
 		"p1":"Heisann! Mitt navn er Ragnhild. Jeg er gift med Trond, og er gardskjerringa på By. Som gardskjerring er det mye å holde styr på.",
 		"p2": "Mens Trond er på sagbruket, er det jeg som har ansvaret for gårdsdriften. Jeg melker kuer og klipper sauer, kjerner smør og passer barn. ",
 		"p3": ""
 	},
 	{
 		"type": "Trond",
-		"imageTitle": "TrondBackground",
+		"imageTitle": "TrondBlueBackground",
 		"p1": "Hei, jeg heter Trond og det er jeg som er bonden på By gård. På gården min driver vi med mye forskjellig. Vi har kuer, hester og sauer, og vi produserer også korn og poteter.",
 		"p2": "Kuene våre er vi veldig glad i, de gir oss melk så vi kan lage smør og ost, og fra sauene får vi ull som holder oss varme gjennom vinteren. Hestene hjelper til med å dra plogen så vi får pløyd jorda, og de trekker kjerra som frakter tømmer til sagene våre.",
 		"p3": "Jeg er også med på å drifte de fine sagbrukene her i Byåa. Sagbrukene er viktige inntektskilder, og dessuten er det spennende arbeid. Om våren og på sommeren jobber vi ofte døgnet rundt, for det er da det meste av skogen hugges."

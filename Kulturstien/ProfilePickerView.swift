@@ -20,12 +20,11 @@ enum Colour: String, CaseIterable, Identifiable {
 struct ProfilePickerView: View {
 	
 	@EnvironmentObject var page : ViewIndex
-	
-	//@State var name: String = ""
-	//@State var selectedColour: Colour = .none
 	@State var pressedNext: Bool = false
 	
     var body: some View {
+		ZStack {
+			Color("BackgroundColour")
 		VStack {
 			if !self.pressedNext {
 			Spacer()
@@ -37,8 +36,11 @@ struct ProfilePickerView: View {
 				}
 				.frame(width: 250)
 				.padding()
-				.background(RoundedRectangle(cornerRadius: 15)
+				.overlay(RoundedRectangle(cornerRadius: 15)
 					.stroke(Color.gray, lineWidth: 1)
+				)
+				.background(RoundedRectangle(cornerRadius: 15)
+					.fill(.white)
 				)
 			//.padding([.leading, .trailing], 80)
 			
@@ -59,8 +61,11 @@ struct ProfilePickerView: View {
 						}
 						.frame(width: 250)
 						.padding()
-						.background(RoundedRectangle(cornerRadius: 15)
+						.overlay(RoundedRectangle(cornerRadius: 15)
 							.stroke(Color.gray, lineWidth: 1)
+						)
+						.background(RoundedRectangle(cornerRadius: 15)
+							.fill(.white)
 						)
 						.foregroundColor(.black)
 					}
@@ -72,8 +77,11 @@ struct ProfilePickerView: View {
 					}
 					.frame(width: 250)
 					.padding()
-					.background(RoundedRectangle(cornerRadius: 15)
+					.overlay(RoundedRectangle(cornerRadius: 15)
 						.stroke(Color.gray, lineWidth: 1)
+					)
+					.background(RoundedRectangle(cornerRadius: 15)
+						.fill(.white)
 					)
 					.foregroundColor(.black)
 				}
@@ -88,8 +96,11 @@ struct ProfilePickerView: View {
 					Text("Neste")
 						.frame(width: 100)
 						.padding()
-						.background(RoundedRectangle(cornerRadius: 15)
+						.overlay(RoundedRectangle(cornerRadius: 15)
 							.stroke(Color.gray, lineWidth: 1)
+						)
+						.background(RoundedRectangle(cornerRadius: 15)
+							.fill(.white)
 						)
 						.foregroundColor(.black)
 				}
@@ -111,14 +122,19 @@ struct ProfilePickerView: View {
 					Text("Start")
 						.frame(width: 100)
 						.padding()
-						.background(RoundedRectangle(cornerRadius: 15)
+						.overlay(RoundedRectangle(cornerRadius: 15)
 							.stroke(Color.gray, lineWidth: 1)
+						)
+						.background(RoundedRectangle(cornerRadius: 15)
+							.fill(.white)
 						)
 						.foregroundColor(.black)
 				}
 				Spacer()
 			}
 		}
+	}
+		.edgesIgnoringSafeArea(.all)
 		
 		
     }

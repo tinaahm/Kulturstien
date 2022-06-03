@@ -66,6 +66,7 @@ struct AvatarEditorView: View {
             
           Spacer()
         }
+		.background(Color("BackgroundColour"))
     }
 }
 

@@ -46,9 +46,12 @@ struct HistoryView: View {
                     }
                     .frame(width: 100, height: 100)
                     .padding()
-                    .background(RoundedRectangle(cornerRadius: 15)
-                        .stroke(Color.gray, lineWidth: 1)
-                    )
+					.overlay(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1)
+					)
+					.background(RoundedRectangle(cornerRadius: 15)
+						.fill(.white)
+					)
                     .foregroundColor(.black)
                     
                 }
@@ -70,9 +73,12 @@ struct HistoryView: View {
                     }
                     .frame(width: 100, height: 100)
                     .padding()
-                    .background(RoundedRectangle(cornerRadius: 15)
-                        .stroke(Color.gray, lineWidth: 1)
-                    )
+					.overlay(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1)
+					)
+					.background(RoundedRectangle(cornerRadius: 15)
+						.fill(.white)
+					)
                     .foregroundColor(.black)
                     
                 }
@@ -100,9 +106,12 @@ struct HistoryView: View {
                     }
                     .frame(width: 100, height: 100)
                     .padding()
-                    .background(RoundedRectangle(cornerRadius: 15)
-                        .stroke(Color.gray, lineWidth: 1)
-                    )
+					.overlay(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1)
+					)
+					.background(RoundedRectangle(cornerRadius: 15)
+						.fill(.white)
+					)
                     .foregroundColor(.black)
                     
                 }
@@ -126,9 +135,12 @@ struct HistoryView: View {
                     }
                     .frame(width: 100, height: 100)
                     .padding()
-                    .background(RoundedRectangle(cornerRadius: 15)
-                        .stroke(Color.gray, lineWidth: 1)
-                    )
+					.overlay(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1)
+					)
+					.background(RoundedRectangle(cornerRadius: 15)
+						.fill(.white)
+					)
                     .foregroundColor(.black)
                     
                 }
@@ -143,6 +155,7 @@ struct HistoryView: View {
             
           Spacer()
         }
+		.background(Color("BackgroundColour"))
         
         
     }

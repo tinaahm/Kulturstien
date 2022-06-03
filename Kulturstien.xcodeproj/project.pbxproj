@@ -48,13 +48,12 @@
 		26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F6282D00E80057BBA6 /* ProfileView.swift */; };
 		26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */; };
 		26D3DF7F2848F7FC009EECE3 /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */; };
+		26D3DF81284A06E7009EECE3 /* HowToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3DF80284A06E7009EECE3 /* HowToView.swift */; };
 		26D4A4DD2837D5630022D49F /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4A4DC2837D5630022D49F /* SelectionView.swift */; };
 		26D4A4DF2837EA230022D49F /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4A4DE2837EA230022D49F /* ButtonView.swift */; };
 		26D4A4E12837EA8D0022D49F /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4A4E02837EA8D0022D49F /* BackButtonView.swift */; };
 		26D72FA4282E573200BC3A8F /* NavigationHandlerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FA3282E573200BC3A8F /* NavigationHandlerView.swift */; };
 		26D72FA6282E5A7500BC3A8F /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FA5282E5A7500BC3A8F /* MenuView.swift */; };
-		26D72FAA282E65C800BC3A8F /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FA9282E65C800BC3A8F /* AchievementsView.swift */; };
-		26D72FAC282E65DE00BC3A8F /* TextsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FAB282E65DE00BC3A8F /* TextsView.swift */; };
 		26D72FB5282E7ED800BC3A8F /* QuizStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D72FB4282E7ED800BC3A8F /* QuizStructures.swift */; };
 		26F0498C283B82A200FBA117 /* Paragraphs.json in Resources */ = {isa = PBXBuildFile; fileRef = 26F0498B283B82A200FBA117 /* Paragraphs.json */; };
 		26F0498E283B830B00FBA117 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0498D283B830B00FBA117 /* Paragraph.swift */; };
@@ -151,13 +150,12 @@
 		26AAC9F6282D00E80057BBA6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIPhoneView.swift; sourceTree = "<group>"; };
 		26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndView.swift; sourceTree = "<group>"; };
+		26D3DF80284A06E7009EECE3 /* HowToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToView.swift; sourceTree = "<group>"; };
 		26D4A4DC2837D5630022D49F /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		26D4A4DE2837EA230022D49F /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		26D4A4E02837EA8D0022D49F /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
 		26D72FA3282E573200BC3A8F /* NavigationHandlerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHandlerView.swift; sourceTree = "<group>"; };
 		26D72FA5282E5A7500BC3A8F /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
-		26D72FA9282E65C800BC3A8F /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
-		26D72FAB282E65DE00BC3A8F /* TextsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextsView.swift; sourceTree = "<group>"; };
 		26D72FB4282E7ED800BC3A8F /* QuizStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizStructures.swift; sourceTree = "<group>"; };
 		26F0498B283B82A200FBA117 /* Paragraphs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Paragraphs.json; sourceTree = "<group>"; };
 		26F0498D283B830B00FBA117 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
@@ -409,12 +407,11 @@
 			children = (
 				237B3CC52848E1B600CF9777 /* ContactView.swift */,
 				26AAC9F6282D00E80057BBA6 /* ProfileView.swift */,
-				26D72FA9282E65C800BC3A8F /* AchievementsView.swift */,
-				26D72FAB282E65DE00BC3A8F /* TextsView.swift */,
 				263B3E7128475A94005919D7 /* ProfilePickerView.swift */,
 				0E0100F92847B4CD003645E5 /* ProgressionView.swift */,
 				0E0100FD2848FD10003645E5 /* AvatarEditorView.swift */,
 				0E0100FF2849039B003645E5 /* HistoryView.swift */,
+				26D3DF80284A06E7009EECE3 /* HowToView.swift */,
 			);
 			name = MenuViews;
 			sourceTree = "<group>";
@@ -633,7 +630,6 @@
 			files = (
 				A0EA0C502848B46D00A2B524 /* GameScene.swift in Sources */,
 				263B3E782847AD7F005919D7 /* CreaturesInformationView.swift in Sources */,
-				26D72FAC282E65DE00BC3A8F /* TextsView.swift in Sources */,
 				237B3CC62848E1B600CF9777 /* ContactView.swift in Sources */,
 				26D72FB5282E7ED800BC3A8F /* QuizStructures.swift in Sources */,
 				0E62D2EF283BB3210002148D /* Cardify.swift in Sources */,
@@ -659,6 +655,7 @@
 				A0EA0C472848B46D00A2B524 /* GameViewController.swift in Sources */,
 				26F0498E283B830B00FBA117 /* Paragraph.swift in Sources */,
 				0E62D2E3283BB23A0002148D /* String+ToArray.swift in Sources */,
+				26D3DF81284A06E7009EECE3 /* HowToView.swift in Sources */,
 				0E62D2ED283BB3090002148D /* GridLayout.swift in Sources */,
 				0E62D2F9283BB5070002148D /* EmojiMemoryGameView.swift in Sources */,
 				A04024E22848C81F001B4D18 /* WackGameViewController.swift in Sources */,
@@ -674,7 +671,6 @@
 				263B3E762847A2F4005919D7 /* FairytaleMemoryGameView.swift in Sources */,
 				26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */,
 				263B3E6E28462ECD005919D7 /* PersonInformation.swift in Sources */,
-				26D72FAA282E65C800BC3A8F /* AchievementsView.swift in Sources */,
 				0E62D2F5283BB4650002148D /* DefaultThemes.swift in Sources */,
 				A04024DF2848C81F001B4D18 /* WhackSlot.swift in Sources */,
 				844A56602848EE64009BF850 /* MillGameScene.swift in Sources */,

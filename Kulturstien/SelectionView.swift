@@ -24,6 +24,7 @@ struct SelectionView: View {
 			
 			BackButtonView()
 			
+			VStack {
 			Image(imageTitle)
                 .padding(60)
 			
@@ -40,8 +41,12 @@ struct SelectionView: View {
                     .foregroundColor(.black)
                     .frame(width: 200)
                     .padding()
-                    .background(RoundedRectangle(cornerRadius: 15)
-                        .stroke(Color.gray, lineWidth: 1))
+					.overlay(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1)
+					)
+					.background(RoundedRectangle(cornerRadius: 15)
+						.fill(.white)
+					)
 			}
 			
 			Button (action: {
@@ -68,8 +73,12 @@ struct SelectionView: View {
                     .foregroundColor(.black)
                     .frame(width: 200)
                     .padding()
-                    .background(RoundedRectangle(cornerRadius: 15)
-						.stroke(self.quizButtonColour, lineWidth: 1))
+					.overlay(RoundedRectangle(cornerRadius: 15)
+						.stroke(self.quizButtonColour, lineWidth: 1)
+					)
+					.background(RoundedRectangle(cornerRadius: 15)
+						.fill(.white)
+					)
 			}
 			
 			if self.showQuizButtonInformationText {
@@ -89,12 +98,18 @@ struct SelectionView: View {
                         .foregroundColor(.black)
                         .frame(width: 200)
                         .padding()
-                        .background(RoundedRectangle(cornerRadius: 15)
-                            .stroke(Color.gray, lineWidth: 1))
+						.overlay(RoundedRectangle(cornerRadius: 15)
+							.stroke(Color.gray, lineWidth: 1)
+						)
+						.background(RoundedRectangle(cornerRadius: 15)
+							.fill(.white)
+						)
 				}
+			}
 			}
 			Spacer()
 		}
+		.background(Color("BackgroundColour"))
     }
 }
 

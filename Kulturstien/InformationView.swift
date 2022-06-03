@@ -71,6 +71,7 @@ struct InformationView: View {
 					}
 				}
         }
+		.background(Color("BackgroundColour"))
         
     }
 }

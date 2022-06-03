@@ -52,9 +52,12 @@ struct ContactView: View {
             }
             .frame(width: 300, height: 200)
             .padding()
-            .background(RoundedRectangle(cornerRadius: 15)
-                .stroke(Color.gray, lineWidth: 1)
-            )
+			.overlay(RoundedRectangle(cornerRadius: 15)
+				.stroke(Color.gray, lineWidth: 1)
+			)
+			.background(RoundedRectangle(cornerRadius: 15)
+				.fill(.white)
+			)
             
             Button(action: {
                 self.sentFeedBAck = true
@@ -63,12 +66,17 @@ struct ContactView: View {
 					.foregroundColor(.black)
 					.frame(width: 200)
 					.padding()
+					.overlay(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1)
+					)
 					.background(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1))
+						.fill(.white)
+					)
             }
 			Spacer()
     }
 }
+		.background(Color("BackgroundColour"))
 }
 }
 struct ContactView_Previews: PreviewProvider {

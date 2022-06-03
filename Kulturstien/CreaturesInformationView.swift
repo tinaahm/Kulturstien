@@ -23,7 +23,7 @@ struct CreaturesInformationView: View {
     var body: some View {
 		ScrollView {
 			VStack {
-				BackButtonView()
+				BackButtonView(buttonColour: .white)
 				Image(creature.imageTitle)
 					.resizable()
 					.scaledToFit()

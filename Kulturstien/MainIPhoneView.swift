@@ -13,7 +13,6 @@ struct MainIPhoneView: View {
 	
     var body: some View {
 		ZStack {
-				
 			ZStack {
 				ButtonView(selectedStructure: .logBooms, selectedPerson: .none, image: "LogboomsButton", width: 71, height: 59, posX: 210, posY: 190)
 				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "SawmillButton", width: 51, height: 60, posX: 70, posY: 520)
@@ -21,7 +20,7 @@ struct MainIPhoneView: View {
 				ButtonView(selectedStructure: .mill, image: "WatermillButton", width: 70, height: 60, posX: 345, posY: 815)
 				ButtonView(selectedPerson: .kirsti, image: "KirstiButton", width: 60, height: 73, posX: 65, posY: 210)
 				ButtonView(selectedPerson: .trond, image: "TrondButton", width: 52, height: 101, posX: 290, posY: 670)
-				ButtonView(selectedPerson: .ragnhild, image: "RagnhildButton", width: 47, height: 90, posX: 145, posY: 840)
+				ButtonView(selectedPerson: .ragnhild, image: "RagnhildButton", width: 47, height: 90, posX: 145, posY: 820)
 				ButtonView(selectedGame: .farmMemoryGame, image: "TrophyButton", width: 40, height: 52, posX: 190, posY: 320)
 				}
 			.background(
@@ -36,6 +35,7 @@ struct MainIPhoneView: View {
 					HStack {
 						Spacer()
 						Button (action: {
+							page.previousPage = page.pageIndex
 							page.pageIndex = .profile
 						}) {
 							Image(getImageTitleByColour(colour: page.user.selectedColour))
@@ -43,27 +43,10 @@ struct MainIPhoneView: View {
 							.frame(width: 60, height: 60)
 							.background(Circle().fill(.white).shadow(radius: 1, x: 2, y: 3)
 							)
-							//.shadow(radius: 1, x: 2, y: 3)
 						}
 						.padding(.trailing)
-						
-				
-						/*Spacer(minLength: 0)
-						
-						Button (action: {
-							withAnimation {
-								page.pageIndex = .menu
-							}
-						}) {
-							Image(systemName: "line.3.horizontal")
-							.resizable()
-							.frame(width: 25, height: 25)
-							.padding(15)
-						}*/
 					}
 					.foregroundColor(.black)
-				//.padding()
-				//.background(.white.opacity(0.5))
 				
 				HStack {
 					Spacer()
@@ -76,16 +59,10 @@ struct MainIPhoneView: View {
 							.frame(width: 30, height: 30)
 							.padding(15)
 							.foregroundColor(.black)
-							//.background(.white.opacity(0.7))
-							.background(Circle().fill(.white).shadow(radius: 2, x: 2, y: 3)
+							.background(Circle().fill(.white).shadow(radius: 1, x: 2, y: 3)
 							)
-							/*.clipShape(Circle())
-							.shadow(radius: 2, x: 2, y: 3)*/
-
 					}
 					.padding(.trailing)
-					//.padding(.top)
-					
 				}
 				Spacer()
 			}

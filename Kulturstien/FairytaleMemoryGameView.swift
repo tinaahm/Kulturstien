@@ -10,7 +10,7 @@ import SwiftUI
 struct FairytaleMemoryGameView: View {
     var body: some View {
 		VStack {
-			BackButtonView()
+			BackButtonView(buttonColour: .white)
 			Image("Nokken")
 				.resizable()
 				.frame(width: 80, height: 50)
@@ -18,6 +18,8 @@ struct FairytaleMemoryGameView: View {
 			Text("Underjordiske vesener")
 			DestinationPageView(theme: DefaultThemes.theme1)
 		}
+		.foregroundColor(.white)
+		.background(Color("FairytaleMemoryGameBackgroundColour"))
     }
 }
 
