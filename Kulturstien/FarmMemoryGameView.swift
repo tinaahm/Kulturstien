@@ -16,6 +16,7 @@ struct FarmMemoryGameView: View {
 			Image("WaterMillIcon")
 			DestinationPageView(theme: DefaultThemes.theme0)
 		}
+		.background(Color("BackgroundColour"))
     }
 }
 

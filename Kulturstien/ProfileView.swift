@@ -24,34 +24,6 @@ struct ProfileView: View {
 			Text("Hei " + page.user.name.capitalized + "!")
 				.padding([.leading, .top, .trailing])
 				.padding(.bottom, 90)
-			
-			Button(action: {
-				
-			}) {
-				Text("Slik spiller du")
-					.frame(width: 200)
-					.padding()
-					.background(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1)
-					)
-					.foregroundColor(.black)
-			}
-			.padding(5)
-            
-            
-			Button(action: {
-				page.previousPage = page.pageIndex
-                page.pageIndex = .avatarChanger
-			}) {
-				Text("Endre avatar")
-					.frame(width: 200)
-					.padding()
-					.background(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1)
-					)
-					.foregroundColor(.black)
-			}
-			.padding(5)
             
 			Button(action: {
 				page.previousPage = page.pageIndex
@@ -60,8 +32,11 @@ struct ProfileView: View {
 				Text("Prestasjoner")
 					.frame(width: 200)
 					.padding()
-					.background(RoundedRectangle(cornerRadius: 15)
+					.overlay(RoundedRectangle(cornerRadius: 15)
 						.stroke(Color.gray, lineWidth: 1)
+					)
+					.background(RoundedRectangle(cornerRadius: 15)
+						.fill(.white)
 					)
 					.foregroundColor(.black)
 			}.padding(5)
@@ -74,9 +49,47 @@ struct ProfileView: View {
 					.foregroundColor(.black)
 					.frame(width: 200)
 					.padding()
+					.overlay(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1)
+					)
 					.background(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1))
+						.fill(.white)
+					)
 			}.padding(5)
+			
+			Button(action: {
+				page.previousPage = page.pageIndex
+				page.pageIndex = .avatarChanger
+			}) {
+				Text("Endre avatar")
+					.frame(width: 200)
+					.padding()
+					.overlay(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1)
+					)
+					.background(RoundedRectangle(cornerRadius: 15)
+						.fill(.white)
+					)
+					.foregroundColor(.black)
+			}
+			.padding(5)
+			
+			Button(action: {
+				page.previousPage = page.pageIndex
+				page.pageIndex = .howTo
+			}) {
+				Text("Slik bruker du appen")
+					.frame(width: 200)
+					.padding()
+					.overlay(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1)
+					)
+					.background(RoundedRectangle(cornerRadius: 15)
+						.fill(.white)
+					)
+					.foregroundColor(.black)
+			}
+			.padding(5)
 			
 			Button(action: {
 				page.previousPage = page.pageIndex
@@ -86,12 +99,17 @@ struct ProfileView: View {
 					.foregroundColor(.black)
 					.frame(width: 200)
 					.padding()
+					.overlay(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1)
+					)
 					.background(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1))
+						.fill(.white)
+					)
 			}.padding(5)
 			
 			Spacer()
 		}
+		.background(Color("BackgroundColour"))
     }
 }
 

@@ -10,26 +10,31 @@ import SwiftUI
 struct BackButtonView: View {
 	
 	@EnvironmentObject var page : ViewIndex
+	var buttonColour: Color = .black
 	
 	var body: some View {
 		HStack (alignment: .top) {
 			Button (action: {
 				let tempPage: Page = page.previousPage
-				page.previousPage = .main
-				page.pageIndex = tempPage
+				
+				if page.lightMode {
+					page.previousPage = .main
+					page.pageIndex = tempPage
+				} else {
+					page.previousPage = .mainNight
+					page.pageIndex = tempPage
+				}
 			}) {
 				Image(systemName: "chevron.left")
 				.resizable()
                 .scaledToFill()
-                            .frame(width: 13, height: 13)
-                            
+				.frame(width: 13, height: 13)
 				.padding(15)
+				.foregroundColor(buttonColour)
 			}
 			.padding(.leading)
 			Spacer()
 		}
-		.foregroundColor(.black)
-		//.padding()
 	}
 }
 

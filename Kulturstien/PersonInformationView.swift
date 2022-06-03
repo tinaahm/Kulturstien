@@ -142,39 +142,10 @@ struct PersonInformationView: View {
 			Spacer()
 		}
 		}
+		.background(Color("BackgroundColour"))
 		
     }
 }
-
-/*struct SwitchButtonView: View {
-	
-	var selected: Bool = false
-	var paragraphIndex: Int
-	
-	var body: some View {
-		Button (action: {
-		}) {
-			if selected {
-				Image(systemName: "moon.stars.fill")
-					.resizable()
-					.frame(width: 15, height: 15)
-					.padding(15)
-					.background(Color.white)
-					.foregroundColor(.black)
-				.clipShape(Circle())
-			} else {
-				Image(systemName: "moon.stars.fill")
-					.resizable()
-					.frame(width: 20, height: 20)
-					.padding(15)
-					.background(Color.white)
-					.foregroundColor(.black)
-				.clipShape(Circle())
-			}
-			
-		}
-	}
-}*/
 
 func getPersonBySelection(selection: Person) -> PersonInformation {
 	for person in personInformation {

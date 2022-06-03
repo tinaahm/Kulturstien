@@ -32,38 +32,21 @@ struct MainNightTimeView: View {
 			//.draggable()
 			
 			VStack {
-				//ZStack {
 					HStack {
+						Spacer()
 						Button (action: {
+							page.previousPage = page.pageIndex
 							page.pageIndex = .profile
 						}) {
 							Image(getImageTitleByColour(colour: page.user.selectedColour))
 							.resizable()
 							.frame(width: 60, height: 60)
+							.background(Circle().fill(.white).shadow(color: .black, radius: 1, x: 2, y: 3)
+							)
 						}
-				
-						Spacer(minLength: 0)
-						
-						
-						
-						Button (action: {
-							withAnimation {
-								page.pageIndex = .menu
-							}
-						}) {
-							Image(systemName: "line.3.horizontal")
-							.resizable()
-							.frame(width: 25, height: 25)
-							.padding(15)
-						}
-						//.padding(.trailing, 30)
-						
-						//Spacer(minLength: 0)
+						.padding(.trailing)
 					}
 					.foregroundColor(.black)
-				
-				.padding()
-				.background(.white.opacity(0.5))
 				
 				HStack {
 					Spacer()
@@ -75,12 +58,11 @@ struct MainNightTimeView: View {
 							.resizable()
 							.frame(width: 30, height: 30)
 							.padding(15)
-							.background(.white.opacity(0.7))
-							.foregroundColor(.black)
-						.clipShape(Circle())
+							.foregroundColor(.yellow)
+							.background(Circle().fill(.white).shadow(color: .black, radius: 1, x: 2, y: 3)
+							)
 					}
 					.padding(.trailing)
-					.padding(.top)
 					
 				}
 				Spacer()

@@ -20,34 +20,43 @@ struct GameEndView: View {
 		
 		let score = getGameSelectionFromPage(gameType: self.gameType, user: page.user)
 		
-		VStack {
-			Text("Poeng: " + String(score))
-			
-			Button(action: {
-				page.pageIndex = getPageByGameSelection(game: selectedGame)
-			}) {
-				Text("Spill på nytt")
-					.frame(width: 150)
-					.padding()
-					.background(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1)
-					)
-					.foregroundColor(.black)
-			}
-			
-			Button(action: {
-				page.pageIndex = .main
-			}) {
-				Text("Gå tilbake til kartet")
-					.frame(width: 150)
-					.padding()
-					.background(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1)
-					)
-					.foregroundColor(.black)
+		ZStack {
+			Color("BackgroundColour")
+			VStack {
+				Text("Poeng: " + String(score))
+				
+				Button(action: {
+					page.pageIndex = getPageByGameSelection(game: selectedGame)
+				}) {
+					Text("Spill på nytt")
+						.frame(width: 150)
+						.padding()
+						.overlay(RoundedRectangle(cornerRadius: 15)
+							.stroke(Color.gray, lineWidth: 1)
+						)
+						.background(RoundedRectangle(cornerRadius: 15)
+							.fill(.white)
+						)
+						.foregroundColor(.black)
+				}
+				
+				Button(action: {
+					page.pageIndex = .main
+				}) {
+					Text("Gå tilbake til kartet")
+						.frame(width: 150)
+						.padding()
+						.overlay(RoundedRectangle(cornerRadius: 15)
+							.stroke(Color.gray, lineWidth: 1)
+						)
+						.background(RoundedRectangle(cornerRadius: 15)
+							.fill(.white)
+						)
+						.foregroundColor(.black)
+				}
 			}
 		}
-		
+		.background(Color("BackgroundColour"))
     }
 	
 }

@@ -18,7 +18,7 @@ struct ProgressionView: View {
     
     var body: some View {
 		
-        VStack () {
+        VStack {
             
             BackButtonView()
             
@@ -118,6 +118,7 @@ struct ProgressionView: View {
             
             Spacer()
         }
+		.background(Color("BackgroundColour"))
         
     }
 }
