@@ -77,23 +77,26 @@ struct PersonInformationView: View {
 							}
 							HStack {
 								VStack {
-									RoundedRectangle(cornerRadius: 50).fill(.clear)
-										.frame(width: 160, height: 140)
-										.onTapGesture {
-											if self.selectedIndex != 0 {
-												self.selectedIndex -= 1
-											}
-										}
+									Color.clear
 								}
+								.frame(width: 80, height: 140)
+								.contentShape(RoundedRectangle(cornerRadius: 50))
+								.onTapGesture {
+									if self.selectedIndex != 0 {
+										self.selectedIndex -= 1
+										}
+									}
+								Spacer()
 								VStack {
-									RoundedRectangle(cornerRadius: 50).fill(.clear)
-										.frame(width: 160, height: 140)
-										.onTapGesture {
-											if self.selectedIndex < (self.personParagraphs.count - 1) {
-												self.selectedIndex += 1
-											}
-										}
+									Color.clear
 								}
+								.frame(width: 80, height: 140)
+								.contentShape(RoundedRectangle(cornerRadius: 50))
+								.onTapGesture {
+									if self.selectedIndex < (self.personParagraphs.count - 1) {
+										self.selectedIndex += 1
+										}
+									}
 							}
 						}
 						.padding(.top, 20)
@@ -143,24 +146,26 @@ struct PersonInformationView: View {
 							}
 							HStack {
 								VStack {
-									Image("")
-										.frame(width: 160, height: 140)
+									Color.clear
 								}
+								.frame(width: 80, height: 140)
 								.contentShape(RoundedRectangle(cornerRadius: 50))
 								.onTapGesture {
 									if self.selectedIndex != 0 {
 										self.selectedIndex -= 1
 										}
 									}
+								Spacer()
 								VStack {
-									RoundedRectangle(cornerRadius: 50).fill(.clear)
-										.frame(width: 160, height: 140)
-										.onTapGesture {
-											if self.selectedIndex < (self.personParagraphs.count - 1) {
-												self.selectedIndex += 1
-											}
-										}
+									Color.clear
 								}
+								.frame(width: 80, height: 140)
+								.contentShape(RoundedRectangle(cornerRadius: 50))
+								.onTapGesture {
+									if self.selectedIndex < (self.personParagraphs.count - 1) {
+										self.selectedIndex += 1
+										}
+									}
 							}
 						}
 						.padding(.top, 20)

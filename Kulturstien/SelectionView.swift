@@ -12,6 +12,7 @@ struct SelectionView: View {
 	@EnvironmentObject var page : ViewIndex
 	@State var quizButtonColour = Color.gray
 	@State var showQuizButtonInformationText = false
+	@State var showARButtonInformationText = false
 	
 	var selectionType: Structure
 	
@@ -92,7 +93,8 @@ struct SelectionView: View {
 			
 			if self.selectionType == .mill {
 				Button (action: {
-					page.previousPage = page.pageIndex
+					//page.previousPage = page.pageIndex
+					self.showARButtonInformationText = true
 				}) {
 					Text("Se i AR")
                         .foregroundColor(.black)
@@ -106,6 +108,15 @@ struct SelectionView: View {
 						)
 				}
 			}
+				
+				if self.showARButtonInformationText {
+					Text("Hei! Du må være på stedet for å kunne se kvernehuset i AR, se i kartet.")
+						.foregroundColor(.red)
+						.font(.callout)
+						.frame(width: 200)
+						.padding()
+				}
+				
 			}
 			Spacer()
 		}
