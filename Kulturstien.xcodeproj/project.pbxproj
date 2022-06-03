@@ -59,6 +59,7 @@
 		26F0498E283B830B00FBA117 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0498D283B830B00FBA117 /* Paragraph.swift */; };
 		26F04990283CC16D00FBA117 /* WackANokkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0498F283CC16D00FBA117 /* WackANokkView.swift */; };
 		26F93BC52837AF98005F5F9E /* LoadJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F93BC42837AF98005F5F9E /* LoadJSON.swift */; };
+		8445573E2849F355009D2175 /* net.png in Resources */ = {isa = PBXBuildFile; fileRef = 8445573D2849F355009D2175 /* net.png */; };
 		844A565F2848EE64009BF850 /* nice-plank.png in Resources */ = {isa = PBXBuildFile; fileRef = 844A565C2848EE64009BF850 /* nice-plank.png */; };
 		844A56602848EE64009BF850 /* MillGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A565D2848EE64009BF850 /* MillGameScene.swift */; };
 		844A56612848EE64009BF850 /* MillGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A565E2848EE64009BF850 /* MillGameView.swift */; };
@@ -159,6 +160,7 @@
 		26F0498D283B830B00FBA117 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
 		26F0498F283CC16D00FBA117 /* WackANokkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WackANokkView.swift; sourceTree = "<group>"; };
 		26F93BC42837AF98005F5F9E /* LoadJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJSON.swift; sourceTree = "<group>"; };
+		8445573D2849F355009D2175 /* net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = net.png; sourceTree = "<group>"; };
 		844A565C2848EE64009BF850 /* nice-plank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nice-plank.png"; sourceTree = "<group>"; };
 		844A565D2848EE64009BF850 /* MillGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MillGameScene.swift; sourceTree = "<group>"; };
 		844A565E2848EE64009BF850 /* MillGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MillGameView.swift; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 		844A56622848EE6B009BF850 /* MillGame */ = {
 			isa = PBXGroup;
 			children = (
+				8445573D2849F355009D2175 /* net.png */,
 				844A56632848F66E009BF850 /* nail.png */,
 				844A565D2848EE64009BF850 /* MillGameScene.swift */,
 				844A565C2848EE64009BF850 /* nice-plank.png */,
@@ -594,6 +597,7 @@
 				A04024E32848C81F001B4D18 /* WackLaunchScreen.storyboard in Resources */,
 				26F0498C283B82A200FBA117 /* Paragraphs.json in Resources */,
 				A0EA0C4E2848B46D00A2B524 /* GameScene.sks in Resources */,
+				8445573E2849F355009D2175 /* net.png in Resources */,
 				A04024DD2848C81F001B4D18 /* whackBad.mp3 in Resources */,
 				267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */,
 			);
