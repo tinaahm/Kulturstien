@@ -64,13 +64,13 @@ class WackGameScene: SKScene {
     var numRounds = 0
     
     override func didMove(to view: SKView) {
-        let background = SKSpriteNode(imageNamed: "whackBackground2")
+       /* let background = SKSpriteNode(imageNamed: "whackBackground2")
         background.position = CGPoint(x: 0, y: 0)
         background.yScale = 0.80
         background.xScale = 0.80
         background.blendMode = .replace
         background.zPosition = -1
-        addChild(background)
+        addChild(background)*/
         
         gameScore = SKLabelNode(fontNamed: "Chalkduster")
         gameScore.text = "Score: 0"

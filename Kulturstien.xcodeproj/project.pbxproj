@@ -457,13 +457,13 @@
 		A0EA0C382848B46D00A2B524 /* SkremBortHuldra */ = {
 			isa = PBXGroup;
 			children = (
+				A0EA0C452848B46D00A2B524 /* GameScene.swift */,
 				A0EA0C392848B46D00A2B524 /* GameViewController.swift */,
 				A0EA0C3B2848B46D00A2B524 /* GameOverScene.swift */,
 				A0EA0C3C2848B46D00A2B524 /* LaunchScreen.storyboard */,
 				A0EA0C3E2848B46D00A2B524 /* Main.storyboard */,
 				A0EA0C402848B46D00A2B524 /* Sounds */,
 				A0EA0C432848B46D00A2B524 /* GameScene.sks */,
-				A0EA0C452848B46D00A2B524 /* GameScene.swift */,
 				A0EA0C462848B46D00A2B524 /* Actions.sks */,
 			);
 			path = SkremBortHuldra;

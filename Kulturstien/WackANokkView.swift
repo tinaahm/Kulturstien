@@ -17,7 +17,7 @@ struct WackANokkView: View {
 		let theWackScene = WackGameScene()
 		theWackScene.size = CGSize(width: 400, height: 800)
 		theWackScene.scaleMode = .aspectFit
-		theWackScene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+		//theWackScene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
 		return theWackScene
 	}
     

@@ -13,9 +13,17 @@ import UIKit
 
 struct FrightenHuldraGameView: View {
     var theScene = SKScene(fileNamed: "GameScene")
+	
     
     var body: some View {
-        SpriteView(scene: theScene!)
+		ZStack {
+			SpriteView(scene: theScene!)
+				.ignoresSafeArea()
+			VStack {
+				BackButtonView()
+				Spacer()
+			}
+		}
     }
 }
 
