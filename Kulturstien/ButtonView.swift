@@ -41,7 +41,8 @@ struct ButtonView: View {
 				page.pageIndex = .personInformation
 			} else if selectedGame != .none {
 				page.previousPage = page.pageIndex
-				page.pageIndex = getPageByGameSelection(game: selectedGame)
+				gameSelection = selectedGame
+				page.pageIndex = .startGame
 			} else if selectedCreature != .none {
 				page.previousPage = page.pageIndex
 				personSelection = selectedCreature

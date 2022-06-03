@@ -17,13 +17,13 @@ struct User {
 }
 
 enum Page {
-	case start, main, mainNight, profile, menu, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, achievements, avatarChanger, gameEnd, history, howTo, millGame
+	case start, main, mainNight, profile, menu, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, achievements, avatarChanger, gameEnd, history, howTo, startGame
 }
 
 var quizSelection: Structure = .none
 var informationSelection: Structure = .none
 var personSelection: Person = .none
-var selectedGame: Game = .none
+var gameSelection: Game = .none
 
 var quizes = Quizes()
 
@@ -34,6 +34,8 @@ class ViewIndex: ObservableObject {
 	@Published var user: User = User()
 	//@Published var quizes = Quizes()
 	@Published var quizesArray: [Quiz] = [Quiz(name: "Kvernhus Quiz", type: .mill, imageTitle: "WaterMillIcon"), Quiz(name: "Sagbruk Quiz", type: .sawmill, imageTitle: "SawmillIcon"), Quiz(name: "Demning Quiz", type: .dam, imageTitle: "DamIcon"), Quiz(name: "Lenseanlegg Quiz", type: .logBooms, imageTitle: "LogBoomsIcon")]
+	@Published var frigtenHuldraGameOver: Bool = false
+	@Published var wackANokkGameOver: Bool = false
 }
 
 struct NavigationHandlerView: View {
@@ -81,14 +83,14 @@ struct NavigationHandlerView: View {
         case .avatarChanger:
             AvatarEditorView()
 		case .gameEnd:
-			GameEndView(gameType: selectedGame)
+			GameEndView(gameType: gameSelection)
 		case .history:
 			HistoryView()
 		case .howTo:
 			HowToView()
-        case .millGame:
-            MillGameView()
-        }
+		case .startGame:
+			GameStartView()
+		}
     }
 }
 

@@ -12,13 +12,23 @@ import SpriteKit
 import UIKit
 
 struct FrightenHuldraGameView: View {
-    var theScene = SKScene(fileNamed: "GameScene")
+	
+	@EnvironmentObject var page : ViewIndex
+	
+    var gameScene = SKScene(fileNamed: "GameScene")
+	var gameOverScene = SKScene(fileNamed: "GameOverScene")
 	
     
     var body: some View {
 		ZStack {
-			SpriteView(scene: theScene!)
-				.ignoresSafeArea()
+			//if !page.frigtenHuldraGameOver {
+				SpriteView(scene: gameScene!)
+					.ignoresSafeArea()
+			/*} else {
+				SpriteView(scene: gameScene!)
+					.ignoresSafeArea()
+			}
+			*/
 			VStack {
 				BackButtonView()
 				Spacer()
@@ -29,6 +39,6 @@ struct FrightenHuldraGameView: View {
 
 struct FrightenHuldraGameView_Previews: PreviewProvider {
     static var previews: some View {
-        FrightenHuldraGameView()
+        FrightenHuldraGameView().environmentObject(ViewIndex())
     }
 }

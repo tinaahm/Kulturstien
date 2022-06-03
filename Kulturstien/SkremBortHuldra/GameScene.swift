@@ -6,6 +6,7 @@
 //
 
 import SpriteKit
+import SwiftUI
 
 struct PhysicsCategory {
   static let none      : UInt32 = 0
@@ -47,6 +48,8 @@ extension CGPoint {
 }
 
 class GameScene: SKScene {
+	
+	//@EnvironmentObject var page : ViewIndex
     
     var gameScore: SKLabelNode!
     
@@ -134,9 +137,11 @@ class GameScene: SKScene {
     
     let loseAction = SKAction.run() { [weak self] in
       guard let `self` = self else { return }
-      let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-      let gameOverScene = GameOverScene(size: self.size)
-      self.view?.presentScene(gameOverScene, transition: reveal)
+      //let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+      //let gameOverScene = GameOverScene(size: self.size)
+      //self.view?.presentScene(gameOverScene, transition: reveal)
+		self.removeAllChildren()
+		
     }
     
     monster.run(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
@@ -196,10 +201,10 @@ class GameScene: SKScene {
     
     monstersDestroyed += 1
     if monstersDestroyed > 99999 {
-        
-      let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-      let gameOverScene = GameOverScene(size: self.size)
-        self.view?.presentScene(gameOverScene, transition: reveal)
+	  let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+	  let gameOverScene = GameOverScene(size: self.size)
+	  self.view?.presentScene(gameOverScene, transition: reveal)
+		//self.page.frigtenHuldraGameOver = true
     }
   }
 
