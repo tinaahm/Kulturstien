@@ -41,7 +41,6 @@ struct InformationView: View {
 						.scaledToFit()
 						.aspectRatio(contentMode: .fill)
 						.frame(width: 350, height: 250)
-						//.shadow(radius: 7)
 					
 						VStack(alignment: .leading) {
 							
@@ -56,7 +55,7 @@ struct InformationView: View {
 										.shadow(radius: 2, x: 0, y: 3)
 
 									VStack {
-										Text(self.information[index].text)
+										Text(self.information[index].text) //FIXME: add multiline center?
 											.font(.body)
 											.foregroundColor(.black)
 									}

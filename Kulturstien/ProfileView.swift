@@ -29,13 +29,14 @@ struct ProfileView: View {
 				
 			}) {
 				Text("Slik spiller du")
-					.frame(width: 275)
+					.frame(width: 200)
 					.padding()
 					.background(RoundedRectangle(cornerRadius: 15)
 						.stroke(Color.gray, lineWidth: 1)
 					)
 					.foregroundColor(.black)
 			}
+			.padding(5)
             
             
 			Button(action: {
@@ -43,28 +44,51 @@ struct ProfileView: View {
                 page.pageIndex = .avatarChanger
 			}) {
 				Text("Endre avatar")
-					.frame(width: 275)
+					.frame(width: 200)
 					.padding()
 					.background(RoundedRectangle(cornerRadius: 15)
 						.stroke(Color.gray, lineWidth: 1)
 					)
 					.foregroundColor(.black)
-					.padding()
 			}
+			.padding(5)
             
 			Button(action: {
 				page.previousPage = page.pageIndex
                 page.pageIndex = .achievements
 			}) {
 				Text("Prestasjoner")
-					.frame(width: 275)
+					.frame(width: 200)
 					.padding()
 					.background(RoundedRectangle(cornerRadius: 15)
 						.stroke(Color.gray, lineWidth: 1)
 					)
 					.foregroundColor(.black)
-			}
+			}.padding(5)
             
+			Button(action: {
+				page.previousPage = page.pageIndex
+				page.pageIndex = .history
+			}) {
+				Text("Byåas historie")
+					.foregroundColor(.black)
+					.frame(width: 200)
+					.padding()
+					.background(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1))
+			}.padding(5)
+			
+			Button(action: {
+				page.previousPage = page.pageIndex
+				page.pageIndex = .contact
+			}) {
+				Text("Kontakt oss")
+					.foregroundColor(.black)
+					.frame(width: 200)
+					.padding()
+					.background(RoundedRectangle(cornerRadius: 15)
+						.stroke(Color.gray, lineWidth: 1))
+			}.padding(5)
 			
 			Spacer()
 		}

@@ -33,20 +33,22 @@ struct MainIPhoneView: View {
 			.draggable()
 			
 			VStack {
-				//ZStack {
 					HStack {
-						//Spacer(minLength: 0)
+						Spacer()
 						Button (action: {
 							page.pageIndex = .profile
 						}) {
 							Image(getImageTitleByColour(colour: page.user.selectedColour))
 							.resizable()
 							.frame(width: 60, height: 60)
-							//.padding(5)
+							.background(Circle().fill(.white).shadow(radius: 1, x: 2, y: 3)
+							)
+							//.shadow(radius: 1, x: 2, y: 3)
 						}
-						//.padding(.leading, 30)
+						.padding(.trailing)
+						
 				
-						Spacer(minLength: 0)
+						/*Spacer(minLength: 0)
 						
 						Button (action: {
 							withAnimation {
@@ -57,18 +59,11 @@ struct MainIPhoneView: View {
 							.resizable()
 							.frame(width: 25, height: 25)
 							.padding(15)
-						}
-						//.padding(.trailing, 30)
-						
-						//Spacer(minLength: 0)
+						}*/
 					}
 					.foregroundColor(.black)
-					//.frame(width: 425, height: 60)
-					//.padding()
-				//}
-				.padding()
-				.background(.white.opacity(0.5))
-				//Spacer(minLength: 0)
+				//.padding()
+				//.background(.white.opacity(0.5))
 				
 				HStack {
 					Spacer()
@@ -80,12 +75,16 @@ struct MainIPhoneView: View {
 							.resizable()
 							.frame(width: 30, height: 30)
 							.padding(15)
-							.background(.white.opacity(0.7))
 							.foregroundColor(.black)
-						.clipShape(Circle())
+							//.background(.white.opacity(0.7))
+							.background(Circle().fill(.white).shadow(radius: 2, x: 2, y: 3)
+							)
+							/*.clipShape(Circle())
+							.shadow(radius: 2, x: 2, y: 3)*/
+
 					}
 					.padding(.trailing)
-					.padding(.top)
+					//.padding(.top)
 					
 				}
 				Spacer()
