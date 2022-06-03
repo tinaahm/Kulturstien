@@ -67,7 +67,7 @@ class GameScene: SKScene {
     addChild(background)
       
     // 3
-      player.position = CGPoint(x: size.height * 0.235, y: size.height * 0.1)
+	  player.position = CGPoint(x: 0, y: -(size.height * 0.4))
     // 4
     addChild(player)
     
@@ -115,11 +115,11 @@ class GameScene: SKScene {
     monster.physicsBody?.collisionBitMask = PhysicsCategory.none // 5
     
     // Determine where to spawn the monster along the X axis
-      let actualX = random(min: monster.size.width, max: monster.size.height*7)
+	  let xPosition = random(min: -(size.width/2), max: (size.width/2))
     
     // Position the monster slightly off-screen along the top,
     // and along a random position along the X axis as calculated above
-    monster.position = CGPoint(x: actualX, y: size.height + monster.size.height/2)
+    monster.position = CGPoint(x: xPosition, y: (size.height/2))
     
     // Add the monster to the scene
     addChild(monster)
@@ -128,7 +128,7 @@ class GameScene: SKScene {
     let actualDuration = random(min: CGFloat(2.0), max: CGFloat(4.0))
     
     // Create the actions
-    let actionMove = SKAction.move(to: CGPoint(x: actualX, y: -monster.size.height/2),
+    let actionMove = SKAction.move(to: CGPoint(x: xPosition, y: -size.height/2),
                                    duration: TimeInterval(actualDuration))
     let actionMoveDone = SKAction.removeFromParent()
     
