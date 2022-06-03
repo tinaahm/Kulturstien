@@ -11,29 +11,41 @@ import GameplayKit
 
 class MillGameScene: SKScene {
     
-    let nailTexture: SKTexture = SKTexture(imageNamed: "nail")
-    let netTexture: SKTexture = SKTexture(imageNamed: "net")
-    let plankTexture: SKTexture = SKTexture(imageNamed: "nice-plank")
+    let nailTexture = SKTexture(imageNamed: "nail")
+    let plankTexture = SKTexture(imageNamed: "nice-plank")
+    let paperTexture = SKTexture(imageNamed: "paper-brown")
+    
+    let playerSprite: SKSpriteNode = SKSpriteNode(texture: SKTexture(imageNamed: "net"))
     
     override func update(_ currentTime: TimeInterval) {}
     
     override func didMove(to view: SKView) {
         self.size = view.frame.size
         
-        backgroundColor = UIColor.systemMint
+        backgroundColor = UIColor.init(Color("WaterColor"))
+        
         physicsWorld.gravity = CGVector(dx: 0, dy: -15)
         
-        let playerSprite: SKSpriteNode = SKSpriteNode(texture: netTexture)
         playerSprite.size = CGSize(width: 100, height: 85)
         playerSprite.anchorPoint = CGPoint(x: -1.5, y: -1)
         playerSprite.position = CGPoint(x: 0, y: 0)
         
         self.addChild(playerSprite)
     
-        //playerSprite.drawBorder(color: UIColor.red, width: 6)
-        
         Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(generateRandomAsset), userInfo: nil, repeats: true)
         }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {}
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+            let coords = touch.location(in: self)
+            
+            playerSprite.position.x = coords.x - 185
+        }
+        
+        print("player x: \(playerSprite.position.x), player y: \(playerSprite.position.y)")
+    }
     
     @objc func generateRandomAsset() {
         
@@ -61,10 +73,13 @@ class MillGameScene: SKScene {
         asset.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: asset.size.width, height: asset.size.height))
         
         self.addChild(asset)
+        
+        //asset.delete(self)
     }
     
 }
 
+// COPIED FROM STACKOVERFLOW - DELETE
 extension SKSpriteNode {
     func drawBorder(color: UIColor, width: CGFloat) {
         let shapeNode = SKShapeNode(rect: frame)
