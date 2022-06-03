@@ -9,7 +9,7 @@ import SpriteKit
 import SwiftUI
 import GameplayKit
 
-class MillGameScene: SKScene {
+class MillGameScene: SKScene, SKPhysicsContactDelegate {
     
     let nailTexture = SKTexture(imageNamed: "nail")
     let plankTexture = SKTexture(imageNamed: "nice-plank")
@@ -20,29 +20,23 @@ class MillGameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {}
     
     override func didMove(to view: SKView) {
+        backgroundColor = UIColor.init(Color("WaterColor"))
         self.size = view.frame.size
         
-        backgroundColor = UIColor.init(Color("WaterColor"))
-        
+        self.physicsWorld.contactDelegate = self
         physicsWorld.gravity = CGVector(dx: 0, dy: -30)
         
-        playerSprite.size = CGSize(width: 100, height: 85)
-        playerSprite.anchorPoint = CGPoint(x: -1.5, y: -1)
-        playerSprite.position = CGPoint(x: 0, y: 0)
-        
-        playerSprite.physicsBody = SKPhysicsBody(rectangleOf: playerSprite.size)
-        playerSprite.physicsBody?.affectedByGravity = false
-        playerSprite.physicsBody?.isDynamic = false;
+        makePlayer()
         
         /*
          Collision
          */
         
+        // playerSprite.physicsBody?.categoryBitMask
+        
         /*
          Collision End
          */
-        
-        self.addChild(playerSprite)
     
         Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(generateRandomAsset), userInfo: nil, repeats: true)
         }
@@ -57,6 +51,20 @@ class MillGameScene: SKScene {
         }
         
         print("player x: \(playerSprite.position.x), player y: \(playerSprite.position.y)")
+    }
+    
+    func makePlayer() {
+        playerSprite.size = CGSize(width: 100, height: 85)
+        playerSprite.anchorPoint = CGPoint(x: -1.5, y: -1)
+        playerSprite.position = CGPoint(x: 0, y: 0)
+        
+        playerSprite.physicsBody = SKPhysicsBody(rectangleOf: playerSprite.size)
+        playerSprite.physicsBody?.affectedByGravity = false
+        playerSprite.physicsBody?.isDynamic = false;
+        
+        playerSprite.name = "player"
+        
+        self.addChild(playerSprite)
     }
     
     @objc func generateRandomAsset() {
@@ -91,10 +99,17 @@ class MillGameScene: SKScene {
         asset.physicsBody = SKPhysicsBody(rectangleOf: asset.size)
         
         self.addChild(asset)
-        
-        //asset.delete(self)
     }
     
+    func didBegin(_ contact: SKPhysicsContact) {
+        let first = SKPhysicsBody()
+        _ = SKPhysicsBody()
+        
+        if (first.node?.name == "player") {
+            first.affectedByGravity = true
+            print("We have contact!")
+        }
+    }
 }
 
 // COPIED FROM STACKOVERFLOW - DELETE
