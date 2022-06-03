@@ -9,13 +9,21 @@ import SpriteKit
 import SwiftUI
 import GameplayKit
 
+struct Tag {
+    static let zero: UInt32 = 0
+    static let player: UInt32 = 1
+    static let trash: UInt32 = 2
+    static let other: UInt32 = 3
+}
+
 class MillGameScene: SKScene, SKPhysicsContactDelegate {
     
     let nailTexture = SKTexture(imageNamed: "nail")
     let plankTexture = SKTexture(imageNamed: "nice-plank")
     let paperTexture = SKTexture(imageNamed: "paper-brown")
     
-    let playerSprite: SKSpriteNode = SKSpriteNode(texture: SKTexture(imageNamed: "net"))
+    let playerSprite: SKSpriteNode =
+        SKSpriteNode(texture: SKTexture(imageNamed: "net"))
     
     override func update(_ currentTime: TimeInterval) {}
     
@@ -50,7 +58,7 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
             playerSprite.position.x = coords.x - 185
         }
         
-        print("player x: \(playerSprite.position.x), player y: \(playerSprite.position.y)")
+        print("player x-pos: \(playerSprite.position.x)")
     }
     
     func makePlayer() {
@@ -63,6 +71,8 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
         playerSprite.physicsBody?.isDynamic = false;
         
         playerSprite.name = "player"
+        
+        playerSprite.self.name = "player"
         
         self.addChild(playerSprite)
     }
@@ -78,14 +88,17 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
         if (currentAsset == 0) {
             asset = SKSpriteNode(texture: nailTexture)
             asset.size = CGSize(width: 14, height: 80)
+            asset.physicsBody?.contactTestBitMask = Tag.other
         }
         else if (currentAsset == 1) {
             asset = SKSpriteNode(texture: plankTexture)
             asset.size = CGSize(width: 68, height: 32)
+            asset.physicsBody?.contactTestBitMask = Tag.other
         }
         else {
             asset = SKSpriteNode(texture: paperTexture)
             asset.size = CGSize(width: 60, height: 60)
+            asset.physicsBody?.contactTestBitMask = Tag.trash
         }
         
         let randomPosition = GKRandomDistribution(lowestValue: 0, highestValue: Int(self.frame.size.width))
@@ -97,18 +110,23 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
         asset.zRotation = CGFloat(randomRadian.nextInt())
         
         asset.physicsBody = SKPhysicsBody(rectangleOf: asset.size)
+        asset.physicsBody?.isDynamic = true
+        asset.physicsBody?.usesPreciseCollisionDetection = true
+        
         
         self.addChild(asset)
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
-        let first = SKPhysicsBody()
-        _ = SKPhysicsBody()
+        let first = contact.bodyA
+        let second = contact.bodyB
         
-        if (first.node?.name == "player") {
-            first.affectedByGravity = true
-            print("We have contact!")
+        if (first.node?.name == "player" || second.node?.name == "player") {
+            first.node?.physicsBody?.affectedByGravity = true;
+            print("Collision!")
         }
+        
+        // if (first.node?.name == "player" || second.node)
     }
 }
 
