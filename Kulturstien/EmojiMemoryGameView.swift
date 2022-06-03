@@ -17,10 +17,8 @@ import SwiftUI
 func endGame(handler: ViewIndex, gameTheme: String, score: Int) -> String {
 	if gameTheme == "Bondens redskaper" {
 		handler.user.farmMemoryGameScore = score
-		selectedGame = .farmMemoryGame
 	} else {
 		handler.user.fairtytaleMemoryGameScore = score
-		selectedGame = .fairytaleCreaturesMemoryGame
 	}
 	handler.pageIndex = .gameEnd
 	return ""

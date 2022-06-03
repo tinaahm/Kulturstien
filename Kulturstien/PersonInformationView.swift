@@ -34,25 +34,20 @@ struct PersonInformationView: View {
 			
 			VStack(alignment: .leading) {
 				
-				HStack {
-					
+				//HStack {
 					if personType != .trond {
 						ZStack {
-							//RoundedRectangle(cornerRadius: 25, style: .continuous)
-								//.fill(Color("Grey"))
-							//	.shadow(radius: 7, x: -2, y: 5)
 							Image("SpeechBubble")
 								.resizable()
 								.scaledToFit()
-			
 							
 							VStack {
-								Text(personParagraphs[selectedIndex])
-									.font(.callout)
-									.foregroundColor(.black)
-									.multilineTextAlignment(.center)
-									.padding([.leading, .trailing], 60)
-									.padding(.bottom, 20)
+								Text(personParagraphs[self.selectedIndex])
+										.font(.callout)
+										.foregroundColor(.black)
+										.multilineTextAlignment(.center)
+										.padding([.leading, .trailing], 60)
+										.padding(.bottom, 20)
 								HStack {
 									ForEach(0 ..< personParagraphs.count) {
 										index in
@@ -78,32 +73,49 @@ struct PersonInformationView: View {
 										}
 										.padding(1)
 									}
+								}
+							}
+							HStack {
+								VStack {
+									RoundedRectangle(cornerRadius: 50).fill(.clear)
+										.frame(width: 160, height: 140)
+										.onTapGesture {
+											if self.selectedIndex != 0 {
+												self.selectedIndex -= 1
+											}
+										}
+								}
+								VStack {
+									RoundedRectangle(cornerRadius: 50).fill(.clear)
+										.frame(width: 160, height: 140)
+										.onTapGesture {
+											if self.selectedIndex < (self.personParagraphs.count - 1) {
+												self.selectedIndex += 1
+											}
+										}
 								}
 							}
 						}
 						.padding(.top, 20)
 						.padding(.leading, 70)
-						//.padding(50)
-					}
-					else {
+					} else {
 						ZStack {
-							//RoundedRectangle(cornerRadius: 25, style: .continuous)
-								//.fill(Color("Grey"))
-							//	.shadow(radius: 7, x: -2, y: 5)
 							Image("FlippedSpeechBubble")
 								.resizable()
 								.scaledToFit()
-			
 							
 							VStack {
-								Text(personParagraphs[selectedIndex])
-									.font(.callout)
-									.foregroundColor(.black)
-									.multilineTextAlignment(.center)
-									.padding([.leading, .trailing], 60)
-									.padding(.bottom, 20)
+								//ZStack {
+								Text(personParagraphs[self.selectedIndex])
+										.font(.callout)
+										.foregroundColor(.black)
+										.multilineTextAlignment(.center)
+										.padding([.leading, .trailing], 60)
+										.padding(.bottom, 20)
+									//	}
+									//}
 								HStack {
-									ForEach(0 ..< personParagraphs.count) {
+									ForEach(0 ..< self.personParagraphs.count) {
 										index in
 										Button (action: {
 											self.selectedIndex = index
@@ -129,18 +141,36 @@ struct PersonInformationView: View {
 									}
 								}
 							}
+							HStack {
+								VStack {
+									Image("")
+										.frame(width: 160, height: 140)
+								}
+								.contentShape(RoundedRectangle(cornerRadius: 50))
+								.onTapGesture {
+									if self.selectedIndex != 0 {
+										self.selectedIndex -= 1
+										}
+									}
+								VStack {
+									RoundedRectangle(cornerRadius: 50).fill(.clear)
+										.frame(width: 160, height: 140)
+										.onTapGesture {
+											if self.selectedIndex < (self.personParagraphs.count - 1) {
+												self.selectedIndex += 1
+											}
+										}
+								}
+							}
 						}
 						.padding(.top, 20)
 						.padding(.trailing, 70)
-						//.padding(50)
 					}
 
 				}
-				
-				
-			}
+			//}
 			Spacer()
-		}
+			}
 		}
 		.background(Color("BackgroundColour"))
 		

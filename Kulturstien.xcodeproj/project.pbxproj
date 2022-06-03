@@ -49,6 +49,7 @@
 		26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */; };
 		26D3DF7F2848F7FC009EECE3 /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */; };
 		26D3DF81284A06E7009EECE3 /* HowToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3DF80284A06E7009EECE3 /* HowToView.swift */; };
+		26D3DF83284A2875009EECE3 /* GameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3DF82284A2875009EECE3 /* GameStartView.swift */; };
 		26D4A4DD2837D5630022D49F /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4A4DC2837D5630022D49F /* SelectionView.swift */; };
 		26D4A4DF2837EA230022D49F /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4A4DE2837EA230022D49F /* ButtonView.swift */; };
 		26D4A4E12837EA8D0022D49F /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4A4E02837EA8D0022D49F /* BackButtonView.swift */; };
@@ -150,6 +151,7 @@
 		26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIPhoneView.swift; sourceTree = "<group>"; };
 		26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndView.swift; sourceTree = "<group>"; };
 		26D3DF80284A06E7009EECE3 /* HowToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToView.swift; sourceTree = "<group>"; };
+		26D3DF82284A2875009EECE3 /* GameStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartView.swift; sourceTree = "<group>"; };
 		26D4A4DC2837D5630022D49F /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		26D4A4DE2837EA230022D49F /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		26D4A4E02837EA8D0022D49F /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				26F0498F283CC16D00FBA117 /* WackANokkView.swift */,
 				A04024E62848C8F1001B4D18 /* FrightenHuldraGameView.swift */,
 				26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */,
+				26D3DF82284A2875009EECE3 /* GameStartView.swift */,
 			);
 			path = Kulturstien;
 			sourceTree = "<group>";
@@ -671,6 +674,7 @@
 				A04024DF2848C81F001B4D18 /* WhackSlot.swift in Sources */,
 				844A56602848EE64009BF850 /* MillGameScene.swift in Sources */,
 				0E62D2E7283BB2800002148D /* Array+Only.swift in Sources */,
+				26D3DF83284A2875009EECE3 /* GameStartView.swift in Sources */,
 				26D72FA4282E573200BC3A8F /* NavigationHandlerView.swift in Sources */,
 				263B3E6A28461C4E005919D7 /* MainNightTimeView.swift in Sources */,
 				0E0100FA2847B4CD003645E5 /* ProgressionView.swift in Sources */,

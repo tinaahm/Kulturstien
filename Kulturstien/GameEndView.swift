@@ -26,7 +26,7 @@ struct GameEndView: View {
 				Text("Poeng: " + String(score))
 				
 				Button(action: {
-					page.pageIndex = getPageByGameSelection(game: selectedGame)
+					page.pageIndex = getPageByGameSelection(game: gameSelection)
 				}) {
 					Text("Spill på nytt")
 						.frame(width: 150)

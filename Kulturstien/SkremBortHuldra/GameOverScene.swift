@@ -6,8 +6,11 @@
 //
 
 import SpriteKit
+import SwiftUI
 
 class GameOverScene: SKScene {
+	
+	//@EnvironmentObject var page : ViewIndex
     
     override func didMove(to view: SKView) -> Void {
         
@@ -46,14 +49,16 @@ class GameOverScene: SKScene {
     private func handlePinch(recognizer : UIPinchGestureRecognizer) -> Void {
         if recognizer.state == .ended {
             restart()
+			//page.frigtenHuldraGameOver = false
         }
     }
     
     private func restart() -> Void {
         let transition = SKTransition.fade(with: .white, duration: 3)
-        let skView = view as! SKView
-        let restartScene = GameScene(size: skView.bounds.size)
-        restartScene.scaleMode = .fill
+        //let skView = view as! SKView
+        //let restartScene = GameScene(size: skView.bounds.size)
+		let restartScene = GameScene(size: self.size)
+        //restartScene.scaleMode = .fill
         self.view?.presentScene(restartScene, transition: transition)
     }
     

@@ -17,12 +17,25 @@ struct BackButtonView: View {
 			Button (action: {
 				let tempPage: Page = page.previousPage
 				
-				if page.lightMode {
-					page.previousPage = .main
-					page.pageIndex = tempPage
+				if page.pageIndex == .history {
+					
+					if page.lightMode {
+						page.previousPage = .main
+					} else {
+						page.previousPage = .mainNight
+					}
+					
+					page.pageIndex = .profile
+					
 				} else {
-					page.previousPage = .mainNight
-					page.pageIndex = tempPage
+					if page.lightMode {
+						page.previousPage = .main
+						page.pageIndex = tempPage
+					}
+					else {
+						page.previousPage = .mainNight
+						page.pageIndex = tempPage
+					}
 				}
 			}) {
 				Image(systemName: "chevron.left")
