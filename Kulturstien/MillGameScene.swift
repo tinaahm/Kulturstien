@@ -24,11 +24,23 @@ class MillGameScene: SKScene {
         
         backgroundColor = UIColor.init(Color("WaterColor"))
         
-        physicsWorld.gravity = CGVector(dx: 0, dy: -15)
+        physicsWorld.gravity = CGVector(dx: 0, dy: -30)
         
         playerSprite.size = CGSize(width: 100, height: 85)
         playerSprite.anchorPoint = CGPoint(x: -1.5, y: -1)
         playerSprite.position = CGPoint(x: 0, y: 0)
+        
+        playerSprite.physicsBody = SKPhysicsBody(rectangleOf: playerSprite.size)
+        playerSprite.physicsBody?.affectedByGravity = false
+        playerSprite.physicsBody?.isDynamic = false;
+        
+        /*
+         Collision
+         */
+        
+        /*
+         Collision End
+         */
         
         self.addChild(playerSprite)
     
@@ -49,17 +61,23 @@ class MillGameScene: SKScene {
     
     @objc func generateRandomAsset() {
         
-        let randomAssetNum = GKRandomDistribution(lowestValue: 0, highestValue: 1)
+        let randomAssetNum = GKRandomDistribution(lowestValue: 0, highestValue: 4)
         
         var asset: SKSpriteNode
         
-        if (randomAssetNum.nextInt() == 0) {
+        let currentAsset = randomAssetNum.nextInt()
+        
+        if (currentAsset == 0) {
             asset = SKSpriteNode(texture: nailTexture)
             asset.size = CGSize(width: 14, height: 80)
         }
-        else {
+        else if (currentAsset == 1) {
             asset = SKSpriteNode(texture: plankTexture)
             asset.size = CGSize(width: 68, height: 32)
+        }
+        else {
+            asset = SKSpriteNode(texture: paperTexture)
+            asset.size = CGSize(width: 60, height: 60)
         }
         
         let randomPosition = GKRandomDistribution(lowestValue: 0, highestValue: Int(self.frame.size.width))
@@ -70,7 +88,7 @@ class MillGameScene: SKScene {
         
         asset.zRotation = CGFloat(randomRadian.nextInt())
         
-        asset.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: asset.size.width, height: asset.size.height))
+        asset.physicsBody = SKPhysicsBody(rectangleOf: asset.size)
         
         self.addChild(asset)
         

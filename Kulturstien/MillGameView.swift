@@ -25,8 +25,12 @@ struct MillGameView: View {
     }
     
     var body: some View {
-        SpriteView(scene: self.gameScene)
-            .ignoresSafeArea()
+        ZStack {
+            SpriteView(scene: self.gameScene)
+                .ignoresSafeArea()
+            
+            BackButtonView().position(x: 220, y: 40)
+        }
     }
 }
 
