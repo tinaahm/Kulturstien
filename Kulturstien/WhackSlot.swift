@@ -19,8 +19,8 @@ class WhackSlot: SKNode {
         self.position = position
         
         let sprite = SKSpriteNode(imageNamed: "whackHole")
-        sprite.xScale = 1.15
-        sprite.yScale = 1.15
+        //sprite.xScale = 1.15
+        //sprite.yScale = 1.15
         addChild(sprite)
         
         let cropNode = SKCropNode()
@@ -47,8 +47,8 @@ class WhackSlot: SKNode {
         
         if isVisible { return }
         
-        charNode.xScale = 1.2
-        charNode.yScale = 1.2
+        //charNode.xScale = 1.2
+        //charNode.yScale = 1.2
         charNode.run(SKAction.moveBy(x: 0, y: 80, duration: 0.10))
         
         isVisible = true

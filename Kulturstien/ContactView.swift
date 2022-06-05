@@ -61,6 +61,7 @@ struct ContactView: View {
             
             Button(action: {
                 self.sentFeedBAck = true
+				self.feedBack = ""
             }) {
                 Text("Send")
 					.foregroundColor(.black)

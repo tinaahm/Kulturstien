@@ -7,52 +7,11 @@
 
 import SpriteKit
 
-/*
-
-struct PhysicsCategory {
-  static let none      : UInt32 = 0
-  static let all       : UInt32 = UInt32.max
-  static let monster   : UInt32 = 0b1       // 1
-  static let projectile: UInt32 = 0b10      // 2
-}
-
-func +(left: CGPoint, right: CGPoint) -> CGPoint {
-  return CGPoint(x: left.x + right.x, y: left.y + right.y)
-}
-
-func -(left: CGPoint, right: CGPoint) -> CGPoint {
-  return CGPoint(x: left.x - right.x, y: left.y - right.y)
-}
-
-func *(point: CGPoint, scalar: CGFloat) -> CGPoint {
-  return CGPoint(x: point.x * scalar, y: point.y * scalar)
-}
-
-func /(point: CGPoint, scalar: CGFloat) -> CGPoint {
-  return CGPoint(x: point.x / scalar, y: point.y / scalar)
-}
-
-#if !(arch(x86_64) || arch(arm64))
-  func sqrt(a: CGFloat) -> CGFloat {
-    return CGFloat(sqrtf(Float(a)))
-  }
-#endif
-
-extension CGPoint {
-  func length() -> CGFloat {
-    return sqrt(x*x + y*y)
-  }
-  
-  func normalized() -> CGPoint {
-    return self / length()
-  }
-}
- 
- */
-
-
-class WackGameScene: SKScene {
-    var gameScore: SKLabelNode!
+class WackGameScene: SKScene, ObservableObject {
+	@Published var gameOver: Bool = false
+    
+	var gameScore: SKLabelNode!
+	
     var score = 0 {
         didSet {
             gameScore.text = "Score: \(score)"
@@ -64,10 +23,10 @@ class WackGameScene: SKScene {
     var numRounds = 0
     
     override func didMove(to view: SKView) {
-       /* let background = SKSpriteNode(imageNamed: "whackBackground2")
-        background.position = CGPoint(x: 0, y: 0)
-        background.yScale = 0.80
-        background.xScale = 0.80
+      /* let background = SKSpriteNode(imageNamed: "whackBackground2")
+        //background.position = CGPoint(x: 0, y: 0)
+        //background.yScale = 0.80
+        //background.xScale = 0.80
         background.blendMode = .replace
         background.zPosition = -1
         addChild(background)*/
@@ -149,10 +108,11 @@ class WackGameScene: SKScene {
             self.scene?.removeFromParent()
             */
             
-            let reveal = SKTransition.flipVertical(withDuration: 1.0)
+            /*let reveal = SKTransition.flipVertical(withDuration: 1.0)
             let gameOverScene = WackGameOverScene(size: size)
-            view?.presentScene(gameOverScene, transition: reveal)
-        
+            view?.presentScene(gameOverScene, transition: reveal)*/
+			
+			self.gameOver = true
         }
         
         popupTime *= 0.980

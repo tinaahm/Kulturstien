@@ -10,6 +10,7 @@ import SwiftUI
 struct GameStartView: View {
 	
 	@EnvironmentObject var page : ViewIndex
+	@State var show = false
 	
     var body: some View {
 		ZStack {
@@ -37,8 +38,13 @@ struct GameStartView: View {
 				.padding(.bottom, 30)
 				
 				Button(action: {
-					page.previousPage = page.pageIndex
-					page.pageIndex = getPageByGameSelection(game: gameSelection)
+					
+					//if gameSelection != .frightenHuldra {
+						page.previousPage = page.pageIndex
+						page.pageIndex = getPageByGameSelection(game: gameSelection)
+					/*} else {
+						self.show.toggle()
+					}*/
 				}) {
 					Text("Start spill")
 						.font(Font.custom("SourceSansPro-SemiBold", size: 16))
@@ -54,6 +60,12 @@ struct GameStartView: View {
 						.foregroundColor(page.lightMode ? .black : .white)
 				}
 				.padding()
+				/*.fullScreenCover(isPresented: $show) {
+							Test()
+				}*/
+				/*.fullScreenCover(isPresented: $show) {
+					FrightenHuldraGameView(/*size: DeviceSize.size isPresented: $show*/)
+				}*/
 				Spacer()
 			}
 		}

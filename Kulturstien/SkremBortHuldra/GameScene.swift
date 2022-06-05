@@ -47,13 +47,14 @@ extension CGPoint {
   }
 }
 
-class GameScene: SKScene {
+class GameScene: SKScene, ObservableObject {
 	
 	//@EnvironmentObject var page : ViewIndex
+	@Published var gameOverHuldra: Bool = false
     
-    var gameScore: SKLabelNode!
+	@Published var gameScore: SKLabelNode!
     
-    var monstersDestroyed = 0 {
+	@Published var monstersDestroyed = 0 {
                   didSet {
                       gameScore.text = "Poeng: \(monstersDestroyed)"
                   }
@@ -70,7 +71,7 @@ class GameScene: SKScene {
     addChild(background)
       
     // 3
-	  player.position = CGPoint(x: 0, y: -(size.height * 0.4))
+	  player.position = CGPoint(x: (size.width / 2), y: (size.height * 0.1))
     // 4
     addChild(player)
     
@@ -118,11 +119,11 @@ class GameScene: SKScene {
     monster.physicsBody?.collisionBitMask = PhysicsCategory.none // 5
     
     // Determine where to spawn the monster along the X axis
-	  let xPosition = random(min: -(size.width/2), max: (size.width/2))
+	  let xPosition = random(min: 5, max: (size.width - 5))
     
     // Position the monster slightly off-screen along the top,
     // and along a random position along the X axis as calculated above
-    monster.position = CGPoint(x: xPosition, y: (size.height/2))
+	  monster.position = CGPoint(x: xPosition, y: size.height)
     
     // Add the monster to the scene
     addChild(monster)
@@ -131,17 +132,20 @@ class GameScene: SKScene {
     let actualDuration = random(min: CGFloat(2.0), max: CGFloat(4.0))
     
     // Create the actions
-    let actionMove = SKAction.move(to: CGPoint(x: xPosition, y: -size.height/2),
+	  let actionMove = SKAction.move(to: CGPoint(x: xPosition, y: (size.height * 0.1)),
                                    duration: TimeInterval(actualDuration))
     let actionMoveDone = SKAction.removeFromParent()
     
-    let loseAction = SKAction.run() { [weak self] in
-      guard let `self` = self else { return }
-      //let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-      //let gameOverScene = GameOverScene(size: self.size)
-      //self.view?.presentScene(gameOverScene, transition: reveal)
+    let loseAction = SKAction.run() { //[weak self] in
+      //guard let `self` = self else { return }
+		//let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+		//let gameOverScene = GameOverScene(size: self.size)
+		//self.view?.presentScene(gameOverScene, transition: reveal)
+		//self.page.frigtenHuldraGameOver = true
+		self.gameOverHuldra = true
+		/*self.removeAllActions()
 		self.removeAllChildren()
-		
+		self.view?.presentScene(nil)*/
     }
     
     monster.run(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
@@ -201,10 +205,13 @@ class GameScene: SKScene {
     
     monstersDestroyed += 1
     if monstersDestroyed > 99999 {
-	  let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-	  let gameOverScene = GameOverScene(size: self.size)
-	  self.view?.presentScene(gameOverScene, transition: reveal)
+	  //let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+	  //let gameOverScene = GameOverScene(size: self.size)
+	 // self.view?.presentScene(gameOverScene, transition: reveal)
 		//self.page.frigtenHuldraGameOver = true
+		
+		//self.view?.presentScene(nil)
+		self.gameOverHuldra = true
     }
   }
 

@@ -6,6 +6,13 @@
 //
 
 import SwiftUI
+import UIKit
+
+class DeviceSize {
+	static var width = UIScreen.main.bounds.size.width
+	static var height = UIScreen.main.bounds.size.height
+	static var size = UIScreen.main.bounds.size
+}
 
 struct User {
 	var name: String = ""
@@ -17,7 +24,7 @@ struct User {
 }
 
 enum Page {
-	case start, main, mainNight, profile, menu, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, achievements, avatarChanger, gameEnd, history, howTo, startGame, ar
+	case start, main, mainNight, profile, menu, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, achievements, avatarChanger, gameEnd, history, howTo, startGame, ar, memoryGameEnd
 }
 
 var quizSelection: Structure = .none
@@ -34,8 +41,7 @@ class ViewIndex: ObservableObject {
 	@Published var user: User = User()
 	//@Published var quizes = Quizes()
 	@Published var quizesArray: [Quiz] = [Quiz(name: "Kvernhus Quiz", type: .mill, imageTitle: "WaterMillIcon"), Quiz(name: "Sagbruk Quiz", type: .sawmill, imageTitle: "SawmillIcon"), Quiz(name: "Demning Quiz", type: .dam, imageTitle: "DamIcon"), Quiz(name: "Lenseanlegg Quiz", type: .logBooms, imageTitle: "LogBoomsIcon")]
-	@Published var frigtenHuldraGameOver: Bool = false
-	@Published var wackANokkGameOver: Bool = false
+	@Published var scorePlaceHolder: Int = 0
 }
 
 struct NavigationHandlerView: View {
@@ -71,7 +77,9 @@ struct NavigationHandlerView: View {
 		case .wackANokk:
 			WackANokkView()
 		case .huldraGame:
-            FrightenHuldraGameView()
+			//FrightenHuldraGameView(/*size: DeviceSize.size*/)
+			//GameEndView(gameType: gameSelection)
+			FrightenHuldraGameView()
 		case .personInformation:
 			PersonInformationView(personType: personSelection)
 		case .creatureInformation:
@@ -82,7 +90,7 @@ struct NavigationHandlerView: View {
             ProgressionView()
         case .avatarChanger:
             AvatarEditorView()
-		case .gameEnd:
+		case .memoryGameEnd:
 			GameEndView(gameType: gameSelection)
 		case .history:
 			HistoryView()
@@ -92,6 +100,8 @@ struct NavigationHandlerView: View {
 			GameStartView()
 		case .ar:
 			WaterMillARView()
+		case .gameEnd:
+			HuldraGameOverView(score: page.scorePlaceHolder)
 		}
     }
 }
