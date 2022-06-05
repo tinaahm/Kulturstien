@@ -7,12 +7,33 @@
 
 import SwiftUI
 
+enum SwipeHVDirection: String {
+	case left, right, up, down, none
+}
+
+func detectDirection(value: DragGesture.Value) -> SwipeHVDirection {
+if value.startLocation.x < value.location.x - 24 {
+			return .left
+		  }
+		  if value.startLocation.x > value.location.x + 24 {
+			return .right
+		  }
+		  if value.startLocation.y < value.location.y - 24 {
+			return .down
+		  }
+		  if value.startLocation.y > value.location.y + 24 {
+			return .up
+		  }
+  return .none
+  }
+
 struct PersonInformationView: View {
 	
 	@State var personType: Person
 	@State var person: PersonInformation
 	@State var personParagraphs: [String]
 	@State var selectedIndex: Int = 0
+	@State private var offset = CGSize.zero
 	
 	init(personType: Person) {
 		self.personType = personType
@@ -40,7 +61,6 @@ struct PersonInformationView: View {
 							Image("SpeechBubble")
 								.resizable()
 								.scaledToFit()
-							
 							VStack {
 								Text(personParagraphs[self.selectedIndex])
 										.font(.callout)
@@ -98,6 +118,22 @@ struct PersonInformationView: View {
 										}
 									}
 							}
+							.gesture(
+								DragGesture()
+									.onEnded { value in
+										print("value", value.translation.width)
+										let direction = detectDirection(value: value)
+											  if direction == .left {
+												  if self.selectedIndex != 0 {
+													  self.selectedIndex -= 1
+													  }
+											  } else if direction == .right {
+												  if self.selectedIndex < (self.personParagraphs.count - 1) {
+													  self.selectedIndex += 1
+													  }
+												  }
+											  }
+								)
 						}
 						.padding(.top, 20)
 						.padding(.leading, 70)
@@ -106,7 +142,6 @@ struct PersonInformationView: View {
 							Image("FlippedSpeechBubble")
 								.resizable()
 								.scaledToFit()
-							
 							VStack {
 								//ZStack {
 								Text(personParagraphs[self.selectedIndex])
@@ -167,6 +202,22 @@ struct PersonInformationView: View {
 										}
 									}
 							}
+							.gesture(
+								DragGesture()
+									.onEnded { value in
+										print("value", value.translation.width)
+										let direction = detectDirection(value: value)
+											  if direction == .left {
+												  if self.selectedIndex != 0 {
+													  self.selectedIndex -= 1
+													  }
+											  } else if direction == .right {
+												  if self.selectedIndex < (self.personParagraphs.count - 1) {
+													  self.selectedIndex += 1
+													  }
+												  }
+											  }
+								)
 						}
 						.padding(.top, 20)
 						.padding(.trailing, 70)
@@ -212,3 +263,4 @@ struct PersonInformationView_Previews: PreviewProvider {
 		PersonInformationView(personType: .trond).environmentObject(ViewIndex())
     }
 }
+
