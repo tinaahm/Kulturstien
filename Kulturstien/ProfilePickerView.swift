@@ -34,23 +34,12 @@ struct ProfilePickerView: View {
 				HStack {
 					TextField("Hva er navnet ditt?", text: $page.user.name)
 				}
-				.frame(width: 250)
-				.padding()
-				.overlay(RoundedRectangle(cornerRadius: 15)
-					.stroke(Color.gray, lineWidth: 1)
-				)
-				.background(RoundedRectangle(cornerRadius: 15)
-					.fill(.white)
-				)
-			//.padding([.leading, .trailing], 80)
-			
-			/*Picker("Hva er favoritt fargen din?", selection: $selectedColour) {
-				ForEach(Colour.allCases) {
-					colour in
-					Text(colour.rawValue.capitalized)
-				}
-			}
-			.pickerStyle(MenuPickerStyle())*/
+				.foregroundColor(.black)
+				.frame(width: DeviceSize.width * 0.7)
+				.padding(20)
+				.background(
+					RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+						.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
 			
 				Menu {
 					ForEach(Colour.allCases) { colour in
@@ -59,14 +48,6 @@ struct ProfilePickerView: View {
 						}) {
 							Label(colour == .none ? colour.rawValue : colour.rawValue.capitalized, systemImage: "")
 						}
-						.frame(width: 250)
-						.padding()
-						.overlay(RoundedRectangle(cornerRadius: 15)
-							.stroke(Color.gray, lineWidth: 1)
-						)
-						.background(RoundedRectangle(cornerRadius: 15)
-							.fill(.white)
-						)
 						.foregroundColor(.black)
 					}
 				} label: {
@@ -75,15 +56,12 @@ struct ProfilePickerView: View {
 						Spacer()
 						Image(systemName: "chevron.down")
 					}
-					.frame(width: 250)
-					.padding()
-					.overlay(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1)
-					)
-					.background(RoundedRectangle(cornerRadius: 15)
-						.fill(.white)
-					)
 					.foregroundColor(.black)
+					.frame(width: DeviceSize.width * 0.7)
+					.padding(20)
+					.background(
+						RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+							.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
 				}
 			}
 			Spacer()
@@ -94,15 +72,12 @@ struct ProfilePickerView: View {
 					self.pressedNext = true
 				}) {
 					Text("Neste")
-						.frame(width: 100)
-						.padding()
-						.overlay(RoundedRectangle(cornerRadius: 15)
-							.stroke(Color.gray, lineWidth: 1)
-						)
-						.background(RoundedRectangle(cornerRadius: 15)
-							.fill(.white)
-						)
 						.foregroundColor(.black)
+						.frame(width: DeviceSize.width * 0.4)
+						.padding(20)
+						.background(
+							RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+								.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
 				}
 			}
 			Spacer()
@@ -120,15 +95,12 @@ struct ProfilePickerView: View {
 					page.pageIndex = .main
 				}) {
 					Text("Start")
-						.frame(width: 100)
-						.padding()
-						.overlay(RoundedRectangle(cornerRadius: 15)
-							.stroke(Color.gray, lineWidth: 1)
-						)
-						.background(RoundedRectangle(cornerRadius: 15)
-							.fill(.white)
-						)
 						.foregroundColor(.black)
+						.frame(width: DeviceSize.width * 0.4)
+						.padding(20)
+						.background(
+							RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+								.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
 				}
 				Spacer()
 			}

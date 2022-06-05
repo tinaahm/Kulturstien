@@ -19,7 +19,7 @@ struct HistoryView: View {
             Image("RælingenKommune")
             .resizable()
             .scaledToFit()
-            .frame(width: 150, height: 150)
+			.frame(width: DeviceSize.width * 0.4, height: DeviceSize.width * 0.2)
         
         Text("Byåas Historie")
             .font(.system(size: 25))
@@ -44,15 +44,12 @@ struct HistoryView: View {
                         .frame(width: 50, height: 50)
                         Text("Kvernhus")
                     }
-                    .frame(width: 100, height: 100)
-                    .padding()
-					.overlay(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1)
-					)
-					.background(RoundedRectangle(cornerRadius: 15)
-						.fill(.white)
-					)
-                    .foregroundColor(.black)
+					.foregroundColor(.black)
+					.frame(width: DeviceSize.width * 0.25, height: DeviceSize.width * 0.25)
+					.padding(20)
+					.background(
+						RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+							.shadow(color: .gray.opacity(0.5), radius: 4, x: 0, y: 4))
                     
                 }
                     Button (action: {
@@ -71,15 +68,12 @@ struct HistoryView: View {
                         .frame(width: 50, height: 50)
                         Text("Sagbruk")
                     }
-                    .frame(width: 100, height: 100)
-                    .padding()
-					.overlay(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1)
-					)
-					.background(RoundedRectangle(cornerRadius: 15)
-						.fill(.white)
-					)
-                    .foregroundColor(.black)
+						.foregroundColor(.black)
+						.frame(width: DeviceSize.width * 0.25, height: DeviceSize.width * 0.25)
+						.padding(20)
+						.background(
+							RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+								.shadow(color: .gray.opacity(0.5), radius: 4, x: 0, y: 4))
                     
                 }
                     .padding()
@@ -104,15 +98,12 @@ struct HistoryView: View {
                         .frame(width: 50, height: 50)
                         Text("Demning")
                     }
-                    .frame(width: 100, height: 100)
-                    .padding()
-					.overlay(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1)
-					)
-					.background(RoundedRectangle(cornerRadius: 15)
-						.fill(.white)
-					)
-                    .foregroundColor(.black)
+						.foregroundColor(.black)
+						.frame(width: DeviceSize.width * 0.25, height: DeviceSize.width * 0.25)
+						.padding(20)
+						.background(
+							RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+								.shadow(color: .gray.opacity(0.5), radius: 4, x: 0, y: 4))
                     
                 }
                     
@@ -130,21 +121,18 @@ struct HistoryView: View {
                         Image("LogBoomsIcon")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 50, height: 50)
+                        .frame(width: 90, height: 90)
                         Text("Lenseanlegg")
                     }
-                    .frame(width: 100, height: 100)
-                    .padding()
-					.overlay(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1)
-					)
-					.background(RoundedRectangle(cornerRadius: 15)
-						.fill(.white)
-					)
-                    .foregroundColor(.black)
+						.foregroundColor(.black)
+						.frame(width: DeviceSize.width * 0.25, height: DeviceSize.width * 0.25)
+						.padding(20)
+						.background(
+							RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+								.shadow(color: .gray.opacity(0.5), radius: 4, x: 0, y: 4))
                     
                 }
-                    .padding()
+					.padding()
                 }
                 
                 

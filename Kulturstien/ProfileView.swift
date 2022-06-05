@@ -23,23 +23,20 @@ struct ProfileView: View {
 			
 			Text("Hei " + page.user.name.capitalized + "!")
 				.padding([.leading, .top, .trailing])
-				.padding(.bottom, 90)
+				.padding(.bottom, 60)
             
 			Button(action: {
 				page.previousPage = page.pageIndex
                 page.pageIndex = .achievements
 			}) {
 				Text("Prestasjoner")
-					.frame(width: 200)
-					.padding()
-					.overlay(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1)
-					)
-					.background(RoundedRectangle(cornerRadius: 15)
-						.fill(.white)
-					)
 					.foregroundColor(.black)
-			}.padding(5)
+					.frame(width: DeviceSize.width * 0.7)
+					.padding(20)
+					.background(
+						RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+							.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
+			}.padding(10)
             
 			Button(action: {
 				page.previousPage = page.pageIndex
@@ -47,49 +44,40 @@ struct ProfileView: View {
 			}) {
 				Text("Byåas historie")
 					.foregroundColor(.black)
-					.frame(width: 200)
-					.padding()
-					.overlay(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1)
-					)
-					.background(RoundedRectangle(cornerRadius: 15)
-						.fill(.white)
-					)
-			}.padding(5)
+					.frame(width: DeviceSize.width * 0.7)
+					.padding(20)
+					.background(
+						RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+							.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
+			}.padding(10)
 			
 			Button(action: {
 				page.previousPage = page.pageIndex
 				page.pageIndex = .avatarChanger
 			}) {
 				Text("Endre avatar")
-					.frame(width: 200)
-					.padding()
-					.overlay(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1)
-					)
-					.background(RoundedRectangle(cornerRadius: 15)
-						.fill(.white)
-					)
 					.foregroundColor(.black)
+					.frame(width: DeviceSize.width * 0.7)
+					.padding(20)
+					.background(
+						RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+							.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
 			}
-			.padding(5)
+			.padding(10)
 			
 			Button(action: {
 				page.previousPage = page.pageIndex
 				page.pageIndex = .howTo
 			}) {
 				Text("Slik bruker du appen")
-					.frame(width: 200)
-					.padding()
-					.overlay(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1)
-					)
-					.background(RoundedRectangle(cornerRadius: 15)
-						.fill(.white)
-					)
 					.foregroundColor(.black)
+					.frame(width: DeviceSize.width * 0.7)
+					.padding(20)
+					.background(
+						RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+							.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
 			}
-			.padding(5)
+			.padding(10)
 			
 			Button(action: {
 				page.previousPage = page.pageIndex
@@ -97,15 +85,12 @@ struct ProfileView: View {
 			}) {
 				Text("Kontakt oss")
 					.foregroundColor(.black)
-					.frame(width: 200)
-					.padding()
-					.overlay(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1)
-					)
-					.background(RoundedRectangle(cornerRadius: 15)
-						.fill(.white)
-					)
-			}.padding(5)
+					.frame(width: DeviceSize.width * 0.7)
+					.padding(20)
+					.background(
+						RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+							.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
+			}.padding(10)
 			
 			Spacer()
 		}

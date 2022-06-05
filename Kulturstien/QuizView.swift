@@ -62,16 +62,13 @@ struct QuizView: View {
 						self.guessedIndex = index
 					}) {
 						Text(answers[index])
-                            .frame(width: 200)
-                            .padding()
-                            .background(RoundedRectangle(cornerRadius: 15)
-                                .stroke(Color.gray, lineWidth: 1)
-                            )
+							.frame(width: DeviceSize.width * 0.7)
+							.padding(20)
                             .foregroundColor(.black)
 							.background(
-										RoundedRectangle(cornerRadius: 15)
-											.fill(showAnswer(answered: self.answered, guessedAnswer: self.guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: self.guessedIndex, quiz: self.quiz, quizIndex: self.questionIndex))
-											)
+									RoundedRectangle(cornerRadius: 15).fill(showAnswer(answered: self.answered, guessedAnswer: self.guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: self.guessedIndex, quiz: self.quiz, quizIndex: self.questionIndex))
+										.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
+											
 					}
 					.disabled(self.answered)
 				}
@@ -113,25 +110,23 @@ struct QuizView: View {
 						self.finished = true
 					}
 				}) {
-					/*Image(systemName: "chevron.right") //FIXME: change to "neste" button
-						.foregroundColor(.black)
-						.padding()
-						.overlay(
-							Circle()
-								.stroke(.gray, lineWidth: 3)
-						)*/
 					Text("Neste")
-						.frame(width: 100)
+						.frame(width: DeviceSize.width * 0.4)
 						.padding()
-						.overlay(RoundedRectangle(cornerRadius: 15)
+						/*.overlay(RoundedRectangle(cornerRadius: 15)
 							.stroke(Color.gray, lineWidth: 1)
 						)
 						.background(RoundedRectangle(cornerRadius: 15)
 							.fill(.white)
-						)
+						)*/
 						.foregroundColor(.black)
+						.background(
+							RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+								.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
 				}
+				.padding()
 			}
+
 			
 			Spacer()
 			} else {
@@ -139,6 +134,7 @@ struct QuizView: View {
 			}
 			
 		}
+		.background(Color("BackgroundColour"))
 		
 		
     }
@@ -185,11 +181,11 @@ func showAnswer(answered: Bool, guessedAnswer: String?, correctAnswer: String, c
 	}
 }
 
-/*struct QuizView_Previews: PreviewProvider {
+struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
 		QuizView(quizType: .sawmill).environmentObject(ViewIndex())
     }
-}*/
+}
 
 struct QuizEndView: View {
 	
@@ -238,9 +234,9 @@ func resultImageToDisplay(numberOfCorrectAnswers: Int, numberOfQuestions: Int) -
 		return "sadTroll"
 	}
 }
-
+/*
 struct QuizEndViewPreviews: PreviewProvider {
 	static var previews: some View {
 		QuizEndView(resultArray: [], title: "Bye").environmentObject(ViewIndex())
 	}
-}
+}*/

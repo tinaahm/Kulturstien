@@ -29,16 +29,14 @@ struct GameEndView: View {
 					page.pageIndex = getPageByGameSelection(game: gameSelection)
 				}) {
 					Text("Spill på nytt")
-						.frame(width: 150)
-						.padding()
-						.overlay(RoundedRectangle(cornerRadius: 15)
-							.stroke(Color.gray, lineWidth: 1)
-						)
-						.background(RoundedRectangle(cornerRadius: 15)
-							.fill(.white)
-						)
 						.foregroundColor(.black)
+						.frame(width: DeviceSize.width * 0.5)
+						.padding(20)
+						.background(
+							RoundedRectangle(cornerRadius: 15).fill(page.lightMode ? Color(red: 0.984, green: 0.984, blue: 0.984) : Color("CreatureInformationTextboxBackground"))
+								.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
 				}
+				.padding()
 				
 				Button(action: {
 					if page.lightMode {
@@ -48,16 +46,14 @@ struct GameEndView: View {
 					}
 				}) {
 					Text("Gå tilbake til kartet")
-						.frame(width: 150)
-						.padding()
-						.overlay(RoundedRectangle(cornerRadius: 15)
-							.stroke(Color.gray, lineWidth: 1)
-						)
-						.background(RoundedRectangle(cornerRadius: 15)
-							.fill(.white)
-						)
 						.foregroundColor(.black)
+						.frame(width: DeviceSize.width * 0.5)
+						.padding(20)
+						.background(
+							RoundedRectangle(cornerRadius: 15).fill(page.lightMode ? Color(red: 0.984, green: 0.984, blue: 0.984) : Color("CreatureInformationTextboxBackground"))
+								.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
 				}
+				.padding(.bottom)
 			}
 		}
 		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))

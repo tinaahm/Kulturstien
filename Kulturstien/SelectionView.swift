@@ -10,7 +10,7 @@ import SwiftUI
 struct SelectionView: View {
 	
 	@EnvironmentObject var page : ViewIndex
-	@State var quizButtonColour = Color.gray
+	@State var quizButtonColour = Color.clear
 	@State var showQuizButtonInformationText = false
 	@State var showARButtonInformationText = false
 	
@@ -40,15 +40,13 @@ struct SelectionView: View {
 			}) {
 				Text("Lær om " + structureName)
                     .foregroundColor(.black)
-                    .frame(width: 200)
-                    .padding()
-					.overlay(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1)
-					)
-					.background(RoundedRectangle(cornerRadius: 15)
-						.fill(.white)
-					)
+					.frame(width: DeviceSize.width * 0.7)
+                    .padding(20)
+					.background(
+						RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+							.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
 			}
+			.padding(.bottom)
 			
 			Button (action: {
 				
@@ -72,21 +70,22 @@ struct SelectionView: View {
 			}) {
 				Text("Ta quiz om " + structureName)
                     .foregroundColor(.black)
-                    .frame(width: 200)
-                    .padding()
+					.frame(width: DeviceSize.width * 0.7)
+                    .padding(20)
 					.overlay(RoundedRectangle(cornerRadius: 15)
 						.stroke(self.quizButtonColour, lineWidth: 1)
 					)
-					.background(RoundedRectangle(cornerRadius: 15)
-						.fill(.white)
-					)
+					.background(
+						RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+							.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
 			}
+			.padding(.bottom)
 			
 			if self.showQuizButtonInformationText {
 				Text("For å låse opp quiz så må du først lese teksten over!")
 					.foregroundColor(.red)
 					.font(.callout)
-					.frame(width: 200)
+					.frame(width: DeviceSize.width * 0.7)
 					.padding()
 			}
 			
@@ -100,23 +99,19 @@ struct SelectionView: View {
 					Text("Se i AR")
                         .foregroundColor(.black)
                         .frame(width: 200)
-                        .padding()
-						.overlay(RoundedRectangle(cornerRadius: 15)
+                        .padding(20)
+						/*.overlay(RoundedRectangle(cornerRadius: 15)
 							.stroke(Color.gray, lineWidth: 1)
 						)
 						.background(RoundedRectangle(cornerRadius: 15)
 							.fill(.white)
-						)
+						)*/
+						.background(
+							RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+								.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
 				}
+				.padding(.bottom)
 			}
-				/*
-				if self.showARButtonInformationText {
-					Text("Hei! Du må være på stedet for å kunne se kvernehuset i AR.")
-						.foregroundColor(.red)
-						.font(.callout)
-						.frame(width: 200)
-						.padding()
-				}*/
 				
 			}
 			Spacer()

@@ -48,24 +48,15 @@ struct GameStartView: View {
 				}) {
 					Text("Start spill")
 						.font(Font.custom("SourceSansPro-SemiBold", size: 16))
-						//.fontWeight(.heavy)
-						.frame(width: 150)
-						.padding()
-						.overlay(RoundedRectangle(cornerRadius: 15)
-							.stroke(Color(page.lightMode ? .gray : .clear), lineWidth: 1)
-						)
-						.background(RoundedRectangle(cornerRadius: 15)
-							.fill(Color(page.lightMode ? "White" : "CreatureInformationTextboxBackground")).shadow(radius: 1, x: 4, y: 4)
-						)
+						.foregroundColor(.black)
+						.frame(width: DeviceSize.width * 0.5)
+						.padding(20)
+						.background(
+							RoundedRectangle(cornerRadius: 15).fill(page.lightMode ? Color(red: 0.984, green: 0.984, blue: 0.984) : Color("CreatureInformationTextboxBackground"))
+								.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
 						.foregroundColor(page.lightMode ? .black : .white)
 				}
 				.padding()
-				/*.fullScreenCover(isPresented: $show) {
-							Test()
-				}*/
-				/*.fullScreenCover(isPresented: $show) {
-					FrightenHuldraGameView(/*size: DeviceSize.size isPresented: $show*/)
-				}*/
 				Spacer()
 			}
 		}

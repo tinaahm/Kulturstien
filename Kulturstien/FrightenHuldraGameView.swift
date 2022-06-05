@@ -115,14 +115,11 @@ struct HuldraGameOverView: View {
 					page.pageIndex = getPageByGameSelection(game: gameSelection)
 				}) {
 					Text("Spill på nytt")
-						.frame(width: 150)
-						.padding()
-						.overlay(RoundedRectangle(cornerRadius: 15)
-							.stroke(Color.gray, lineWidth: 1)
-						)
-						.background(RoundedRectangle(cornerRadius: 15)
-							.fill(.white)
-						)
+						.frame(width: DeviceSize.width * 0.5)
+						.padding(20)
+						.background(
+							RoundedRectangle(cornerRadius: 15).fill(page.lightMode ? Color(red: 0.984, green: 0.984, blue: 0.984) : Color("CreatureInformationTextboxBackground"))
+								.shadow(color: .gray.opacity(0.5), radius: 4, x: 0, y: 4))
 						.foregroundColor(.black)
 				}
 				
@@ -143,14 +140,17 @@ struct HuldraGameOverView: View {
 					}
 				}) {
 					Text("Gå tilbake til kartet")
-						.frame(width: 150)
-						.padding()
-						.overlay(RoundedRectangle(cornerRadius: 15)
+						.frame(width: DeviceSize.width * 0.5)
+						.padding(20)
+						/*.overlay(RoundedRectangle(cornerRadius: 15)
 							.stroke(Color.gray, lineWidth: 1)
 						)
 						.background(RoundedRectangle(cornerRadius: 15)
 							.fill(.white)
-						)
+						)*/
+						.background(
+							RoundedRectangle(cornerRadius: 15).fill(page.lightMode ? Color(red: 0.984, green: 0.984, blue: 0.984) : Color("CreatureInformationTextboxBackground"))
+								.shadow(color: .gray.opacity(0.5), radius: 4, x: 0, y: 4))
 						.foregroundColor(.black)
 				}
 			}
@@ -163,4 +163,10 @@ struct FrightenHuldraGameView_Previews: PreviewProvider {
     static var previews: some View {
 		FrightenHuldraGameView().environmentObject(ViewIndex())
     }
+}
+
+struct HuldraGameOverView_Previews: PreviewProvider {
+	static var previews: some View {
+		HuldraGameOverView(score: 0).environmentObject(ViewIndex())
+	}
 }
