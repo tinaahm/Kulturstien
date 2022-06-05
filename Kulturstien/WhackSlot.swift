@@ -18,7 +18,7 @@ class WhackSlot: SKNode {
     func configure(at position: CGPoint) {
         self.position = position
         
-        let sprite = SKSpriteNode(imageNamed: "whackHole")
+        let sprite = SKSpriteNode(imageNamed: "Group 69")
         //sprite.xScale = 1.15
         //sprite.yScale = 1.15
         addChild(sprite)

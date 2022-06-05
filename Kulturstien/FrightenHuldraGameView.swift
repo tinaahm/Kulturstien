@@ -103,8 +103,14 @@ struct HuldraGameOverView: View {
 				Text("Poeng: " + String(score))
 				
 				Button(action: {
-					if page.user.frightenHuldraGameScore < score {
-						page.user.frightenHuldraGameScore = score
+					if gameSelection == .frightenHuldra {
+						if page.user.frightenHuldraGameScore < score {
+							page.user.frightenHuldraGameScore = score
+						}
+					} else if gameSelection == .wackANokk {
+						if page.user.wackANokkGameScore < score {
+							page.user.wackANokkGameScore = score
+						}
 					}
 					page.pageIndex = getPageByGameSelection(game: gameSelection)
 				}) {
@@ -121,8 +127,14 @@ struct HuldraGameOverView: View {
 				}
 				
 				Button(action: {
-					if page.user.frightenHuldraGameScore < score {
-						page.user.frightenHuldraGameScore = score
+					if gameSelection == .frightenHuldra {
+						if page.user.frightenHuldraGameScore < score {
+							page.user.frightenHuldraGameScore = score
+						}
+					} else if gameSelection == .wackANokk {
+						if page.user.wackANokkGameScore < score {
+							page.user.wackANokkGameScore = score
+						}
 					}
 					if page.lightMode {
 						page.pageIndex = .main

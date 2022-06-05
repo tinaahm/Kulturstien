@@ -23,26 +23,45 @@ class WackGameScene: SKScene, ObservableObject {
     var numRounds = 0
     
     override func didMove(to view: SKView) {
-      /* let background = SKSpriteNode(imageNamed: "whackBackground2")
+      let background = SKSpriteNode(imageNamed: "13 Pro - 163")
         //background.position = CGPoint(x: 0, y: 0)
         //background.yScale = 0.80
         //background.xScale = 0.80
         background.blendMode = .replace
         background.zPosition = -1
-        addChild(background)*/
+        addChild(background)
         
         gameScore = SKLabelNode(fontNamed: "Chalkduster")
         gameScore.text = "Score: 0"
-        gameScore.position = CGPoint(x: -140, y: 260)
-        gameScore.horizontalAlignmentMode = .left
-        gameScore.fontSize = 60
+		gameScore.position = CGPoint(x: (size.width / 2), y: 750)
+        //gameScore.horizontalAlignmentMode = .center
+		//gameScore.verticalAlignmentMode = .center
+        gameScore.fontSize = 20
         addChild(gameScore)
+		
+		let halfOfScreenSize = (size.height / 2)
+		let rowHeight = (halfOfScreenSize / 5)
+		let nodeWidth = (size.width / 4)
         
-        for i in 0 ..< 3 { createSlot(at: CGPoint(x: -170 + (i * 170), y: -500)) }
-        for i in 0 ..< 4 { createSlot(at: CGPoint(x: -250 + (i * 170), y: -390)) }
+        for i in 0 ..< 3 {
+			createSlot(at: CGPoint(x: ((nodeWidth * 1) + (nodeWidth * CGFloat(i))), y: halfOfScreenSize - (rowHeight * 0)))
+		}
+		for i in 0 ..< 4 {
+			createSlot(at: CGPoint(x: ((nodeWidth * 0.5) + (nodeWidth * CGFloat(i))), y: halfOfScreenSize - (rowHeight * 1)))
+		}
+		for i in 0 ..< 3 {
+			createSlot(at: CGPoint(x: ((nodeWidth * 1) + (nodeWidth * CGFloat(i))), y: halfOfScreenSize - (rowHeight * 2)))
+		}
+		for i in 0 ..< 4 {
+			createSlot(at: CGPoint(x: ((nodeWidth * 0.5) + (nodeWidth * CGFloat(i))), y: halfOfScreenSize - (rowHeight * 3)))
+		}
+		for i in 0 ..< 3 {
+			createSlot(at: CGPoint(x: ((nodeWidth * 1) + (nodeWidth * CGFloat(i))), y: halfOfScreenSize - (rowHeight * 4)))
+		}
+        /*for i in 0 ..< 4 { createSlot(at: CGPoint(x: -250 + (i * 170), y: halfOfScreenSize * (rowHeight * 0))) }
         for i in 0 ..< 3 { createSlot(at: CGPoint(x: -170 + (i * 170), y: -280)) }
         for i in 0 ..< 4 { createSlot(at: CGPoint(x: -250 + (i * 170), y: -170)) }
-        for i in 0 ..< 3 { createSlot(at: CGPoint(x: -170 + (i * 170), y: -60)) }
+        for i in 0 ..< 3 { createSlot(at: CGPoint(x: -170 + (i * 170), y: -60)) }*/
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
             self?.createEnemy()
@@ -71,8 +90,8 @@ class WackGameScene: SKScene, ObservableObject {
                     if !whackSlot.isVisible { continue }
                     if whackSlot.isHit { continue }
                     
-                    whackSlot.charNode.xScale = 0.90
-                    whackSlot.charNode.yScale = 0.90
+                    //whackSlot.charNode.xScale = 0.90
+                    //whackSlot.charNode.yScale = 0.90
                     
                     whackSlot.hit()
                     score += 1
@@ -93,7 +112,7 @@ class WackGameScene: SKScene, ObservableObject {
     func createEnemy() {
         numRounds += 1
         
-        if numRounds == 3 {
+        if numRounds >= 50 {
             for slot in slots {
                 slot.hide()
             }
@@ -115,7 +134,7 @@ class WackGameScene: SKScene, ObservableObject {
 			self.gameOver = true
         }
         
-        popupTime *= 0.980
+        popupTime *= 0.991
         
         slots.shuffle()
         slots[0].show(hideTime: popupTime)
@@ -126,7 +145,7 @@ class WackGameScene: SKScene, ObservableObject {
         if Int.random(in: 0...12) > 11 { slots[4].show(hideTime: popupTime)  }
         
         let minDelay = popupTime / 2.0
-        let maxDelay = popupTime * 2
+		let maxDelay = popupTime * 2.0
         let delay = Double.random(in: minDelay...maxDelay)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in

@@ -24,6 +24,14 @@ struct WackANokkView: View {
 	//var theWackScene = SKScene(fileNamed: "WackGameScene")
 	
 	@EnvironmentObject var page : ViewIndex
+	/*var gameScene: WackGameScene {
+		@StateObject var gameScene = WackGameScene()
+			gameScene.size = DeviceSize.size
+			//gameScene.scaleMode = .aspectFit
+		//theWackScene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+		return gameScene
+	}*/
+	
 	@StateObject var gameScene = WackGameScene(size: DeviceSize.size)
 	
 	var body: some View {

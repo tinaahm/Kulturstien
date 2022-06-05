@@ -91,7 +91,7 @@ class GameScene: SKScene, ObservableObject {
       
       gameScore = SKLabelNode(fontNamed: "Chalkduster")
       gameScore.text = "Poeng: 0"
-      gameScore.position = CGPoint(x: 140, y: 750)
+      gameScore.position = CGPoint(x: (size.width / 2), y: 750)
       gameScore.horizontalAlignmentMode = .left
       gameScore.fontSize = 20
       addChild(gameScore)
