@@ -21,7 +21,7 @@ struct GameEndView: View {
 		let score = getGameSelectionFromPage(gameType: self.gameType, user: page.user)
 		
 		ZStack {
-			Color("BackgroundColour")
+			Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground")
 			VStack {
 				Text("Poeng: " + String(score))
 				
@@ -41,7 +41,11 @@ struct GameEndView: View {
 				}
 				
 				Button(action: {
-					page.pageIndex = .main
+					if page.lightMode {
+						page.pageIndex = .main
+					} else {
+						page.pageIndex = .mainNight
+					}
 				}) {
 					Text("Gå tilbake til kartet")
 						.frame(width: 150)
@@ -56,7 +60,7 @@ struct GameEndView: View {
 				}
 			}
 		}
-		.background(Color("BackgroundColour"))
+		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
     }
 	
 }

@@ -113,13 +113,23 @@ struct QuizView: View {
 						self.finished = true
 					}
 				}) {
-					Image(systemName: "chevron.right") //FIXME: change to "neste" button
+					/*Image(systemName: "chevron.right") //FIXME: change to "neste" button
 						.foregroundColor(.black)
 						.padding()
 						.overlay(
 							Circle()
 								.stroke(.gray, lineWidth: 3)
+						)*/
+					Text("Neste")
+						.frame(width: 100)
+						.padding()
+						.overlay(RoundedRectangle(cornerRadius: 15)
+							.stroke(Color.gray, lineWidth: 1)
 						)
+						.background(RoundedRectangle(cornerRadius: 15)
+							.fill(.white)
+						)
+						.foregroundColor(.black)
 				}
 			}
 			

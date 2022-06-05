@@ -47,6 +47,150 @@
 		267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */; };
 		26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F6282D00E80057BBA6 /* ProfileView.swift */; };
 		26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */; };
+		26D2D34F284B7FBD00BD68A0 /* SourceSansPro-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2B7284B7FBD00BD68A0 /* SourceSansPro-BlackItalic.ttf */; };
+		26D2D350284B7FBD00BD68A0 /* SourceSansPro-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2B8284B7FBD00BD68A0 /* SourceSansPro-SemiBoldItalic.ttf */; };
+		26D2D351284B7FBD00BD68A0 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2B9284B7FBD00BD68A0 /* SourceSansPro-Regular.ttf */; };
+		26D2D352284B7FBD00BD68A0 /* SourceSansPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2BA284B7FBD00BD68A0 /* SourceSansPro-Bold.ttf */; };
+		26D2D353284B7FBD00BD68A0 /* SourceSansPro-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2BB284B7FBD00BD68A0 /* SourceSansPro-LightItalic.ttf */; };
+		26D2D354284B7FBD00BD68A0 /* SourceSansPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2BC284B7FBD00BD68A0 /* SourceSansPro-Light.ttf */; };
+		26D2D355284B7FBD00BD68A0 /* SourceSansPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2BD284B7FBD00BD68A0 /* SourceSansPro-Black.ttf */; };
+		26D2D357284B7FBD00BD68A0 /* SourceSansPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2BF284B7FBD00BD68A0 /* SourceSansPro-ExtraLight.ttf */; };
+		26D2D358284B7FBD00BD68A0 /* SourceSansPro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2C0284B7FBD00BD68A0 /* SourceSansPro-BoldItalic.ttf */; };
+		26D2D359284B7FBD00BD68A0 /* SourceSansPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2C1284B7FBD00BD68A0 /* SourceSansPro-SemiBold.ttf */; };
+		26D2D35A284B7FBD00BD68A0 /* SourceSansPro-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2C2284B7FBD00BD68A0 /* SourceSansPro-ExtraLightItalic.ttf */; };
+		26D2D35B284B7FBD00BD68A0 /* SourceSansPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2C3284B7FBD00BD68A0 /* SourceSansPro-Italic.ttf */; };
+		26D2D35C284B7FBD00BD68A0 /* Saira-Italic-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2C5284B7FBD00BD68A0 /* Saira-Italic-VariableFont_wdth,wght.ttf */; };
+		26D2D35D284B7FBD00BD68A0 /* Saira-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2C6284B7FBD00BD68A0 /* Saira-VariableFont_wdth,wght.ttf */; };
+		26D2D35E284B7FBD00BD68A0 /* Saira_SemiCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2C9284B7FBD00BD68A0 /* Saira_SemiCondensed-Italic.ttf */; };
+		26D2D35F284B7FBD00BD68A0 /* Saira_SemiCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2CA284B7FBD00BD68A0 /* Saira_SemiCondensed-Regular.ttf */; };
+		26D2D360284B7FBD00BD68A0 /* Saira_SemiCondensed-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2CB284B7FBD00BD68A0 /* Saira_SemiCondensed-BlackItalic.ttf */; };
+		26D2D361284B7FBD00BD68A0 /* Saira_SemiCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2CC284B7FBD00BD68A0 /* Saira_SemiCondensed-Light.ttf */; };
+		26D2D362284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2CD284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraLight.ttf */; };
+		26D2D363284B7FBD00BD68A0 /* Saira_SemiCondensed-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2CE284B7FBD00BD68A0 /* Saira_SemiCondensed-ThinItalic.ttf */; };
+		26D2D364284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2CF284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraBold.ttf */; };
+		26D2D365284B7FBD00BD68A0 /* Saira_SemiCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2D0284B7FBD00BD68A0 /* Saira_SemiCondensed-BoldItalic.ttf */; };
+		26D2D366284B7FBD00BD68A0 /* Saira_SemiCondensed-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2D1284B7FBD00BD68A0 /* Saira_SemiCondensed-Thin.ttf */; };
+		26D2D367284B7FBD00BD68A0 /* Saira_SemiCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2D2284B7FBD00BD68A0 /* Saira_SemiCondensed-LightItalic.ttf */; };
+		26D2D368284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2D3284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraLightItalic.ttf */; };
+		26D2D369284B7FBD00BD68A0 /* Saira_SemiCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2D4284B7FBD00BD68A0 /* Saira_SemiCondensed-SemiBold.ttf */; };
+		26D2D36A284B7FBD00BD68A0 /* Saira_SemiCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2D5284B7FBD00BD68A0 /* Saira_SemiCondensed-Bold.ttf */; };
+		26D2D36B284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2D6284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraBoldItalic.ttf */; };
+		26D2D36C284B7FBD00BD68A0 /* Saira_SemiCondensed-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2D7284B7FBD00BD68A0 /* Saira_SemiCondensed-MediumItalic.ttf */; };
+		26D2D36D284B7FBD00BD68A0 /* Saira_SemiCondensed-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2D8284B7FBD00BD68A0 /* Saira_SemiCondensed-Black.ttf */; };
+		26D2D36E284B7FBD00BD68A0 /* Saira_SemiCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2D9284B7FBD00BD68A0 /* Saira_SemiCondensed-Medium.ttf */; };
+		26D2D36F284B7FBD00BD68A0 /* Saira_SemiCondensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2DA284B7FBD00BD68A0 /* Saira_SemiCondensed-SemiBoldItalic.ttf */; };
+		26D2D370284B7FBD00BD68A0 /* Saira-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2DC284B7FBD00BD68A0 /* Saira-Medium.ttf */; };
+		26D2D371284B7FBD00BD68A0 /* Saira-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2DD284B7FBD00BD68A0 /* Saira-MediumItalic.ttf */; };
+		26D2D372284B7FBD00BD68A0 /* Saira-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2DE284B7FBD00BD68A0 /* Saira-ExtraBoldItalic.ttf */; };
+		26D2D373284B7FBD00BD68A0 /* Saira-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2DF284B7FBD00BD68A0 /* Saira-Light.ttf */; };
+		26D2D374284B7FBD00BD68A0 /* Saira-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2E0284B7FBD00BD68A0 /* Saira-SemiBoldItalic.ttf */; };
+		26D2D375284B7FBD00BD68A0 /* Saira-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2E1284B7FBD00BD68A0 /* Saira-Regular.ttf */; };
+		26D2D376284B7FBD00BD68A0 /* Saira-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2E2284B7FBD00BD68A0 /* Saira-BlackItalic.ttf */; };
+		26D2D377284B7FBD00BD68A0 /* Saira-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2E3284B7FBD00BD68A0 /* Saira-ExtraLight.ttf */; };
+		26D2D378284B7FBD00BD68A0 /* Saira-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2E4284B7FBD00BD68A0 /* Saira-ThinItalic.ttf */; };
+		26D2D379284B7FBD00BD68A0 /* Saira-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2E5284B7FBD00BD68A0 /* Saira-BoldItalic.ttf */; };
+		26D2D37A284B7FBD00BD68A0 /* Saira-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2E6284B7FBD00BD68A0 /* Saira-Black.ttf */; };
+		26D2D37B284B7FBD00BD68A0 /* Saira-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2E7284B7FBD00BD68A0 /* Saira-ExtraLightItalic.ttf */; };
+		26D2D37C284B7FBD00BD68A0 /* Saira-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2E8284B7FBD00BD68A0 /* Saira-SemiBold.ttf */; };
+		26D2D37D284B7FBD00BD68A0 /* Saira-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2E9284B7FBD00BD68A0 /* Saira-Italic.ttf */; };
+		26D2D37E284B7FBD00BD68A0 /* Saira-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2EA284B7FBD00BD68A0 /* Saira-Thin.ttf */; };
+		26D2D37F284B7FBD00BD68A0 /* Saira-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2EB284B7FBD00BD68A0 /* Saira-LightItalic.ttf */; };
+		26D2D380284B7FBD00BD68A0 /* Saira-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2EC284B7FBD00BD68A0 /* Saira-Bold.ttf */; };
+		26D2D381284B7FBD00BD68A0 /* Saira-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2ED284B7FBD00BD68A0 /* Saira-ExtraBold.ttf */; };
+		26D2D382284B7FBD00BD68A0 /* Saira_UltraCondensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2EF284B7FBD00BD68A0 /* Saira_UltraCondensed-SemiBoldItalic.ttf */; };
+		26D2D383284B7FBD00BD68A0 /* Saira_UltraCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2F0284B7FBD00BD68A0 /* Saira_UltraCondensed-LightItalic.ttf */; };
+		26D2D384284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2F1284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraBold.ttf */; };
+		26D2D385284B7FBD00BD68A0 /* Saira_UltraCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2F2284B7FBD00BD68A0 /* Saira_UltraCondensed-Medium.ttf */; };
+		26D2D386284B7FBD00BD68A0 /* Saira_UltraCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2F3284B7FBD00BD68A0 /* Saira_UltraCondensed-Bold.ttf */; };
+		26D2D387284B7FBD00BD68A0 /* Saira_UltraCondensed-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2F4284B7FBD00BD68A0 /* Saira_UltraCondensed-ThinItalic.ttf */; };
+		26D2D388284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2F5284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraLight.ttf */; };
+		26D2D389284B7FBD00BD68A0 /* Saira_UltraCondensed-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2F6284B7FBD00BD68A0 /* Saira_UltraCondensed-MediumItalic.ttf */; };
+		26D2D38A284B7FBD00BD68A0 /* Saira_UltraCondensed-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2F7284B7FBD00BD68A0 /* Saira_UltraCondensed-Black.ttf */; };
+		26D2D38B284B7FBD00BD68A0 /* Saira_UltraCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2F8284B7FBD00BD68A0 /* Saira_UltraCondensed-BoldItalic.ttf */; };
+		26D2D38C284B7FBD00BD68A0 /* Saira_UltraCondensed-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2F9284B7FBD00BD68A0 /* Saira_UltraCondensed-BlackItalic.ttf */; };
+		26D2D38D284B7FBD00BD68A0 /* Saira_UltraCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2FA284B7FBD00BD68A0 /* Saira_UltraCondensed-SemiBold.ttf */; };
+		26D2D38E284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2FB284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraLightItalic.ttf */; };
+		26D2D38F284B7FBD00BD68A0 /* Saira_UltraCondensed-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2FC284B7FBD00BD68A0 /* Saira_UltraCondensed-Thin.ttf */; };
+		26D2D390284B7FBD00BD68A0 /* Saira_UltraCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2FD284B7FBD00BD68A0 /* Saira_UltraCondensed-Light.ttf */; };
+		26D2D391284B7FBD00BD68A0 /* Saira_UltraCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2FE284B7FBD00BD68A0 /* Saira_UltraCondensed-Italic.ttf */; };
+		26D2D392284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2FF284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraBoldItalic.ttf */; };
+		26D2D393284B7FBD00BD68A0 /* Saira_UltraCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D300284B7FBD00BD68A0 /* Saira_UltraCondensed-Regular.ttf */; };
+		26D2D394284B7FBD00BD68A0 /* Saira_Expanded-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D302284B7FBD00BD68A0 /* Saira_Expanded-Italic.ttf */; };
+		26D2D395284B7FBD00BD68A0 /* Saira_Expanded-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D303284B7FBD00BD68A0 /* Saira_Expanded-SemiBoldItalic.ttf */; };
+		26D2D396284B7FBD00BD68A0 /* Saira_Expanded-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D304284B7FBD00BD68A0 /* Saira_Expanded-Light.ttf */; };
+		26D2D397284B7FBD00BD68A0 /* Saira_Expanded-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D305284B7FBD00BD68A0 /* Saira_Expanded-LightItalic.ttf */; };
+		26D2D398284B7FBD00BD68A0 /* Saira_Expanded-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D306284B7FBD00BD68A0 /* Saira_Expanded-Thin.ttf */; };
+		26D2D399284B7FBD00BD68A0 /* Saira_Expanded-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D307284B7FBD00BD68A0 /* Saira_Expanded-ExtraLightItalic.ttf */; };
+		26D2D39A284B7FBD00BD68A0 /* Saira_Expanded-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D308284B7FBD00BD68A0 /* Saira_Expanded-Regular.ttf */; };
+		26D2D39B284B7FBD00BD68A0 /* Saira_Expanded-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D309284B7FBD00BD68A0 /* Saira_Expanded-BlackItalic.ttf */; };
+		26D2D39C284B7FBD00BD68A0 /* Saira_Expanded-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D30A284B7FBD00BD68A0 /* Saira_Expanded-ExtraBoldItalic.ttf */; };
+		26D2D39D284B7FBD00BD68A0 /* Saira_Expanded-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D30B284B7FBD00BD68A0 /* Saira_Expanded-Bold.ttf */; };
+		26D2D39E284B7FBD00BD68A0 /* Saira_Expanded-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D30C284B7FBD00BD68A0 /* Saira_Expanded-MediumItalic.ttf */; };
+		26D2D39F284B7FBD00BD68A0 /* Saira_Expanded-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D30D284B7FBD00BD68A0 /* Saira_Expanded-SemiBold.ttf */; };
+		26D2D3A0284B7FBD00BD68A0 /* Saira_Expanded-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D30E284B7FBD00BD68A0 /* Saira_Expanded-ThinItalic.ttf */; };
+		26D2D3A1284B7FBD00BD68A0 /* Saira_Expanded-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D30F284B7FBD00BD68A0 /* Saira_Expanded-ExtraLight.ttf */; };
+		26D2D3A2284B7FBD00BD68A0 /* Saira_Expanded-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D310284B7FBD00BD68A0 /* Saira_Expanded-Medium.ttf */; };
+		26D2D3A3284B7FBD00BD68A0 /* Saira_Expanded-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D311284B7FBD00BD68A0 /* Saira_Expanded-Black.ttf */; };
+		26D2D3A4284B7FBD00BD68A0 /* Saira_Expanded-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D312284B7FBD00BD68A0 /* Saira_Expanded-BoldItalic.ttf */; };
+		26D2D3A5284B7FBD00BD68A0 /* Saira_Expanded-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D313284B7FBD00BD68A0 /* Saira_Expanded-ExtraBold.ttf */; };
+		26D2D3A6284B7FBD00BD68A0 /* Saira_Condensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D315284B7FBD00BD68A0 /* Saira_Condensed-ExtraBoldItalic.ttf */; };
+		26D2D3A7284B7FBD00BD68A0 /* Saira_Condensed-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D316284B7FBD00BD68A0 /* Saira_Condensed-Black.ttf */; };
+		26D2D3A8284B7FBD00BD68A0 /* Saira_Condensed-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D317284B7FBD00BD68A0 /* Saira_Condensed-ExtraLightItalic.ttf */; };
+		26D2D3A9284B7FBD00BD68A0 /* Saira_Condensed-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D318284B7FBD00BD68A0 /* Saira_Condensed-ExtraLight.ttf */; };
+		26D2D3AA284B7FBD00BD68A0 /* Saira_Condensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D319284B7FBD00BD68A0 /* Saira_Condensed-ExtraBold.ttf */; };
+		26D2D3AB284B7FBD00BD68A0 /* Saira_Condensed-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D31A284B7FBD00BD68A0 /* Saira_Condensed-ThinItalic.ttf */; };
+		26D2D3AC284B7FBD00BD68A0 /* Saira_Condensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D31B284B7FBD00BD68A0 /* Saira_Condensed-BoldItalic.ttf */; };
+		26D2D3AD284B7FBD00BD68A0 /* Saira_Condensed-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D31C284B7FBD00BD68A0 /* Saira_Condensed-BlackItalic.ttf */; };
+		26D2D3AE284B7FBD00BD68A0 /* Saira_Condensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D31D284B7FBD00BD68A0 /* Saira_Condensed-LightItalic.ttf */; };
+		26D2D3AF284B7FBD00BD68A0 /* Saira_Condensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D31E284B7FBD00BD68A0 /* Saira_Condensed-SemiBold.ttf */; };
+		26D2D3B0284B7FBD00BD68A0 /* Saira_Condensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D31F284B7FBD00BD68A0 /* Saira_Condensed-Italic.ttf */; };
+		26D2D3B1284B7FBD00BD68A0 /* Saira_Condensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D320284B7FBD00BD68A0 /* Saira_Condensed-SemiBoldItalic.ttf */; };
+		26D2D3B2284B7FBD00BD68A0 /* Saira_Condensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D321284B7FBD00BD68A0 /* Saira_Condensed-Bold.ttf */; };
+		26D2D3B3284B7FBD00BD68A0 /* Saira_Condensed-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D322284B7FBD00BD68A0 /* Saira_Condensed-Thin.ttf */; };
+		26D2D3B4284B7FBD00BD68A0 /* Saira_Condensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D323284B7FBD00BD68A0 /* Saira_Condensed-Medium.ttf */; };
+		26D2D3B5284B7FBD00BD68A0 /* Saira_Condensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D324284B7FBD00BD68A0 /* Saira_Condensed-Regular.ttf */; };
+		26D2D3B6284B7FBD00BD68A0 /* Saira_Condensed-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D325284B7FBD00BD68A0 /* Saira_Condensed-MediumItalic.ttf */; };
+		26D2D3B7284B7FBD00BD68A0 /* Saira_Condensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D326284B7FBD00BD68A0 /* Saira_Condensed-Light.ttf */; };
+		26D2D3B8284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D328284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraBoldItalic.ttf */; };
+		26D2D3B9284B7FBD00BD68A0 /* Saira_SemiExpanded-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D329284B7FBD00BD68A0 /* Saira_SemiExpanded-Medium.ttf */; };
+		26D2D3BA284B7FBD00BD68A0 /* Saira_SemiExpanded-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D32A284B7FBD00BD68A0 /* Saira_SemiExpanded-SemiBold.ttf */; };
+		26D2D3BB284B7FBD00BD68A0 /* Saira_SemiExpanded-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D32B284B7FBD00BD68A0 /* Saira_SemiExpanded-Black.ttf */; };
+		26D2D3BC284B7FBD00BD68A0 /* Saira_SemiExpanded-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D32C284B7FBD00BD68A0 /* Saira_SemiExpanded-Regular.ttf */; };
+		26D2D3BD284B7FBD00BD68A0 /* Saira_SemiExpanded-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D32D284B7FBD00BD68A0 /* Saira_SemiExpanded-LightItalic.ttf */; };
+		26D2D3BE284B7FBD00BD68A0 /* Saira_SemiExpanded-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D32E284B7FBD00BD68A0 /* Saira_SemiExpanded-BlackItalic.ttf */; };
+		26D2D3BF284B7FBD00BD68A0 /* Saira_SemiExpanded-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D32F284B7FBD00BD68A0 /* Saira_SemiExpanded-SemiBoldItalic.ttf */; };
+		26D2D3C0284B7FBD00BD68A0 /* Saira_SemiExpanded-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D330284B7FBD00BD68A0 /* Saira_SemiExpanded-MediumItalic.ttf */; };
+		26D2D3C1284B7FBD00BD68A0 /* Saira_SemiExpanded-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D331284B7FBD00BD68A0 /* Saira_SemiExpanded-Italic.ttf */; };
+		26D2D3C2284B7FBD00BD68A0 /* Saira_SemiExpanded-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D332284B7FBD00BD68A0 /* Saira_SemiExpanded-ThinItalic.ttf */; };
+		26D2D3C3284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D333284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraLight.ttf */; };
+		26D2D3C4284B7FBD00BD68A0 /* Saira_SemiExpanded-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D334284B7FBD00BD68A0 /* Saira_SemiExpanded-Light.ttf */; };
+		26D2D3C5284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D335284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraLightItalic.ttf */; };
+		26D2D3C6284B7FBD00BD68A0 /* Saira_SemiExpanded-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D336284B7FBD00BD68A0 /* Saira_SemiExpanded-BoldItalic.ttf */; };
+		26D2D3C7284B7FBD00BD68A0 /* Saira_SemiExpanded-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D337284B7FBD00BD68A0 /* Saira_SemiExpanded-Bold.ttf */; };
+		26D2D3C8284B7FBD00BD68A0 /* Saira_SemiExpanded-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D338284B7FBD00BD68A0 /* Saira_SemiExpanded-Thin.ttf */; };
+		26D2D3C9284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D339284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraBold.ttf */; };
+		26D2D3CA284B7FBD00BD68A0 /* Saira_ExtraCondensed-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D33B284B7FBD00BD68A0 /* Saira_ExtraCondensed-Black.ttf */; };
+		26D2D3CB284B7FBD00BD68A0 /* Saira_ExtraCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D33C284B7FBD00BD68A0 /* Saira_ExtraCondensed-Medium.ttf */; };
+		26D2D3CC284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D33D284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraBold.ttf */; };
+		26D2D3CD284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D33E284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraBoldItalic.ttf */; };
+		26D2D3CE284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D33F284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraLightItalic.ttf */; };
+		26D2D3CF284B7FBD00BD68A0 /* Saira_ExtraCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D340284B7FBD00BD68A0 /* Saira_ExtraCondensed-LightItalic.ttf */; };
+		26D2D3D0284B7FBD00BD68A0 /* Saira_ExtraCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D341284B7FBD00BD68A0 /* Saira_ExtraCondensed-BoldItalic.ttf */; };
+		26D2D3D1284B7FBD00BD68A0 /* Saira_ExtraCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D342284B7FBD00BD68A0 /* Saira_ExtraCondensed-Regular.ttf */; };
+		26D2D3D2284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D343284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraLight.ttf */; };
+		26D2D3D3284B7FBD00BD68A0 /* Saira_ExtraCondensed-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D344284B7FBD00BD68A0 /* Saira_ExtraCondensed-ThinItalic.ttf */; };
+		26D2D3D4284B7FBD00BD68A0 /* Saira_ExtraCondensed-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D345284B7FBD00BD68A0 /* Saira_ExtraCondensed-BlackItalic.ttf */; };
+		26D2D3D5284B7FBD00BD68A0 /* Saira_ExtraCondensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D346284B7FBD00BD68A0 /* Saira_ExtraCondensed-SemiBoldItalic.ttf */; };
+		26D2D3D6284B7FBD00BD68A0 /* Saira_ExtraCondensed-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D347284B7FBD00BD68A0 /* Saira_ExtraCondensed-Thin.ttf */; };
+		26D2D3D7284B7FBD00BD68A0 /* Saira_ExtraCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D348284B7FBD00BD68A0 /* Saira_ExtraCondensed-Italic.ttf */; };
+		26D2D3D8284B7FBD00BD68A0 /* Saira_ExtraCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D349284B7FBD00BD68A0 /* Saira_ExtraCondensed-Light.ttf */; };
+		26D2D3D9284B7FBD00BD68A0 /* Saira_ExtraCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D34A284B7FBD00BD68A0 /* Saira_ExtraCondensed-Bold.ttf */; };
+		26D2D3DA284B7FBD00BD68A0 /* Saira_ExtraCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D34B284B7FBD00BD68A0 /* Saira_ExtraCondensed-SemiBold.ttf */; };
+		26D2D3DB284B7FBD00BD68A0 /* Saira_ExtraCondensed-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D34C284B7FBD00BD68A0 /* Saira_ExtraCondensed-MediumItalic.ttf */; };
+		26D2D3DC284B7FBD00BD68A0 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D34D284B7FBD00BD68A0 /* OFL.txt */; };
+		26D2D3DD284B7FBD00BD68A0 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D34E284B7FBD00BD68A0 /* README.txt */; };
+		26D2D41D284CEC6000BD68A0 /* WaterMillNoWater.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 26D2D41C284CEC6000BD68A0 /* WaterMillNoWater.rcproject */; };
+		26D2D420284CECFF00BD68A0 /* WaterMillARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D2D41F284CECFF00BD68A0 /* WaterMillARView.swift */; };
 		26D3DF7F2848F7FC009EECE3 /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */; };
 		26D3DF81284A06E7009EECE3 /* HowToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3DF80284A06E7009EECE3 /* HowToView.swift */; };
 		26D3DF83284A2875009EECE3 /* GameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3DF82284A2875009EECE3 /* GameStartView.swift */; };
@@ -150,6 +294,150 @@
 		267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Macondo-Regular.ttf"; sourceTree = "<group>"; };
 		26AAC9F6282D00E80057BBA6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIPhoneView.swift; sourceTree = "<group>"; };
+		26D2D2B7284B7FBD00BD68A0 /* SourceSansPro-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2B8284B7FBD00BD68A0 /* SourceSansPro-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2B9284B7FBD00BD68A0 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
+		26D2D2BA284B7FBD00BD68A0 /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.ttf"; sourceTree = "<group>"; };
+		26D2D2BB284B7FBD00BD68A0 /* SourceSansPro-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-LightItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2BC284B7FBD00BD68A0 /* SourceSansPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.ttf"; sourceTree = "<group>"; };
+		26D2D2BD284B7FBD00BD68A0 /* SourceSansPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Black.ttf"; sourceTree = "<group>"; };
+		26D2D2BF284B7FBD00BD68A0 /* SourceSansPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLight.ttf"; sourceTree = "<group>"; };
+		26D2D2C0284B7FBD00BD68A0 /* SourceSansPro-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2C1284B7FBD00BD68A0 /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
+		26D2D2C2284B7FBD00BD68A0 /* SourceSansPro-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2C3284B7FBD00BD68A0 /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
+		26D2D2C5284B7FBD00BD68A0 /* Saira-Italic-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Italic-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
+		26D2D2C6284B7FBD00BD68A0 /* Saira-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
+		26D2D2C9284B7FBD00BD68A0 /* Saira_SemiCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-Italic.ttf"; sourceTree = "<group>"; };
+		26D2D2CA284B7FBD00BD68A0 /* Saira_SemiCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		26D2D2CB284B7FBD00BD68A0 /* Saira_SemiCondensed-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-BlackItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2CC284B7FBD00BD68A0 /* Saira_SemiCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-Light.ttf"; sourceTree = "<group>"; };
+		26D2D2CD284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-ExtraLight.ttf"; sourceTree = "<group>"; };
+		26D2D2CE284B7FBD00BD68A0 /* Saira_SemiCondensed-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-ThinItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2CF284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-ExtraBold.ttf"; sourceTree = "<group>"; };
+		26D2D2D0284B7FBD00BD68A0 /* Saira_SemiCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2D1284B7FBD00BD68A0 /* Saira_SemiCondensed-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-Thin.ttf"; sourceTree = "<group>"; };
+		26D2D2D2284B7FBD00BD68A0 /* Saira_SemiCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2D3284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2D4284B7FBD00BD68A0 /* Saira_SemiCondensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		26D2D2D5284B7FBD00BD68A0 /* Saira_SemiCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		26D2D2D6284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2D7284B7FBD00BD68A0 /* Saira_SemiCondensed-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-MediumItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2D8284B7FBD00BD68A0 /* Saira_SemiCondensed-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-Black.ttf"; sourceTree = "<group>"; };
+		26D2D2D9284B7FBD00BD68A0 /* Saira_SemiCondensed-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-Medium.ttf"; sourceTree = "<group>"; };
+		26D2D2DA284B7FBD00BD68A0 /* Saira_SemiCondensed-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2DC284B7FBD00BD68A0 /* Saira-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Medium.ttf"; sourceTree = "<group>"; };
+		26D2D2DD284B7FBD00BD68A0 /* Saira-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-MediumItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2DE284B7FBD00BD68A0 /* Saira-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2DF284B7FBD00BD68A0 /* Saira-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Light.ttf"; sourceTree = "<group>"; };
+		26D2D2E0284B7FBD00BD68A0 /* Saira-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2E1284B7FBD00BD68A0 /* Saira-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Regular.ttf"; sourceTree = "<group>"; };
+		26D2D2E2284B7FBD00BD68A0 /* Saira-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-BlackItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2E3284B7FBD00BD68A0 /* Saira-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-ExtraLight.ttf"; sourceTree = "<group>"; };
+		26D2D2E4284B7FBD00BD68A0 /* Saira-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-ThinItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2E5284B7FBD00BD68A0 /* Saira-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-BoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2E6284B7FBD00BD68A0 /* Saira-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Black.ttf"; sourceTree = "<group>"; };
+		26D2D2E7284B7FBD00BD68A0 /* Saira-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2E8284B7FBD00BD68A0 /* Saira-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-SemiBold.ttf"; sourceTree = "<group>"; };
+		26D2D2E9284B7FBD00BD68A0 /* Saira-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Italic.ttf"; sourceTree = "<group>"; };
+		26D2D2EA284B7FBD00BD68A0 /* Saira-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Thin.ttf"; sourceTree = "<group>"; };
+		26D2D2EB284B7FBD00BD68A0 /* Saira-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-LightItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2EC284B7FBD00BD68A0 /* Saira-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Bold.ttf"; sourceTree = "<group>"; };
+		26D2D2ED284B7FBD00BD68A0 /* Saira-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-ExtraBold.ttf"; sourceTree = "<group>"; };
+		26D2D2EF284B7FBD00BD68A0 /* Saira_UltraCondensed-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2F0284B7FBD00BD68A0 /* Saira_UltraCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2F1284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-ExtraBold.ttf"; sourceTree = "<group>"; };
+		26D2D2F2284B7FBD00BD68A0 /* Saira_UltraCondensed-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-Medium.ttf"; sourceTree = "<group>"; };
+		26D2D2F3284B7FBD00BD68A0 /* Saira_UltraCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		26D2D2F4284B7FBD00BD68A0 /* Saira_UltraCondensed-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-ThinItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2F5284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-ExtraLight.ttf"; sourceTree = "<group>"; };
+		26D2D2F6284B7FBD00BD68A0 /* Saira_UltraCondensed-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-MediumItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2F7284B7FBD00BD68A0 /* Saira_UltraCondensed-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-Black.ttf"; sourceTree = "<group>"; };
+		26D2D2F8284B7FBD00BD68A0 /* Saira_UltraCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2F9284B7FBD00BD68A0 /* Saira_UltraCondensed-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-BlackItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2FA284B7FBD00BD68A0 /* Saira_UltraCondensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		26D2D2FB284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		26D2D2FC284B7FBD00BD68A0 /* Saira_UltraCondensed-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-Thin.ttf"; sourceTree = "<group>"; };
+		26D2D2FD284B7FBD00BD68A0 /* Saira_UltraCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-Light.ttf"; sourceTree = "<group>"; };
+		26D2D2FE284B7FBD00BD68A0 /* Saira_UltraCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-Italic.ttf"; sourceTree = "<group>"; };
+		26D2D2FF284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D300284B7FBD00BD68A0 /* Saira_UltraCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_UltraCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		26D2D302284B7FBD00BD68A0 /* Saira_Expanded-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-Italic.ttf"; sourceTree = "<group>"; };
+		26D2D303284B7FBD00BD68A0 /* Saira_Expanded-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D304284B7FBD00BD68A0 /* Saira_Expanded-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-Light.ttf"; sourceTree = "<group>"; };
+		26D2D305284B7FBD00BD68A0 /* Saira_Expanded-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-LightItalic.ttf"; sourceTree = "<group>"; };
+		26D2D306284B7FBD00BD68A0 /* Saira_Expanded-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-Thin.ttf"; sourceTree = "<group>"; };
+		26D2D307284B7FBD00BD68A0 /* Saira_Expanded-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		26D2D308284B7FBD00BD68A0 /* Saira_Expanded-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-Regular.ttf"; sourceTree = "<group>"; };
+		26D2D309284B7FBD00BD68A0 /* Saira_Expanded-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-BlackItalic.ttf"; sourceTree = "<group>"; };
+		26D2D30A284B7FBD00BD68A0 /* Saira_Expanded-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D30B284B7FBD00BD68A0 /* Saira_Expanded-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-Bold.ttf"; sourceTree = "<group>"; };
+		26D2D30C284B7FBD00BD68A0 /* Saira_Expanded-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-MediumItalic.ttf"; sourceTree = "<group>"; };
+		26D2D30D284B7FBD00BD68A0 /* Saira_Expanded-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-SemiBold.ttf"; sourceTree = "<group>"; };
+		26D2D30E284B7FBD00BD68A0 /* Saira_Expanded-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-ThinItalic.ttf"; sourceTree = "<group>"; };
+		26D2D30F284B7FBD00BD68A0 /* Saira_Expanded-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-ExtraLight.ttf"; sourceTree = "<group>"; };
+		26D2D310284B7FBD00BD68A0 /* Saira_Expanded-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-Medium.ttf"; sourceTree = "<group>"; };
+		26D2D311284B7FBD00BD68A0 /* Saira_Expanded-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-Black.ttf"; sourceTree = "<group>"; };
+		26D2D312284B7FBD00BD68A0 /* Saira_Expanded-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-BoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D313284B7FBD00BD68A0 /* Saira_Expanded-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Expanded-ExtraBold.ttf"; sourceTree = "<group>"; };
+		26D2D315284B7FBD00BD68A0 /* Saira_Condensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D316284B7FBD00BD68A0 /* Saira_Condensed-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-Black.ttf"; sourceTree = "<group>"; };
+		26D2D317284B7FBD00BD68A0 /* Saira_Condensed-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		26D2D318284B7FBD00BD68A0 /* Saira_Condensed-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-ExtraLight.ttf"; sourceTree = "<group>"; };
+		26D2D319284B7FBD00BD68A0 /* Saira_Condensed-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-ExtraBold.ttf"; sourceTree = "<group>"; };
+		26D2D31A284B7FBD00BD68A0 /* Saira_Condensed-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-ThinItalic.ttf"; sourceTree = "<group>"; };
+		26D2D31B284B7FBD00BD68A0 /* Saira_Condensed-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D31C284B7FBD00BD68A0 /* Saira_Condensed-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-BlackItalic.ttf"; sourceTree = "<group>"; };
+		26D2D31D284B7FBD00BD68A0 /* Saira_Condensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		26D2D31E284B7FBD00BD68A0 /* Saira_Condensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		26D2D31F284B7FBD00BD68A0 /* Saira_Condensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-Italic.ttf"; sourceTree = "<group>"; };
+		26D2D320284B7FBD00BD68A0 /* Saira_Condensed-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D321284B7FBD00BD68A0 /* Saira_Condensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-Bold.ttf"; sourceTree = "<group>"; };
+		26D2D322284B7FBD00BD68A0 /* Saira_Condensed-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-Thin.ttf"; sourceTree = "<group>"; };
+		26D2D323284B7FBD00BD68A0 /* Saira_Condensed-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-Medium.ttf"; sourceTree = "<group>"; };
+		26D2D324284B7FBD00BD68A0 /* Saira_Condensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-Regular.ttf"; sourceTree = "<group>"; };
+		26D2D325284B7FBD00BD68A0 /* Saira_Condensed-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-MediumItalic.ttf"; sourceTree = "<group>"; };
+		26D2D326284B7FBD00BD68A0 /* Saira_Condensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_Condensed-Light.ttf"; sourceTree = "<group>"; };
+		26D2D328284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D329284B7FBD00BD68A0 /* Saira_SemiExpanded-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-Medium.ttf"; sourceTree = "<group>"; };
+		26D2D32A284B7FBD00BD68A0 /* Saira_SemiExpanded-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-SemiBold.ttf"; sourceTree = "<group>"; };
+		26D2D32B284B7FBD00BD68A0 /* Saira_SemiExpanded-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-Black.ttf"; sourceTree = "<group>"; };
+		26D2D32C284B7FBD00BD68A0 /* Saira_SemiExpanded-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-Regular.ttf"; sourceTree = "<group>"; };
+		26D2D32D284B7FBD00BD68A0 /* Saira_SemiExpanded-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-LightItalic.ttf"; sourceTree = "<group>"; };
+		26D2D32E284B7FBD00BD68A0 /* Saira_SemiExpanded-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-BlackItalic.ttf"; sourceTree = "<group>"; };
+		26D2D32F284B7FBD00BD68A0 /* Saira_SemiExpanded-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D330284B7FBD00BD68A0 /* Saira_SemiExpanded-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-MediumItalic.ttf"; sourceTree = "<group>"; };
+		26D2D331284B7FBD00BD68A0 /* Saira_SemiExpanded-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-Italic.ttf"; sourceTree = "<group>"; };
+		26D2D332284B7FBD00BD68A0 /* Saira_SemiExpanded-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-ThinItalic.ttf"; sourceTree = "<group>"; };
+		26D2D333284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-ExtraLight.ttf"; sourceTree = "<group>"; };
+		26D2D334284B7FBD00BD68A0 /* Saira_SemiExpanded-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-Light.ttf"; sourceTree = "<group>"; };
+		26D2D335284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		26D2D336284B7FBD00BD68A0 /* Saira_SemiExpanded-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-BoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D337284B7FBD00BD68A0 /* Saira_SemiExpanded-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-Bold.ttf"; sourceTree = "<group>"; };
+		26D2D338284B7FBD00BD68A0 /* Saira_SemiExpanded-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-Thin.ttf"; sourceTree = "<group>"; };
+		26D2D339284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiExpanded-ExtraBold.ttf"; sourceTree = "<group>"; };
+		26D2D33B284B7FBD00BD68A0 /* Saira_ExtraCondensed-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-Black.ttf"; sourceTree = "<group>"; };
+		26D2D33C284B7FBD00BD68A0 /* Saira_ExtraCondensed-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-Medium.ttf"; sourceTree = "<group>"; };
+		26D2D33D284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-ExtraBold.ttf"; sourceTree = "<group>"; };
+		26D2D33E284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D33F284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		26D2D340284B7FBD00BD68A0 /* Saira_ExtraCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		26D2D341284B7FBD00BD68A0 /* Saira_ExtraCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D342284B7FBD00BD68A0 /* Saira_ExtraCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		26D2D343284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-ExtraLight.ttf"; sourceTree = "<group>"; };
+		26D2D344284B7FBD00BD68A0 /* Saira_ExtraCondensed-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-ThinItalic.ttf"; sourceTree = "<group>"; };
+		26D2D345284B7FBD00BD68A0 /* Saira_ExtraCondensed-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-BlackItalic.ttf"; sourceTree = "<group>"; };
+		26D2D346284B7FBD00BD68A0 /* Saira_ExtraCondensed-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		26D2D347284B7FBD00BD68A0 /* Saira_ExtraCondensed-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-Thin.ttf"; sourceTree = "<group>"; };
+		26D2D348284B7FBD00BD68A0 /* Saira_ExtraCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-Italic.ttf"; sourceTree = "<group>"; };
+		26D2D349284B7FBD00BD68A0 /* Saira_ExtraCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-Light.ttf"; sourceTree = "<group>"; };
+		26D2D34A284B7FBD00BD68A0 /* Saira_ExtraCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		26D2D34B284B7FBD00BD68A0 /* Saira_ExtraCondensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		26D2D34C284B7FBD00BD68A0 /* Saira_ExtraCondensed-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_ExtraCondensed-MediumItalic.ttf"; sourceTree = "<group>"; };
+		26D2D34D284B7FBD00BD68A0 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		26D2D34E284B7FBD00BD68A0 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		26D2D41C284CEC6000BD68A0 /* WaterMillNoWater.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = WaterMillNoWater.rcproject; sourceTree = "<group>"; };
+		26D2D41F284CECFF00BD68A0 /* WaterMillARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterMillARView.swift; sourceTree = "<group>"; };
 		26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndView.swift; sourceTree = "<group>"; };
 		26D3DF80284A06E7009EECE3 /* HowToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToView.swift; sourceTree = "<group>"; };
 		26D3DF82284A2875009EECE3 /* GameStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartView.swift; sourceTree = "<group>"; };
@@ -330,6 +618,11 @@
 		267A77432829558100E0EB7A /* Kulturstien */ = {
 			isa = PBXGroup;
 			children = (
+				26D2D41E284CECBB00BD68A0 /* AR */,
+				267A7783282AF8F600E0EB7A /* Info.plist */,
+				267A77482829558200E0EB7A /* Assets.xcassets */,
+				267A774B2829558200E0EB7A /* Preview Assets.xcassets */,
+				26D72FAF282E714F00BC3A8F /* MainViews */,
 				844A56622848EE6B009BF850 /* MillGame */,
 				A04024D12848C7F7001B4D18 /* WackANokk */,
 				A0EA0C382848B46D00A2B524 /* SkremBortHuldra */,
@@ -338,11 +631,7 @@
 				26D4A4E22837EAD10022D49F /* ButtonViews */,
 				0E17588F283683D900E8F9C4 /* InfoViews */,
 				2669457E2832562400B25AF7 /* Quiz */,
-				267A7783282AF8F600E0EB7A /* Info.plist */,
-				26D72FAF282E714F00BC3A8F /* MainViews */,
 				26D72FB0282E716A00BC3A8F /* MenuViews */,
-				267A77482829558200E0EB7A /* Assets.xcassets */,
-				267A774B2829558200E0EB7A /* Preview Assets.xcassets */,
 				26D72FB1282E719000BC3A8F /* Fonts */,
 				26F0498F283CC16D00FBA117 /* WackANokkView.swift */,
 				A04024E62848C8F1001B4D18 /* FrightenHuldraGameView.swift */,
@@ -367,6 +656,223 @@
 				267A77612829558200E0EB7A /* KulturstienUITestsLaunchTests.swift */,
 			);
 			path = KulturstienUITests;
+			sourceTree = "<group>";
+		};
+		26D2D2B6284B7FBD00BD68A0 /* Source_Sans_Pro */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Source_Sans_Pro;
+			sourceTree = "<group>";
+		};
+		26D2D2C4284B7FBD00BD68A0 /* Saira */ = {
+			isa = PBXGroup;
+			children = (
+				26D2D2C5284B7FBD00BD68A0 /* Saira-Italic-VariableFont_wdth,wght.ttf */,
+				26D2D2C6284B7FBD00BD68A0 /* Saira-VariableFont_wdth,wght.ttf */,
+				26D2D2C7284B7FBD00BD68A0 /* static */,
+				26D2D34D284B7FBD00BD68A0 /* OFL.txt */,
+				26D2D34E284B7FBD00BD68A0 /* README.txt */,
+			);
+			path = Saira;
+			sourceTree = "<group>";
+		};
+		26D2D2C7284B7FBD00BD68A0 /* static */ = {
+			isa = PBXGroup;
+			children = (
+				26D2D2C8284B7FBD00BD68A0 /* Saira_SemiCondensed */,
+				26D2D2DB284B7FBD00BD68A0 /* Saira */,
+				26D2D2EE284B7FBD00BD68A0 /* Saira_UltraCondensed */,
+				26D2D301284B7FBD00BD68A0 /* Saira_Expanded */,
+				26D2D314284B7FBD00BD68A0 /* Saira_Condensed */,
+				26D2D327284B7FBD00BD68A0 /* Saira_SemiExpanded */,
+				26D2D33A284B7FBD00BD68A0 /* Saira_ExtraCondensed */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
+		26D2D2C8284B7FBD00BD68A0 /* Saira_SemiCondensed */ = {
+			isa = PBXGroup;
+			children = (
+				26D2D2C9284B7FBD00BD68A0 /* Saira_SemiCondensed-Italic.ttf */,
+				26D2D2CA284B7FBD00BD68A0 /* Saira_SemiCondensed-Regular.ttf */,
+				26D2D2CB284B7FBD00BD68A0 /* Saira_SemiCondensed-BlackItalic.ttf */,
+				26D2D2CC284B7FBD00BD68A0 /* Saira_SemiCondensed-Light.ttf */,
+				26D2D2CD284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraLight.ttf */,
+				26D2D2CE284B7FBD00BD68A0 /* Saira_SemiCondensed-ThinItalic.ttf */,
+				26D2D2CF284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraBold.ttf */,
+				26D2D2D0284B7FBD00BD68A0 /* Saira_SemiCondensed-BoldItalic.ttf */,
+				26D2D2D1284B7FBD00BD68A0 /* Saira_SemiCondensed-Thin.ttf */,
+				26D2D2D2284B7FBD00BD68A0 /* Saira_SemiCondensed-LightItalic.ttf */,
+				26D2D2D3284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraLightItalic.ttf */,
+				26D2D2D4284B7FBD00BD68A0 /* Saira_SemiCondensed-SemiBold.ttf */,
+				26D2D2D5284B7FBD00BD68A0 /* Saira_SemiCondensed-Bold.ttf */,
+				26D2D2D6284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraBoldItalic.ttf */,
+				26D2D2D7284B7FBD00BD68A0 /* Saira_SemiCondensed-MediumItalic.ttf */,
+				26D2D2D8284B7FBD00BD68A0 /* Saira_SemiCondensed-Black.ttf */,
+				26D2D2D9284B7FBD00BD68A0 /* Saira_SemiCondensed-Medium.ttf */,
+				26D2D2DA284B7FBD00BD68A0 /* Saira_SemiCondensed-SemiBoldItalic.ttf */,
+			);
+			path = Saira_SemiCondensed;
+			sourceTree = "<group>";
+		};
+		26D2D2DB284B7FBD00BD68A0 /* Saira */ = {
+			isa = PBXGroup;
+			children = (
+				26D2D2DC284B7FBD00BD68A0 /* Saira-Medium.ttf */,
+				26D2D2DD284B7FBD00BD68A0 /* Saira-MediumItalic.ttf */,
+				26D2D2DE284B7FBD00BD68A0 /* Saira-ExtraBoldItalic.ttf */,
+				26D2D2DF284B7FBD00BD68A0 /* Saira-Light.ttf */,
+				26D2D2E0284B7FBD00BD68A0 /* Saira-SemiBoldItalic.ttf */,
+				26D2D2E1284B7FBD00BD68A0 /* Saira-Regular.ttf */,
+				26D2D2E2284B7FBD00BD68A0 /* Saira-BlackItalic.ttf */,
+				26D2D2E3284B7FBD00BD68A0 /* Saira-ExtraLight.ttf */,
+				26D2D2E4284B7FBD00BD68A0 /* Saira-ThinItalic.ttf */,
+				26D2D2E5284B7FBD00BD68A0 /* Saira-BoldItalic.ttf */,
+				26D2D2E6284B7FBD00BD68A0 /* Saira-Black.ttf */,
+				26D2D2E7284B7FBD00BD68A0 /* Saira-ExtraLightItalic.ttf */,
+				26D2D2E8284B7FBD00BD68A0 /* Saira-SemiBold.ttf */,
+				26D2D2E9284B7FBD00BD68A0 /* Saira-Italic.ttf */,
+				26D2D2EA284B7FBD00BD68A0 /* Saira-Thin.ttf */,
+				26D2D2EB284B7FBD00BD68A0 /* Saira-LightItalic.ttf */,
+				26D2D2EC284B7FBD00BD68A0 /* Saira-Bold.ttf */,
+				26D2D2ED284B7FBD00BD68A0 /* Saira-ExtraBold.ttf */,
+			);
+			path = Saira;
+			sourceTree = "<group>";
+		};
+		26D2D2EE284B7FBD00BD68A0 /* Saira_UltraCondensed */ = {
+			isa = PBXGroup;
+			children = (
+				26D2D2EF284B7FBD00BD68A0 /* Saira_UltraCondensed-SemiBoldItalic.ttf */,
+				26D2D2F0284B7FBD00BD68A0 /* Saira_UltraCondensed-LightItalic.ttf */,
+				26D2D2F1284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraBold.ttf */,
+				26D2D2F2284B7FBD00BD68A0 /* Saira_UltraCondensed-Medium.ttf */,
+				26D2D2F3284B7FBD00BD68A0 /* Saira_UltraCondensed-Bold.ttf */,
+				26D2D2F4284B7FBD00BD68A0 /* Saira_UltraCondensed-ThinItalic.ttf */,
+				26D2D2F5284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraLight.ttf */,
+				26D2D2F6284B7FBD00BD68A0 /* Saira_UltraCondensed-MediumItalic.ttf */,
+				26D2D2F7284B7FBD00BD68A0 /* Saira_UltraCondensed-Black.ttf */,
+				26D2D2F8284B7FBD00BD68A0 /* Saira_UltraCondensed-BoldItalic.ttf */,
+				26D2D2F9284B7FBD00BD68A0 /* Saira_UltraCondensed-BlackItalic.ttf */,
+				26D2D2FA284B7FBD00BD68A0 /* Saira_UltraCondensed-SemiBold.ttf */,
+				26D2D2FB284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraLightItalic.ttf */,
+				26D2D2FC284B7FBD00BD68A0 /* Saira_UltraCondensed-Thin.ttf */,
+				26D2D2FD284B7FBD00BD68A0 /* Saira_UltraCondensed-Light.ttf */,
+				26D2D2FE284B7FBD00BD68A0 /* Saira_UltraCondensed-Italic.ttf */,
+				26D2D2FF284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraBoldItalic.ttf */,
+				26D2D300284B7FBD00BD68A0 /* Saira_UltraCondensed-Regular.ttf */,
+			);
+			path = Saira_UltraCondensed;
+			sourceTree = "<group>";
+		};
+		26D2D301284B7FBD00BD68A0 /* Saira_Expanded */ = {
+			isa = PBXGroup;
+			children = (
+				26D2D302284B7FBD00BD68A0 /* Saira_Expanded-Italic.ttf */,
+				26D2D303284B7FBD00BD68A0 /* Saira_Expanded-SemiBoldItalic.ttf */,
+				26D2D304284B7FBD00BD68A0 /* Saira_Expanded-Light.ttf */,
+				26D2D305284B7FBD00BD68A0 /* Saira_Expanded-LightItalic.ttf */,
+				26D2D306284B7FBD00BD68A0 /* Saira_Expanded-Thin.ttf */,
+				26D2D307284B7FBD00BD68A0 /* Saira_Expanded-ExtraLightItalic.ttf */,
+				26D2D308284B7FBD00BD68A0 /* Saira_Expanded-Regular.ttf */,
+				26D2D309284B7FBD00BD68A0 /* Saira_Expanded-BlackItalic.ttf */,
+				26D2D30A284B7FBD00BD68A0 /* Saira_Expanded-ExtraBoldItalic.ttf */,
+				26D2D30B284B7FBD00BD68A0 /* Saira_Expanded-Bold.ttf */,
+				26D2D30C284B7FBD00BD68A0 /* Saira_Expanded-MediumItalic.ttf */,
+				26D2D30D284B7FBD00BD68A0 /* Saira_Expanded-SemiBold.ttf */,
+				26D2D30E284B7FBD00BD68A0 /* Saira_Expanded-ThinItalic.ttf */,
+				26D2D30F284B7FBD00BD68A0 /* Saira_Expanded-ExtraLight.ttf */,
+				26D2D310284B7FBD00BD68A0 /* Saira_Expanded-Medium.ttf */,
+				26D2D311284B7FBD00BD68A0 /* Saira_Expanded-Black.ttf */,
+				26D2D312284B7FBD00BD68A0 /* Saira_Expanded-BoldItalic.ttf */,
+				26D2D313284B7FBD00BD68A0 /* Saira_Expanded-ExtraBold.ttf */,
+			);
+			path = Saira_Expanded;
+			sourceTree = "<group>";
+		};
+		26D2D314284B7FBD00BD68A0 /* Saira_Condensed */ = {
+			isa = PBXGroup;
+			children = (
+				26D2D315284B7FBD00BD68A0 /* Saira_Condensed-ExtraBoldItalic.ttf */,
+				26D2D316284B7FBD00BD68A0 /* Saira_Condensed-Black.ttf */,
+				26D2D317284B7FBD00BD68A0 /* Saira_Condensed-ExtraLightItalic.ttf */,
+				26D2D318284B7FBD00BD68A0 /* Saira_Condensed-ExtraLight.ttf */,
+				26D2D319284B7FBD00BD68A0 /* Saira_Condensed-ExtraBold.ttf */,
+				26D2D31A284B7FBD00BD68A0 /* Saira_Condensed-ThinItalic.ttf */,
+				26D2D31B284B7FBD00BD68A0 /* Saira_Condensed-BoldItalic.ttf */,
+				26D2D31C284B7FBD00BD68A0 /* Saira_Condensed-BlackItalic.ttf */,
+				26D2D31D284B7FBD00BD68A0 /* Saira_Condensed-LightItalic.ttf */,
+				26D2D31E284B7FBD00BD68A0 /* Saira_Condensed-SemiBold.ttf */,
+				26D2D31F284B7FBD00BD68A0 /* Saira_Condensed-Italic.ttf */,
+				26D2D320284B7FBD00BD68A0 /* Saira_Condensed-SemiBoldItalic.ttf */,
+				26D2D321284B7FBD00BD68A0 /* Saira_Condensed-Bold.ttf */,
+				26D2D322284B7FBD00BD68A0 /* Saira_Condensed-Thin.ttf */,
+				26D2D323284B7FBD00BD68A0 /* Saira_Condensed-Medium.ttf */,
+				26D2D324284B7FBD00BD68A0 /* Saira_Condensed-Regular.ttf */,
+				26D2D325284B7FBD00BD68A0 /* Saira_Condensed-MediumItalic.ttf */,
+				26D2D326284B7FBD00BD68A0 /* Saira_Condensed-Light.ttf */,
+			);
+			path = Saira_Condensed;
+			sourceTree = "<group>";
+		};
+		26D2D327284B7FBD00BD68A0 /* Saira_SemiExpanded */ = {
+			isa = PBXGroup;
+			children = (
+				26D2D328284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraBoldItalic.ttf */,
+				26D2D329284B7FBD00BD68A0 /* Saira_SemiExpanded-Medium.ttf */,
+				26D2D32A284B7FBD00BD68A0 /* Saira_SemiExpanded-SemiBold.ttf */,
+				26D2D32B284B7FBD00BD68A0 /* Saira_SemiExpanded-Black.ttf */,
+				26D2D32C284B7FBD00BD68A0 /* Saira_SemiExpanded-Regular.ttf */,
+				26D2D32D284B7FBD00BD68A0 /* Saira_SemiExpanded-LightItalic.ttf */,
+				26D2D32E284B7FBD00BD68A0 /* Saira_SemiExpanded-BlackItalic.ttf */,
+				26D2D32F284B7FBD00BD68A0 /* Saira_SemiExpanded-SemiBoldItalic.ttf */,
+				26D2D330284B7FBD00BD68A0 /* Saira_SemiExpanded-MediumItalic.ttf */,
+				26D2D331284B7FBD00BD68A0 /* Saira_SemiExpanded-Italic.ttf */,
+				26D2D332284B7FBD00BD68A0 /* Saira_SemiExpanded-ThinItalic.ttf */,
+				26D2D333284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraLight.ttf */,
+				26D2D334284B7FBD00BD68A0 /* Saira_SemiExpanded-Light.ttf */,
+				26D2D335284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraLightItalic.ttf */,
+				26D2D336284B7FBD00BD68A0 /* Saira_SemiExpanded-BoldItalic.ttf */,
+				26D2D337284B7FBD00BD68A0 /* Saira_SemiExpanded-Bold.ttf */,
+				26D2D338284B7FBD00BD68A0 /* Saira_SemiExpanded-Thin.ttf */,
+				26D2D339284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraBold.ttf */,
+			);
+			path = Saira_SemiExpanded;
+			sourceTree = "<group>";
+		};
+		26D2D33A284B7FBD00BD68A0 /* Saira_ExtraCondensed */ = {
+			isa = PBXGroup;
+			children = (
+				26D2D33B284B7FBD00BD68A0 /* Saira_ExtraCondensed-Black.ttf */,
+				26D2D33C284B7FBD00BD68A0 /* Saira_ExtraCondensed-Medium.ttf */,
+				26D2D33D284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraBold.ttf */,
+				26D2D33E284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraBoldItalic.ttf */,
+				26D2D33F284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraLightItalic.ttf */,
+				26D2D340284B7FBD00BD68A0 /* Saira_ExtraCondensed-LightItalic.ttf */,
+				26D2D341284B7FBD00BD68A0 /* Saira_ExtraCondensed-BoldItalic.ttf */,
+				26D2D342284B7FBD00BD68A0 /* Saira_ExtraCondensed-Regular.ttf */,
+				26D2D343284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraLight.ttf */,
+				26D2D344284B7FBD00BD68A0 /* Saira_ExtraCondensed-ThinItalic.ttf */,
+				26D2D345284B7FBD00BD68A0 /* Saira_ExtraCondensed-BlackItalic.ttf */,
+				26D2D346284B7FBD00BD68A0 /* Saira_ExtraCondensed-SemiBoldItalic.ttf */,
+				26D2D347284B7FBD00BD68A0 /* Saira_ExtraCondensed-Thin.ttf */,
+				26D2D348284B7FBD00BD68A0 /* Saira_ExtraCondensed-Italic.ttf */,
+				26D2D349284B7FBD00BD68A0 /* Saira_ExtraCondensed-Light.ttf */,
+				26D2D34A284B7FBD00BD68A0 /* Saira_ExtraCondensed-Bold.ttf */,
+				26D2D34B284B7FBD00BD68A0 /* Saira_ExtraCondensed-SemiBold.ttf */,
+				26D2D34C284B7FBD00BD68A0 /* Saira_ExtraCondensed-MediumItalic.ttf */,
+			);
+			path = Saira_ExtraCondensed;
+			sourceTree = "<group>";
+		};
+		26D2D41E284CECBB00BD68A0 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				26D2D41F284CECFF00BD68A0 /* WaterMillARView.swift */,
+				26D2D41C284CEC6000BD68A0 /* WaterMillNoWater.rcproject */,
+			);
+			name = AR;
 			sourceTree = "<group>";
 		};
 		26D4A4E22837EAD10022D49F /* ButtonViews */ = {
@@ -422,6 +928,20 @@
 		26D72FB1282E719000BC3A8F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				26D2D2B7284B7FBD00BD68A0 /* SourceSansPro-BlackItalic.ttf */,
+				26D2D2B8284B7FBD00BD68A0 /* SourceSansPro-SemiBoldItalic.ttf */,
+				26D2D2B9284B7FBD00BD68A0 /* SourceSansPro-Regular.ttf */,
+				26D2D2BA284B7FBD00BD68A0 /* SourceSansPro-Bold.ttf */,
+				26D2D2BB284B7FBD00BD68A0 /* SourceSansPro-LightItalic.ttf */,
+				26D2D2BC284B7FBD00BD68A0 /* SourceSansPro-Light.ttf */,
+				26D2D2BD284B7FBD00BD68A0 /* SourceSansPro-Black.ttf */,
+				26D2D2BF284B7FBD00BD68A0 /* SourceSansPro-ExtraLight.ttf */,
+				26D2D2C0284B7FBD00BD68A0 /* SourceSansPro-BoldItalic.ttf */,
+				26D2D2C1284B7FBD00BD68A0 /* SourceSansPro-SemiBold.ttf */,
+				26D2D2C2284B7FBD00BD68A0 /* SourceSansPro-ExtraLightItalic.ttf */,
+				26D2D2C3284B7FBD00BD68A0 /* SourceSansPro-Italic.ttf */,
+				26D2D2C4284B7FBD00BD68A0 /* Saira */,
+				26D2D2B6284B7FBD00BD68A0 /* Source_Sans_Pro */,
 				267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */,
 			);
 			name = Fonts;
@@ -585,27 +1105,169 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26D2D3C7284B7FBD00BD68A0 /* Saira_SemiExpanded-Bold.ttf in Resources */,
+				26D2D3A9284B7FBD00BD68A0 /* Saira_Condensed-ExtraLight.ttf in Resources */,
+				26D2D3C0284B7FBD00BD68A0 /* Saira_SemiExpanded-MediumItalic.ttf in Resources */,
+				26D2D3B1284B7FBD00BD68A0 /* Saira_Condensed-SemiBoldItalic.ttf in Resources */,
+				26D2D366284B7FBD00BD68A0 /* Saira_SemiCondensed-Thin.ttf in Resources */,
+				26D2D3BC284B7FBD00BD68A0 /* Saira_SemiExpanded-Regular.ttf in Resources */,
+				26D2D35D284B7FBD00BD68A0 /* Saira-VariableFont_wdth,wght.ttf in Resources */,
+				26D2D3A5284B7FBD00BD68A0 /* Saira_Expanded-ExtraBold.ttf in Resources */,
+				26D2D38C284B7FBD00BD68A0 /* Saira_UltraCondensed-BlackItalic.ttf in Resources */,
+				26D2D3D0284B7FBD00BD68A0 /* Saira_ExtraCondensed-BoldItalic.ttf in Resources */,
+				26D2D383284B7FBD00BD68A0 /* Saira_UltraCondensed-LightItalic.ttf in Resources */,
+				26D2D38A284B7FBD00BD68A0 /* Saira_UltraCondensed-Black.ttf in Resources */,
+				26D2D368284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraLightItalic.ttf in Resources */,
 				A0EA0C4A2848B46D00A2B524 /* LaunchScreen.storyboard in Resources */,
+				26D2D3B5284B7FBD00BD68A0 /* Saira_Condensed-Regular.ttf in Resources */,
+				26D2D3CF284B7FBD00BD68A0 /* Saira_ExtraCondensed-LightItalic.ttf in Resources */,
+				26D2D379284B7FBD00BD68A0 /* Saira-BoldItalic.ttf in Resources */,
+				26D2D3D9284B7FBD00BD68A0 /* Saira_ExtraCondensed-Bold.ttf in Resources */,
 				A0EA0C4B2848B46D00A2B524 /* Main.storyboard in Resources */,
+				26D2D357284B7FBD00BD68A0 /* SourceSansPro-ExtraLight.ttf in Resources */,
+				26D2D3D2284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraLight.ttf in Resources */,
+				26D2D3DC284B7FBD00BD68A0 /* OFL.txt in Resources */,
+				26D2D3A1284B7FBD00BD68A0 /* Saira_Expanded-ExtraLight.ttf in Resources */,
+				26D2D3AD284B7FBD00BD68A0 /* Saira_Condensed-BlackItalic.ttf in Resources */,
+				26D2D398284B7FBD00BD68A0 /* Saira_Expanded-Thin.ttf in Resources */,
+				26D2D380284B7FBD00BD68A0 /* Saira-Bold.ttf in Resources */,
+				26D2D394284B7FBD00BD68A0 /* Saira_Expanded-Italic.ttf in Resources */,
+				26D2D35C284B7FBD00BD68A0 /* Saira-Italic-VariableFont_wdth,wght.ttf in Resources */,
+				26D2D3AB284B7FBD00BD68A0 /* Saira_Condensed-ThinItalic.ttf in Resources */,
+				26D2D3A8284B7FBD00BD68A0 /* Saira_Condensed-ExtraLightItalic.ttf in Resources */,
+				26D2D3D1284B7FBD00BD68A0 /* Saira_ExtraCondensed-Regular.ttf in Resources */,
+				26D2D386284B7FBD00BD68A0 /* Saira_UltraCondensed-Bold.ttf in Resources */,
 				2669457D283255B700B25AF7 /* QuizQuestions.json in Resources */,
+				26D2D3A3284B7FBD00BD68A0 /* Saira_Expanded-Black.ttf in Resources */,
+				26D2D362284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraLight.ttf in Resources */,
+				26D2D3CE284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraLightItalic.ttf in Resources */,
+				26D2D396284B7FBD00BD68A0 /* Saira_Expanded-Light.ttf in Resources */,
+				26D2D3DA284B7FBD00BD68A0 /* Saira_ExtraCondensed-SemiBold.ttf in Resources */,
+				26D2D39B284B7FBD00BD68A0 /* Saira_Expanded-BlackItalic.ttf in Resources */,
+				26D2D3C4284B7FBD00BD68A0 /* Saira_SemiExpanded-Light.ttf in Resources */,
 				A04024DC2848C81F001B4D18 /* WackMain.storyboard in Resources */,
+				26D2D390284B7FBD00BD68A0 /* Saira_UltraCondensed-Light.ttf in Resources */,
+				26D2D3A6284B7FBD00BD68A0 /* Saira_Condensed-ExtraBoldItalic.ttf in Resources */,
+				26D2D37B284B7FBD00BD68A0 /* Saira-ExtraLightItalic.ttf in Resources */,
+				26D2D372284B7FBD00BD68A0 /* Saira-ExtraBoldItalic.ttf in Resources */,
+				26D2D382284B7FBD00BD68A0 /* Saira_UltraCondensed-SemiBoldItalic.ttf in Resources */,
+				26D2D3AC284B7FBD00BD68A0 /* Saira_Condensed-BoldItalic.ttf in Resources */,
+				26D2D37A284B7FBD00BD68A0 /* Saira-Black.ttf in Resources */,
+				26D2D38D284B7FBD00BD68A0 /* Saira_UltraCondensed-SemiBold.ttf in Resources */,
 				263B3E7028462FF9005919D7 /* PersonInformation.json in Resources */,
+				26D2D385284B7FBD00BD68A0 /* Saira_UltraCondensed-Medium.ttf in Resources */,
 				A04024E02848C81F001B4D18 /* WackActions.sks in Resources */,
+				26D2D387284B7FBD00BD68A0 /* Saira_UltraCondensed-ThinItalic.ttf in Resources */,
+				26D2D3C1284B7FBD00BD68A0 /* Saira_SemiExpanded-Italic.ttf in Resources */,
+				26D2D3A0284B7FBD00BD68A0 /* Saira_Expanded-ThinItalic.ttf in Resources */,
 				267A774C2829558200E0EB7A /* Preview Assets.xcassets in Resources */,
+				26D2D36F284B7FBD00BD68A0 /* Saira_SemiCondensed-SemiBoldItalic.ttf in Resources */,
 				A0EA0C4C2848B46D00A2B524 /* skyteflamme.mp3 in Resources */,
 				A04024E12848C81F001B4D18 /* WackGameScene.sks in Resources */,
+				26D2D3B3284B7FBD00BD68A0 /* Saira_Condensed-Thin.ttf in Resources */,
+				26D2D3B8284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraBoldItalic.ttf in Resources */,
+				26D2D374284B7FBD00BD68A0 /* Saira-SemiBoldItalic.ttf in Resources */,
+				26D2D3DB284B7FBD00BD68A0 /* Saira_ExtraCondensed-MediumItalic.ttf in Resources */,
 				A0EA0C512848B46D00A2B524 /* Actions.sks in Resources */,
+				26D2D3BD284B7FBD00BD68A0 /* Saira_SemiExpanded-LightItalic.ttf in Resources */,
+				26D2D350284B7FBD00BD68A0 /* SourceSansPro-SemiBoldItalic.ttf in Resources */,
+				26D2D36A284B7FBD00BD68A0 /* Saira_SemiCondensed-Bold.ttf in Resources */,
+				26D2D378284B7FBD00BD68A0 /* Saira-ThinItalic.ttf in Resources */,
+				26D2D37E284B7FBD00BD68A0 /* Saira-Thin.ttf in Resources */,
+				26D2D3C8284B7FBD00BD68A0 /* Saira_SemiExpanded-Thin.ttf in Resources */,
 				267A77492829558200E0EB7A /* Assets.xcassets in Resources */,
+				26D2D388284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraLight.ttf in Resources */,
+				26D2D36C284B7FBD00BD68A0 /* Saira_SemiCondensed-MediumItalic.ttf in Resources */,
+				26D2D36D284B7FBD00BD68A0 /* Saira_SemiCondensed-Black.ttf in Resources */,
+				26D2D39D284B7FBD00BD68A0 /* Saira_Expanded-Bold.ttf in Resources */,
+				26D2D36E284B7FBD00BD68A0 /* Saira_SemiCondensed-Medium.ttf in Resources */,
+				26D2D35A284B7FBD00BD68A0 /* SourceSansPro-ExtraLightItalic.ttf in Resources */,
 				844A56642848F66E009BF850 /* nail.png in Resources */,
+				26D2D3DD284B7FBD00BD68A0 /* README.txt in Resources */,
+				26D2D3B0284B7FBD00BD68A0 /* Saira_Condensed-Italic.ttf in Resources */,
+				26D2D3C6284B7FBD00BD68A0 /* Saira_SemiExpanded-BoldItalic.ttf in Resources */,
+				26D2D359284B7FBD00BD68A0 /* SourceSansPro-SemiBold.ttf in Resources */,
+				26D2D361284B7FBD00BD68A0 /* Saira_SemiCondensed-Light.ttf in Resources */,
+				26D2D373284B7FBD00BD68A0 /* Saira-Light.ttf in Resources */,
+				26D2D3C2284B7FBD00BD68A0 /* Saira_SemiExpanded-ThinItalic.ttf in Resources */,
+				26D2D3BA284B7FBD00BD68A0 /* Saira_SemiExpanded-SemiBold.ttf in Resources */,
+				26D2D367284B7FBD00BD68A0 /* Saira_SemiCondensed-LightItalic.ttf in Resources */,
+				26D2D371284B7FBD00BD68A0 /* Saira-MediumItalic.ttf in Resources */,
+				26D2D375284B7FBD00BD68A0 /* Saira-Regular.ttf in Resources */,
 				A04024E52848C81F001B4D18 /* whack.mp3 in Resources */,
 				84455740284A15B6009D2175 /* paper-brown.png in Resources */,
+				26D2D3B4284B7FBD00BD68A0 /* Saira_Condensed-Medium.ttf in Resources */,
+				26D2D399284B7FBD00BD68A0 /* Saira_Expanded-ExtraLightItalic.ttf in Resources */,
+				26D2D35B284B7FBD00BD68A0 /* SourceSansPro-Italic.ttf in Resources */,
+				26D2D35F284B7FBD00BD68A0 /* Saira_SemiCondensed-Regular.ttf in Resources */,
+				26D2D37F284B7FBD00BD68A0 /* Saira-LightItalic.ttf in Resources */,
+				26D2D37C284B7FBD00BD68A0 /* Saira-SemiBold.ttf in Resources */,
+				26D2D395284B7FBD00BD68A0 /* Saira_Expanded-SemiBoldItalic.ttf in Resources */,
+				26D2D351284B7FBD00BD68A0 /* SourceSansPro-Regular.ttf in Resources */,
+				26D2D369284B7FBD00BD68A0 /* Saira_SemiCondensed-SemiBold.ttf in Resources */,
 				844A565F2848EE64009BF850 /* nice-plank.png in Resources */,
+				26D2D376284B7FBD00BD68A0 /* Saira-BlackItalic.ttf in Resources */,
+				26D2D3D7284B7FBD00BD68A0 /* Saira_ExtraCondensed-Italic.ttf in Resources */,
+				26D2D3C3284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraLight.ttf in Resources */,
+				26D2D3D5284B7FBD00BD68A0 /* Saira_ExtraCondensed-SemiBoldItalic.ttf in Resources */,
+				26D2D3D8284B7FBD00BD68A0 /* Saira_ExtraCondensed-Light.ttf in Resources */,
+				26D2D3AF284B7FBD00BD68A0 /* Saira_Condensed-SemiBold.ttf in Resources */,
+				26D2D3A2284B7FBD00BD68A0 /* Saira_Expanded-Medium.ttf in Resources */,
+				26D2D358284B7FBD00BD68A0 /* SourceSansPro-BoldItalic.ttf in Resources */,
+				26D2D3D6284B7FBD00BD68A0 /* Saira_ExtraCondensed-Thin.ttf in Resources */,
+				26D2D3B9284B7FBD00BD68A0 /* Saira_SemiExpanded-Medium.ttf in Resources */,
 				A04024F12848D013001B4D18 /* backgroundmusic.mp3 in Resources */,
+				26D2D3BB284B7FBD00BD68A0 /* Saira_SemiExpanded-Black.ttf in Resources */,
+				26D2D34F284B7FBD00BD68A0 /* SourceSansPro-BlackItalic.ttf in Resources */,
+				26D2D39F284B7FBD00BD68A0 /* Saira_Expanded-SemiBold.ttf in Resources */,
 				A04024E32848C81F001B4D18 /* WackLaunchScreen.storyboard in Resources */,
+				26D2D39C284B7FBD00BD68A0 /* Saira_Expanded-ExtraBoldItalic.ttf in Resources */,
+				26D2D39A284B7FBD00BD68A0 /* Saira_Expanded-Regular.ttf in Resources */,
+				26D2D391284B7FBD00BD68A0 /* Saira_UltraCondensed-Italic.ttf in Resources */,
+				26D2D3B6284B7FBD00BD68A0 /* Saira_Condensed-MediumItalic.ttf in Resources */,
+				26D2D377284B7FBD00BD68A0 /* Saira-ExtraLight.ttf in Resources */,
+				26D2D3CA284B7FBD00BD68A0 /* Saira_ExtraCondensed-Black.ttf in Resources */,
+				26D2D38B284B7FBD00BD68A0 /* Saira_UltraCondensed-BoldItalic.ttf in Resources */,
+				26D2D355284B7FBD00BD68A0 /* SourceSansPro-Black.ttf in Resources */,
+				26D2D392284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraBoldItalic.ttf in Resources */,
+				26D2D38F284B7FBD00BD68A0 /* Saira_UltraCondensed-Thin.ttf in Resources */,
+				26D2D353284B7FBD00BD68A0 /* SourceSansPro-LightItalic.ttf in Resources */,
+				26D2D370284B7FBD00BD68A0 /* Saira-Medium.ttf in Resources */,
+				26D2D37D284B7FBD00BD68A0 /* Saira-Italic.ttf in Resources */,
+				26D2D3C9284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraBold.ttf in Resources */,
+				26D2D381284B7FBD00BD68A0 /* Saira-ExtraBold.ttf in Resources */,
+				26D2D364284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraBold.ttf in Resources */,
+				26D2D389284B7FBD00BD68A0 /* Saira_UltraCondensed-MediumItalic.ttf in Resources */,
+				26D2D360284B7FBD00BD68A0 /* Saira_SemiCondensed-BlackItalic.ttf in Resources */,
+				26D2D3AE284B7FBD00BD68A0 /* Saira_Condensed-LightItalic.ttf in Resources */,
 				26F0498C283B82A200FBA117 /* Paragraphs.json in Resources */,
+				26D2D39E284B7FBD00BD68A0 /* Saira_Expanded-MediumItalic.ttf in Resources */,
+				26D2D3D3284B7FBD00BD68A0 /* Saira_ExtraCondensed-ThinItalic.ttf in Resources */,
+				26D2D393284B7FBD00BD68A0 /* Saira_UltraCondensed-Regular.ttf in Resources */,
+				26D2D3CB284B7FBD00BD68A0 /* Saira_ExtraCondensed-Medium.ttf in Resources */,
+				26D2D35E284B7FBD00BD68A0 /* Saira_SemiCondensed-Italic.ttf in Resources */,
+				26D2D3B7284B7FBD00BD68A0 /* Saira_Condensed-Light.ttf in Resources */,
+				26D2D384284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraBold.ttf in Resources */,
+				26D2D365284B7FBD00BD68A0 /* Saira_SemiCondensed-BoldItalic.ttf in Resources */,
+				26D2D3B2284B7FBD00BD68A0 /* Saira_Condensed-Bold.ttf in Resources */,
+				26D2D352284B7FBD00BD68A0 /* SourceSansPro-Bold.ttf in Resources */,
+				26D2D3A7284B7FBD00BD68A0 /* Saira_Condensed-Black.ttf in Resources */,
+				26D2D354284B7FBD00BD68A0 /* SourceSansPro-Light.ttf in Resources */,
 				A0EA0C4E2848B46D00A2B524 /* GameScene.sks in Resources */,
+				26D2D38E284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraLightItalic.ttf in Resources */,
 				8445573E2849F355009D2175 /* net.png in Resources */,
+				26D2D36B284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraBoldItalic.ttf in Resources */,
+				26D2D3CD284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraBoldItalic.ttf in Resources */,
+				26D2D3CC284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraBold.ttf in Resources */,
+				26D2D3C5284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraLightItalic.ttf in Resources */,
 				A04024DD2848C81F001B4D18 /* whackBad.mp3 in Resources */,
+				26D2D3AA284B7FBD00BD68A0 /* Saira_Condensed-ExtraBold.ttf in Resources */,
+				26D2D397284B7FBD00BD68A0 /* Saira_Expanded-LightItalic.ttf in Resources */,
+				26D2D3A4284B7FBD00BD68A0 /* Saira_Expanded-BoldItalic.ttf in Resources */,
+				26D2D3BF284B7FBD00BD68A0 /* Saira_SemiExpanded-SemiBoldItalic.ttf in Resources */,
+				26D2D363284B7FBD00BD68A0 /* Saira_SemiCondensed-ThinItalic.ttf in Resources */,
+				26D2D3BE284B7FBD00BD68A0 /* Saira_SemiExpanded-BlackItalic.ttf in Resources */,
+				26D2D3D4284B7FBD00BD68A0 /* Saira_ExtraCondensed-BlackItalic.ttf in Resources */,
 				267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,6 +1308,7 @@
 				A04024E42848C81F001B4D18 /* WackGameOverScene.swift in Sources */,
 				0E62D2DD283BB07E0002148D /* ThemeCollection.swift in Sources */,
 				26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */,
+				26D2D420284CECFF00BD68A0 /* WaterMillARView.swift in Sources */,
 				0E62D2F7283BB4BC0002148D /* ThemeSelectionView.swift in Sources */,
 				26D72FA6282E5A7500BC3A8F /* MenuView.swift in Sources */,
 				267A77452829558100E0EB7A /* KulturstienApp.swift in Sources */,
@@ -662,6 +1325,7 @@
 				0E62D2ED283BB3090002148D /* GridLayout.swift in Sources */,
 				0E62D2F9283BB5070002148D /* EmojiMemoryGameView.swift in Sources */,
 				A04024E22848C81F001B4D18 /* WackGameViewController.swift in Sources */,
+				26D2D41D284CEC6000BD68A0 /* WaterMillNoWater.rcproject in Sources */,
 				844A56612848EE64009BF850 /* MillGameView.swift in Sources */,
 				0E62D2EB283BB2C40002148D /* UIColor+RGBA.swift in Sources */,
 				0E17588E2836832B00E8F9C4 /* InformationView.swift in Sources */,
@@ -869,6 +1533,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = kulturstien/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Kulturstien;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
@@ -900,6 +1565,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = kulturstien/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Kulturstien;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";

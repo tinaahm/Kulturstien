@@ -11,7 +11,7 @@ enum Game: String {
 	case wackANokk = "Slå nøkken"
 	case frightenHuldra = "Skrem Vekk Huldra"
 	case farmMemoryGame = "Bondens redskaper"
-	case fairytaleCreaturesMemoryGame = "Utenjordiske vesener"
+	case fairytaleCreaturesMemoryGame = "Underjordiske vesener"
 	case none = ""
 }
 
@@ -53,8 +53,7 @@ struct ButtonView: View {
 				.resizable()
 				.frame(width: width, height: height)
 				.padding(15)
-                .padding(.bottom, 100)
-
+                //.padding(.bottom, 100) ???
 		}
 		.position(x: posX, y: posY)
 	}
@@ -75,8 +74,8 @@ func getPageByGameSelection(game: Game) -> Page {
 	}
 }
 
-/*struct ButtonView_Previews: PreviewProvider {
+struct ButtonView_Previews: PreviewProvider {
 	static var previews: some View {
-		ButtonView(selectionType: .none, image: "", width: 0, height: 0, posX: 0, posY: 0).environmentObject(ViewIndex())
+		ButtonView(selectedStructure: .logBooms, selectedPerson: .none, image: "LogboomsButton", width: 71, height: 59, posX: 210, posY: 190).environmentObject(ViewIndex())
 	}
-}*/
+}

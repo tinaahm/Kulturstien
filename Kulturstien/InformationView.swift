@@ -22,55 +22,67 @@ struct InformationView: View {
     
     var body: some View {
 		
-        ScrollView {
-            VStack {
-				BackButtonView() //TODO: title inline with back button?
+		VStack {
+				BackButtonView()
+				/*Text(self.title)
+					.font(.title)*/
+			
+			ScrollView {
 				
-				VStack(alignment: .leading) {
-					Text(self.title)
-						.font(.title)
-				}
-				.padding(.bottom, 30)
+				Spacer()
+				Spacer()
+				Spacer()
 				
-				ForEach(0 ..< self.information.count) {
-					index in
+				VStack {
+				//TODO: title inline with back button?
 					
-					
-					Image(self.information[index].imageTitle)
-						.resizable()
-						.scaledToFit()
-						.aspectRatio(contentMode: .fill)
-						.frame(width: 350, height: 250)
-					
-						VStack(alignment: .leading) {
-							
-							/*HStack {
-								
-								RoundedRectangle(cornerRadius: 25, style: .continuous)
-									.fill(.white)*/
-
-								ZStack {
-									RoundedRectangle(cornerRadius: 25, style: .continuous)
-										.fill(Color("Grey"))
-										.shadow(radius: 2, x: 0, y: 3)
-
-									VStack {
-										Text(self.information[index].text) //FIXME: add multiline center?
-											.font(.body)
-											.foregroundColor(.black)
-									}
-									.padding(30)
-									.multilineTextAlignment(.center)
-								}
-								.frame(width: 350)
-								.padding(20)
-							//}
-						}
-						.padding()
-							Spacer()
+					VStack(alignment: .leading) {
+						Text(self.title)
+							.font(.title)
 					}
-				}
-        }
+					.padding(.bottom, 30)
+					
+					ForEach(0 ..< self.information.count) {
+						index in
+						
+						
+						Image(self.information[index].imageTitle)
+							.resizable()
+							.scaledToFit()
+							.aspectRatio(contentMode: .fill)
+							.frame(width: 350, height: 250)
+						
+							VStack(alignment: .leading) {
+								
+								/*HStack {
+									
+									RoundedRectangle(cornerRadius: 25, style: .continuous)
+										.fill(.white)*/
+
+									ZStack {
+										RoundedRectangle(cornerRadius: 25, style: .continuous)
+											.fill(Color("Grey"))
+											.shadow(radius: 2, x: 0, y: 3)
+
+										VStack {
+											Text(self.information[index].text) //FIXME: add multiline center?
+												.font(.body)
+												.foregroundColor(.black)
+										}
+										.padding(30)
+										.multilineTextAlignment(.center)
+									}
+									.frame(width: 350)
+									.padding(20)
+								//}
+							}
+							.padding()
+								Spacer()
+						}
+					}
+			}
+			.background(Color("BackgroundColour"))
+		}
 		.background(Color("BackgroundColour"))
         
     }

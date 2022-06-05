@@ -17,7 +17,7 @@ struct BackButtonView: View {
 			Button (action: {
 				let tempPage: Page = page.previousPage
 				
-				if page.pageIndex == .history {
+				if page.pageIndex == .history || page.pageIndex == .achievements {
 					
 					if page.lightMode {
 						page.previousPage = .main

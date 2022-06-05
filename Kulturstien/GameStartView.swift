@@ -22,13 +22,14 @@ struct GameStartView: View {
 					.padding()
 				VStack {
 					Text(gameSelection.rawValue)
-						.font(.title3)
-						.fontWeight(.heavy)
+						.font(Font.custom("SourceSansPro-SemiBold", size: 18))
+						//.fontWeight(.heavy)
 						.multilineTextAlignment(.center)
 						.foregroundColor(page.lightMode ? .black : .white)
 						.padding(.bottom, 5)
 					Text("Prøv å få alle like!")
-						.fontWeight(.heavy)
+						.font(Font.custom("SourceSansPro-SemiBold", size: 16))
+						//.fontWeight(.heavy)
 						.multilineTextAlignment(.center)
 						.foregroundColor(page.lightMode ? .black : .white)
 				}
@@ -40,7 +41,8 @@ struct GameStartView: View {
 					page.pageIndex = getPageByGameSelection(game: gameSelection)
 				}) {
 					Text("Start spill")
-						.fontWeight(.heavy)
+						.font(Font.custom("SourceSansPro-SemiBold", size: 16))
+						//.fontWeight(.heavy)
 						.frame(width: 150)
 						.padding()
 						.overlay(RoundedRectangle(cornerRadius: 15)

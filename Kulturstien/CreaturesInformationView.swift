@@ -21,9 +21,11 @@ struct CreaturesInformationView: View {
 	}
 	
     var body: some View {
+		
+		VStack {
+			BackButtonView(buttonColour: .white)
 		ScrollView {
 			VStack {
-				BackButtonView(buttonColour: .white)
 				Image(creature.imageTitle)
 					.resizable()
 					.scaledToFit()
@@ -51,6 +53,7 @@ struct CreaturesInformationView: View {
 			}
 		}
 		.foregroundColor(.white)
+		}
 		.background(Color("CreatureInformationBackground"))
     }
 }

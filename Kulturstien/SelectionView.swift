@@ -93,8 +93,9 @@ struct SelectionView: View {
 			
 			if self.selectionType == .mill {
 				Button (action: {
-					//page.previousPage = page.pageIndex
-					self.showARButtonInformationText = true
+					page.previousPage = page.pageIndex
+					page.pageIndex = .ar
+					//self.showARButtonInformationText = true
 				}) {
 					Text("Se i AR")
                         .foregroundColor(.black)
@@ -108,14 +109,14 @@ struct SelectionView: View {
 						)
 				}
 			}
-				
+				/*
 				if self.showARButtonInformationText {
-					Text("Hei! Du må være på stedet for å kunne se kvernehuset i AR, se i kartet.")
+					Text("Hei! Du må være på stedet for å kunne se kvernehuset i AR.")
 						.foregroundColor(.red)
 						.font(.callout)
 						.frame(width: 200)
 						.padding()
-				}
+				}*/
 				
 			}
 			Spacer()

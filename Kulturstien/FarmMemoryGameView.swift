@@ -9,12 +9,17 @@ import SwiftUI
 
 struct FarmMemoryGameView: View {
     var body: some View {
-		VStack {
+		VStack (alignment: .center) {
 			BackButtonView()
-			Text("Huske spill")
+			/*Text("Huske spill")
+				.font(Font.custom("SourceSansPro-SemiBold", size: 18))
 			Text("Bondens redskaper")
+				.font(Font.custom("SourceSansPro-Regular", size: 16))*/
 			Image("WaterMillIcon")
+				.resizable()
+				.frame(width: 69*2, height: 55*2, alignment: .center)
 			DestinationPageView(theme: DefaultThemes.theme0)
+				.edgesIgnoringSafeArea(.bottom)
 		}
 		.background(Color("BackgroundColour"))
     }
@@ -22,6 +27,6 @@ struct FarmMemoryGameView: View {
 
 struct FarmMemoryGameView_Previews: PreviewProvider {
     static var previews: some View {
-        FarmMemoryGameView()
+        FarmMemoryGameView().environmentObject(ViewIndex())
     }
 }

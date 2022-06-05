@@ -31,6 +31,7 @@ struct EmojiMemoryGameView: View {
     var body: some View {
         return VStack{
 			Text("Poeng: \(viewModel.getScore())")
+				.font(Font.custom("SourceSansPro-SemiBold", size: 18))
             Grid(items: viewModel.cards) { card in
                 CardView(card: card).onTapGesture {
                     withAnimation(.easeInOut(duration: 0.3)) {
@@ -38,14 +39,15 @@ struct EmojiMemoryGameView: View {
                         }
                     }
                     .padding(5)
+					//.shadow(color: (page.lightMode ? .gray : .white), radius: 2, x: 2, y: 3)
             }
-                .padding()
-            .foregroundColor(Color(viewModel.theme.accentColor))
-        .accentColor(Color(viewModel.theme.accentColor))
+			.foregroundColor(Color(viewModel.theme.accentColor))
+			.accentColor(Color(viewModel.theme.accentColor))
 			if viewModel.gameDone() {
 				Image(endGame(handler: page, gameTheme: viewModel.theme.name, score: viewModel.getScore()))
 			}
     }
+		.padding()
 }
 
 struct CardView: View {
@@ -95,7 +97,7 @@ struct CardView: View {
 					.animation(card.isMatched ? Animation.linear(duration: 1).repeatForever(autoreverses: false) : .default)
 
             }
-            .cardify(isFaceUp: card.isFaceUp)
+			.cardify(isFaceUp: card.isFaceUp, shadowColour: page.lightMode ? .gray : .white)
             .transition(.scale)
 		}
     }
@@ -113,7 +115,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let game = EmojiMemoryGameViewModel(theme: DefaultThemes.theme1)
         game.choose(card: game.cards[0])
-        return EmojiMemoryGameView(viewModel: game)
+        return EmojiMemoryGameView(viewModel: game).environmentObject(ViewIndex())
     }
 }
 

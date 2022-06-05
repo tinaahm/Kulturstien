@@ -4,14 +4,15 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Macondo-Regular.ttf</string>
+		<string>SourceSansPro-SemiBold.ttf</string>
+		<string>SourceSansPro-Regular.ttf</string>
 	</array>
 	<key>UILaunchScreen</key>
 	<dict>
-		<key>UIImageName</key>
-		<string>Rælingen2</string>
 		<key>UIColorName</key>
 		<string>LaunchScreenBackground</string>
+		<key>UIImageName</key>
+		<string>Rælingen2</string>
 		<key>UIImageRespectsSafeAreaInsets</key>
 		<true/>
 	</dict>

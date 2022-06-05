@@ -9,9 +9,10 @@ import SwiftUI
 
 struct HowToView: View {
     var body: some View {
+		VStack {
+			BackButtonView()
 		ScrollView {
 			VStack {
-				BackButtonView()
 				Text("Slik bruker du appen")
 					.font(.title)
 				
@@ -140,6 +141,8 @@ struct HowToView: View {
                 Spacer()
 			}
 		}
+		}
+		
 		.background(Color("BackgroundColour"))
     }
 }
