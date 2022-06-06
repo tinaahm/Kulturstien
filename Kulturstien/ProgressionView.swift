@@ -22,69 +22,57 @@ struct ProgressionView: View {
             
             BackButtonView()
             
-            ScrollView {
             
             Text("Quiz progresjon")
                 .font(.system(size: 25))
-            
-            ZStack {
-                
-                RoundedRectangle(cornerRadius: 25, style: .continuous)
-                    .fill(Color("Grey"))
-                    .shadow(radius: 2, x: 0, y: 3)
 
-                VStack (alignment: .leading){
-                    
-                    ForEach(0 ..< 4) { outerIndex in
-                    HStack (){
-                        Text(page.quizesArray[outerIndex].type.rawValue.capitalized)
-                                .padding()
-                     
-                            Spacer()
-                        ForEach(0 ..< 3) { innerIndex in
-                            VStack (alignment: .trailing) {
-                                Image(page.quizesArray[outerIndex].questionAnswers[innerIndex] ? greenImageArray[innerIndex] : greyImageArray[innerIndex])
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 20, height: 20)
-                            .padding(12)
-                                
-                            }
-                            
+            
+            VStack(alignment: .leading) {
+            
+				ForEach(0 ..< 4) { outerIndex in
+                HStack (){
+					Text(page.quizesArray[outerIndex].type.rawValue.capitalized)
+                            .padding()
+                 
+                        Spacer()
+                    ForEach(0 ..< 3) { innerIndex in
+                        VStack (alignment: .trailing) {
+							Image(page.quizesArray[outerIndex].questionAnswers[innerIndex] ? greenImageArray[innerIndex] : greyImageArray[innerIndex])
+                        .resizable()
+                        .scaledToFill()
+						.frame(width: 27, height: 27)
+						.padding(17)
                             
                         }
                         
-                        if page.quizesArray[outerIndex].informationPageRead {
-                            Image(systemName: "arrow.right")
-                                .resizable()
-                                .frame(width: 25, height: 20)
-                                .padding(.leading, 5)
-                                .onTapGesture {
-                                    page.previousPage = page.pageIndex
-                                    quizSelection = page.quizesArray[outerIndex].type
-                                    page.pageIndex = .quiz
-                                }
-                        } else {
-                            Image(systemName: "lock.fill")
-                                .resizable()
-                                .frame(width: 20, height: 27)
-                                .padding(.leading, 5)
-                                
-                        }
                         
                     }
-                        .padding(.trailing, 13)
-                    }
-                    
-                    
+					
+					if page.quizesArray[outerIndex].informationPageRead {
+						Image(systemName: "arrow.right")
+							.resizable()
+							.frame(width: 25, height: 20)
+							.padding(.leading, 5)
+							.onTapGesture {
+								page.previousPage = page.pageIndex
+								quizSelection = page.quizesArray[outerIndex].type
+								page.pageIndex = .quiz
+							}
+					} else {
+						Image(systemName: "lock.fill")
+							.resizable()
+							.frame(width: 20, height: 27)
+							.padding(.leading, 5)
+					}
+					
                 }
-                .padding(5)
+                    .padding(.trailing, 13)
+                }
+            
             }
-            .frame(width: 345)
+            
+            
             .padding()
-
-            
-            
             
 			VStack(alignment: .center) {
 				Text("Poeng")
@@ -130,10 +118,8 @@ struct ProgressionView: View {
             
             Spacer()
         }
-		
+		.background(Color("BackgroundColour"))
         
-    }
-        .background(Color("BackgroundColour"))
     }
 }
 
