@@ -77,8 +77,8 @@ class WhackSlot: SKNode {
     func hit() {
         isHit = true
         
-        let delay = SKAction.wait(forDuration: 0.25)
-        let hide = SKAction.moveBy(x: 0, y:-80, duration:0.5)
+        let delay = SKAction.wait(forDuration: 0.5)
+        let hide = SKAction.moveBy(x: 0, y:-80, duration:0.25)
         let notVisible = SKAction.run { [unowned self] in self.isVisible = false }
         charNode.run(SKAction.sequence([delay, hide, notVisible]))
     }

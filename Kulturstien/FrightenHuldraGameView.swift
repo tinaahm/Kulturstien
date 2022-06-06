@@ -101,7 +101,7 @@ struct HuldraGameOverView: View {
 		Color("CreatureInformationBackground")
 			VStack {
 				Text("Poeng: " + String(score))
-				
+					.foregroundColor(page.lightMode ? .black : .white)
 				Button(action: {
 					if gameSelection == .frightenHuldra {
 						if page.user.frightenHuldraGameScore < score {
@@ -116,12 +116,12 @@ struct HuldraGameOverView: View {
 				}) {
 					Text("Spill på nytt")
 						.frame(width: DeviceSize.width * 0.5)
+						.foregroundColor(page.lightMode ? .black : .white)
 						.padding(20)
 						.background(
 							RoundedRectangle(cornerRadius: 15).fill(page.lightMode ? Color(red: 0.984, green: 0.984, blue: 0.984) : Color("CreatureInformationTextboxBackground"))
 								.shadow(color: .gray.opacity(0.5), radius: 4, x: 0, y: 4))
-						.foregroundColor(.black)
-				}
+				}.padding(.bottom)
 				
 				Button(action: {
 					if gameSelection == .frightenHuldra {
@@ -142,6 +142,7 @@ struct HuldraGameOverView: View {
 					Text("Gå tilbake til kartet")
 						.frame(width: DeviceSize.width * 0.5)
 						.padding(20)
+						.foregroundColor(page.lightMode ? .black : .white)
 						/*.overlay(RoundedRectangle(cornerRadius: 15)
 							.stroke(Color.gray, lineWidth: 1)
 						)
@@ -151,8 +152,8 @@ struct HuldraGameOverView: View {
 						.background(
 							RoundedRectangle(cornerRadius: 15).fill(page.lightMode ? Color(red: 0.984, green: 0.984, blue: 0.984) : Color("CreatureInformationTextboxBackground"))
 								.shadow(color: .gray.opacity(0.5), radius: 4, x: 0, y: 4))
-						.foregroundColor(.black)
 				}
+				.padding(.bottom)
 			}
 		}
 		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))

@@ -85,9 +85,9 @@ class GameScene: SKScene, ObservableObject {
             ])
         ))
     
-    let backgroundMusic = SKAudioNode(fileNamed: "backgroundmusic")
-    backgroundMusic.autoplayLooped = true
-    addChild(backgroundMusic)
+    //let backgroundMusic = SKAudioNode(fileNamed: "backgroundmusic")
+    //backgroundMusic.autoplayLooped = true
+    //addChild(backgroundMusic)
       
       gameScore = SKLabelNode(fontNamed: "Chalkduster")
       gameScore.text = "Poeng: 0"

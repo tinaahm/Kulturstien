@@ -24,12 +24,12 @@ struct GameEndView: View {
 			Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground")
 			VStack {
 				Text("Poeng: " + String(score))
-				
+					.foregroundColor(page.lightMode ? .black : .white)
 				Button(action: {
 					page.pageIndex = getPageByGameSelection(game: gameSelection)
 				}) {
 					Text("Spill på nytt")
-						.foregroundColor(.black)
+						.foregroundColor(page.lightMode ? .black : .white)
 						.frame(width: DeviceSize.width * 0.5)
 						.padding(20)
 						.background(
@@ -46,7 +46,7 @@ struct GameEndView: View {
 					}
 				}) {
 					Text("Gå tilbake til kartet")
-						.foregroundColor(.black)
+						.foregroundColor(page.lightMode ? .black : .white)
 						.frame(width: DeviceSize.width * 0.5)
 						.padding(20)
 						.background(

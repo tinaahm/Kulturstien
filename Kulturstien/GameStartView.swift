@@ -24,37 +24,29 @@ struct GameStartView: View {
 				VStack {
 					Text(gameSelection.rawValue)
 						.font(Font.custom("SourceSansPro-SemiBold", size: 18))
-						//.fontWeight(.heavy)
 						.multilineTextAlignment(.center)
 						.foregroundColor(page.lightMode ? .black : .white)
 						.padding(.bottom, 5)
 					Text("Prøv å få alle like!")
-						.font(Font.custom("SourceSansPro-SemiBold", size: 16))
-						//.fontWeight(.heavy)
-						.multilineTextAlignment(.center)
 						.foregroundColor(page.lightMode ? .black : .white)
+						.font(Font.custom("SourceSansPro-SemiBold", size: 16))
+						.multilineTextAlignment(.center)
 				}
 				.padding([.top, .leading, .trailing])
 				.padding(.bottom, 30)
 				
 				Button(action: {
-					
-					//if gameSelection != .frightenHuldra {
-						page.previousPage = page.pageIndex
-						page.pageIndex = getPageByGameSelection(game: gameSelection)
-					/*} else {
-						self.show.toggle()
-					}*/
+					page.previousPage = page.pageIndex
+					page.pageIndex = getPageByGameSelection(game: gameSelection)
 				}) {
 					Text("Start spill")
 						.font(Font.custom("SourceSansPro-SemiBold", size: 16))
-						.foregroundColor(.black)
+						.foregroundColor(page.lightMode ? .black : .white)
 						.frame(width: DeviceSize.width * 0.5)
 						.padding(20)
 						.background(
 							RoundedRectangle(cornerRadius: 15).fill(page.lightMode ? Color(red: 0.984, green: 0.984, blue: 0.984) : Color("CreatureInformationTextboxBackground"))
 								.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
-						.foregroundColor(page.lightMode ? .black : .white)
 				}
 				.padding()
 				Spacer()
