@@ -24,9 +24,6 @@ class WackGameScene: SKScene, ObservableObject {
     
     override func didMove(to view: SKView) {
       let background = SKSpriteNode(imageNamed: "13 Pro - 163")
-        //background.position = CGPoint(x: 0, y: 0)
-        //background.yScale = 0.80
-        //background.xScale = 0.80
         background.blendMode = .replace
         background.zPosition = -1
         addChild(background)
@@ -34,8 +31,6 @@ class WackGameScene: SKScene, ObservableObject {
         gameScore = SKLabelNode(fontNamed: "Chalkduster")
         gameScore.text = "Score: 0"
 		gameScore.position = CGPoint(x: (size.width / 2), y: 750)
-        //gameScore.horizontalAlignmentMode = .center
-		//gameScore.verticalAlignmentMode = .center
         gameScore.fontSize = 30
         addChild(gameScore)
 		
@@ -58,10 +53,6 @@ class WackGameScene: SKScene, ObservableObject {
 		for i in 0 ..< 3 {
 			createSlot(at: CGPoint(x: ((nodeWidth * 1) + (nodeWidth * CGFloat(i))), y: halfOfScreenSize - (rowHeight * 4)))
 		}
-        /*for i in 0 ..< 4 { createSlot(at: CGPoint(x: -250 + (i * 170), y: halfOfScreenSize * (rowHeight * 0))) }
-        for i in 0 ..< 3 { createSlot(at: CGPoint(x: -170 + (i * 170), y: -280)) }
-        for i in 0 ..< 4 { createSlot(at: CGPoint(x: -250 + (i * 170), y: -170)) }
-        for i in 0 ..< 3 { createSlot(at: CGPoint(x: -170 + (i * 170), y: -60)) }*/
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
             self?.createEnemy()
@@ -90,9 +81,6 @@ class WackGameScene: SKScene, ObservableObject {
                     if !whackSlot.isVisible { continue }
                     if whackSlot.isHit { continue }
                     
-                    //whackSlot.charNode.xScale = 0.90
-                    //whackSlot.charNode.yScale = 0.90
-                    
                     whackSlot.hit()
                     score += 1
                     
@@ -118,19 +106,6 @@ class WackGameScene: SKScene, ObservableObject {
             }
             
             numRounds = 0
-            /*let scene = GameScene(size: self.size)
-            scene.scaleMode = .aspectFill
-            let animation = SKTransition.fade(withDuration: 1.0)
-            self.view?.presentScene(scene, transition: animation)
-            self.removeAllChildren()
-            self.removeAllActions()
-            self.scene?.removeFromParent()
-            */
-            
-            /*let reveal = SKTransition.flipVertical(withDuration: 1.0)
-            let gameOverScene = WackGameOverScene(size: size)
-            view?.presentScene(gameOverScene, transition: reveal)*/
-			
 			self.gameOver = true
         }
         

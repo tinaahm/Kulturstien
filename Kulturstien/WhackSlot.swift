@@ -19,8 +19,6 @@ class WhackSlot: SKNode {
         self.position = position
         
         let sprite = SKSpriteNode(imageNamed: "Group 69")
-        //sprite.xScale = 1.15
-        //sprite.yScale = 1.15
         addChild(sprite)
         
         let cropNode = SKCropNode()
@@ -60,6 +58,8 @@ class WhackSlot: SKNode {
             charNode.name = "charFriend"
         } else {
             charNode.texture = SKTexture(imageNamed: "nkken2")
+            charNode.xScale = 0.8
+            charNode.yScale = 0.8
             charNode.name = "charEnemy"
         }
         
@@ -78,12 +78,11 @@ class WhackSlot: SKNode {
     func hit() {
         isHit = true
         
-        charNode.xScale = 0.67
-        charNode.yScale = 0.67
+        charNode.xScale = 0.57
+        charNode.yScale = 0.57
         let delay = SKAction.wait(forDuration: 0.05)
         let hide = SKAction.moveBy(x: 0, y:-80, duration:0.1)
         let notVisible = SKAction.run { [unowned self] in self.isVisible = false }
         charNode.run(SKAction.sequence([delay, hide, notVisible]))
     }
-    
 }

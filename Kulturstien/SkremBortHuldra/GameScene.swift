@@ -49,7 +49,6 @@ extension CGPoint {
 
 class GameScene: SKScene, ObservableObject {
 	
-	//@EnvironmentObject var page : ViewIndex
 	@Published var gameOverHuldra: Bool = false
     
 	@Published var gameScore: SKLabelNode!
@@ -62,7 +61,6 @@ class GameScene: SKScene, ObservableObject {
 
     
   let player = SKSpriteNode(imageNamed: "TrondPlayer")
-    
     
   override func didMove(to view: SKView) {
     // 2
@@ -88,15 +86,10 @@ class GameScene: SKScene, ObservableObject {
             SKAction.wait(forDuration: 0.430)
             ])
         ))
-    
-    //let backgroundMusic = SKAudioNode(fileNamed: "backgroundmusic")
-    //backgroundMusic.autoplayLooped = true
-    //addChild(backgroundMusic)
       
       gameScore = SKLabelNode(fontNamed: "Chalkduster")
       gameScore.text = "Poeng: 0"
       gameScore.position = CGPoint(x: (size.width / 2), y: 800)
-     // gameScore.horizontalAlignmentMode = .left
       gameScore.fontSize = 25
       addChild(gameScore)
     
@@ -140,16 +133,8 @@ class GameScene: SKScene, ObservableObject {
                                    duration: TimeInterval(actualDuration))
     let actionMoveDone = SKAction.removeFromParent()
     
-    let loseAction = SKAction.run() { //[weak self] in
-      //guard let `self` = self else { return }
-		//let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-		//let gameOverScene = GameOverScene(size: self.size)
-		//self.view?.presentScene(gameOverScene, transition: reveal)
-		//self.page.frigtenHuldraGameOver = true
+    let loseAction = SKAction.run() {
 		self.gameOverHuldra = true
-		/*self.removeAllActions()
-		self.removeAllChildren()
-		self.view?.presentScene(nil)*/
     }
     
     monster.run(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
@@ -214,12 +199,6 @@ class GameScene: SKScene, ObservableObject {
     
     monstersDestroyed += 1
     if monstersDestroyed > 99999 {
-	  //let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-	  //let gameOverScene = GameOverScene(size: self.size)
-	 // self.view?.presentScene(gameOverScene, transition: reveal)
-		//self.page.frigtenHuldraGameOver = true
-		
-		//self.view?.presentScene(nil)
 		self.gameOverHuldra = true
     }
   }
