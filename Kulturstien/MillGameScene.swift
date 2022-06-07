@@ -218,5 +218,10 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
             player = contact.bodyB
             other = contact.bodyA
         }
+        
+        if (other.node?.physicsBody?.categoryBitMask == 0b10)
+        {
+            print("Found part!")
+        }
     }
 }
