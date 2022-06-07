@@ -17,7 +17,9 @@ struct Tag {
 }
 
 class MillGameScene: SKScene, SKPhysicsContactDelegate {
-
+    
+    var nodes: [SKSpriteNode] = []
+    
     let nailTexture = SKTexture(imageNamed: "nail")
     let plankTexture = SKTexture(imageNamed: "nice-plank")
     let paperTexture = SKTexture(imageNamed: "paper-brown")
@@ -36,15 +38,37 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
         
         makePlayer()
     
+        // Generate assets
         Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(generateRandomAsset), userInfo: nil, repeats: true)
         
+        // Clean-up
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(collectTrash), userInfo: nil, repeats: true)
     }
-        
+    
+    
+    /// Scheduled clean-up of generated objects (SKSpriteNodes)
+    @objc func collectTrash() {
+        for node in nodes {
+            if (node.position.y < self.size.height / 8) {
+                node.removeFromParent()
+            }
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+            let coords = touch.location(in: self)
+            
+            playerSprite.run(SKAction.moveTo(x: coords.x, duration: 0.3))
+        }
+
+    }
+    
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let coords = touch.location(in: self)
             
-            playerSprite.position.x = coords.x //- 185
+            playerSprite.run(SKAction.moveTo(x: coords.x, duration: 0.24))
         }
         
         print("player x-pos: \(playerSprite.position.x)")
@@ -110,6 +134,9 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
         asset.physicsBody?.isDynamic = true
         
         self.addChild(asset)
+        
+        // Keep track of nodes, rm automatically
+        nodes.append(asset)
     }
     
     /*
@@ -147,8 +174,8 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         print("CONTACT")
         
-        var first = SKPhysicsBody()
-        var second = SKPhysicsBody()
+        //var first = SKPhysicsBody()
+        //var second = SKPhysicsBody()
         
         // if (contact.bodyA.node?.name == "player")
     }
