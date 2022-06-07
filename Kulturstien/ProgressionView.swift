@@ -34,6 +34,7 @@ struct ProgressionView: View {
             ScrollView {
             
             Text("Quiz progresjon")
+				.foregroundColor(page.lightMode ? .black : .white)
                 .font(.system(size: 25))
                 .padding(.top, 40)
             
@@ -98,6 +99,7 @@ struct ProgressionView: View {
             
 			VStack(alignment: .center) {
 				Text("Poeng")
+					.foregroundColor(page.lightMode ? .black : .white)
 					.font(.system(size: 25))
 					.padding(10)
                 
@@ -116,11 +118,11 @@ struct ProgressionView: View {
                             .padding(5)
                         VStack {
                             HStack () {
-                                Text("Bondens Redskaper - " + String(page.farmMemoryGameScore) + " poeng")
+                                Text("Bondens Redskaper: " + String(page.farmMemoryGameScore) + " poeng")
                                     .padding(2)
                             }
                             HStack () {
-                                Text("Underjordiske Vesen - " + String(page.fairtytaleMemoryGameScore) + " poeng")
+                                Text("Underjordiske Vesen: " + String(page.fairtytaleMemoryGameScore) + " poeng")
                                     .padding(2)
                             }
                         }
@@ -214,7 +216,7 @@ struct ProgressionView: View {
             }
         
     }
-        .background(Color("BackgroundColour"))
+		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
     }
 }
 

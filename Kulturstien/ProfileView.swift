@@ -22,6 +22,7 @@ struct ProfileView: View {
 			.padding(5)
 			
 			Text("Hei " + page.userName.capitalized + "!")
+				.foregroundColor(page.lightMode ? .black : .white)
 				.padding([.leading, .top, .trailing])
 				.padding(.bottom, 60)
             
@@ -94,7 +95,7 @@ struct ProfileView: View {
 			
 			Spacer()
 		}
-		.background(Color("BackgroundColour"))
+		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
     }
 }
 

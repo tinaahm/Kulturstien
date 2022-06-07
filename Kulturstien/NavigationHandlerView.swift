@@ -29,8 +29,6 @@ enum Colour: String, CaseIterable, Identifiable {
 }
 
 struct User {
-	//@AppStorage(UserDataKeys.userName.rawValue) var userName: String = ""
-	//@AppStorage(UserDataKeys.selectedColour.rawValue) var selectedColour: Colour = .none
 	var wackANokkGameScore: Int = 0
 	var frightenHuldraGameScore: Int = 0
 	var farmMemoryGameScore: Int = 0

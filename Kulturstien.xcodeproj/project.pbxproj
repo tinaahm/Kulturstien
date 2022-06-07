@@ -192,7 +192,6 @@
 		26D2D41D284CEC6000BD68A0 /* WaterMillNoWater.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 26D2D41C284CEC6000BD68A0 /* WaterMillNoWater.rcproject */; };
 		26D2D420284CECFF00BD68A0 /* WaterMillARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D2D41F284CECFF00BD68A0 /* WaterMillARView.swift */; };
 		26D2D422284DFCF900BD68A0 /* AppTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D2D421284DFCF900BD68A0 /* AppTutorialView.swift */; };
-		26D2D424284DFF7C00BD68A0 /* PageInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D423284DFF7C00BD68A0 /* PageInformation.json */; };
 		26D3DF7F2848F7FC009EECE3 /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */; };
 		26D3DF81284A06E7009EECE3 /* HowToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3DF80284A06E7009EECE3 /* HowToView.swift */; };
 		26D3DF83284A2875009EECE3 /* GameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3DF82284A2875009EECE3 /* GameStartView.swift */; };
@@ -439,7 +438,6 @@
 		26D2D41C284CEC6000BD68A0 /* WaterMillNoWater.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = WaterMillNoWater.rcproject; sourceTree = "<group>"; };
 		26D2D41F284CECFF00BD68A0 /* WaterMillARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterMillARView.swift; sourceTree = "<group>"; };
 		26D2D421284DFCF900BD68A0 /* AppTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTutorialView.swift; sourceTree = "<group>"; };
-		26D2D423284DFF7C00BD68A0 /* PageInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PageInformation.json; sourceTree = "<group>"; };
 		26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndView.swift; sourceTree = "<group>"; };
 		26D3DF80284A06E7009EECE3 /* HowToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToView.swift; sourceTree = "<group>"; };
 		26D3DF82284A2875009EECE3 /* GameStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartView.swift; sourceTree = "<group>"; };
@@ -889,7 +887,6 @@
 			children = (
 				263B3E6F28462FF9005919D7 /* PersonInformation.json */,
 				26F93BC42837AF98005F5F9E /* LoadJSON.swift */,
-				26D2D423284DFF7C00BD68A0 /* PageInformation.json */,
 				2669457C283255B700B25AF7 /* QuizQuestions.json */,
 				26F0498B283B82A200FBA117 /* Paragraphs.json */,
 				26F0498D283B830B00FBA117 /* Paragraph.swift */,
@@ -1235,7 +1232,6 @@
 				26D2D370284B7FBD00BD68A0 /* Saira-Medium.ttf in Resources */,
 				26D2D37D284B7FBD00BD68A0 /* Saira-Italic.ttf in Resources */,
 				26D2D3C9284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraBold.ttf in Resources */,
-				26D2D424284DFF7C00BD68A0 /* PageInformation.json in Resources */,
 				26D2D381284B7FBD00BD68A0 /* Saira-ExtraBold.ttf in Resources */,
 				26D2D364284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraBold.ttf in Resources */,
 				26D2D389284B7FBD00BD68A0 /* Saira_UltraCondensed-MediumItalic.ttf in Resources */,

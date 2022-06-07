@@ -23,10 +23,14 @@ struct ContactView: View {
         
         Text("Kontakt Rælingen Kommune")
             .font(.title2)
+			.foregroundColor(page.lightMode ? .black : .white)
             
         Text("Telefon: 63 83 50 00")
+				.foregroundColor(page.lightMode ? .black : .white)
         Text("Telefax: 63 83 52 33")
+				.foregroundColor(page.lightMode ? .black : .white)
         Text("postmottak@ralingen.kommune.no")
+				.foregroundColor(page.lightMode ? .black : .white)
             if self.sentFeedBAck {
                 Text("Din tilbakemelding er sendt")
                     .padding()
@@ -80,7 +84,7 @@ struct ContactView: View {
 			Spacer()
     }
 }
-		.background(Color("BackgroundColour"))
+		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
 }
 }
 struct ContactView_Previews: PreviewProvider {

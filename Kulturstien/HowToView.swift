@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct HowToView: View {
+	
+	@EnvironmentObject var page: ViewIndex
+	
     var body: some View {
 		VStack {
 			BackButtonView()
 		ScrollView {
 			VStack {
 				Text("Slik bruker du appen")
+					.foregroundColor(page.lightMode ? .black : .white)
 					.font(.title)
 				
 				VStack {
 					
                     Text("Dagtid")
+						.foregroundColor(page.lightMode ? .black : .white)
                         .font(.subheadline)
                         .padding(.top, 20)
                     ZStack {
@@ -81,6 +86,7 @@ struct HowToView: View {
                     .padding(20)
                     
                     Text("Kveldstid")
+						.foregroundColor(page.lightMode ? .black : .white)
                         .font(.subheadline)
                         .padding(.top, 20)
                     
@@ -143,12 +149,12 @@ struct HowToView: View {
 		}
 		}
 		
-		.background(Color("BackgroundColour"))
+		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
     }
 }
 
 struct HowToView_Previews: PreviewProvider {
     static var previews: some View {
-        HowToView()
+        HowToView().environmentObject(ViewIndex())
     }
 }

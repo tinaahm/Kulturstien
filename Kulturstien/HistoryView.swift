@@ -22,6 +22,7 @@ struct HistoryView: View {
 			.frame(width: DeviceSize.width * 0.4, height: DeviceSize.width * 0.2)
         
         Text("Byåas Historie")
+				.foregroundColor(page.lightMode ? .black : .white)
             .font(.system(size: 25))
             
             HStack (alignment: .top) {
@@ -143,7 +144,7 @@ struct HistoryView: View {
             
           Spacer()
         }
-		.background(Color("BackgroundColour"))
+		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
         
         
     }
