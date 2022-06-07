@@ -26,7 +26,7 @@ struct MillGameView: View {
     
     var body: some View {
         ZStack {
-            SpriteView(scene: self.gameScene)
+            SpriteView(scene: gameScene, debugOptions: [.showsNodeCount, .showsFPS, .showsPhysics])
                 .ignoresSafeArea()
             
             BackButtonView().position(x: 220, y: 40)

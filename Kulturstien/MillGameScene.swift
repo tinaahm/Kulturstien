@@ -11,13 +11,13 @@ import GameplayKit
 
 struct Tag {
     static let trash: UInt32 = 0
-    static let player: UInt32 = 1
-    static let parts: UInt32 = 2
-    static let other: UInt32 = 3
+    static let player: UInt32 = 0b1
+    static let parts: UInt32 = 0b10
+    static let other: UInt32 = 0b11
 }
 
 class MillGameScene: SKScene, SKPhysicsContactDelegate {
-    
+
     let nailTexture = SKTexture(imageNamed: "nail")
     let plankTexture = SKTexture(imageNamed: "nice-plank")
     let paperTexture = SKTexture(imageNamed: "paper-brown")
@@ -25,16 +25,7 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
     let playerSprite: SKSpriteNode =
         SKSpriteNode(texture: SKTexture(imageNamed: "net"))
     
-    override func update(_ currentTime: TimeInterval) {}
-    
     override func didMove(to view: SKView) {
-        
-        // START SHOW PHYSICS - DELETE
-        let skView = self.view!
-        skView.showsFPS = true
-        skView.showsNodeCount = true
-        skView.showsPhysics = true
-        // END PHYSICS
         
         size = view.frame.size
         
@@ -46,15 +37,14 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
         makePlayer()
     
         Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(generateRandomAsset), userInfo: nil, repeats: true)
-        }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {}
-    
+        
+    }
+        
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let coords = touch.location(in: self)
             
-            playerSprite.position.x = coords.x - 185
+            playerSprite.position.x = coords.x //- 185
         }
         
         print("player x-pos: \(playerSprite.position.x)")
@@ -62,8 +52,8 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
     
     func makePlayer() {
         playerSprite.size = CGSize(width: 100, height: 85)
-        playerSprite.anchorPoint = CGPoint(x: -1.5, y: -1)
-        playerSprite.position = CGPoint(x: 0, y: 0)
+        
+        playerSprite.position = CGPoint(x: self.size.width / 2, y: self.size.height / 8)
         
         playerSprite.physicsBody = SKPhysicsBody(rectangleOf: playerSprite.size)
         playerSprite.physicsBody?.affectedByGravity = true
@@ -72,8 +62,6 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
         playerSprite.name = "player"
         
         playerSprite.physicsBody?.categoryBitMask = Tag.player
-        playerSprite.physicsBody?.contactTestBitMask = Tag.other
-        playerSprite.physicsBody?.collisionBitMask = Tag.trash
         
         self.addChild(playerSprite)
     }
@@ -109,23 +97,22 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         asset.physicsBody?.contactTestBitMask = Tag.player
+        asset.physicsBody?.collisionBitMask = Tag.player
         
-        let randomPosition = GKRandomDistribution(lowestValue: 0, highestValue: Int(self.frame.size.width - 40))
+        let randomPosition = GKRandomDistribution(lowestValue: 0, highestValue: Int(self.size.width - 40))
         
         let randomRadian = GKRandomDistribution(lowestValue: 0, highestValue: 7)
         
-        asset.position = CGPoint(x: CGFloat(randomPosition.nextInt()), y: self.frame.size.height)
+        asset.position = CGPoint(x: CGFloat(randomPosition.nextInt()), y: self.size.height)
         
         asset.zRotation = CGFloat(randomRadian.nextInt())
     
         asset.physicsBody?.isDynamic = true
-        asset.physicsBody?.usesPreciseCollisionDetection = true
-        
-        asset.drawBorder(color: UIColor.red, width: 50)
         
         self.addChild(asset)
     }
     
+    /*
     func didBegin(_ contact: SKPhysicsContact) {
         print("COLLISION")
         
@@ -155,15 +142,14 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
         
         other.node?.removeFromParent()
     }
-}
-
-// COPIED FROM STACKOVERFLOW - DELETE
-extension SKSpriteNode {
-    func drawBorder(color: UIColor, width: CGFloat) {
-        let shapeNode = SKShapeNode(rect: frame)
-        shapeNode.fillColor = .clear
-        shapeNode.strokeColor = color
-        shapeNode.lineWidth = width
-        addChild(shapeNode)
+     */
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        print("CONTACT")
+        
+        var first = SKPhysicsBody()
+        var second = SKPhysicsBody()
+        
+        // if (contact.bodyA.node?.name == "player")
     }
 }
