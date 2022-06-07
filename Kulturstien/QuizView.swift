@@ -180,12 +180,12 @@ func showAnswer(answered: Bool, guessedAnswer: String?, correctAnswer: String, c
 		}
 	}
 }
-
+/*
 struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
 		QuizView(quizType: .sawmill).environmentObject(ViewIndex())
     }
-}
+}*/
 
 struct QuizEndView: View {
 	
@@ -201,15 +201,57 @@ struct QuizEndView: View {
 		VStack (spacing: 20) {
 			VStack (spacing: 30) {
 				Image(resultImageToDisplay(numberOfCorrectAnswers: numberOfCorrectAnswers, numberOfQuestions: resultArray.count))
-					.resizable()
-					.frame(width: 120, height: 100)
-					.padding(15)
+					.padding(40)
+					.background(Circle().stroke(Color.gray, lineWidth: 1))
 				VStack {
 					Text("Ditt resultat")
 						.font(.title)
 					Text(String(numberOfCorrectAnswers) + "/" + String(resultArray.count))
 						.font(.title2)
 				}
+				
+				if numberOfCorrectAnswers != resultArray.count {
+					Button (action: {
+						
+					}) {
+						Text("Les igjen")
+							.frame(width: DeviceSize.width * 0.5)
+							.padding(20)
+							.foregroundColor(.black)
+							.background(
+								RoundedRectangle(cornerRadius: 15).fill(.white)
+										.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4)
+							)
+											
+					}
+				}
+				
+				Button (action: {
+				}) {
+					Text("Ta quizen på nytt")
+						.frame(width: DeviceSize.width * 0.5)
+						.padding(20)
+						.foregroundColor(.black)
+						.background(
+							RoundedRectangle(cornerRadius: 15).fill(.white)
+									.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4)
+						)
+										
+				}
+				
+				Button (action: {
+				}) {
+					Text("Tilbake til kartet")
+						.frame(width: DeviceSize.width * 0.5)
+						.padding(20)
+						.foregroundColor(.black)
+						.background(
+							RoundedRectangle(cornerRadius: 15).fill(.white)
+									.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4)
+						)
+										
+				}
+				
 				Spacer()
 			}
 		}
@@ -229,14 +271,14 @@ func getNumberOfCorrectAnswers(resultArray: [Bool]) -> Int {
 
 func resultImageToDisplay(numberOfCorrectAnswers: Int, numberOfQuestions: Int) -> String {
 	if numberOfCorrectAnswers == numberOfQuestions {
-		return "trophy"
+		return "Trophy-1"
 	} else {
 		return "sadTroll"
 	}
 }
-/*
+
 struct QuizEndViewPreviews: PreviewProvider {
 	static var previews: some View {
 		QuizEndView(resultArray: [], title: "Bye").environmentObject(ViewIndex())
 	}
-}*/
+}

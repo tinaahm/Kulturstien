@@ -38,16 +38,16 @@ class WhackSlot: SKNode {
     
     func show(hideTime: Double) {
         
-        random.append(SKTexture(imageNamed: "Cow"))
-        random.append(SKTexture(imageNamed: "Reindeer"))
-        random.append(SKTexture(imageNamed: "Bunny"))
-        random.append(SKTexture(imageNamed: "Chicken"))
+        random.append(SKTexture(imageNamed: "CowGame"))
+        random.append(SKTexture(imageNamed: "ReindeerGame"))
+        random.append(SKTexture(imageNamed: "BunnyGame"))
+        random.append(SKTexture(imageNamed: "ChickenGame"))
         let rand = Int(arc4random_uniform(UInt32(random.count)))
         let texture = random[rand] as SKTexture
         
         if isVisible { return }
         
-        //charNode.xScale = 1.2
+		charNode.xScale = 0.85
         //charNode.yScale = 1.2
         charNode.run(SKAction.moveBy(x: 0, y: 80, duration: 0.10))
         
