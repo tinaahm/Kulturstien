@@ -10,6 +10,7 @@ import Foundation
 var quizQuestions: [QuizQuestion] = load("QuizQuestions.json")
 var paragraphs: [Paragraph] = load("Paragraphs.json")
 var personInformation: [PersonInformation] = load("PersonInformation.json")
+var pageInformation: [PageInformation] = load("PageInformation.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
 	let data: Data
