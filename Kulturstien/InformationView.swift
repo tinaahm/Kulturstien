@@ -24,8 +24,6 @@ struct InformationView: View {
 		
 		VStack {
 				BackButtonView()
-				/*Text(self.title)
-					.font(.title)*/
 			
 			ScrollView {
 				
@@ -53,12 +51,6 @@ struct InformationView: View {
 							.frame(width: 350, height: 250)
 						
 							VStack(alignment: .leading) {
-								
-								/*HStack {
-									
-									RoundedRectangle(cornerRadius: 25, style: .continuous)
-										.fill(.white)*/
-
 									ZStack {
 										RoundedRectangle(cornerRadius: 25, style: .continuous)
 											.fill(Color("Grey"))
@@ -74,7 +66,6 @@ struct InformationView: View {
 									}
 									.frame(width: 350)
 									.padding(20)
-								//}
 							}
 							.padding()
 								Spacer()

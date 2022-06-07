@@ -13,9 +13,6 @@ struct ProfilePickerView: View {
 	@EnvironmentObject var page : ViewIndex
 	@State var pressedNext: Bool = false
 	
-	//@AppStorage(UserDataKeys.userName.rawValue) var userName = ""
-	//@AppStorage(UserDataKeys.selectedColour.rawValue) var selectedColour
-	
     var body: some View {
 		ZStack {
 			

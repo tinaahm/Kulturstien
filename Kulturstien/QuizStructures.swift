@@ -50,15 +50,6 @@ struct QuizQuestion: Codable {
 	var wrongOptionOne: String
 	var wrongOptionTwo: String
 	
-	/*init(type: QuizType, question: String, correctOption: String, wrongOptionOne: String,
-		 wrongOptionTwo: String) {
-		self.type = type
-		self.question = question
-		self.correctOption = correctOption
-		self.wrongOptionOne = wrongOptionOne
-		self.wrongOptionTwo = wrongOptionTwo
-	}*/
-	
 }
 
 func shuffleArray(questions : [QuizQuestion]) -> [[String]] {

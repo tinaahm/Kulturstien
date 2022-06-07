@@ -28,7 +28,6 @@ struct MainIPhoneView: View {
 			.background(
 					Image("13 Pro - 71")
 						.resizable()
-						//.scaledToFill()
 						.edgesIgnoringSafeArea(.all)
 				)
 			.draggable()

@@ -45,7 +45,6 @@ struct EmojiMemoryGameView: View {
                         }
                     }
                     .padding(5)
-					//.shadow(color: (page.lightMode ? .gray : .white), radius: 2, x: 2, y: 3)
             }
 			.foregroundColor(Color(viewModel.theme.accentColor))
 			.accentColor(Color(viewModel.theme.accentColor))

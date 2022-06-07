@@ -13,32 +13,10 @@ import UIKit
 
 struct WackANokkView: View {
 	
-	/*var theWackScene: SKScene {
-		let theWackScene = WackGameScene()
-		theWackScene.size = CGSize(width: 400, height: 800)
-		theWackScene.scaleMode = .aspectFit
-		//theWackScene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-		return theWackScene
-	}*/
-    
-	//var theWackScene = SKScene(fileNamed: "WackGameScene")
-	
 	@EnvironmentObject var page : ViewIndex
-	/*var gameScene: WackGameScene {
-		@StateObject var gameScene = WackGameScene()
-			gameScene.size = DeviceSize.size
-			//gameScene.scaleMode = .aspectFit
-		//theWackScene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-		return gameScene
-	}*/
-	
 	@StateObject var gameScene = WackGameScene(size: DeviceSize.size)
 	
 	var body: some View {
-		/*ZStack {
-			SpriteView(scene: self.theWackScene)
-				.ignoresSafeArea()
-		}*/
 		
 		if !gameScene.gameOver {
 			SpriteView(scene: gameScene)

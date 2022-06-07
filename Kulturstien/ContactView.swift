@@ -42,7 +42,6 @@ struct ContactView: View {
                 
             VStack (spacing: 25){
 				ZStack(alignment: .leading) {
-                //TextField("Tilbakemelding...", text: $feedBack)
 				TextEditor(text: $feedBack)
 						.padding()
 				if feedBack.isEmpty {
@@ -71,12 +70,6 @@ struct ContactView: View {
 					.foregroundColor(.black)
 					.frame(width: 200)
 					.padding()
-					/*.overlay(RoundedRectangle(cornerRadius: 15)
-						.stroke(Color.gray, lineWidth: 1)
-					)
-					.background(RoundedRectangle(cornerRadius: 15)
-						.fill(.white)
-					)*/
 					.background(
 						RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
 							.shadow(color: .gray.opacity(0.5), radius: 4, x: 0, y: 4))

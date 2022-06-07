@@ -94,18 +94,11 @@ struct SelectionView: View {
 					Button (action: {
 						page.previousPage = page.pageIndex
 						page.pageIndex = .ar
-						//self.showARButtonInformationText = true
 					}) {
 						Text("Se i AR")
 							.foregroundColor(.black)
 							.frame(width: DeviceSize.width * 0.7)
 							.padding(20)
-							/*.overlay(RoundedRectangle(cornerRadius: 15)
-								.stroke(Color.gray, lineWidth: 1)
-							)
-							.background(RoundedRectangle(cornerRadius: 15)
-								.fill(.white)
-							)*/
 							.background(
 								RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
 									.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))

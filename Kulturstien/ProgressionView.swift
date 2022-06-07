@@ -17,14 +17,8 @@ struct ProgressionView: View {
     var cardGameSum: Int = 200
     
     var body: some View {
-		
-        
-        
         ZStack{
-            
-            
-            
-        VStack {
+			VStack {
             
             VStack {
                 

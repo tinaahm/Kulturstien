@@ -54,8 +54,6 @@ struct PersonInformationView: View {
 			Text("Møt " + self.person.type.rawValue + "!")
 			
 			VStack(alignment: .leading) {
-				
-				//HStack {
 					if personType != .trond {
 						ZStack {
 							Image("SpeechBubble")
@@ -143,15 +141,12 @@ struct PersonInformationView: View {
 								.resizable()
 								.scaledToFit()
 							VStack {
-								//ZStack {
 								Text(personParagraphs[self.selectedIndex])
 										.font(.callout)
 										.foregroundColor(.black)
 										.multilineTextAlignment(.center)
 										.padding([.leading, .trailing], 60)
 										.padding(.bottom, 20)
-									//	}
-									//}
 								HStack {
 									ForEach(0 ..< self.personParagraphs.count) {
 										index in
@@ -224,7 +219,6 @@ struct PersonInformationView: View {
 					}
 
 				}
-			//}
 			Spacer()
 			}
 		}

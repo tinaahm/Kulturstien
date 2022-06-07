@@ -14,9 +14,7 @@ struct KulturstienApp: App {
 	
     var body: some Scene {
         WindowGroup {
-            // MillGameView()
-            
-			NavigationHandlerView()//.environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+			NavigationHandlerView()
 				.environmentObject(viewIndex)
 				.preferredColorScheme(.light)
         }

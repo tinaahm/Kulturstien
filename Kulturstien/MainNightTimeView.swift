@@ -26,7 +26,6 @@ struct MainNightTimeView: View {
 			.background(
 					Image("NightTimeMap")
 						.resizable()
-						//.scaledToFill()
 						.edgesIgnoringSafeArea(.all)
 				)
 			//.draggable()

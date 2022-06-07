@@ -99,8 +99,6 @@ struct NavigationHandlerView: View {
 			case .wackANokk:
 				WackANokkView()
 			case .huldraGame:
-				//FrightenHuldraGameView(/*size: DeviceSize.size*/)
-				//GameEndView(gameType: gameSelection)
 				FrightenHuldraGameView()
 			case .personInformation:
 				PersonInformationView(personType: personSelection)

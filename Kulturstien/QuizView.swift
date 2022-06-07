@@ -42,8 +42,6 @@ struct QuizView: View {
 			VStack (spacing: 15) {
 			
 			BackButtonView()
-			
-			//if !finished {
 			HStack {
 				Text(self.quiz.name)
 					.font(.title)
@@ -138,18 +136,6 @@ struct QuizView: View {
     }
 
 }
-/*
-func getRightAnswerIndex(answerArray: [String], correctAnswer: String) -> Int {
-	var i : Int = 0
-	for answer in answerArray {
-		if answer == correctAnswer {
-			break
-		}
-		i += 1
-	}
-	return i
-}
-*/
 
 func checkPreviouslyAnsweredQuestions(answerArray: [Bool]) -> Bool {
 	for answer in answerArray {
