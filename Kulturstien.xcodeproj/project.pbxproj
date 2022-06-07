@@ -45,6 +45,8 @@
 		267A77602829558200E0EB7A /* KulturstienUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A775F2829558200E0EB7A /* KulturstienUITests.swift */; };
 		267A77622829558200E0EB7A /* KulturstienUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77612829558200E0EB7A /* KulturstienUITestsLaunchTests.swift */; };
 		267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */; };
+		26934079284F776E00F7C74A /* huldraskutt.wav in Resources */ = {isa = PBXBuildFile; fileRef = 26934078284F776E00F7C74A /* huldraskutt.wav */; };
+		2693407B284F779900F7C74A /* KulturstienSaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2693407A284F779900F7C74A /* KulturstienSaveData.swift */; };
 		26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F6282D00E80057BBA6 /* ProfileView.swift */; };
 		26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */; };
 		26D2D34F284B7FBD00BD68A0 /* SourceSansPro-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2B7284B7FBD00BD68A0 /* SourceSansPro-BlackItalic.ttf */; };
@@ -223,7 +225,6 @@
 		A04024E52848C81F001B4D18 /* whack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A04024DB2848C81F001B4D18 /* whack.mp3 */; };
 		A04024E72848C8F1001B4D18 /* FrightenHuldraGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04024E62848C8F1001B4D18 /* FrightenHuldraGameView.swift */; };
 		A074ABC4284F4F7E005AE129 /* Kastegaffel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A074ABC3284F4F7E005AE129 /* Kastegaffel.mp3 */; };
-		A074ABD0284F75B9005AE129 /* huldraskutt.wav in Resources */ = {isa = PBXBuildFile; fileRef = A074ABCF284F75B9005AE129 /* huldraskutt.wav */; };
 		A0EA0C472848B46D00A2B524 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA0C392848B46D00A2B524 /* GameViewController.swift */; };
 		A0EA0C4A2848B46D00A2B524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C3C2848B46D00A2B524 /* LaunchScreen.storyboard */; };
 		A0EA0C4B2848B46D00A2B524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C3E2848B46D00A2B524 /* Main.storyboard */; };
@@ -292,6 +293,8 @@
 		267A77612829558200E0EB7A /* KulturstienUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturstienUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		267A7783282AF8F600E0EB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Macondo-Regular.ttf"; sourceTree = "<group>"; };
+		26934078284F776E00F7C74A /* huldraskutt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = huldraskutt.wav; path = ../../../../../../Downloads/huldraskutt.wav; sourceTree = "<group>"; };
+		2693407A284F779900F7C74A /* KulturstienSaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturstienSaveData.swift; sourceTree = "<group>"; };
 		26AAC9F6282D00E80057BBA6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIPhoneView.swift; sourceTree = "<group>"; };
 		26D2D2B7284B7FBD00BD68A0 /* SourceSansPro-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -470,7 +473,6 @@
 		A04024DB2848C81F001B4D18 /* whack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whack.mp3; sourceTree = "<group>"; };
 		A04024E62848C8F1001B4D18 /* FrightenHuldraGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrightenHuldraGameView.swift; sourceTree = "<group>"; };
 		A074ABC3284F4F7E005AE129 /* Kastegaffel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Kastegaffel.mp3; sourceTree = "<group>"; };
-		A074ABCF284F75B9005AE129 /* huldraskutt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = huldraskutt.wav; path = ../../../../../huldraskutt.wav; sourceTree = "<group>"; };
 		A0EA0C392848B46D00A2B524 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A0EA0C3D2848B46D00A2B524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0EA0C3F2848B46D00A2B524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -995,7 +997,8 @@
 		A0EA0C402848B46D00A2B524 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				A074ABCF284F75B9005AE129 /* huldraskutt.wav */,
+				26934078284F776E00F7C74A /* huldraskutt.wav */,
+				2693407A284F779900F7C74A /* KulturstienSaveData.swift */,
 				A074ABC3284F4F7E005AE129 /* Kastegaffel.mp3 */,
 			);
 			path = Sounds;
@@ -1189,7 +1192,6 @@
 				26D2D359284B7FBD00BD68A0 /* SourceSansPro-SemiBold.ttf in Resources */,
 				26D2D361284B7FBD00BD68A0 /* Saira_SemiCondensed-Light.ttf in Resources */,
 				26D2D373284B7FBD00BD68A0 /* Saira-Light.ttf in Resources */,
-				A074ABD0284F75B9005AE129 /* huldraskutt.wav in Resources */,
 				26D2D3C2284B7FBD00BD68A0 /* Saira_SemiExpanded-ThinItalic.ttf in Resources */,
 				26D2D3BA284B7FBD00BD68A0 /* Saira_SemiExpanded-SemiBold.ttf in Resources */,
 				26D2D367284B7FBD00BD68A0 /* Saira_SemiCondensed-LightItalic.ttf in Resources */,
@@ -1263,6 +1265,7 @@
 				26D2D3C5284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraLightItalic.ttf in Resources */,
 				A04024DD2848C81F001B4D18 /* whackBad.mp3 in Resources */,
 				26D2D3AA284B7FBD00BD68A0 /* Saira_Condensed-ExtraBold.ttf in Resources */,
+				26934079284F776E00F7C74A /* huldraskutt.wav in Resources */,
 				26D2D397284B7FBD00BD68A0 /* Saira_Expanded-LightItalic.ttf in Resources */,
 				26D2D3A4284B7FBD00BD68A0 /* Saira_Expanded-BoldItalic.ttf in Resources */,
 				26D2D3BF284B7FBD00BD68A0 /* Saira_SemiExpanded-SemiBoldItalic.ttf in Resources */,
@@ -1341,6 +1344,7 @@
 				0E62D2F5283BB4650002148D /* DefaultThemes.swift in Sources */,
 				A04024DF2848C81F001B4D18 /* WhackSlot.swift in Sources */,
 				844A56602848EE64009BF850 /* MillGameScene.swift in Sources */,
+				2693407B284F779900F7C74A /* KulturstienSaveData.swift in Sources */,
 				0E62D2E7283BB2800002148D /* Array+Only.swift in Sources */,
 				26D3DF83284A2875009EECE3 /* GameStartView.swift in Sources */,
 				26D72FA4282E573200BC3A8F /* NavigationHandlerView.swift in Sources */,
