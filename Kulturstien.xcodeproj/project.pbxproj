@@ -212,6 +212,7 @@
 		844A56602848EE64009BF850 /* MillGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A565D2848EE64009BF850 /* MillGameScene.swift */; };
 		844A56612848EE64009BF850 /* MillGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A565E2848EE64009BF850 /* MillGameView.swift */; };
 		844A56642848F66E009BF850 /* nail.png in Resources */ = {isa = PBXBuildFile; fileRef = 844A56632848F66E009BF850 /* nail.png */; };
+		84B21F03284F812300619C82 /* huldraskutt.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84B21F02284F812300619C82 /* huldraskutt.wav */; };
 		A04024DC2848C81F001B4D18 /* WackMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04024D22848C81E001B4D18 /* WackMain.storyboard */; };
 		A04024DD2848C81F001B4D18 /* whackBad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A04024D32848C81E001B4D18 /* whackBad.mp3 */; };
 		A04024DE2848C81F001B4D18 /* WackGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04024D42848C81E001B4D18 /* WackGameScene.swift */; };
@@ -223,7 +224,6 @@
 		A04024E52848C81F001B4D18 /* whack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A04024DB2848C81F001B4D18 /* whack.mp3 */; };
 		A04024E72848C8F1001B4D18 /* FrightenHuldraGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04024E62848C8F1001B4D18 /* FrightenHuldraGameView.swift */; };
 		A074ABC4284F4F7E005AE129 /* Kastegaffel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A074ABC3284F4F7E005AE129 /* Kastegaffel.mp3 */; };
-		A074ABD0284F75B9005AE129 /* huldraskutt.wav in Resources */ = {isa = PBXBuildFile; fileRef = A074ABCF284F75B9005AE129 /* huldraskutt.wav */; };
 		A0EA0C472848B46D00A2B524 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA0C392848B46D00A2B524 /* GameViewController.swift */; };
 		A0EA0C4A2848B46D00A2B524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C3C2848B46D00A2B524 /* LaunchScreen.storyboard */; };
 		A0EA0C4B2848B46D00A2B524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C3E2848B46D00A2B524 /* Main.storyboard */; };
@@ -459,6 +459,7 @@
 		844A565D2848EE64009BF850 /* MillGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MillGameScene.swift; sourceTree = "<group>"; };
 		844A565E2848EE64009BF850 /* MillGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MillGameView.swift; sourceTree = "<group>"; };
 		844A56632848F66E009BF850 /* nail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nail.png; sourceTree = "<group>"; };
+		84B21F02284F812300619C82 /* huldraskutt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = huldraskutt.wav; sourceTree = "<group>"; };
 		A04024D22848C81E001B4D18 /* WackMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WackMain.storyboard; sourceTree = "<group>"; };
 		A04024D32848C81E001B4D18 /* whackBad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whackBad.mp3; sourceTree = "<group>"; };
 		A04024D42848C81E001B4D18 /* WackGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WackGameScene.swift; sourceTree = "<group>"; };
@@ -470,7 +471,6 @@
 		A04024DB2848C81F001B4D18 /* whack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whack.mp3; sourceTree = "<group>"; };
 		A04024E62848C8F1001B4D18 /* FrightenHuldraGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrightenHuldraGameView.swift; sourceTree = "<group>"; };
 		A074ABC3284F4F7E005AE129 /* Kastegaffel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Kastegaffel.mp3; sourceTree = "<group>"; };
-		A074ABCF284F75B9005AE129 /* huldraskutt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = huldraskutt.wav; path = ../../../../../huldraskutt.wav; sourceTree = "<group>"; };
 		A0EA0C392848B46D00A2B524 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A0EA0C3D2848B46D00A2B524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0EA0C3F2848B46D00A2B524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -995,7 +995,7 @@
 		A0EA0C402848B46D00A2B524 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				A074ABCF284F75B9005AE129 /* huldraskutt.wav */,
+				84B21F02284F812300619C82 /* huldraskutt.wav */,
 				A074ABC3284F4F7E005AE129 /* Kastegaffel.mp3 */,
 			);
 			path = Sounds;
@@ -1189,7 +1189,6 @@
 				26D2D359284B7FBD00BD68A0 /* SourceSansPro-SemiBold.ttf in Resources */,
 				26D2D361284B7FBD00BD68A0 /* Saira_SemiCondensed-Light.ttf in Resources */,
 				26D2D373284B7FBD00BD68A0 /* Saira-Light.ttf in Resources */,
-				A074ABD0284F75B9005AE129 /* huldraskutt.wav in Resources */,
 				26D2D3C2284B7FBD00BD68A0 /* Saira_SemiExpanded-ThinItalic.ttf in Resources */,
 				26D2D3BA284B7FBD00BD68A0 /* Saira_SemiExpanded-SemiBold.ttf in Resources */,
 				26D2D367284B7FBD00BD68A0 /* Saira_SemiCondensed-LightItalic.ttf in Resources */,
@@ -1263,6 +1262,7 @@
 				26D2D3C5284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraLightItalic.ttf in Resources */,
 				A04024DD2848C81F001B4D18 /* whackBad.mp3 in Resources */,
 				26D2D3AA284B7FBD00BD68A0 /* Saira_Condensed-ExtraBold.ttf in Resources */,
+				84B21F03284F812300619C82 /* huldraskutt.wav in Resources */,
 				26D2D397284B7FBD00BD68A0 /* Saira_Expanded-LightItalic.ttf in Resources */,
 				26D2D3A4284B7FBD00BD68A0 /* Saira_Expanded-BoldItalic.ttf in Resources */,
 				26D2D3BF284B7FBD00BD68A0 /* Saira_SemiExpanded-SemiBoldItalic.ttf in Resources */,

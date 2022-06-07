@@ -31,7 +31,8 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
         
         size = view.frame.size
         
-        backgroundColor = UIColor.init(Color("WaterColor"))
+        // backgroundColor = UIColor.init(Color("WaterColor"))
+        backgroundColor = UIColor.systemBlue
         
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = CGVector(dx: 0, dy: -5)
