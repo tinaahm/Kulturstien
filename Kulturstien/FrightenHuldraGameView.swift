@@ -38,58 +38,10 @@ struct FrightenHuldraGameView: View {
 				.onAppear {
 					page.scorePlaceHolder = gameScene.monstersDestroyed
 					page.pageIndex = .gameEnd
-					//isPresented.toggle()
 				}
-			
-			//HuldraGameOverView(score: gameScene.monstersDestroyed)
 		}
-		
-		/*ZStack {
-			if !gameScene.gameOverHuldra {
-				SpriteView(scene: gameScene)
-					.ignoresSafeArea()
-			} else {
-				HuldraGameOverView(score: gameScene.monstersDestroyed)
-			}
-		}*/
     }
 }
-
-/*struct Test: UIViewRepresentable {
-	func makeUIView(context: Context) -> SKView {
-		
-		@EnvironmentObject var page : ViewIndex
-		
-		let sceneView = SKView()
-		let gameScene = GameScene(size: DeviceSize.size)
-		
-		scene.controller = self
-				skView.ignoresSiblingOrder = true
-				scene.scaleMode = .AspectFill
-				skView.presentScene(scene)
-		
-		var scene: SKScene {
-			let scene = Level_1()
-				scene.size = GameScene(size: DeviceSize.size)
-				return scene
-			}
-		
-		if !gameScene.gameOverHuldra {
-			SpriteView(scene: gameScene)
-		} else {
-			Image("")
-				.onAppear {
-					page.scorePlaceHolder = gameScene.monstersDestroyed
-					page.pageIndex = .gameEnd
-				}
-			
-			//HuldraGameOverView(score: gameScene.monstersDestroyed)
-		}
-		return sceneView
-	}
-	func updateUIView(_ uiView: SKView, context: Context) {
-	}
-}*/
 
 struct HuldraGameOverView: View {
 	
@@ -104,12 +56,12 @@ struct HuldraGameOverView: View {
 					.foregroundColor(page.lightMode ? .black : .white)
 				Button(action: {
 					if gameSelection == .frightenHuldra {
-						if page.user.frightenHuldraGameScore < score {
-							page.user.frightenHuldraGameScore = score
+						if page.frightenHuldraGameScore < score {
+							page.frightenHuldraGameScore = score
 						}
 					} else if gameSelection == .wackANokk {
-						if page.user.wackANokkGameScore < score {
-							page.user.wackANokkGameScore = score
+						if page.wackANokkGameScore < score {
+							page.wackANokkGameScore = score
 						}
 					}
 					page.pageIndex = getPageByGameSelection(game: gameSelection)
@@ -125,12 +77,12 @@ struct HuldraGameOverView: View {
 				
 				Button(action: {
 					if gameSelection == .frightenHuldra {
-						if page.user.frightenHuldraGameScore < score {
-							page.user.frightenHuldraGameScore = score
+						if page.frightenHuldraGameScore < score {
+							page.frightenHuldraGameScore = score
 						}
 					} else if gameSelection == .wackANokk {
-						if page.user.wackANokkGameScore < score {
-							page.user.wackANokkGameScore = score
+						if page.wackANokkGameScore < score {
+							page.wackANokkGameScore = score
 						}
 					}
 					if page.lightMode {

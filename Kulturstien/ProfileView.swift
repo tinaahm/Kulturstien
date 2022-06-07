@@ -16,12 +16,12 @@ struct ProfileView: View {
 			
 			BackButtonView()
 			
-			Image(getImageTitleByColour(colour: page.user.selectedColour))
+			Image(getImageTitleByColour(colour: page.selectedColour))
 			.resizable()
 			.frame(width: 100, height: 100)
 			.padding(5)
 			
-			Text("Hei " + page.user.name.capitalized + "!")
+			Text("Hei " + page.userName.capitalized + "!")
 				.padding([.leading, .top, .trailing])
 				.padding(.bottom, 60)
             

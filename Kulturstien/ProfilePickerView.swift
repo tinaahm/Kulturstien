@@ -7,23 +7,18 @@
 
 import SwiftUI
 
-enum Colour: String, CaseIterable, Identifiable {
-	case pink = "rosa"
-	case yellow = "gul"
-	case green = "grønn"
-	case orange = "oransje"
-	case blue = "blå"
-	case none = "Hva er favoritt fargen din?"
-	var id: Self { self }
-}
 
 struct ProfilePickerView: View {
 	
 	@EnvironmentObject var page : ViewIndex
 	@State var pressedNext: Bool = false
 	
+	//@AppStorage(UserDataKeys.userName.rawValue) var userName = ""
+	//@AppStorage(UserDataKeys.selectedColour.rawValue) var selectedColour
+	
     var body: some View {
 		ZStack {
+			
 			Color("BackgroundColour")
 		VStack {
 			if !self.pressedNext {
@@ -32,7 +27,7 @@ struct ProfilePickerView: View {
 				.padding(.bottom, 50)
 			VStack {
 				HStack {
-					TextField("Hva er navnet ditt?", text: $page.user.name)
+					TextField("Hva er navnet ditt?", text: $page.userName)
 				}
 				.foregroundColor(.black)
 				.frame(width: DeviceSize.width * 0.7)
@@ -44,7 +39,7 @@ struct ProfilePickerView: View {
 				Menu {
 					ForEach(Colour.allCases) { colour in
 						Button(action: {
-							page.user.selectedColour = colour
+							self.page.selectedColour = colour
 						}) {
 							Label(colour == .none ? colour.rawValue : colour.rawValue.capitalized, systemImage: "")
 						}
@@ -52,7 +47,7 @@ struct ProfilePickerView: View {
 					}
 				} label: {
 					HStack {
-						Text(page.user.selectedColour == .none ? page.user.selectedColour.rawValue : page.user.selectedColour.rawValue.capitalized)
+						Text(self.page.selectedColour == .none ? self.page.selectedColour.rawValue : self.page.selectedColour.rawValue.capitalized)
 						Spacer()
 						Image(systemName: "chevron.down")
 					}
@@ -67,7 +62,7 @@ struct ProfilePickerView: View {
 			Spacer()
 			Spacer()
 			
-				if !page.user.name.isEmpty && page.user.selectedColour != .none {
+				if !page.userName.isEmpty && page.selectedColour != .none {
 				Button(action: {
 					self.pressedNext = true
 				}) {
@@ -83,16 +78,17 @@ struct ProfilePickerView: View {
 			Spacer()
 			} else {
 				
-				Image(getImageTitleByColour(colour: page.user.selectedColour))
+				Image(getImageTitleByColour(colour: page.selectedColour))
 					.resizable()
 					.scaledToFit()
 					.padding([.leading, .top, .trailing], 90)
 					.padding(.bottom, 20)
-				Text("Hei " + page.user.name.capitalized)
+				Text("Hei " + page.userName.capitalized)
 					.padding([.leading, .top, .trailing])
 					.padding(.bottom, 90)
 				Button(action: {
-					page.pageIndex = .main
+					page.appStartPage = .main
+					page.pageIndex = .appTutorial
 				}) {
 					Text("Start")
 						.foregroundColor(.black)

@@ -14,19 +14,21 @@ struct MainIPhoneView: View {
     var body: some View {
 		ZStack {
 			ZStack {
-				ButtonView(selectedStructure: .logBooms, selectedPerson: .none, image: "LogboomsButton", width: 71, height: 59, posX: 210, posY: 190)
-				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "SawmillButton", width: 51, height: 60, posX: 70, posY: 520)
-				ButtonView(selectedStructure: .dam, selectedPerson: .none, image: "DamButton", width: 55, height: 60, posX: 40, posY: 740)
-				ButtonView(selectedStructure: .mill, image: "WatermillButton", width: 70, height: 60, posX: 345, posY: 815)
-				ButtonView(selectedPerson: .kirsti, image: "KirstiButton", width: 60, height: 73, posX: 65, posY: 210)
-				ButtonView(selectedPerson: .trond, image: "TrondButton", width: 52, height: 101, posX: 290, posY: 670)
-				ButtonView(selectedPerson: .ragnhild, image: "RagnhildButton", width: 47, height: 90, posX: 145, posY: 820)
-				ButtonView(selectedGame: .farmMemoryGame, image: "TrophyButton", width: 40, height: 52, posX: 190, posY: 320)
+				ButtonView(selectedStructure: .logBooms, selectedPerson: .none, image: "LogboomsButton", width: 71, height: 59, posX: 200, posY: 120)
+				ButtonView(selectedStructure: .sawmill, selectedPerson: .none, image: "SawmillButton", width: 51, height: 60, posX: 190, posY: 440)
+				ButtonView(selectedStructure: .dam, selectedPerson: .none, image: "DamButton", width: 55, height: 60, posX: 70, posY: 630)
+				ButtonView(selectedStructure: .mill, image: "WatermillButton", width: 70, height: 60, posX: 335, posY: 740)
+				ButtonView(selectedPerson: .kirsti, image: "KirstiButton", width: 60, height: 73, posX: 70, posY: 150)
+				ButtonView(selectedPerson: .trond, image: "TrondButton", width: 52, height: 101, posX: 290, posY: 590)
+				ButtonView(selectedPerson: .ragnhild, image: "RagnhildButton", width: 47, height: 90, posX: 270, posY: 250)
+				ButtonView(selectedGame: .farmMemoryGame, image: "TrophyButton", width: 40, height: 52, posX: 80, posY: 280)
+				ButtonView(selectedGame: .farmMemoryGame, image: "TrophyButton", width: 40, height: 52, posX: 55, posY: 470)
 				}
+			
 			.background(
-					Image("dayMap")
+					Image("13 Pro - 71")
 						.resizable()
-						.scaledToFill()
+						//.scaledToFill()
 						.edgesIgnoringSafeArea(.all)
 				)
 			.draggable()
@@ -38,7 +40,7 @@ struct MainIPhoneView: View {
 							page.previousPage = page.pageIndex
 							page.pageIndex = .profile
 						}) {
-							Image(getImageTitleByColour(colour: page.user.selectedColour))
+							Image(getImageTitleByColour(colour: page.selectedColour))
 							.resizable()
 							.frame(width: 60, height: 60)
 							.background(Circle().fill(.white).shadow(radius: 1, x: 2, y: 3)

@@ -12,6 +12,7 @@ import SwiftUI
 
 struct AvatarEditorView: View {
     
+	@Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject var page: ViewIndex
 	
 	var avatarArray = [["Cow", "blå"], ["Troll-1", "grønn"], ["Bunny", "rosa"], ["Reindeer", "oransje"], ["Chicken", "gul"]]
@@ -30,14 +31,14 @@ struct AvatarEditorView: View {
 					
 					ForEach(0 ..< 3) { index in
 						Button (action: {
-							page.user.selectedColour = Colour(rawValue: avatarArray[index][1])!
+							page.selectedColour = Colour(rawValue: avatarArray[index][1])!
 						}) {
 							Image(avatarArray[index][0])
 							.resizable()
 							.frame(width: 130, height: 130)
 							.overlay(
 									RoundedRectangle(cornerRadius: 200)
-										.stroke(selectedAvatar(currentColour: page.user.selectedColour, buttontColour: Colour(rawValue: avatarArray[index][1])!), lineWidth: 4)
+										.stroke(selectedAvatar(currentColour: page.selectedColour, buttontColour: Colour(rawValue: avatarArray[index][1])!), lineWidth: 4)
 								)
 						}
 					}
@@ -48,14 +49,14 @@ struct AvatarEditorView: View {
                 VStack () {
 					ForEach(3 ..< 5) { index in
 						Button (action: {
-							page.user.selectedColour = Colour(rawValue: avatarArray[index][1])!
+							page.selectedColour = Colour(rawValue: avatarArray[index][1])!
 						}) {
 							Image(avatarArray[index][0])
 							.resizable()
 							.frame(width: 130, height: 130)
 							.overlay(
 									RoundedRectangle(cornerRadius: 200)
-										.stroke(selectedAvatar(currentColour: page.user.selectedColour, buttontColour: Colour(rawValue: avatarArray[index][1])!), lineWidth: 4)
+										.stroke(selectedAvatar(currentColour: page.selectedColour, buttontColour: Colour(rawValue: avatarArray[index][1])!), lineWidth: 4)
 								)
 						}
                     }

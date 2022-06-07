@@ -18,7 +18,7 @@ struct GameEndView: View {
 	
     var body: some View {
 		
-		let score = getGameSelectionFromPage(gameType: self.gameType, user: page.user)
+		let score = page.scorePlaceHolder
 		
 		ZStack {
 			Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground")

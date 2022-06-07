@@ -14,17 +14,31 @@ class DeviceSize {
 	static var size = UIScreen.main.bounds.size
 }
 
+enum UserDataKeys: String {
+	case userName, selectedColour, wackANokkGameScore, frightenHuldraGameScore, farmMemoryGameScore, fairtytaleMemoryGameScore, appStartPage, pageIndex
+}
+
+enum Colour: String, CaseIterable, Identifiable {
+	case pink = "rosa"
+	case yellow = "gul"
+	case green = "grønn"
+	case orange = "oransje"
+	case blue = "blå"
+	case none = "Hva er favoritt fargen din?"
+	var id: Self { self }
+}
+
 struct User {
-	var name: String = ""
-	var selectedColour: Colour = .none
+	//@AppStorage(UserDataKeys.userName.rawValue) var userName: String = ""
+	//@AppStorage(UserDataKeys.selectedColour.rawValue) var selectedColour: Colour = .none
 	var wackANokkGameScore: Int = 0
 	var frightenHuldraGameScore: Int = 0
 	var farmMemoryGameScore: Int = 0
 	var fairtytaleMemoryGameScore: Int = 0
 }
 
-enum Page {
-	case start, main, mainNight, profile, menu, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, achievements, avatarChanger, gameEnd, history, howTo, startGame, ar, memoryGameEnd, quizEnd
+enum Page: String {
+	case start, main, mainNight, profile, menu, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, achievements, avatarChanger, gameEnd, history, howTo, startGame, ar, memoryGameEnd, quizEnd, appTutorial
 }
 
 var quizSelection: Structure = .none
@@ -35,11 +49,17 @@ var gameSelection: Game = .none
 var quizes = Quizes()
 
 class ViewIndex: ObservableObject {
-	@Published var pageIndex : Page = .start //TODO: if user has profile do not show start/ProfilePickerView.
+	@Published var pageIndex : Page = .main
 	@Published var previousPage : Page = .main
 	@Published var lightMode: Bool = true
 	@Published var user: User = User()
-	//@Published var quizes = Quizes()
+	@AppStorage(UserDataKeys.userName.rawValue) var userName: String = ""
+	@AppStorage(UserDataKeys.selectedColour.rawValue) var selectedColour: Colour = .none
+	@AppStorage(UserDataKeys.appStartPage.rawValue) var appStartPage: Page = .start
+	@AppStorage(UserDataKeys.wackANokkGameScore.rawValue) var wackANokkGameScore: Int = 0
+	@AppStorage(UserDataKeys.frightenHuldraGameScore.rawValue) var frightenHuldraGameScore: Int = 0
+	@AppStorage(UserDataKeys.farmMemoryGameScore.rawValue) var farmMemoryGameScore: Int = 0
+	@AppStorage(UserDataKeys.fairtytaleMemoryGameScore.rawValue) var fairtytaleMemoryGameScore: Int = 0
 	@Published var quizesArray: [Quiz] = [Quiz(name: "Kvernhus Quiz", type: .mill, imageTitle: "WaterMillIcon"), Quiz(name: "Sagbruk Quiz", type: .sawmill, imageTitle: "SawmillIcon"), Quiz(name: "Demning Quiz", type: .dam, imageTitle: "DamIcon"), Quiz(name: "Lenseanlegg Quiz", type: .logBooms, imageTitle: "LogBoomsIcon")]
 	@Published var scorePlaceHolder: Int = 0
 	@Published var currentQuiz: Quiz = Quiz(name: "", type: .none, imageTitle: "")
@@ -50,70 +70,70 @@ struct NavigationHandlerView: View {
 	@EnvironmentObject var page : ViewIndex
 	
     var body: some View {
-		switch page.pageIndex {
-		case .start:
+		if page.appStartPage == .start {
 			ProfilePickerView()
-		case .main:
-			MainIPhoneView()
-		case .mainNight:
-			MainNightTimeView()
-		case .profile:
-			ProfileView()
-		case .menu:
-			MenuView()
-				.transition(.backslide)
-		case .texts:
-			MenuView()
-		case .quiz:
-			QuizView(quizType: quizSelection)
-		case .selection:
-			SelectionView(selectionType: informationSelection)
-        case .information:
-			InformationView(type: informationSelection)
-                .transition(.backslide)
-        case .farmMemoryGame:
-			FarmMemoryGameView()
-		case .fairytaleCreaturesMemoryGame:
-			FairytaleMemoryGameView()
-		case .wackANokk:
-			WackANokkView()
-		case .huldraGame:
-			//FrightenHuldraGameView(/*size: DeviceSize.size*/)
-			//GameEndView(gameType: gameSelection)
-			FrightenHuldraGameView()
-		case .personInformation:
-			PersonInformationView(personType: personSelection)
-		case .creatureInformation:
-			CreaturesInformationView(creatureType: personSelection)
-        case .contact:
-            ContactView()
-        case .achievements:
-            ProgressionView()
-        case .avatarChanger:
-            AvatarEditorView()
-		case .memoryGameEnd:
-			GameEndView(gameType: gameSelection)
-		case .history:
-			HistoryView()
-		case .howTo:
-			HowToView()
-		case .startGame:
-			GameStartView()
-		case .ar:
-			WaterMillARView()
-		case .gameEnd:
-			HuldraGameOverView(score: page.scorePlaceHolder)
-		case .quizEnd:
-			QuizEndView(resultArray: page.currentQuiz.questionAnswers, title: page.currentQuiz.name)
+		} else {
+			switch page.pageIndex {
+			case .start:
+				ProfilePickerView()
+			case .main:
+				MainIPhoneView()
+			case .mainNight:
+				MainNightTimeView()
+			case .profile:
+				ProfileView()
+			case .menu:
+				MenuView()
+					.transition(.backslide)
+			case .texts:
+				MenuView()
+			case .quiz:
+				QuizView(quizType: quizSelection)
+			case .selection:
+				SelectionView(selectionType: informationSelection)
+			case .information:
+				InformationView(type: informationSelection)
+					.transition(.backslide)
+			case .farmMemoryGame:
+				FarmMemoryGameView()
+			case .fairytaleCreaturesMemoryGame:
+				FairytaleMemoryGameView()
+			case .wackANokk:
+				WackANokkView()
+			case .huldraGame:
+				//FrightenHuldraGameView(/*size: DeviceSize.size*/)
+				//GameEndView(gameType: gameSelection)
+				FrightenHuldraGameView()
+			case .personInformation:
+				PersonInformationView(personType: personSelection)
+			case .creatureInformation:
+				CreaturesInformationView(creatureType: personSelection)
+			case .contact:
+				ContactView()
+			case .achievements:
+				ProgressionView()
+			case .avatarChanger:
+				AvatarEditorView()
+			case .memoryGameEnd:
+				GameEndView(gameType: gameSelection)
+			case .history:
+				HistoryView()
+			case .howTo:
+				HowToView()
+			case .startGame:
+				GameStartView()
+			case .ar:
+				WaterMillARView()
+			case .gameEnd:
+				HuldraGameOverView(score: page.scorePlaceHolder)
+			case .quizEnd:
+				QuizEndView(resultArray: page.currentQuiz.questionAnswers, title: page.currentQuiz.name)
+			case .appTutorial:
+				AppTutorialView()
+			}
 		}
     }
 }
-
-/*struct NavigationHandlerView_Previews: PreviewProvider {
-    static var previews: some View {
-		NavigationHandlerView().environmentObject(ViewIndex())
-    }
-}*/
 
 extension AnyTransition {
 	static var backslide: AnyTransition {

@@ -11,10 +11,6 @@ struct FarmMemoryGameView: View {
     var body: some View {
 		VStack (alignment: .center) {
 			BackButtonView()
-			/*Text("Huske spill")
-				.font(Font.custom("SourceSansPro-SemiBold", size: 18))
-			Text("Bondens redskaper")
-				.font(Font.custom("SourceSansPro-Regular", size: 16))*/
 			Image("WaterMillIcon")
 				.resizable()
 				.frame(width: 69*2, height: 55*2, alignment: .center)

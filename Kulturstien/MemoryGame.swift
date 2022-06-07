@@ -58,14 +58,6 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
             }
         }
 		if numberOfMatches == numberOfPossibleMatches {
-			/*if cardTheme == "Bondens Redskaper" {
-				page.user.farmMemoryGameScore = score
-				selectedGame = .farmMemoryGame
-			} else {
-				page.user.fairtytaleMemoryGameScore = score
-				selectedGame = .fairytaleCreaturesMemoryGame
-			}
-			page.pageIndex = .gameEnd*/
 			gameOver = true
 		}
 		

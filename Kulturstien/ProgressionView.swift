@@ -116,11 +116,11 @@ struct ProgressionView: View {
                             .padding(5)
                         VStack {
                             HStack () {
-                                Text("Bondens Redskaper - " + String(page.user.farmMemoryGameScore) + " poeng")
+                                Text("Bondens Redskaper - " + String(page.farmMemoryGameScore) + " poeng")
                                     .padding(2)
                             }
                             HStack () {
-                                Text("Underjordiske Vesen - " + String(page.user.fairtytaleMemoryGameScore) + " poeng")
+                                Text("Underjordiske Vesen - " + String(page.fairtytaleMemoryGameScore) + " poeng")
                                     .padding(2)
                             }
                         }
@@ -181,7 +181,7 @@ struct ProgressionView: View {
                         VStack {
                             
                             HStack () {
-                                Text(String(page.user.frightenHuldraGameScore) + " poeng")
+                                Text(String(page.frightenHuldraGameScore) + " poeng")
                                     .padding(2)
                             }
                         }
