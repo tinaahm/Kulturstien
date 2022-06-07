@@ -14,8 +14,11 @@ struct KulturstienApp: App {
 	
     var body: some Scene {
         WindowGroup {
+            MillGameView()
+            /*
 			NavigationHandlerView().environmentObject(viewIndex)
 				.preferredColorScheme(.light)
+             */
         }
     }
 }
