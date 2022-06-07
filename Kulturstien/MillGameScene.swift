@@ -18,8 +18,9 @@ struct Tag {
 
 class MillGameScene: SKScene, SKPhysicsContactDelegate
 {
-    
     var nodes: [SKSpriteNode] = []
+    
+    var partsCounter: Int = 0
     
     let nailTexture = SKTexture(imageNamed: "nail")
     let plankTexture = SKTexture(imageNamed: "nice-plank")
@@ -31,7 +32,6 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
     
     override func didMove(to view: SKView)
     {
-        
         size = view.frame.size
         
         backgroundColor = UIColor.init(Color("WaterColor"))
@@ -50,7 +50,7 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
     
     
     /// Scheduled clean-up of generated objects (SKSpriteNodes)
-    @objc func collectTrash()
+    @objc private func collectTrash()
     {
         for node in nodes
         {
@@ -79,12 +79,10 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
             let coords = touch.location(in: self)
             playerSprite.run(SKAction.moveTo(x: coords.x, duration: 0.24))
         }
-        
-        print("player x-pos: \(playerSprite.position.x)")
     }
     
     /// Generate player object
-    func makePlayer()
+    private func makePlayer()
     {
         playerSprite.size = CGSize(width: 100, height: 85)
         
@@ -103,7 +101,7 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
     
     
     /// Programatically generate random assets
-    @objc func generateRandomAsset()
+    @objc private func generateRandomAsset()
     {
         let randomAssetNum = GKRandomDistribution(lowestValue: 0, highestValue: 4)
         
@@ -168,60 +166,66 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
         nodes.append(asset)
     }
     
-    /*
-    func didBegin(_ contact: SKPhysicsContact) {
-        print("COLLISION")
-        
-        var player = contact.bodyA
-        var other = contact.bodyB
-        
-        var isMillPart = false
-       
-        /*
-        if (first.node?.name == "player" || second.node?.name == "player") {
-            first.node?.physicsBody?.affectedByGravity = true;
-            second.node?.physicsBody?.affectedByGravity = true;
-            print("Collision!")
-        }
-         */
-        
-        if (player.categoryBitMask < Tag.player) {
-            player = contact.bodyB
-            other = contact.bodyA
-        }
-        
-        if (other.categoryBitMask > Tag.player) {
-            isMillPart = true
-        } else {
-            isMillPart = false
-        }
-        
-        other.node?.removeFromParent()
-    }
-     */
-    
     func didBegin(_ contact: SKPhysicsContact)
     {
-        print("CONTACT")
+        print("Contact")
         
-        var player = SKPhysicsBody()
         var other = SKPhysicsBody()
         
         // Contact assumes one body must be the player
         if (contact.bodyA.node?.name == "player")
         {
-            player = contact.bodyA
             other = contact.bodyB
         }
         else
         {
-            player = contact.bodyB
             other = contact.bodyA
         }
         
-        if (other.node?.physicsBody?.categoryBitMask == 0b10)
+        // What collided?
+        if (other.node?.physicsBody?.categoryBitMask == Tag.parts)
         {
             print("Found part!")
+            
+            print ("Number of parts: \(partsCounter)")
+            
+            if (partsCounter > 9)
+            {
+                // Game won
+                partsCounter = 0
+                
+                if let scene = SKScene(fileNamed: "MillGameScene")
+                {
+                    scene.scaleMode = .fill
+                    
+                
+                    view?.presentScene(scene)
+                }
+            }
+            
+            partsCounter += 1
         }
+        
+        else
+        {
+            reloadScene()
+        }
+        
+        // Delete other item and sprite-node wrapper
+        other.node?.parent?.removeFromParent()
+        other.node?.removeFromParent()
+    }
+    
+    private func reloadScene()
+    {
+        let screenSize: CGRect = UIScreen.main.bounds
+        
+        let screenWidth = screenSize.width
+        let screenHeight = screenSize.height
+        
+        size = CGSize(width: screenWidth, height: screenHeight)
+        scaleMode = .fill
+        
+        view?.presentScene(MillGameScene())
     }
 }

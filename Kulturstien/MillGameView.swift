@@ -9,8 +9,10 @@ import UIKit
 import SpriteKit
 import SwiftUI
 
-struct MillGameView: View {
-    var gameScene: SKScene {
+struct MillGameView: View
+{
+    public var gameScene: SKScene
+    {
         let screenSize: CGRect = UIScreen.main.bounds
         
         let screenWidth = screenSize.width
@@ -26,9 +28,11 @@ struct MillGameView: View {
     
     var body: some View {
         ZStack {
-            SpriteView(scene: gameScene, debugOptions: [.showsNodeCount, .showsFPS, .showsPhysics])
+            SpriteView(scene: gameScene, debugOptions: [
+                .showsNodeCount, .showsFPS
+                                                    // ,.showsPhysics
+            ])
                 .ignoresSafeArea()
-            
             BackButtonView().position(x: 220, y: 40)
         }
     }
