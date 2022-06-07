@@ -18,14 +18,24 @@ struct ProgressionView: View {
     
     var body: some View {
 		
+        
+        
+        ZStack{
+            
+            
+            
         VStack {
             
-            BackButtonView()
+            VStack {
+                
+            }
+            .background(Color("DarkGrey"))
             
             ScrollView {
             
             Text("Quiz progresjon")
                 .font(.system(size: 25))
+                .padding(.top, 40)
             
             ZStack {
                 
@@ -90,47 +100,118 @@ struct ProgressionView: View {
 				Text("Poeng")
 					.font(.system(size: 25))
 					.padding(10)
+                
+               
+                
+                ZStack {
+                    
+                    RoundedRectangle(cornerRadius: 25, style: .continuous)
+                        .fill(Color("Grey"))
+                        .shadow(radius: 2, x: 0, y: 3)
+
+                    VStack (alignment: .center){
+                        
+                        Text("Minnespill")
+                            .font(.title3)
+                            .padding(5)
+                        VStack {
+                            HStack () {
+                                Text("Bondens Redskaper - " + String(page.user.farmMemoryGameScore) + " poeng")
+                                    .padding(2)
+                            }
+                            HStack () {
+                                Text("Underjordiske Vesen - " + String(page.user.fairtytaleMemoryGameScore) + " poeng")
+                                    .padding(2)
+                            }
+                        }
+                        .padding()
+                        .background(Color("LighterGrey"))
+                        .cornerRadius(25)
+                    
+                            
+                                Spacer()
+              
+                    }
+                    .padding(10)
+                }
+                .frame(width: 345)
+                .padding(.bottom)
+                
+                ZStack {
+                    
+                    RoundedRectangle(cornerRadius: 25, style: .continuous)
+                        .fill(Color("Grey"))
+                        .shadow(radius: 2, x: 0, y: 3)
+
+                    VStack (alignment: .center){
+                        
+                        Text("Wack a Nøkk")
+                            .font(.title3)
+                            .padding(5)
+                        VStack {
+                            
+                            HStack () {
+                                Text(String(page.user.wackANokkGameScore) + " poeng")
+                                    .padding(2)
+                            }
+                        }
+                        .padding()
+                        .background(Color("LighterGrey"))
+                        .cornerRadius(25)
+                            
+                                Spacer()
+              
+                    }
+                    .padding(10)
+                }
+                .frame(width: 345)
+                .padding(.bottom)
+                
+                ZStack {
+                    
+                    RoundedRectangle(cornerRadius: 25, style: .continuous)
+                        .fill(Color("Grey"))
+                        .shadow(radius: 2, x: 0, y: 3)
+
+                    VStack (alignment: .center){
+                        
+                        Text("Skrem Huldra")
+                            .font(.title3)
+                            .padding(5)
+                        VStack {
+                            
+                            HStack () {
+                                Text(String(page.user.frightenHuldraGameScore) + " poeng")
+                                    .padding(2)
+                            }
+                        }
+                        .padding()
+                        .background(Color("LighterGrey"))
+                        .cornerRadius(25)
+                            
+                                Spacer()
+              
+                    }
+                    .padding(10)
+                }
+                .frame(width: 345)
 				
-				VStack {
-					Text("Minnespill")
-						.font(.title3)
-						.padding(5)
-					HStack () {
-						Text("Bondens Redskaper - " + String(page.user.farmMemoryGameScore) + " poeng")
-							.padding(2)
-					}
-					HStack () {
-						Text("Underjordiske Vesen - " + String(page.user.fairtytaleMemoryGameScore) + " poeng")
-							.padding(2)
-					}
-				}
-				.padding(.bottom)
 				
-				VStack {
-					Text("Wack A Nøkk")
-						.font(.title3)
-						.padding(5)
-					HStack () {
-						Text(String(page.user.wackANokkGameScore) + " poeng")
-							.padding(2)
-					}
-				}
-				.padding(.bottom)
-				VStack {
-					Text("Skrem Bort Huldra")
-						.font(.title3)
-						.padding(5)
-					HStack () {
-						Text(String(page.user.frightenHuldraGameScore) + " poeng")
-							.padding(2)
-					}
-				}
+				
 				
 			}
             
             Spacer()
         }
 		
+        
+    }
+            VStack {
+                
+                
+                BackButtonView()
+                Spacer()
+            }
         
     }
         .background(Color("BackgroundColour"))
