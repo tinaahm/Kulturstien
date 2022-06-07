@@ -212,6 +212,8 @@
 		844A56602848EE64009BF850 /* MillGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A565D2848EE64009BF850 /* MillGameScene.swift */; };
 		844A56612848EE64009BF850 /* MillGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A565E2848EE64009BF850 /* MillGameView.swift */; };
 		844A56642848F66E009BF850 /* nail.png in Resources */ = {isa = PBXBuildFile; fileRef = 844A56632848F66E009BF850 /* nail.png */; };
+		84B21F0A284F8CC600619C82 /* big-tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B21F08284F8CC600619C82 /* big-tree.png */; };
+		84B21F0B284F8CC600619C82 /* small-tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B21F09284F8CC600619C82 /* small-tree.png */; };
 		A04024DC2848C81F001B4D18 /* WackMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04024D22848C81E001B4D18 /* WackMain.storyboard */; };
 		A04024DD2848C81F001B4D18 /* whackBad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A04024D32848C81E001B4D18 /* whackBad.mp3 */; };
 		A04024DE2848C81F001B4D18 /* WackGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04024D42848C81E001B4D18 /* WackGameScene.swift */; };
@@ -459,6 +461,8 @@
 		844A565D2848EE64009BF850 /* MillGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MillGameScene.swift; sourceTree = "<group>"; };
 		844A565E2848EE64009BF850 /* MillGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MillGameView.swift; sourceTree = "<group>"; };
 		844A56632848F66E009BF850 /* nail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nail.png; sourceTree = "<group>"; };
+		84B21F08284F8CC600619C82 /* big-tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "big-tree.png"; path = "../../../Downloads/big-tree.png"; sourceTree = "<group>"; };
+		84B21F09284F8CC600619C82 /* small-tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "small-tree.png"; path = "../../../Downloads/small-tree.png"; sourceTree = "<group>"; };
 		A04024D22848C81E001B4D18 /* WackMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WackMain.storyboard; sourceTree = "<group>"; };
 		A04024D32848C81E001B4D18 /* whackBad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whackBad.mp3; sourceTree = "<group>"; };
 		A04024D42848C81E001B4D18 /* WackGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WackGameScene.swift; sourceTree = "<group>"; };
@@ -952,6 +956,8 @@
 		844A56622848EE6B009BF850 /* MillGame */ = {
 			isa = PBXGroup;
 			children = (
+				84B21F08284F8CC600619C82 /* big-tree.png */,
+				84B21F09284F8CC600619C82 /* small-tree.png */,
 				8445573F284A15B5009D2175 /* paper-brown.png */,
 				8445573D2849F355009D2175 /* net.png */,
 				844A56632848F66E009BF850 /* nail.png */,
@@ -1111,6 +1117,7 @@
 				26D2D3B1284B7FBD00BD68A0 /* Saira_Condensed-SemiBoldItalic.ttf in Resources */,
 				26D2D366284B7FBD00BD68A0 /* Saira_SemiCondensed-Thin.ttf in Resources */,
 				26D2D3BC284B7FBD00BD68A0 /* Saira_SemiExpanded-Regular.ttf in Resources */,
+				84B21F0B284F8CC600619C82 /* small-tree.png in Resources */,
 				26D2D35D284B7FBD00BD68A0 /* Saira-VariableFont_wdth,wght.ttf in Resources */,
 				26D2D3A5284B7FBD00BD68A0 /* Saira_Expanded-ExtraBold.ttf in Resources */,
 				26D2D38C284B7FBD00BD68A0 /* Saira_UltraCondensed-BlackItalic.ttf in Resources */,
@@ -1167,6 +1174,7 @@
 				26D2D3B8284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraBoldItalic.ttf in Resources */,
 				26D2D374284B7FBD00BD68A0 /* Saira-SemiBoldItalic.ttf in Resources */,
 				A074ABC4284F4F7E005AE129 /* Kastegaffel.mp3 in Resources */,
+				84B21F0A284F8CC600619C82 /* big-tree.png in Resources */,
 				26D2D3DB284B7FBD00BD68A0 /* Saira_ExtraCondensed-MediumItalic.ttf in Resources */,
 				A0EA0C512848B46D00A2B524 /* Actions.sks in Resources */,
 				26D2D3BD284B7FBD00BD68A0 /* Saira_SemiExpanded-LightItalic.ttf in Resources */,
