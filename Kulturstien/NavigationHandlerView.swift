@@ -24,7 +24,7 @@ struct User {
 }
 
 enum Page {
-	case start, main, mainNight, profile, menu, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, achievements, avatarChanger, gameEnd, history, howTo, startGame, ar, memoryGameEnd
+	case start, main, mainNight, profile, menu, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, achievements, avatarChanger, gameEnd, history, howTo, startGame, ar, memoryGameEnd, quizEnd
 }
 
 var quizSelection: Structure = .none
@@ -42,6 +42,7 @@ class ViewIndex: ObservableObject {
 	//@Published var quizes = Quizes()
 	@Published var quizesArray: [Quiz] = [Quiz(name: "Kvernhus Quiz", type: .mill, imageTitle: "WaterMillIcon"), Quiz(name: "Sagbruk Quiz", type: .sawmill, imageTitle: "SawmillIcon"), Quiz(name: "Demning Quiz", type: .dam, imageTitle: "DamIcon"), Quiz(name: "Lenseanlegg Quiz", type: .logBooms, imageTitle: "LogBoomsIcon")]
 	@Published var scorePlaceHolder: Int = 0
+	@Published var currentQuiz: Quiz = Quiz(name: "", type: .none, imageTitle: "")
 }
 
 struct NavigationHandlerView: View {
@@ -102,6 +103,8 @@ struct NavigationHandlerView: View {
 			WaterMillARView()
 		case .gameEnd:
 			HuldraGameOverView(score: page.scorePlaceHolder)
+		case .quizEnd:
+			QuizEndView(resultArray: page.currentQuiz.questionAnswers, title: page.currentQuiz.name)
 		}
     }
 }

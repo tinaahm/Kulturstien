@@ -27,6 +27,8 @@ struct BackButtonView: View {
 					
 					page.pageIndex = .profile
 					
+				} else if page.pageIndex == .information && page.previousPage != .selection {
+					page.pageIndex = .selection
 				} else {
 					if page.lightMode {
 						page.previousPage = .main
