@@ -36,7 +36,7 @@ class WackGameScene: SKScene, ObservableObject {
 		gameScore.position = CGPoint(x: (size.width / 2), y: 750)
         //gameScore.horizontalAlignmentMode = .center
 		//gameScore.verticalAlignmentMode = .center
-        gameScore.fontSize = 20
+        gameScore.fontSize = 30
         addChild(gameScore)
 		
 		let halfOfScreenSize = (size.height / 2)
@@ -112,7 +112,7 @@ class WackGameScene: SKScene, ObservableObject {
     func createEnemy() {
         numRounds += 1
         
-        if numRounds >= 50 {
+        if numRounds >= 35 {
             for slot in slots {
                 slot.hide()
             }
