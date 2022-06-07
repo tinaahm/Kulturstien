@@ -64,9 +64,6 @@ struct QuizView: View {
 						self.answered = true
 						self.guessedAnswer = answers[index]
 						self.guessedIndex = index
-						if index == numberOfQuestions - 1 {
-							self.finished = true
-						}
 					}) {
 						Text(answers[index])
 							.frame(width: DeviceSize.width * 0.7)
@@ -101,6 +98,10 @@ struct QuizView: View {
 						self.guessedIndex = nil
 						self.guessedAnswer = nil
 						self.questionIndex += 1
+						
+						if self.questionIndex == (numberOfQuestions - 1) {
+						 self.finished = true
+						}
 						
 					} else {
 						self.quiz.questionAnswers[questionIndex] = answeredCorrectly
