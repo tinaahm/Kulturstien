@@ -61,7 +61,8 @@ class GameScene: SKScene, ObservableObject {
               }
 
     
-  let player = SKSpriteNode(imageNamed: "turtleavatar")
+  let player = SKSpriteNode(imageNamed: "TrondPlayer")
+    
     
   override func didMove(to view: SKView) {
     // 2
@@ -72,6 +73,9 @@ class GameScene: SKScene, ObservableObject {
       
     // 3
 	  player.position = CGPoint(x: (size.width / 2), y: (size.height * 0.1))
+      player.yScale = 0.35
+      player.xScale = 0.35
+      player.zPosition = 2
     // 4
     addChild(player)
     
@@ -91,9 +95,9 @@ class GameScene: SKScene, ObservableObject {
       
       gameScore = SKLabelNode(fontNamed: "Chalkduster")
       gameScore.text = "Poeng: 0"
-      gameScore.position = CGPoint(x: (size.width / 2), y: 750)
-      gameScore.horizontalAlignmentMode = .left
-      gameScore.fontSize = 20
+      gameScore.position = CGPoint(x: (size.width / 2), y: 800)
+     // gameScore.horizontalAlignmentMode = .left
+      gameScore.fontSize = 25
       addChild(gameScore)
     
   }
@@ -159,13 +163,15 @@ class GameScene: SKScene, ObservableObject {
       return
     }
     
-    run(SKAction.playSoundFileNamed("skyteflamme", waitForCompletion: false))
+    run(SKAction.playSoundFileNamed("Kastegaffel", waitForCompletion: false))
 
     let touchLocation = touch.location(in: self)
     
     // 2 - Set up initial location of projectile
-    let projectile = SKSpriteNode(imageNamed: "projectile")
+    let projectile = SKSpriteNode(imageNamed: "Pitchfork")
     projectile.position = player.position
+      projectile.yScale = 1.1
+      projectile.xScale = 1.1
     
     projectile.physicsBody = SKPhysicsBody(circleOfRadius: projectile.size.width/2)
     projectile.physicsBody?.isDynamic = true
@@ -199,9 +205,12 @@ class GameScene: SKScene, ObservableObject {
   }
   
   func projectileDidCollideWithMonster(projectile: SKSpriteNode, monster: SKSpriteNode) {
-    print("Hit")
+      
+    run(SKAction.playSoundFileNamed("huldraskutt", waitForCompletion: false))
+    
     projectile.removeFromParent()
     monster.removeFromParent()
+
     
     monstersDestroyed += 1
     if monstersDestroyed > 99999 {
