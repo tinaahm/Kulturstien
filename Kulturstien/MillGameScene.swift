@@ -16,26 +16,28 @@ struct Tag {
     static let other: UInt32 = 0b11
 }
 
-class MillGameScene: SKScene, SKPhysicsContactDelegate {
+class MillGameScene: SKScene, SKPhysicsContactDelegate
+{
     
     var nodes: [SKSpriteNode] = []
     
     let nailTexture = SKTexture(imageNamed: "nail")
     let plankTexture = SKTexture(imageNamed: "nice-plank")
-    let paperTexture = SKTexture(imageNamed: "paper-brown")
+    let smallTreeTexture = SKTexture(imageNamed: "small-tree")
+    let bigTreeTexture = SKTexture(imageNamed: "big-tree")
     
     let playerSprite: SKSpriteNode =
         SKSpriteNode(texture: SKTexture(imageNamed: "net"))
     
-    override func didMove(to view: SKView) {
+    override func didMove(to view: SKView)
+    {
         
         size = view.frame.size
         
-        // backgroundColor = UIColor.init(Color("WaterColor"))
-        backgroundColor = UIColor.systemBlue
+        backgroundColor = UIColor.init(Color("WaterColor"))
         
         physicsWorld.contactDelegate = self
-        physicsWorld.gravity = CGVector(dx: 0, dy: -5)
+        physicsWorld.gravity = CGVector(dx: 0, dy: -20)
         
         makePlayer()
     
@@ -48,16 +50,21 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
     
     
     /// Scheduled clean-up of generated objects (SKSpriteNodes)
-    @objc func collectTrash() {
-        for node in nodes {
-            if (node.position.y < self.size.height / 8) {
+    @objc func collectTrash()
+    {
+        for node in nodes
+        {
+            if (node.position.y < self.size.height / 8)
+            {
                 node.removeFromParent()
             }
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for touch in touches {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        for touch in touches
+        {
             let coords = touch.location(in: self)
             
             playerSprite.run(SKAction.moveTo(x: coords.x, duration: 0.3))
@@ -65,17 +72,20 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
 
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for touch in touches {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        for touch in touches
+        {
             let coords = touch.location(in: self)
-            
             playerSprite.run(SKAction.moveTo(x: coords.x, duration: 0.24))
         }
         
         print("player x-pos: \(playerSprite.position.x)")
     }
     
-    func makePlayer() {
+    /// Generate player object
+    func makePlayer()
+    {
         playerSprite.size = CGSize(width: 100, height: 85)
         
         playerSprite.position = CGPoint(x: self.size.width / 2, y: self.size.height / 8)
@@ -91,32 +101,50 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(playerSprite)
     }
     
-    @objc func generateRandomAsset() {
     
+    /// Programatically generate random assets
+    @objc func generateRandomAsset()
+    {
         let randomAssetNum = GKRandomDistribution(lowestValue: 0, highestValue: 4)
         
         var asset: SKSpriteNode
         
         let currentAsset = randomAssetNum.nextInt()
         
-        if (currentAsset == 0) {
+        if (currentAsset == 0)
+        {
             asset = SKSpriteNode(texture: nailTexture)
             asset.size = CGSize(width: 14, height: 80)
             
             asset.physicsBody = SKPhysicsBody(rectangleOf: asset.size)
             asset.physicsBody?.categoryBitMask = Tag.parts
         }
-        else if (currentAsset == 1) {
+        
+        else if (currentAsset == 1)
+        {
             asset = SKSpriteNode(texture: plankTexture)
             asset.size = CGSize(width: 68, height: 32)
             
             asset.physicsBody = SKPhysicsBody(rectangleOf: asset.size)
             asset.physicsBody?.categoryBitMask = Tag.parts
         }
-        else {
-            asset = SKSpriteNode(texture: paperTexture)
-            asset.size = CGSize(width: 60, height: 60)
+        
+        else
+        {
+            let randomTree = randomAssetNum.nextInt()
             
+            if (randomTree < 4)
+            {
+                asset = SKSpriteNode(texture: smallTreeTexture)
+                asset.size = CGSize(width: 60, height: 60)
+            }
+            
+            else
+            {
+                asset = SKSpriteNode(texture: bigTreeTexture)
+                asset.size = CGSize(width: 80, height: 80)
+            }
+        
             asset.physicsBody = SKPhysicsBody(rectangleOf: asset.size)
             asset.physicsBody?.categoryBitMask = Tag.trash
         }
@@ -172,12 +200,23 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate {
     }
      */
     
-    func didBegin(_ contact: SKPhysicsContact) {
+    func didBegin(_ contact: SKPhysicsContact)
+    {
         print("CONTACT")
         
-        //var first = SKPhysicsBody()
-        //var second = SKPhysicsBody()
+        var player = SKPhysicsBody()
+        var other = SKPhysicsBody()
         
-        // if (contact.bodyA.node?.name == "player")
+        // Contact assumes one body must be the player
+        if (contact.bodyA.node?.name == "player")
+        {
+            player = contact.bodyA
+            other = contact.bodyB
+        }
+        else
+        {
+            player = contact.bodyB
+            other = contact.bodyA
+        }
     }
 }
