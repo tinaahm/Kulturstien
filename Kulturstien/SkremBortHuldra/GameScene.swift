@@ -60,11 +60,12 @@ class GameScene: SKScene, ObservableObject {
               }
 
     
+
   let player = SKSpriteNode(imageNamed: "TrondPlayer")
     
   override func didMove(to view: SKView) {
     // 2
-    let background = SKSpriteNode(imageNamed: "background")
+    let background = SKSpriteNode(imageNamed: "NightTimeMap")
     background.blendMode = .replace
     background.zPosition = -1
     addChild(background)
@@ -87,10 +88,10 @@ class GameScene: SKScene, ObservableObject {
             ])
         ))
       
-      gameScore = SKLabelNode(fontNamed: "Chalkduster")
+      gameScore = SKLabelNode(fontNamed: "Saira-Regular")
       gameScore.text = "Poeng: 0"
       gameScore.position = CGPoint(x: (size.width / 2), y: 800)
-      gameScore.fontSize = 25
+      gameScore.fontSize = 35
       addChild(gameScore)
     
   }
