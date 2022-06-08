@@ -254,11 +254,14 @@ func setAnswersArray(page: ViewIndex, selection: Structure, answerArray: [Bool])
 		page.millAnswers.removeAll()
 		page.millAnswers.append(contentsOf: answerArray)
 	case .sawmill:
-		page.sawMillAnswers = answerArray
+		page.sawMillAnswers.removeAll()
+		page.sawMillAnswers.append(contentsOf: answerArray)
 	case .dam:
-		page.damAnswers = answerArray
+		page.damAnswers.removeAll()
+		page.damAnswers.append(contentsOf: answerArray)
 	case .logBooms:
-		page.logBoomsAnswers = answerArray
+		page.logBoomsAnswers.removeAll()
+		page.logBoomsAnswers.append(contentsOf: answerArray)
 	case .none:
 		return
 	}
