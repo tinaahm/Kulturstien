@@ -85,11 +85,17 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
 		
         if (partsCounter >= requiredParts)
         {
+            for node in nodes
+            {
+                node.removeFromParent()
+            }
+            
             gameRunning = false
             
             label.text = "Du klarte det!"
             restartButton.alpha = 100
-			self.gameOver = true
+			
+            self.gameOver = true
         }
     }
     
@@ -125,10 +131,7 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
             {
                 reloadScene()
             }
-            
-
         }
-
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?)
@@ -282,6 +285,13 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         restartButton.alpha = 0
         partsCounter = 0
         
+        for node in nodes
+        {
+            node.removeFromParent()
+        }
+     
+        playerSprite.run(SKAction.moveTo(x: frame.midX, duration: 0))
+        /*
         let screenSize: CGRect = UIScreen.main.bounds
         
         let screenWidth = screenSize.width
@@ -291,5 +301,6 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         scaleMode = .fill
         
         view?.presentScene(MillGameScene())
+         */
     }
 }
