@@ -110,12 +110,20 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
             let coords: CGPoint = touch.location(in: self)
             let restartPos: CGPoint = restartButton.position
             
-            if (coords == restartPos)
+            playerSprite.run(SKAction.moveTo(x: coords.x, duration: netMoveDelay))
+            
+            if (gameRunning) { return }
+        
+            let dx = coords.x - restartPos.x;
+            let dy = coords.y - restartPos.y;
+            let distance = sqrtf(Float(dx * dx + dy * dy));
+            
+            if (distance < 200)
             {
                 reloadScene()
             }
             
-            playerSprite.run(SKAction.moveTo(x: coords.x, duration: netMoveDelay))
+
         }
 
     }
