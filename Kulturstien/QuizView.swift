@@ -84,15 +84,6 @@ struct QuizView: View {
 						
 						self.quiz.questionAnswers[questionIndex] = answeredCorrectly
 						
-						for i in 0...(page.quizesArray.count - 1) {
-							if page.quizesArray[i].type == self.quiz.type {
-								
-								if !checkPreviouslyAnsweredQuestions(answerArray: page.quizesArray[i].questionAnswers) {
-									page.quizesArray[i].questionAnswers = self.quiz.questionAnswers
-								}
-							}
-						}
-						
 						self.guessedIndex = nil
 						self.guessedAnswer = nil
 						self.questionIndex += 1
@@ -102,15 +93,12 @@ struct QuizView: View {
 						}
 						
 					} else {
+						
 						self.quiz.questionAnswers[questionIndex] = answeredCorrectly
-						for i in 0...(page.quizesArray.count - 1) {
-							if page.quizesArray[i].type == self.quiz.type {
-								
-								if !checkPreviouslyAnsweredQuestions(answerArray: page.quizesArray[i].questionAnswers) {
-									page.quizesArray[i].questionAnswers = self.quiz.questionAnswers
-								}
-							}
+						if !checkIfPastQuizAnswersAreCorrect(answerArray: getAnswersArray(page: page, selection: self.quizType)) {
+							setAnswersArray(page: page, selection: self.quizType, answerArray: self.quiz.questionAnswers)
 						}
+						
 						self.guessedIndex = nil
 						self.guessedAnswer = nil
 						page.currentQuiz = self.quiz
@@ -137,7 +125,7 @@ struct QuizView: View {
 
 }
 
-func checkPreviouslyAnsweredQuestions(answerArray: [Bool]) -> Bool {
+func checkIfPastQuizAnswersAreCorrect(answerArray: [Bool]) -> Bool {
 	for answer in answerArray {
 		if !answer {
 			return false
@@ -241,9 +229,7 @@ struct QuizEndView: View {
 							RoundedRectangle(cornerRadius: 15).fill(.white)
 									.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4)
 						)
-										
 				}
-				
 				Spacer()
 			}
 		}
@@ -251,7 +237,6 @@ struct QuizEndView: View {
 		.background(Color("BackgroundColour"))
 	}
 }
-
 
 func getNumberOfCorrectAnswers(resultArray: [Bool]) -> Int {
 	var i : Int = 0
@@ -261,6 +246,37 @@ func getNumberOfCorrectAnswers(resultArray: [Bool]) -> Int {
 		}
 	}
 	return i
+}
+
+func setAnswersArray(page: ViewIndex, selection: Structure, answerArray: [Bool]) {
+	switch selection {
+	case .mill:
+		page.millAnswers.removeAll()
+		page.millAnswers.append(contentsOf: answerArray)
+	case .sawmill:
+		page.sawMillAnswers = answerArray
+	case .dam:
+		page.damAnswers = answerArray
+	case .logBooms:
+		page.logBoomsAnswers = answerArray
+	case .none:
+		return
+	}
+}
+
+func getAnswersArray(page: ViewIndex, selection: Structure) -> [Bool] {
+	switch selection {
+	case .mill:
+		return page.millAnswers
+	case .sawmill:
+		return page.sawMillAnswers
+	case .dam:
+		return page.damAnswers
+	case .logBooms:
+		return page.logBoomsAnswers
+	case .none:
+		return [Bool]()
+	}
 }
 
 func resultImageToDisplay(numberOfCorrectAnswers: Int, numberOfQuestions: Int) -> String {

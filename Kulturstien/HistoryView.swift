@@ -32,11 +32,7 @@ struct HistoryView: View {
 						
 						page.previousPage = page.pageIndex
 						informationSelection = .mill
-						for i in 0...(page.quizesArray.count - 1) {
-							if page.quizesArray[i].type == informationSelection {
-								page.quizesArray[i].informationPageRead = true
-							}
-						}
+						setInformationPageToRead(page: page, selection: informationSelection)
 						page.pageIndex = .information
                     }) {
                         VStack () {
@@ -56,11 +52,7 @@ struct HistoryView: View {
                     Button (action: {
 						page.previousPage = page.pageIndex
 						informationSelection = .sawmill
-						for i in 0...(page.quizesArray.count - 1) {
-							if page.quizesArray[i].type == informationSelection {
-								page.quizesArray[i].informationPageRead = true
-							}
-						}
+						setInformationPageToRead(page: page, selection: informationSelection)
 						page.pageIndex = .information
                     }) {
                         VStack () {
@@ -86,11 +78,7 @@ struct HistoryView: View {
                     Button (action: {
 						page.previousPage = page.pageIndex
 						informationSelection = .dam
-						for i in 0...(page.quizesArray.count - 1) {
-							if page.quizesArray[i].type == informationSelection {
-								page.quizesArray[i].informationPageRead = true
-							}
-						}
+						setInformationPageToRead(page: page, selection: informationSelection)
 						page.pageIndex = .information
                     }) {
                         VStack () {
@@ -111,11 +99,7 @@ struct HistoryView: View {
                     Button (action: {
 						page.previousPage = page.pageIndex
 						informationSelection = .logBooms
-						for i in 0...(page.quizesArray.count - 1) {
-							if page.quizesArray[i].type == informationSelection {
-								page.quizesArray[i].informationPageRead = true
-							}
-						}
+						setInformationPageToRead(page: page, selection: informationSelection)
 						page.pageIndex = .information
                     }) {
                         VStack () {

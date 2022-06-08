@@ -30,7 +30,7 @@ struct MainIPhoneView: View {
 						.resizable()
 						.edgesIgnoringSafeArea(.all)
 				)
-			.draggable()
+			//.draggable()
 			
 			VStack {
 					HStack {

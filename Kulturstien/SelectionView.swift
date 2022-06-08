@@ -38,11 +38,13 @@ struct SelectionView: View {
 				}
 			
 				Button (action: {
-					for i in 0...(page.quizesArray.count - 1) {
+					/*for i in 0...(page.quizesArray.count - 1) {
 						if page.quizesArray[i].type == self.selectionType {
 							page.quizesArray[i].informationPageRead = true
 						}
-					}
+					}*/
+					setInformationPageToRead(page: page, selection: self.selectionType)
+					
 					page.previousPage = page.pageIndex
 					page.pageIndex = .information
 				}) {
@@ -58,16 +60,14 @@ struct SelectionView: View {
 				
 				Button (action: {
 					
-					var informationPageRead: Bool = false
-					
+					/*var informationPageRead: Bool = false
 					for i in 0...(page.quizesArray.count - 1) {
 						if page.quizesArray[i].type == self.selectionType {
 							informationPageRead = page.quizesArray[i].informationPageRead
 						}
-					}
+					}*/
 					
-					
-					if informationPageRead {
+					if getInformationPageRead(page: page, selection: self.selectionType) {
 						page.previousPage = page.pageIndex
 						quizSelection = selectionType
 						page.pageIndex = .quiz
@@ -85,7 +85,8 @@ struct SelectionView: View {
 						)
 						.background(
 							RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
-								.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
+								.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4)
+						)
 				}
 				.padding(.bottom)
 				
@@ -125,6 +126,36 @@ func getImageTitleFromSelection(selectionType: Structure) -> String {
 		return "LogBoomsIcon"
 	case .none:
 		return ""
+	}
+}
+
+func setInformationPageToRead(page: ViewIndex, selection: Structure) {
+	switch selection {
+	case .mill:
+		page.readMillInformation = true
+	case .sawmill:
+		page.readSawmillInformation = true
+	case .dam:
+		page.readDamInformation = true
+	case .logBooms:
+		page.readLogBoomsInformation = true
+	case .none:
+		return
+	}
+}
+
+func getInformationPageRead(page: ViewIndex, selection: Structure) -> Bool {
+	switch selection {
+	case .mill:
+		return page.readMillInformation
+	case .sawmill:
+		return page.readSawmillInformation
+	case .dam:
+		return page.readDamInformation
+	case .logBooms:
+		return page.readLogBoomsInformation
+	case .none:
+		return false
 	}
 }
 

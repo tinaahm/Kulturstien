@@ -13,10 +13,13 @@ struct ProgressionView: View {
     
     var greyImageArray = ["GreyRectangleLeft", "GreyRectangleCenter", "GreyRectangleRight"]
 	var greenImageArray = ["GreenLeftRectangle", "GreenMiddleRectangle", "GreenRightRectangle"]
-    var quizArray = ["Sagbruk", "Kvernhus", "Demning", "Lenseanlegg"]
+    var quizArray = ["kvernhus", "sagbruk", "demning", "lenseanlegg"]
     var cardGameSum: Int = 200
     
     var body: some View {
+		
+		let quizAnswerArray = [page.millAnswers, page.sawMillAnswers, page.damAnswers, page.logBoomsAnswers]
+		
         ZStack{
 			VStack {
             
@@ -38,35 +41,33 @@ struct ProgressionView: View {
                     .fill(Color("Grey"))
                     .shadow(radius: 2, x: 0, y: 3)
 
-                VStack (alignment: .leading){
+                VStack (alignment: .leading) {
                     
-                    ForEach(0 ..< 4) { outerIndex in
+					ForEach(0 ..< quizAnswerArray.count) { outerIndex in
                     HStack (){
-                        Text(page.quizesArray[outerIndex].type.rawValue.capitalized)
+						Text(quizArray[outerIndex].capitalized)
                                 .padding()
                      
                             Spacer()
-                        ForEach(0 ..< 3) { innerIndex in
+						ForEach(0 ..< quizAnswerArray[outerIndex].count) { innerIndex in
                             VStack (alignment: .trailing) {
-                                Image(page.quizesArray[outerIndex].questionAnswers[innerIndex] ? greenImageArray[innerIndex] : greyImageArray[innerIndex])
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 20, height: 20)
-                            .padding(12)
-                                
-                            }
-                            
-                            
+                                //Image(page.quizesArray[outerIndex].questionAnswers[innerIndex] ? greenImageArray[innerIndex] : greyImageArray[innerIndex])
+								Image(quizAnswerArray[outerIndex][innerIndex] ? greenImageArray[innerIndex] : greyImageArray[innerIndex])
+									.resizable()
+									.scaledToFill()
+									.frame(width: 20, height: 20)
+									.padding(12)
+								}
                         }
                         
-                        if page.quizesArray[outerIndex].informationPageRead {
+						if getInformationPageRead(page: page, selection: Structure(rawValue: quizArray[outerIndex])!) {
                             Image(systemName: "arrow.right")
                                 .resizable()
                                 .frame(width: 25, height: 20)
                                 .padding(.leading, 5)
                                 .onTapGesture {
                                     page.previousPage = page.pageIndex
-                                    quizSelection = page.quizesArray[outerIndex].type
+									quizSelection = Structure(rawValue: quizArray[outerIndex])!
                                     page.pageIndex = .quiz
                                 }
                         } else {
@@ -147,7 +148,7 @@ struct ProgressionView: View {
                         VStack {
                             
                             HStack () {
-                                Text(String(page.user.wackANokkGameScore) + " poeng")
+                                Text(String(page.wackANokkGameScore) + " poeng")
                                     .padding(2)
                             }
                         }

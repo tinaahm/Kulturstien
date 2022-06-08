@@ -15,7 +15,9 @@ class DeviceSize {
 }
 
 enum UserDataKeys: String {
-	case userName, selectedColour, wackANokkGameScore, frightenHuldraGameScore, farmMemoryGameScore, fairtytaleMemoryGameScore, appStartPage, pageIndex
+	case userName, selectedColour, wackANokkGameScore, frightenHuldraGameScore, farmMemoryGameScore, fairtytaleMemoryGameScore, appStartPage
+	case readSawmillInformation, readMillInformation, readDamInformation, readLogBoomsInformation
+	case sawMillAnswers, millAnswers, damAnswers, logBoomsAnswers
 }
 
 enum Colour: String, CaseIterable, Identifiable {
@@ -26,6 +28,19 @@ enum Colour: String, CaseIterable, Identifiable {
 	case blue = "blå"
 	case none = "Hva er favoritt fargen din?"
 	var id: Self { self }
+}
+
+struct ReadInformationPages {
+	var informationType: Structure
+	var read: Bool
+	//var questionAnswers: [Bool]
+
+	
+	init(informationType: Structure) {
+		self.informationType = informationType
+		self.read = false
+	}
+	
 }
 
 struct User {
@@ -53,11 +68,28 @@ class ViewIndex: ObservableObject {
 	@Published var user: User = User()
 	@AppStorage(UserDataKeys.userName.rawValue) var userName: String = ""
 	@AppStorage(UserDataKeys.selectedColour.rawValue) var selectedColour: Colour = .none
+	
 	@AppStorage(UserDataKeys.appStartPage.rawValue) var appStartPage: Page = .start
 	@AppStorage(UserDataKeys.wackANokkGameScore.rawValue) var wackANokkGameScore: Int = 0
 	@AppStorage(UserDataKeys.frightenHuldraGameScore.rawValue) var frightenHuldraGameScore: Int = 0
 	@AppStorage(UserDataKeys.farmMemoryGameScore.rawValue) var farmMemoryGameScore: Int = 0
 	@AppStorage(UserDataKeys.fairtytaleMemoryGameScore.rawValue) var fairtytaleMemoryGameScore: Int = 0
+	
+	@AppStorage(UserDataKeys.readMillInformation.rawValue) var readMillInformation: Bool = false
+	@AppStorage(UserDataKeys.readSawmillInformation.rawValue) var readSawmillInformation: Bool = false
+	@AppStorage(UserDataKeys.readDamInformation.rawValue) var readDamInformation: Bool = false
+	@AppStorage(UserDataKeys.readLogBoomsInformation.rawValue) var readLogBoomsInformation: Bool = false
+	
+	@AppStorage(UserDataKeys.millAnswers.rawValue) var millAnswers: [Bool] = [false, false, false]
+	@AppStorage(UserDataKeys.sawMillAnswers.rawValue) var sawMillAnswers: [Bool] = [false, false, false]
+	@AppStorage(UserDataKeys.damAnswers.rawValue) var damAnswers: [Bool] = [false, false, false]
+	@AppStorage(UserDataKeys.logBoomsAnswers.rawValue) var logBoomsAnswers: [Bool] = [false, false, false]
+	
+	/*@AppStorage(UserDataKeys.readMillInformation.rawValue) var readMillInformation: Quiz = Quiz(name: "Kvernhus Quiz", type: .mill, imageTitle: "WaterMillIcon")
+	@AppStorage(UserDataKeys.readSawmillInformation.rawValue) var readSawmillInformation: Quiz = Quiz(name: "Sagbruk Quiz", type: .sawmill, imageTitle: "SawmillIcon")
+	@AppStorage(UserDataKeys.readDamInformation.rawValue) var readDamInformation: Quiz = Quiz(name: "Demning Quiz", type: .dam, imageTitle: "DamIcon")
+	@AppStorage(UserDataKeys.readLogBoomsInformation.rawValue) var readLogBoomsInformation: Quiz = Quiz(name: "Lenseanlegg Quiz", type: .logBooms, imageTitle: "LogBoomsIcon")*/
+	
 	@Published var quizesArray: [Quiz] = [Quiz(name: "Kvernhus Quiz", type: .mill, imageTitle: "WaterMillIcon"), Quiz(name: "Sagbruk Quiz", type: .sawmill, imageTitle: "SawmillIcon"), Quiz(name: "Demning Quiz", type: .dam, imageTitle: "DamIcon"), Quiz(name: "Lenseanlegg Quiz", type: .logBooms, imageTitle: "LogBoomsIcon")]
 	@Published var scorePlaceHolder: Int = 0
 	@Published var currentQuiz: Quiz = Quiz(name: "", type: .none, imageTitle: "")
@@ -136,6 +168,26 @@ extension AnyTransition {
 		AnyTransition.asymmetric(
 			insertion: .move(edge: .trailing),
 			removal: .move(edge: .leading))
+	}
+}
+
+extension Array: RawRepresentable where Element: Codable {
+	public init?(rawValue: String) {
+		guard let data = rawValue.data(using: .utf8),
+			  let result = try? JSONDecoder().decode([Element].self, from: data)
+		else {
+			return nil
+		}
+		self = result
+	}
+
+	public var rawValue: String {
+		guard let data = try? JSONEncoder().encode(self),
+			  let result = String(data: data, encoding: .utf8)
+		else {
+			return "[]"
+		}
+		return result
 	}
 }
 
