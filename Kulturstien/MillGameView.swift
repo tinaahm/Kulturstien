@@ -9,10 +9,12 @@ import UIKit
 import SpriteKit
 import SwiftUI
 
-struct MillGameView: View
-{
-    public var gameScene: SKScene
-    {
+struct MillGameView: View {
+	
+	@EnvironmentObject var page : ViewIndex
+	@StateObject var gameScene = MillGameScene(size: DeviceSize.size)
+	
+    /*public var gameScene: SKScene {
         let screenSize: CGRect = UIScreen.main.bounds
         
         let screenWidth = screenSize.width
@@ -24,15 +26,23 @@ struct MillGameView: View
         scene.scaleMode = .fill
         
         return scene
-    }
+    }*/
     
     var body: some View {
         ZStack {
-            SpriteView(scene: gameScene, debugOptions: [
-                .showsNodeCount, .showsFPS
-                                                    // ,.showsPhysics
-            ])
-                .ignoresSafeArea()
+			
+			if !gameScene.gameOver {
+				SpriteView(scene: gameScene, debugOptions: [
+					.showsNodeCount, .showsFPS     // ,.showsPhysics
+				])
+					.ignoresSafeArea()
+			} else {
+				Image("")
+					.onAppear {
+						page.scorePlaceHolder = gameScene.partsCounter
+						page.pageIndex = .gameEnd
+					}
+			}
             BackButtonView().position(x: 220, y: 40)
         }
     }
@@ -40,7 +50,6 @@ struct MillGameView: View
 
 struct MillGameView_Previews: PreviewProvider {
     static var previews: some View {
-        MillGameView()
-            .previewInterfaceOrientation(.portrait)
+		MillGameView().environmentObject(ViewIndex())
     }
 }

@@ -15,6 +15,7 @@ struct ProgressionView: View {
 	var greenImageArray = ["GreenLeftRectangle", "GreenMiddleRectangle", "GreenRightRectangle"]
     var quizArray = ["kvernhus", "sagbruk", "demning", "lenseanlegg"]
     var cardGameSum: Int = 200
+	var rectangleWidth = DeviceSize.width * 0.85
     
     var body: some View {
 		
@@ -86,7 +87,7 @@ struct ProgressionView: View {
                 }
                 .padding(5)
             }
-            .frame(width: 345)
+            .frame(width: rectangleWidth)
             .padding()
 
             
@@ -131,7 +132,7 @@ struct ProgressionView: View {
                     }
                     .padding(10)
                 }
-                .frame(width: 345)
+                .frame(width: rectangleWidth)
                 .padding(.bottom)
                 
                 ZStack {
@@ -161,7 +162,7 @@ struct ProgressionView: View {
                     }
                     .padding(10)
                 }
-                .frame(width: 345)
+                .frame(width: rectangleWidth)
                 .padding(.bottom)
                 
                 ZStack {
@@ -191,7 +192,37 @@ struct ProgressionView: View {
                     }
                     .padding(10)
                 }
-                .frame(width: 345)
+                .frame(width: rectangleWidth)
+				.padding(.bottom)
+				
+				ZStack {
+					
+					RoundedRectangle(cornerRadius: 25, style: .continuous)
+						.fill(Color("Grey"))
+						.shadow(radius: 2, x: 0, y: 3)
+
+					VStack (alignment: .center){
+						
+						Text("Mølle Spill")
+							.font(.title3)
+							.padding(5)
+						VStack {
+							
+							HStack () {
+								Text(String(page.millGameScore) + " poeng")
+									.padding(2)
+							}
+						}
+						.padding()
+						.background(Color("LighterGrey"))
+						.cornerRadius(25)
+							
+								Spacer()
+			  
+					}
+					.padding(10)
+				}
+				.frame(width: rectangleWidth)
 				
 				
 				

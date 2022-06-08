@@ -60,6 +60,8 @@ func getPageByGameSelection(game: Game) -> Page {
 		return .farmMemoryGame
 	case .fairytaleCreaturesMemoryGame:
 		return .fairytaleCreaturesMemoryGame
+	case .millGame:
+		return .millGame
 	case .none:
 		return .main
 	}

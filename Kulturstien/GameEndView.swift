@@ -58,9 +58,8 @@ struct GameEndView: View {
 		}
 		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
     }
-	
 }
-
+/*
 func getGameSelectionFromPage(gameType: Game, user: User) -> Int {
 	switch gameType {
 	case .wackANokk:
@@ -74,7 +73,7 @@ func getGameSelectionFromPage(gameType: Game, user: User) -> Int {
 	case .none:
 		return 0
 	}
-}
+}*/
 
 struct GameEndView_Previews: PreviewProvider {
     static var previews: some View {
