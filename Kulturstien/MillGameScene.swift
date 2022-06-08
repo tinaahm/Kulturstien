@@ -27,9 +27,12 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     
     let label = SKLabelNode(fontNamed: "Source Sans Pro")
     
-    
+    var restartButton = SKSpriteNode()
+        
     var nodes: [SKSpriteNode] = []
     @Published var partsCounter: Int = 0
+    
+    var gameRunning: Bool = true
     
     let nailTexture = SKTexture(imageNamed: "nail")
     let plankTexture = SKTexture(imageNamed: "nice-plank")
@@ -50,12 +53,26 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         
         makePlayer()
         
+        // Init restartbutton
+        let systemRestart = UIImage(systemName: "arrow.clockwise")
+        let data = systemRestart?.pngData()
+        let image = UIImage(data: data!)
+        let texture = SKTexture(image: image!)
+        
+        restartButton = SKSpriteNode(texture: texture, size: CGSize(width: 32, height: 32))
+        restartButton.position = CGPoint(x: frame.midX, y: frame.midY)
+        restartButton.alpha = 0
+        restartButton.isUserInteractionEnabled = true
+
+        addChild(restartButton)
+    
+        
         // Init text label
         label.fontSize = 30
         label.fontColor = SKColor.black
         label.position = CGPoint(x: frame.midX, y: frame.maxY - 100)
         addChild(label)
-    
+        
         // Generate assets
         Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(generateRandomAsset), userInfo: nil, repeats: true)
         
@@ -65,9 +82,13 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     
     override func update(_ currentTime: TimeInterval) {
         label.text = "Samlede deler: \(partsCounter) / \(requiredParts)"
-        
-        if (partsCounter >= requiredParts) {
+		
+        if (partsCounter >= requiredParts)
+        {
+            gameRunning = false
+            
             label.text = "Du klarte det!"
+            restartButton.alpha = 100
 			self.gameOver = true
         }
     }
@@ -89,7 +110,13 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     {
         for touch in touches
         {
-            let coords = touch.location(in: self)
+            let coords: CGPoint = touch.location(in: self)
+            let restartPos: CGPoint = restartButton.position
+            
+            if (coords == restartPos)
+            {
+                reloadScene()
+            }
             
             playerSprite.run(SKAction.moveTo(x: coords.x, duration: netMoveDelay))
         }
@@ -127,7 +154,7 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     /// Programatically generate random assets
     @objc private func generateRandomAsset()
     {
-        if (partsCounter >= requiredParts) { return }
+        if (!gameRunning) { return }
             
         let randomAssetNum = GKRandomDistribution(lowestValue: 0, highestValue: 4)
         
@@ -243,6 +270,10 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     
     private func reloadScene()
     {
+        gameRunning = true
+        restartButton.alpha = 0
+        partsCounter = 0
+        
         let screenSize: CGRect = UIScreen.main.bounds
         
         let screenWidth = screenSize.width
