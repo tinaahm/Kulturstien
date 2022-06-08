@@ -26,6 +26,8 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
     
     var requiredParts: Int = 6
     
+    let label = SKLabelNode(fontNamed: "Source Sans Pro")
+    
     let nailTexture = SKTexture(imageNamed: "nail")
     let plankTexture = SKTexture(imageNamed: "nice-plank")
     let smallTreeTexture = SKTexture(imageNamed: "small-tree")
@@ -45,7 +47,12 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
         
         makePlayer()
         
+        // Init text label
+        label.fontSize = 30
+        label.fontColor = SKColor.black
+        label.position = CGPoint(x: frame.midX, y: frame.maxY - 100)
         drawText()
+        addChild(label)
     
         // Generate assets
         Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(generateRandomAsset), userInfo: nil, repeats: true)
@@ -54,9 +61,13 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(collectTrash), userInfo: nil, repeats: true)
     }
     
+    override func update(_ currentTime: TimeInterval) {
+        drawText()
+    }
+    
     func drawText()
     {
-        
+        label.text = "Samlede deler: \(partsCounter) / \(requiredParts)"
     }
     
     
