@@ -24,6 +24,11 @@ struct SelectionView: View {
 		VStack (spacing: 15) {
 			
 			BackButtonView()
+            
+            VStack {
+                Text(structureName.uppercased())
+                    .font(.custom("sourcesanspro-semibold", fixedSize: 24))
+            }
 			
 			VStack {
 			Image(imageTitle)
@@ -48,7 +53,7 @@ struct SelectionView: View {
 					page.previousPage = page.pageIndex
 					page.pageIndex = .information
 				}) {
-					Text("Lær om " + structureName)
+					Text("Les og lær")
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.7)
 						.padding(20)
@@ -76,7 +81,7 @@ struct SelectionView: View {
 						self.showQuizButtonInformationText = true
 					}
 				}) {
-					Text("Ta quiz om " + structureName)
+					Text("Ta quiz")
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.7)
 						.padding(20)

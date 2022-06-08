@@ -31,8 +31,8 @@ struct InformationView: View {
 				BackButtonView()
 				
 				VStack(alignment: .leading) {
-					Text(self.title)
-						.font(.title)
+                    Text(self.title.uppercased())
+                        .font(.custom("SourceSansPro-SemiBold", fixedSize: 24))
 				}
 				.padding(.bottom, 20)
 				

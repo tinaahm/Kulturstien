@@ -43,8 +43,8 @@ struct QuizView: View {
 			
 			BackButtonView()
 			HStack {
-				Text(self.quiz.name)
-					.font(.title)
+                Text(self.quiz.name.uppercased())
+                    .font(.custom("sourcesanspro-semibold", fixedSize: 24))
 			}
 			.padding()
                 Image(self.quiz.imageTitle)
