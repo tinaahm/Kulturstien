@@ -21,12 +21,13 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
     var gravitySpeed: Int = 20
     var netMoveDelay: Double = 0.2
     
-    var nodes: [SKSpriteNode] = []
-    var partsCounter: Int = 0
-    
-    var requiredParts: Int = 6
+    var requiredParts: Int = 2
     
     let label = SKLabelNode(fontNamed: "Source Sans Pro")
+    
+    
+    var nodes: [SKSpriteNode] = []
+    var partsCounter: Int = 0
     
     let nailTexture = SKTexture(imageNamed: "nail")
     let plankTexture = SKTexture(imageNamed: "nice-plank")
@@ -51,7 +52,6 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
         label.fontSize = 30
         label.fontColor = SKColor.black
         label.position = CGPoint(x: frame.midX, y: frame.maxY - 100)
-        drawText()
         addChild(label)
     
         // Generate assets
@@ -62,12 +62,12 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
     }
     
     override func update(_ currentTime: TimeInterval) {
-        drawText()
-    }
-    
-    func drawText()
-    {
         label.text = "Samlede deler: \(partsCounter) / \(requiredParts)"
+        
+        if (partsCounter >= requiredParts)
+        {
+            label.text = "Du klarte det!"
+        }
     }
     
     
@@ -125,6 +125,8 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
     /// Programatically generate random assets
     @objc private func generateRandomAsset()
     {
+        if (partsCounter >= requiredParts) { return }
+            
         let randomAssetNum = GKRandomDistribution(lowestValue: 0, highestValue: 4)
         
         var asset: SKSpriteNode
