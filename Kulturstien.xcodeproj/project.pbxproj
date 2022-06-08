@@ -205,12 +205,8 @@
 		26F0498E283B830B00FBA117 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0498D283B830B00FBA117 /* Paragraph.swift */; };
 		26F04990283CC16D00FBA117 /* WackANokkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0498F283CC16D00FBA117 /* WackANokkView.swift */; };
 		26F93BC52837AF98005F5F9E /* LoadJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F93BC42837AF98005F5F9E /* LoadJSON.swift */; };
-		8445573E2849F355009D2175 /* net.png in Resources */ = {isa = PBXBuildFile; fileRef = 8445573D2849F355009D2175 /* net.png */; };
-		84455740284A15B6009D2175 /* paper-brown.png in Resources */ = {isa = PBXBuildFile; fileRef = 8445573F284A15B5009D2175 /* paper-brown.png */; };
-		844A565F2848EE64009BF850 /* nice-plank.png in Resources */ = {isa = PBXBuildFile; fileRef = 844A565C2848EE64009BF850 /* nice-plank.png */; };
 		844A56602848EE64009BF850 /* MillGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A565D2848EE64009BF850 /* MillGameScene.swift */; };
 		844A56612848EE64009BF850 /* MillGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A565E2848EE64009BF850 /* MillGameView.swift */; };
-		844A56642848F66E009BF850 /* nail.png in Resources */ = {isa = PBXBuildFile; fileRef = 844A56632848F66E009BF850 /* nail.png */; };
 		A04024DC2848C81F001B4D18 /* WackMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04024D22848C81E001B4D18 /* WackMain.storyboard */; };
 		A04024DD2848C81F001B4D18 /* whackBad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A04024D32848C81E001B4D18 /* whackBad.mp3 */; };
 		A04024DE2848C81F001B4D18 /* WackGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04024D42848C81E001B4D18 /* WackGameScene.swift */; };
@@ -451,12 +447,8 @@
 		26F0498D283B830B00FBA117 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
 		26F0498F283CC16D00FBA117 /* WackANokkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WackANokkView.swift; sourceTree = "<group>"; };
 		26F93BC42837AF98005F5F9E /* LoadJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJSON.swift; sourceTree = "<group>"; };
-		8445573D2849F355009D2175 /* net.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = net.png; sourceTree = "<group>"; };
-		8445573F284A15B5009D2175 /* paper-brown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper-brown.png"; sourceTree = "<group>"; };
-		844A565C2848EE64009BF850 /* nice-plank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nice-plank.png"; sourceTree = "<group>"; };
 		844A565D2848EE64009BF850 /* MillGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MillGameScene.swift; sourceTree = "<group>"; };
 		844A565E2848EE64009BF850 /* MillGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MillGameView.swift; sourceTree = "<group>"; };
-		844A56632848F66E009BF850 /* nail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nail.png; sourceTree = "<group>"; };
 		A04024D22848C81E001B4D18 /* WackMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WackMain.storyboard; sourceTree = "<group>"; };
 		A04024D32848C81E001B4D18 /* whackBad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whackBad.mp3; sourceTree = "<group>"; };
 		A04024D42848C81E001B4D18 /* WackGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WackGameScene.swift; sourceTree = "<group>"; };
@@ -947,11 +939,7 @@
 		844A56622848EE6B009BF850 /* MillGame */ = {
 			isa = PBXGroup;
 			children = (
-				8445573F284A15B5009D2175 /* paper-brown.png */,
-				8445573D2849F355009D2175 /* net.png */,
-				844A56632848F66E009BF850 /* nail.png */,
 				844A565D2848EE64009BF850 /* MillGameScene.swift */,
-				844A565C2848EE64009BF850 /* nice-plank.png */,
 				844A565E2848EE64009BF850 /* MillGameView.swift */,
 			);
 			name = MillGame;
@@ -1179,7 +1167,6 @@
 				26D2D39D284B7FBD00BD68A0 /* Saira_Expanded-Bold.ttf in Resources */,
 				26D2D36E284B7FBD00BD68A0 /* Saira_SemiCondensed-Medium.ttf in Resources */,
 				26D2D35A284B7FBD00BD68A0 /* SourceSansPro-ExtraLightItalic.ttf in Resources */,
-				844A56642848F66E009BF850 /* nail.png in Resources */,
 				26D2D3DD284B7FBD00BD68A0 /* README.txt in Resources */,
 				26D2D3B0284B7FBD00BD68A0 /* Saira_Condensed-Italic.ttf in Resources */,
 				26D2D3C6284B7FBD00BD68A0 /* Saira_SemiExpanded-BoldItalic.ttf in Resources */,
@@ -1193,7 +1180,6 @@
 				26D2D371284B7FBD00BD68A0 /* Saira-MediumItalic.ttf in Resources */,
 				26D2D375284B7FBD00BD68A0 /* Saira-Regular.ttf in Resources */,
 				A04024E52848C81F001B4D18 /* whack.mp3 in Resources */,
-				84455740284A15B6009D2175 /* paper-brown.png in Resources */,
 				26D2D3B4284B7FBD00BD68A0 /* Saira_Condensed-Medium.ttf in Resources */,
 				26D2D399284B7FBD00BD68A0 /* Saira_Expanded-ExtraLightItalic.ttf in Resources */,
 				26D2D35B284B7FBD00BD68A0 /* SourceSansPro-Italic.ttf in Resources */,
@@ -1203,7 +1189,6 @@
 				26D2D395284B7FBD00BD68A0 /* Saira_Expanded-SemiBoldItalic.ttf in Resources */,
 				26D2D351284B7FBD00BD68A0 /* SourceSansPro-Regular.ttf in Resources */,
 				26D2D369284B7FBD00BD68A0 /* Saira_SemiCondensed-SemiBold.ttf in Resources */,
-				844A565F2848EE64009BF850 /* nice-plank.png in Resources */,
 				26D2D376284B7FBD00BD68A0 /* Saira-BlackItalic.ttf in Resources */,
 				26D2D3D7284B7FBD00BD68A0 /* Saira_ExtraCondensed-Italic.ttf in Resources */,
 				26D2D3C3284B7FBD00BD68A0 /* Saira_SemiExpanded-ExtraLight.ttf in Resources */,
@@ -1252,7 +1237,6 @@
 				26D2D354284B7FBD00BD68A0 /* SourceSansPro-Light.ttf in Resources */,
 				A0EA0C4E2848B46D00A2B524 /* GameScene.sks in Resources */,
 				26D2D38E284B7FBD00BD68A0 /* Saira_UltraCondensed-ExtraLightItalic.ttf in Resources */,
-				8445573E2849F355009D2175 /* net.png in Resources */,
 				26D2D36B284B7FBD00BD68A0 /* Saira_SemiCondensed-ExtraBoldItalic.ttf in Resources */,
 				26D2D3CD284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraBoldItalic.ttf in Resources */,
 				26D2D3CC284B7FBD00BD68A0 /* Saira_ExtraCondensed-ExtraBold.ttf in Resources */,
