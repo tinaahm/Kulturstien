@@ -30,19 +30,6 @@ enum Colour: String, CaseIterable, Identifiable {
 	var id: Self { self }
 }
 
-struct ReadInformationPages {
-	var informationType: Structure
-	var read: Bool
-	//var questionAnswers: [Bool]
-
-	
-	init(informationType: Structure) {
-		self.informationType = informationType
-		self.read = false
-	}
-	
-}
-
 struct User {
 	var wackANokkGameScore: Int = 0
 	var frightenHuldraGameScore: Int = 0
@@ -52,6 +39,14 @@ struct User {
 
 enum Page: String {
 	case start, main, mainNight, profile, menu, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, achievements, avatarChanger, gameEnd, history, howTo, startGame, ar, memoryGameEnd, quizEnd, appTutorial
+}
+
+enum Game: String {
+	case wackANokk = "Slå nøkken"
+	case frightenHuldra = "Skrem Vekk Huldra"
+	case farmMemoryGame = "Bondens redskaper"
+	case fairytaleCreaturesMemoryGame = "Underjordiske vesener"
+	case none = ""
 }
 
 var quizSelection: Structure = .none
@@ -65,7 +60,7 @@ class ViewIndex: ObservableObject {
 	@Published var pageIndex : Page = .main
 	@Published var previousPage : Page = .main
 	@Published var lightMode: Bool = true
-	@Published var user: User = User()
+	
 	@AppStorage(UserDataKeys.userName.rawValue) var userName: String = ""
 	@AppStorage(UserDataKeys.selectedColour.rawValue) var selectedColour: Colour = .none
 	
@@ -84,11 +79,6 @@ class ViewIndex: ObservableObject {
 	@AppStorage(UserDataKeys.sawMillAnswers.rawValue) var sawMillAnswers: [Bool] = [false, false, false]
 	@AppStorage(UserDataKeys.damAnswers.rawValue) var damAnswers: [Bool] = [false, false, false]
 	@AppStorage(UserDataKeys.logBoomsAnswers.rawValue) var logBoomsAnswers: [Bool] = [false, false, false]
-	
-	/*@AppStorage(UserDataKeys.readMillInformation.rawValue) var readMillInformation: Quiz = Quiz(name: "Kvernhus Quiz", type: .mill, imageTitle: "WaterMillIcon")
-	@AppStorage(UserDataKeys.readSawmillInformation.rawValue) var readSawmillInformation: Quiz = Quiz(name: "Sagbruk Quiz", type: .sawmill, imageTitle: "SawmillIcon")
-	@AppStorage(UserDataKeys.readDamInformation.rawValue) var readDamInformation: Quiz = Quiz(name: "Demning Quiz", type: .dam, imageTitle: "DamIcon")
-	@AppStorage(UserDataKeys.readLogBoomsInformation.rawValue) var readLogBoomsInformation: Quiz = Quiz(name: "Lenseanlegg Quiz", type: .logBooms, imageTitle: "LogBoomsIcon")*/
 	
 	@Published var quizesArray: [Quiz] = [Quiz(name: "Kvernhus Quiz", type: .mill, imageTitle: "WaterMillIcon"), Quiz(name: "Sagbruk Quiz", type: .sawmill, imageTitle: "SawmillIcon"), Quiz(name: "Demning Quiz", type: .dam, imageTitle: "DamIcon"), Quiz(name: "Lenseanlegg Quiz", type: .logBooms, imageTitle: "LogBoomsIcon")]
 	@Published var scorePlaceHolder: Int = 0

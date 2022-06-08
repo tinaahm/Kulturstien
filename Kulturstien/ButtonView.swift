@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-enum Game: String {
-	case wackANokk = "Slå nøkken"
-	case frightenHuldra = "Skrem Vekk Huldra"
-	case farmMemoryGame = "Bondens redskaper"
-	case fairytaleCreaturesMemoryGame = "Underjordiske vesener"
-	case none = ""
-}
-
 struct ButtonView: View {
 	
 	@EnvironmentObject var page : ViewIndex
