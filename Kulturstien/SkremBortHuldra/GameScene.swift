@@ -203,17 +203,8 @@ class GameScene: SKScene, ObservableObject {
 	  if self.reset {
 		  self.removeAllChildren()
 		  self.removeAllActions()
-		  self.loadScene()
 	  }
   }
-
-	func resetGame() {
-		if self.reset {
-			self.removeAllChildren()
-			self.removeAllActions()
-			self.loadScene()
-		}
-	}
 	
 }
 
