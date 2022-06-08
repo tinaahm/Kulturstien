@@ -9,15 +9,16 @@ import SpriteKit
 import SwiftUI
 import GameplayKit
 
-struct Tag {
+struct Tag
+{
     static let trash: UInt32 = 0
     static let player: UInt32 = 0b1
     static let parts: UInt32 = 0b10
     static let other: UInt32 = 0b11
 }
 
-class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
-	
+class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject
+{
 	@Published var gameOver = false
 	
     var gravitySpeed: Int = 20
@@ -66,7 +67,6 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
 
         addChild(restartButton)
     
-        
         // Init text label
         label.fontSize = 30
         label.fontColor = SKColor.black
@@ -80,7 +80,8 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(collectTrash), userInfo: nil, repeats: true)
     }
     
-    override func update(_ currentTime: TimeInterval) {
+    override func update(_ currentTime: TimeInterval)
+    {
         label.text = "Samlede deler: \(partsCounter) / \(requiredParts)"
 		
         if (partsCounter >= requiredParts)
