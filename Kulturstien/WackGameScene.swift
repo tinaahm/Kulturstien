@@ -11,6 +11,7 @@ class WackGameScene: SKScene, ObservableObject {
 	@Published var gameOver: Bool = false
     
 	var gameScore: SKLabelNode!
+    var gameScore2: SKLabelNode!
 	
 	@Published var score = 0 {
         didSet {
@@ -28,10 +29,11 @@ class WackGameScene: SKScene, ObservableObject {
         background.zPosition = -1
         addChild(background)
         
-        gameScore = SKLabelNode(fontNamed: "Chalkduster")
-        gameScore.text = "Score: 0"
+
+        gameScore = SKLabelNode(fontNamed: "Saira-Regular")
+        gameScore.text = "Poeng: 0"
 		gameScore.position = CGPoint(x: (size.width / 2), y: 750)
-        gameScore.fontSize = 30
+        gameScore.fontSize = 35
         addChild(gameScore)
 		
 		let halfOfScreenSize = (size.height / 2)
