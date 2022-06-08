@@ -13,7 +13,7 @@ class WackGameScene: SKScene, ObservableObject {
 	var gameScore: SKLabelNode!
     var gameScore2: SKLabelNode!
 	
-    var score = 0 {
+	@Published var score = 0 {
         didSet {
             gameScore.text = "Score: \(score)"
         }

@@ -219,7 +219,11 @@ struct QuizEndView: View {
 				}
 				
 				Button (action: {
+					if page.lightMode {
 						page.pageIndex = .main
+					} else {
+						page.pageIndex = .mainNight
+					}
 				}) {
 					Text("Tilbake til kartet")
 						.frame(width: DeviceSize.width * 0.5)

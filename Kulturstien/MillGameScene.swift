@@ -9,15 +9,18 @@ import SpriteKit
 import SwiftUI
 import GameplayKit
 
-struct Tag {
+struct Tag
+{
     static let trash: UInt32 = 0
     static let player: UInt32 = 0b1
     static let parts: UInt32 = 0b10
     static let other: UInt32 = 0b11
 }
 
-class MillGameScene: SKScene, SKPhysicsContactDelegate
+class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject
 {
+	@Published var gameOver = false
+	
     var gravitySpeed: Int = 20
     var netMoveDelay: Double = 0.2
     
@@ -25,9 +28,12 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
     
     let label = SKLabelNode(fontNamed: "Source Sans Pro")
     
-    
+    var restartButton = SKSpriteNode()
+        
     var nodes: [SKSpriteNode] = []
-    var partsCounter: Int = 0
+    @Published var partsCounter: Int = 0
+    
+    var gameRunning: Bool = true
     
     let nailTexture = SKTexture(imageNamed: "nail")
     let plankTexture = SKTexture(imageNamed: "nice-plank")
@@ -48,12 +54,25 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
         
         makePlayer()
         
+        // Init restartbutton
+        let systemRestart = UIImage(systemName: "arrow.clockwise")
+        let data = systemRestart?.pngData()
+        let image = UIImage(data: data!)
+        let texture = SKTexture(image: image!)
+        
+        restartButton = SKSpriteNode(texture: texture, size: CGSize(width: 32, height: 32))
+        restartButton.position = CGPoint(x: frame.midX, y: frame.midY)
+        restartButton.alpha = 0
+        restartButton.isUserInteractionEnabled = true
+
+        addChild(restartButton)
+    
         // Init text label
         label.fontSize = 30
         label.fontColor = SKColor.black
         label.position = CGPoint(x: frame.midX, y: frame.maxY - 100)
         addChild(label)
-    
+        
         // Generate assets
         Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(generateRandomAsset), userInfo: nil, repeats: true)
         
@@ -61,12 +80,23 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(collectTrash), userInfo: nil, repeats: true)
     }
     
-    override func update(_ currentTime: TimeInterval) {
+    override func update(_ currentTime: TimeInterval)
+    {
         label.text = "Samlede deler: \(partsCounter) / \(requiredParts)"
-        
+		
         if (partsCounter >= requiredParts)
         {
+            for node in nodes
+            {
+                node.removeFromParent()
+            }
+            
+            gameRunning = false
+            
             label.text = "Du klarte det!"
+            restartButton.alpha = 100
+			
+            self.gameOver = true
         }
     }
     
@@ -87,11 +117,22 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
     {
         for touch in touches
         {
-            let coords = touch.location(in: self)
+            let coords: CGPoint = touch.location(in: self)
+            let restartPos: CGPoint = restartButton.position
             
             playerSprite.run(SKAction.moveTo(x: coords.x, duration: netMoveDelay))
+            
+            if (gameRunning) { return }
+        
+            let dx = coords.x - restartPos.x;
+            let dy = coords.y - restartPos.y;
+            let distance = sqrtf(Float(dx * dx + dy * dy));
+            
+            if (distance < 200)
+            {
+                reloadScene()
+            }
         }
-
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?)
@@ -125,7 +166,7 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
     /// Programatically generate random assets
     @objc private func generateRandomAsset()
     {
-        if (partsCounter >= requiredParts) { return }
+        if (!gameRunning) { return }
             
         let randomAssetNum = GKRandomDistribution(lowestValue: 0, highestValue: 4)
         
@@ -241,6 +282,17 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
     
     private func reloadScene()
     {
+        gameRunning = true
+        restartButton.alpha = 0
+        partsCounter = 0
+        
+        for node in nodes
+        {
+            node.removeFromParent()
+        }
+     
+        playerSprite.run(SKAction.moveTo(x: frame.midX, duration: 0))
+        /*
         let screenSize: CGRect = UIScreen.main.bounds
         
         let screenWidth = screenSize.width
@@ -250,5 +302,6 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
         scaleMode = .fill
         
         view?.presentScene(MillGameScene())
+         */
     }
 }

@@ -22,7 +22,7 @@ struct MainIPhoneView: View {
 				ButtonView(selectedPerson: .trond, image: "TrondButton", width: 52, height: 101, posX: 290, posY: 590)
 				ButtonView(selectedPerson: .ragnhild, image: "RagnhildButton", width: 47, height: 90, posX: 270, posY: 250)
 				ButtonView(selectedGame: .farmMemoryGame, image: "TrophyButton", width: 40, height: 52, posX: 80, posY: 280)
-				ButtonView(selectedGame: .farmMemoryGame, image: "TrophyButton", width: 40, height: 52, posX: 55, posY: 470)
+				ButtonView(selectedGame: .millGame, image: "TrophyButton", width: 40, height: 52, posX: 55, posY: 470)
 				}
 			
 			.background(

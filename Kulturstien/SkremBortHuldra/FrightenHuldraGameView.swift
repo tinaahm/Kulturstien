@@ -39,7 +39,7 @@ struct HuldraGameOverView: View {
 	
 	var body: some View {
 		ZStack {
-		Color("CreatureInformationBackground")
+			Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground")
 			VStack {
 				Text("Poeng: " + String(score))
 					.foregroundColor(page.lightMode ? .black : .white)
@@ -51,6 +51,10 @@ struct HuldraGameOverView: View {
 					} else if gameSelection == .wackANokk {
 						if page.wackANokkGameScore < score {
 							page.wackANokkGameScore = score
+						}
+					} else if gameSelection == .millGame {
+						if page.millGameScore < score {
+							page.millGameScore = score
 						}
 					}
 					page.pageIndex = getPageByGameSelection(game: gameSelection)
@@ -72,6 +76,10 @@ struct HuldraGameOverView: View {
 					} else if gameSelection == .wackANokk {
 						if page.wackANokkGameScore < score {
 							page.wackANokkGameScore = score
+						}
+					} else if gameSelection == .millGame {
+						if page.millGameScore < score {
+							page.millGameScore = score
 						}
 					}
 					if page.lightMode {

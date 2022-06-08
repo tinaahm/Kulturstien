@@ -949,10 +949,10 @@
 			isa = PBXGroup;
 			children = (
 				26F0498F283CC16D00FBA117 /* WackANokkView.swift */,
-				A04024D62848C81F001B4D18 /* WackActions.sks */,
-				A04024D72848C81F001B4D18 /* WackGameScene.sks */,
 				A04024D42848C81E001B4D18 /* WackGameScene.swift */,
 				A04024D82848C81F001B4D18 /* WackGameViewController.swift */,
+				A04024D62848C81F001B4D18 /* WackActions.sks */,
+				A04024D72848C81F001B4D18 /* WackGameScene.sks */,
 				A04024D92848C81F001B4D18 /* WackLaunchScreen.storyboard */,
 				A04024D22848C81E001B4D18 /* WackMain.storyboard */,
 				A04024DB2848C81F001B4D18 /* whack.mp3 */,
