@@ -23,12 +23,18 @@ struct GameEndView: View {
 		ZStack {
 			Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground")
 			VStack {
+				Text("Game Over")
+					.font(.headlineFont)
+					.padding()
+					.foregroundColor(page.lightMode ? .black : .white)
 				Text("Poeng: " + String(score))
+					.font(.subHeadlineFont)
 					.foregroundColor(page.lightMode ? .black : .white)
 				Button(action: {
 					page.pageIndex = getPageByGameSelection(game: gameSelection)
 				}) {
 					Text("Spill på nytt")
+						.font(.subHeadlineFont)
 						.foregroundColor(page.lightMode ? .black : .white)
 						.frame(width: DeviceSize.width * 0.5)
 						.padding(20)
@@ -46,6 +52,7 @@ struct GameEndView: View {
 					}
 				}) {
 					Text("Gå tilbake til kartet")
+						.font(.subHeadlineFont)
 						.foregroundColor(page.lightMode ? .black : .white)
 						.frame(width: DeviceSize.width * 0.5)
 						.padding(20)
@@ -59,21 +66,6 @@ struct GameEndView: View {
 		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
     }
 }
-/*
-func getGameSelectionFromPage(gameType: Game, user: User) -> Int {
-	switch gameType {
-	case .wackANokk:
-		return user.wackANokkGameScore
-	case .frightenHuldra:
-		return user.frightenHuldraGameScore
-	case .farmMemoryGame:
-		return user.farmMemoryGameScore
-	case .fairytaleCreaturesMemoryGame:
-		return user.fairtytaleMemoryGameScore
-	case .none:
-		return 0
-	}
-}*/
 
 struct GameEndView_Previews: PreviewProvider {
     static var previews: some View {

@@ -44,16 +44,16 @@ struct QuizView: View {
 			BackButtonView()
 			HStack {
                 Text(self.quiz.name.uppercased())
-                    .font(.custom("sourcesanspro-semibold", fixedSize: 24))
+					.font(.headlineFont)
 			}
 			.padding()
                 Image(self.quiz.imageTitle)
 				Text(String(self.questionIndex + 1) + "/" + String(numberOfQuestions))
-				.font(.title3)
-				.padding(.bottom)
+					.font(.subHeadlineFont)
+					.padding(.bottom)
 				Text(self.quiz.questions[questionIndex].question)
-				.font(.title3)
-				.padding(.bottom)
+					.font(.subHeadlineFont)
+					.padding(.bottom)
 			
 			Group {
 				ForEach(0 ..< numberOfQuestions) {
@@ -64,6 +64,7 @@ struct QuizView: View {
 						self.guessedIndex = index
 					}) {
 						Text(answers[index])
+							.font(.subHeadlineFont)
 							.frame(width: DeviceSize.width * 0.7)
 							.padding(20)
                             .foregroundColor(.black)
@@ -106,6 +107,7 @@ struct QuizView: View {
 					}
 				}) {
 					Text(self.finished ? "Avslutt" : "Neste")
+						.font(.subHeadlineFont)
 						.frame(width: DeviceSize.width * 0.4)
 						.padding()
 						.foregroundColor(.black)
@@ -183,9 +185,10 @@ struct QuizEndView: View {
 					.background(Circle().fill(.white))
 				VStack {
 					Text("Ditt resultat")
-						.font(.title)
+						.font(.headlineFont)
+						.padding(.bottom, 10)
 					Text(String(numberOfCorrectAnswers) + "/" + String(resultArray.count))
-						.font(.title2)
+						.font(.subHeadlineFont)
 				}
 				
 				if numberOfCorrectAnswers != resultArray.count {
@@ -194,6 +197,7 @@ struct QuizEndView: View {
 						page.pageIndex = .information
 					}) {
 						Text("Les igjen")
+							.font(.subHeadlineFont)
 							.frame(width: DeviceSize.width * 0.5)
 							.padding(20)
 							.foregroundColor(.black)
@@ -208,6 +212,7 @@ struct QuizEndView: View {
 					page.pageIndex = .quiz
 				}) {
 					Text("Ta quizen på nytt")
+						.font(.subHeadlineFont)
 						.frame(width: DeviceSize.width * 0.5)
 						.padding(20)
 						.foregroundColor(.black)
@@ -226,6 +231,7 @@ struct QuizEndView: View {
 					}
 				}) {
 					Text("Tilbake til kartet")
+						.font(.subHeadlineFont)
 						.frame(width: DeviceSize.width * 0.5)
 						.padding(20)
 						.foregroundColor(.black)

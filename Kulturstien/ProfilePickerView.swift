@@ -21,11 +21,13 @@ struct ProfilePickerView: View {
 			if !self.pressedNext {
 			Spacer()
 			Text("Velkommen til Byåa Kultursti!")
+					.font(.headlineFont)
 				.padding(.bottom, 50)
 			VStack {
 				HStack {
 					TextField("Hva er navnet ditt?", text: $page.userName)
 				}
+				.font(.subHeadlineFont)
 				.foregroundColor(.black)
 				.frame(width: DeviceSize.width * 0.7)
 				.padding(20)
@@ -39,6 +41,7 @@ struct ProfilePickerView: View {
 							self.page.selectedColour = colour
 						}) {
 							Label(colour == .none ? colour.rawValue : colour.rawValue.capitalized, systemImage: "")
+								.font(.subHeadlineFont)
 						}
 						.foregroundColor(.black)
 					}
@@ -48,6 +51,7 @@ struct ProfilePickerView: View {
 						Spacer()
 						Image(systemName: "chevron.down")
 					}
+					.font(.subHeadlineFont)
 					.foregroundColor(.black)
 					.frame(width: DeviceSize.width * 0.7)
 					.padding(20)
@@ -64,6 +68,7 @@ struct ProfilePickerView: View {
 					self.pressedNext = true
 				}) {
 					Text("Neste")
+						.font(.subHeadlineFont)
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.4)
 						.padding(20)
@@ -80,7 +85,8 @@ struct ProfilePickerView: View {
 					.scaledToFit()
 					.padding([.leading, .top, .trailing], 90)
 					.padding(.bottom, 20)
-				Text("Hei " + page.userName.capitalized)
+				Text("Velkommen " + page.userName.capitalized)
+					.font(.headlineFont)
 					.padding([.leading, .top, .trailing])
 					.padding(.bottom, 90)
 				Button(action: {
@@ -88,6 +94,7 @@ struct ProfilePickerView: View {
 					page.pageIndex = .appTutorial
 				}) {
 					Text("Start")
+						.font(.subHeadlineFont)
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.4)
 						.padding(20)

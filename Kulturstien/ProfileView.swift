@@ -22,15 +22,17 @@ struct ProfileView: View {
 			.padding(5)
 			
 			Text("Hei " + page.userName.capitalized + "!")
+				.font(.headlineFont)
 				.foregroundColor(page.lightMode ? .black : .white)
 				.padding([.leading, .top, .trailing])
-				.padding(.bottom, 60)
+				.padding(.bottom, 40)
             
 			Button(action: {
 				page.previousPage = page.pageIndex
                 page.pageIndex = .achievements
 			}) {
 				Text("Prestasjoner")
+					.font(.subHeadlineFont)
 					.foregroundColor(.black)
 					.frame(width: DeviceSize.width * 0.7)
 					.padding(20)
@@ -44,6 +46,7 @@ struct ProfileView: View {
 				page.pageIndex = .history
 			}) {
 				Text("Byåas historie")
+					.font(.subHeadlineFont)
 					.foregroundColor(.black)
 					.frame(width: DeviceSize.width * 0.7)
 					.padding(20)
@@ -57,6 +60,7 @@ struct ProfileView: View {
 				page.pageIndex = .avatarChanger
 			}) {
 				Text("Endre avatar")
+					.font(.subHeadlineFont)
 					.foregroundColor(.black)
 					.frame(width: DeviceSize.width * 0.7)
 					.padding(20)
@@ -71,6 +75,7 @@ struct ProfileView: View {
 				page.pageIndex = .howTo
 			}) {
 				Text("Slik bruker du appen")
+					.font(.subHeadlineFont)
 					.foregroundColor(.black)
 					.frame(width: DeviceSize.width * 0.7)
 					.padding(20)
@@ -85,6 +90,7 @@ struct ProfileView: View {
 				page.pageIndex = .contact
 			}) {
 				Text("Kontakt oss")
+					.font(.subHeadlineFont)
 					.foregroundColor(.black)
 					.frame(width: DeviceSize.width * 0.7)
 					.padding(20)

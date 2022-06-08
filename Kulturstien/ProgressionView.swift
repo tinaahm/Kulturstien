@@ -32,8 +32,8 @@ struct ProgressionView: View {
             ScrollView {
             
             Text("Quiz progresjon")
+				.font(.headlineFont)
 				.foregroundColor(page.lightMode ? .black : .white)
-                .font(.system(size: 25))
                 .padding(.top, 40)
             
             ZStack {
@@ -47,6 +47,7 @@ struct ProgressionView: View {
 					ForEach(0 ..< quizAnswerArray.count) { outerIndex in
                     HStack (){
 						Text(quizArray[outerIndex].capitalized)
+							.font(.subHeadlineFont)
                                 .padding()
                      
                             Spacer()
@@ -95,6 +96,7 @@ struct ProgressionView: View {
             
 			VStack(alignment: .center) {
 				Text("Poeng")
+					.font(.headlineFont)
 					.foregroundColor(page.lightMode ? .black : .white)
 					.font(.system(size: 25))
 					.padding(10)
@@ -110,15 +112,17 @@ struct ProgressionView: View {
                     VStack (alignment: .center){
                         
                         Text("Minnespill")
-                            .font(.title3)
+                            .font(.headlineFont)
                             .padding(5)
                         VStack {
                             HStack () {
                                 Text("Bondens Redskaper: " + String(page.farmMemoryGameScore) + " poeng")
+									.font(.subHeadlineFont)
                                     .padding(2)
                             }
                             HStack () {
                                 Text("Underjordiske Vesen: " + String(page.fairtytaleMemoryGameScore) + " poeng")
+									.font(.subHeadlineFont)
                                     .padding(2)
                             }
                         }
@@ -144,12 +148,13 @@ struct ProgressionView: View {
                     VStack (alignment: .center){
                         
                         Text("Wack a Nøkk")
-                            .font(.title3)
+                            .font(.headlineFont)
                             .padding(5)
                         VStack {
                             
                             HStack () {
                                 Text(String(page.wackANokkGameScore) + " poeng")
+									.font(.subHeadlineFont)
                                     .padding(2)
                             }
                         }
@@ -174,12 +179,13 @@ struct ProgressionView: View {
                     VStack (alignment: .center){
                         
                         Text("Skrem Huldra")
-                            .font(.title3)
+                            .font(.headlineFont)
                             .padding(5)
                         VStack {
                             
                             HStack () {
                                 Text(String(page.frightenHuldraGameScore) + " poeng")
+									.font(.subHeadlineFont)
                                     .padding(2)
                             }
                         }
@@ -204,12 +210,13 @@ struct ProgressionView: View {
 					VStack (alignment: .center){
 						
 						Text("Mølle Spill")
-							.font(.title3)
+							.font(.headlineFont)
 							.padding(5)
 						VStack {
 							
 							HStack () {
 								Text(String(page.millGameScore) + " poeng")
+									.font(.subHeadlineFont)
 									.padding(2)
 							}
 						}

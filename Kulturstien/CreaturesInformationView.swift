@@ -31,6 +31,7 @@ struct CreaturesInformationView: View {
 					.scaledToFit()
 					.frame(width: 100, height: 100)
 				Text(creature.type.rawValue)
+					.font(.headlineFont)
 					.padding(.top)
 				ForEach(0 ..< creatureParagraphs.count) {
 					index in
@@ -39,16 +40,16 @@ struct CreaturesInformationView: View {
 								.fill(Color("CreatureInformationTextboxBackground"))
 								.shadow(radius: 4, x: -2, y: 5)
 
-							VStack(alignment: .leading) {
+							VStack(alignment: .center) {
 								Text(creatureParagraphs[index])
-									.font(.body)
+									.font(.textFont)
 									.padding()
 							}
 							.padding(20)
-							.multilineTextAlignment(.center)
+							.multilineTextAlignment(.leading)
 						}
-						.frame(width: 350)
-						.padding(20)
+						.frame(width: DeviceSize.width * 0.85)
+						.padding(10)
 				}
 			}
 		}

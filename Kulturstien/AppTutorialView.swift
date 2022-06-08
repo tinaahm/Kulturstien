@@ -36,7 +36,8 @@ struct AppTutorialView: View {
 				Button(action: {
 					page.pageIndex = .main
 				}) {
-					Text("Hopp Over")
+					Text("Hopp over")
+						.font(.subHeadlineFont)
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.7)
 						.padding(20)

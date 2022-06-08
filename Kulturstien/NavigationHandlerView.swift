@@ -38,7 +38,7 @@ struct User {
 }
 
 enum Page: String {
-	case start, main, mainNight, profile, menu, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, achievements, avatarChanger, gameEnd, history, howTo, startGame, ar, memoryGameEnd, quizEnd, appTutorial, millGame, resetView, secondReset
+	case start, main, mainNight, profile, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, achievements, avatarChanger, gameEnd, history, howTo, startGame, ar, memoryGameEnd, quizEnd, appTutorial, millGame, resetView, secondReset
 }
 
 enum Game: String {
@@ -105,11 +105,6 @@ struct NavigationHandlerView: View {
 				MainNightTimeView()
 			case .profile:
 				ProfileView()
-			case .menu:
-				MenuView()
-					.transition(.backslide)
-			case .texts:
-				MenuView()
 			case .quiz:
 				QuizView(quizType: quizSelection)
 			case .selection:
@@ -190,12 +185,15 @@ extension Array: RawRepresentable where Element: Codable {
 	}
 }
 
-/*
+
 extension Font {
-	static let mediumFont = Font.custom("Sans-Regular", size: Font.TextStyle.subheadline.size, relativeTo: .caption)
+	/*static let mediumFont = Font.custom("Sans-Regular", size: Font.TextStyle.subheadline.size, relativeTo: .caption)
 	static let mediumSmallFont = Font.custom("Sans-Regular", size: Font.TextStyle.footnote.size, relativeTo: .caption)
 	static let smallFont = Font.custom("Sans-Regular", size: Font.TextStyle.caption.size, relativeTo: .caption)
-	static let verySmallFont = Font.custom("Sans-Regular", size: Font.TextStyle.caption2.size, relativeTo: .caption)
+	static let verySmallFont = Font.custom("Sans-Regular", size: Font.TextStyle.caption2.size, relativeTo: .caption)*/
+	static let headlineFont = Font.custom("SourceSansPro-SemiBold", size: Font.TextStyle.title3.size, relativeTo: .caption)
+	static let subHeadlineFont = Font.custom("SourceSansPro-Regular", size: Font.TextStyle.headline.size, relativeTo: .caption)
+	static let textFont = Font.custom("SourceSansPro-Regular", size: Font.TextStyle.subheadline.size, relativeTo: .caption)
 }
 
 extension Font.TextStyle {
@@ -214,4 +212,4 @@ extension Font.TextStyle {
 			return 8
 		}
 	}
-}*/
+}

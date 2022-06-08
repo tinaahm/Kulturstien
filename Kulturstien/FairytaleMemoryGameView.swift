@@ -11,11 +11,11 @@ struct FairytaleMemoryGameView: View {
     var body: some View {
 		VStack {
 			BackButtonView(buttonColour: .white)
+			Text("Underjordiske vesener")
+				.font(.headlineFont)
 			Image("Nokken")
 				.resizable()
 				.frame(width: 80, height: 50)
-			Text("Huskespill")
-			Text("Underjordiske vesener")
 			DestinationPageView(theme: DefaultThemes.theme1)
 		}
 		.foregroundColor(.white)
@@ -25,6 +25,6 @@ struct FairytaleMemoryGameView: View {
 
 struct FairytaleMemoryGameView_Previews: PreviewProvider {
     static var previews: some View {
-        FairytaleMemoryGameView()
+        FairytaleMemoryGameView().environmentObject(ViewIndex())
     }
 }

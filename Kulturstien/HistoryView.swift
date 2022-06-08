@@ -22,8 +22,8 @@ struct HistoryView: View {
 			.frame(width: DeviceSize.width * 0.4, height: DeviceSize.width * 0.2)
         
         Text("Byåas Historie")
-				.foregroundColor(page.lightMode ? .black : .white)
-            .font(.system(size: 25))
+			.font(.headlineFont)
+			.foregroundColor(page.lightMode ? .black : .white)
             
             HStack (alignment: .top) {
                 
@@ -40,6 +40,7 @@ struct HistoryView: View {
                         .resizable()
                         .frame(width: 50, height: 50)
                         Text("Kvernhus")
+							.font(.subHeadlineFont)
                     }
 					.foregroundColor(.black)
 					.frame(width: DeviceSize.width * 0.25, height: DeviceSize.width * 0.25)
@@ -60,6 +61,7 @@ struct HistoryView: View {
                         .resizable()
                         .frame(width: 50, height: 50)
                         Text("Sagbruk")
+								.font(.subHeadlineFont)
                     }
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.25, height: DeviceSize.width * 0.25)
@@ -86,6 +88,7 @@ struct HistoryView: View {
                         .resizable()
                         .frame(width: 50, height: 50)
                         Text("Demning")
+							.font(.subHeadlineFont)
                     }
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.25, height: DeviceSize.width * 0.25)
@@ -106,8 +109,9 @@ struct HistoryView: View {
                         Image("LogBoomsIcon")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 90, height: 90)
+                        .frame(width: 90, height: 60)
                         Text("Lenseanlegg")
+							.font(.subHeadlineFont)
                     }
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.25, height: DeviceSize.width * 0.25)

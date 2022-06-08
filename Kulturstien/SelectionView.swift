@@ -27,7 +27,7 @@ struct SelectionView: View {
             
             VStack {
                 Text(structureName.uppercased())
-                    .font(.custom("sourcesanspro-semibold", fixedSize: 24))
+					.font(.headlineFont)
             }
 			
 			VStack {
@@ -36,8 +36,8 @@ struct SelectionView: View {
 				
 				if self.showQuizButtonInformationText {
 					Text("For å låse opp quiz så må du først lese teksten over!")
+						.font(.textFont)
 						.foregroundColor(.red)
-						.font(.callout)
 						.frame(width: DeviceSize.width * 0.7)
 						.padding()
 				}
@@ -54,6 +54,7 @@ struct SelectionView: View {
 					page.pageIndex = .information
 				}) {
 					Text("Les og lær")
+						.font(.subHeadlineFont)
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.7)
 						.padding(20)
@@ -65,13 +66,6 @@ struct SelectionView: View {
 				
 				Button (action: {
 					
-					/*var informationPageRead: Bool = false
-					for i in 0...(page.quizesArray.count - 1) {
-						if page.quizesArray[i].type == self.selectionType {
-							informationPageRead = page.quizesArray[i].informationPageRead
-						}
-					}*/
-					
 					if getInformationPageRead(page: page, selection: self.selectionType) {
 						page.previousPage = page.pageIndex
 						quizSelection = selectionType
@@ -82,6 +76,7 @@ struct SelectionView: View {
 					}
 				}) {
 					Text("Ta quiz")
+						.font(.subHeadlineFont)
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.7)
 						.padding(20)
@@ -102,6 +97,7 @@ struct SelectionView: View {
 						page.pageIndex = .ar
 					}) {
 						Text("Se i AR")
+							.font(.subHeadlineFont)
 							.foregroundColor(.black)
 							.frame(width: DeviceSize.width * 0.7)
 							.padding(20)

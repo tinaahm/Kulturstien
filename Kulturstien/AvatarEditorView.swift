@@ -23,8 +23,8 @@ struct AvatarEditorView: View {
         BackButtonView()
         
         Text("Endre avatar")
+			.font(.headlineFont)
 			.foregroundColor(page.lightMode ? .black : .white)
-            .font(.system(size: 25))
             
             HStack (alignment: .top) {
                 

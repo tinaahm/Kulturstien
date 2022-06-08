@@ -26,7 +26,7 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject
     
     var requiredParts: Int = 2
     
-    let label = SKLabelNode(fontNamed: "Source Sans Pro")
+    let label = SKLabelNode(fontNamed: "Saira-Regular")
     
     var restartButton = SKSpriteNode()
         

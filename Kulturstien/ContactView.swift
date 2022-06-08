@@ -15,24 +15,29 @@ struct ContactView: View {
     
     var body: some View {
         
-        VStack (spacing: 30) {
+        VStack (spacing: 25) {
 
         BackButtonView()
         
         Image("RælingenKommune")
         
         Text("Kontakt Rælingen Kommune")
-            .font(.title2)
+			.font(.headlineFont)
 			.foregroundColor(page.lightMode ? .black : .white)
             
         Text("Telefon: 63 83 50 00")
-				.foregroundColor(page.lightMode ? .black : .white)
+			.font(.subHeadlineFont)
+			.foregroundColor(page.lightMode ? .black : .white)
         Text("Telefax: 63 83 52 33")
-				.foregroundColor(page.lightMode ? .black : .white)
+			.font(.subHeadlineFont)
+			.foregroundColor(page.lightMode ? .black : .white)
         Text("postmottak@ralingen.kommune.no")
-				.foregroundColor(page.lightMode ? .black : .white)
-            if self.sentFeedBAck {
+			.font(.subHeadlineFont)
+			.foregroundColor(page.lightMode ? .black : .white)
+            
+			if self.sentFeedBAck {
                 Text("Din tilbakemelding er sendt")
+					.font(.subHeadlineFont)
                     .padding()
                     .frame(width: 320)
                     .background(.green)
@@ -47,13 +52,15 @@ struct ContactView: View {
 				if feedBack.isEmpty {
 					VStack {
 						Text("Tilbakemelding...")
+							.font(.textFont)
 							.foregroundColor(.gray)
 							.padding()
 						Spacer()
 					}
 				}
             }
-            .frame(width: 300, height: 200)
+			.font(.textFont)
+			.frame(width: DeviceSize.width * 0.7, height:  DeviceSize.width * 0.5)
             .padding()
 			.overlay(RoundedRectangle(cornerRadius: 15)
 				.stroke(Color.gray, lineWidth: 1)
@@ -67,6 +74,7 @@ struct ContactView: View {
 				self.feedBack = ""
             }) {
                 Text("Send")
+					.font(.subHeadlineFont)
 					.foregroundColor(.black)
 					.frame(width: 200)
 					.padding()

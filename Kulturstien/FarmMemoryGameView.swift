@@ -11,11 +11,13 @@ struct FarmMemoryGameView: View {
     var body: some View {
 		VStack (alignment: .center) {
 			BackButtonView()
+			Text("Bondens redskaper")
+				.font(.headlineFont)
 			Image("WaterMillIcon")
 				.resizable()
-				.frame(width: 69*2, height: 55*2, alignment: .center)
+				.frame(width: 80, height: 60, alignment: .center)
 			DestinationPageView(theme: DefaultThemes.theme0)
-				.edgesIgnoringSafeArea(.bottom)
+				//.edgesIgnoringSafeArea(.bottom)
 		}
 		.background(Color("BackgroundColour"))
     }

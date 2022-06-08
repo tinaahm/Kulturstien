@@ -32,36 +32,33 @@ struct InformationView: View {
 				
 				VStack(alignment: .leading) {
                     Text(self.title.uppercased())
-                        .font(.custom("SourceSansPro-SemiBold", fixedSize: 24))
+						.font(.headlineFont)
 				}
-				.padding(.bottom, 20)
+				.padding(.bottom, 10)
 				
 				ZStack {
 					RoundedRectangle(cornerRadius: 25, style: .continuous)
 						.fill(.white)
-						//.shadow(radius: 4, x: -2, y: 5)
 						.frame(width: (DeviceSize.width * 0.9), height: (DeviceSize.height * 0.7))
 					
 					VStack(alignment: .center, spacing: 0) {
 						Spacer()
 						Image(self.information[self.selectedIndex].imageTitle)
 								.resizable()
-								//.scaledToFit()
-								//.aspectRatio(contentMode: .fill)
 								.frame(width: (DeviceSize.width * 0.8), height: ((DeviceSize.height * 0.7)/2.5))
+								.padding()
 						
 						Text(self.information[self.selectedIndex].text) //FIXME: add multiline center?
-							.font(.body)
+							.font(.textFont)
 							.foregroundColor(.black)
 							.multilineTextAlignment(.leading)
-							.frame(width: (DeviceSize.width * 0.8), height: ((DeviceSize.height * 0.7)/2))
+							.padding()
+							.frame(width: (DeviceSize.width * 0.85), height: ((DeviceSize.height * 0.7)/2), alignment: .top)
 						Spacer()
 					}
-					
+					.frame(width: (DeviceSize.width * 0.9), height: (DeviceSize.height * 0.7))
 				}
-				//.padding(.bottom, 30)
-				
-				//Spacer()
+				.padding()
 				
 				HStack {
 					ForEach(0 ..< self.information.count) {
@@ -107,61 +104,6 @@ struct InformationView: View {
 						  }
 			)
 		.background(Color("BackgroundColour"))
-		
-		/*VStack {
-				BackButtonView()
-			
-			ScrollView {
-				
-				Spacer()
-				Spacer()
-				Spacer()
-				
-				VStack {
-				//TODO: title inline with back button?
-					
-					VStack(alignment: .leading) {
-						Text(self.title)
-							.font(.title)
-					}
-					.padding(.bottom, 30)
-					
-					ForEach(0 ..< self.information.count) {
-						index in
-						
-						
-						Image(self.information[index].imageTitle)
-							.resizable()
-							.scaledToFit()
-							.aspectRatio(contentMode: .fill)
-							.frame(width: 350, height: 250)
-						
-							VStack(alignment: .leading) {
-									ZStack {
-										RoundedRectangle(cornerRadius: 25, style: .continuous)
-											.fill(Color("Grey"))
-											.shadow(radius: 2, x: 0, y: 3)
-
-										VStack {
-											Text(self.information[index].text) //FIXME: add multiline center?
-												.font(.body)
-												.foregroundColor(.black)
-										}
-										.padding(30)
-										.multilineTextAlignment(.center)
-									}
-									.frame(width: 350)
-									.padding(20)
-							}
-							.padding()
-								Spacer()
-						}
-					}
-			}
-			.background(Color("BackgroundColour"))
-		}
-		.background(Color("BackgroundColour"))*/
-        
     }
 }
 

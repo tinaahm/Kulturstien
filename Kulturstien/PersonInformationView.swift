@@ -52,6 +52,7 @@ struct PersonInformationView: View {
 			BackButtonView()
 			
 			Text("Møt " + self.person.type.rawValue + "!")
+				.font(.headlineFont)
 			
 			VStack(alignment: .leading) {
 					if personType != .trond {
@@ -61,7 +62,7 @@ struct PersonInformationView: View {
 								.scaledToFit()
 							VStack {
 								Text(personParagraphs[self.selectedIndex])
-										.font(.callout)
+										.font(.textFont)
 										.foregroundColor(.black)
 										.multilineTextAlignment(.center)
 										.padding([.leading, .trailing], 60)
@@ -142,11 +143,11 @@ struct PersonInformationView: View {
 								.scaledToFit()
 							VStack {
 								Text(personParagraphs[self.selectedIndex])
-										.font(.callout)
-										.foregroundColor(.black)
-										.multilineTextAlignment(.center)
-										.padding([.leading, .trailing], 60)
-										.padding(.bottom, 20)
+									.font(.textFont)
+									.foregroundColor(.black)
+									.multilineTextAlignment(.center)
+									.padding([.leading, .trailing], 60)
+									.padding(.bottom, 20)
 								HStack {
 									ForEach(0 ..< self.personParagraphs.count) {
 										index in

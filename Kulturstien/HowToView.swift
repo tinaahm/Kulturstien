@@ -18,13 +18,13 @@ struct HowToView: View {
 			VStack {
 				Text("Slik bruker du appen")
 					.foregroundColor(page.lightMode ? .black : .white)
-					.font(.title)
+					.font(.headlineFont)
 				
 				VStack {
 					
                     Text("Dagtid")
 						.foregroundColor(page.lightMode ? .black : .white)
-                        .font(.subheadline)
+                        .font(.subHeadlineFont)
                         .padding(.top, 20)
                     ZStack {
                         
@@ -39,7 +39,7 @@ struct HowToView: View {
                                     .scaledToFit()
                                     .frame(width: 50, height: 50)
                                 Text("Bytt til natt")
-                                    .font(.body)
+                                    .font(.textFont)
                                     .foregroundColor(.black)
                                 Spacer()
                             }
@@ -51,7 +51,7 @@ struct HowToView: View {
                                     .scaledToFit()
                                     .frame(width: 50, height: 50)
                                 Text("Les om innbyggere")
-                                    .font(.body)
+                                    .font(.textFont)
                                     .foregroundColor(.black)
                                 Spacer()
                             }
@@ -63,7 +63,7 @@ struct HowToView: View {
                                     .scaledToFit()
                                     .frame(width: 50, height: 50)
                                 Text("Les om driften i Byåa, ta quiz og se AR")
-                                    .font(.body)
+                                    .font(.textFont)
                                     .foregroundColor(.black)
                                 Spacer()
                             }
@@ -75,7 +75,7 @@ struct HowToView: View {
                                     .scaledToFit()
                                     .frame(width: 50, height: 50)
                                 Text("Spill")
-                                    .font(.body)
+                                    .font(.textFont)
                                     .foregroundColor(.black)
                                 Spacer()
                             }
@@ -87,7 +87,7 @@ struct HowToView: View {
                     
                     Text("Kveldstid")
 						.foregroundColor(page.lightMode ? .black : .white)
-                        .font(.subheadline)
+                        .font(.subHeadlineFont)
                         .padding(.top, 20)
                     
                     ZStack {
@@ -103,7 +103,7 @@ struct HowToView: View {
                                     .scaledToFit()
                                     .frame(width: 50, height: 50)
                                 Text("Byaå om dagen. ")
-                                    .font(.body)
+									.font(.textFont)
                                     .foregroundColor(.black)
                                 Spacer()
                             }
@@ -115,7 +115,7 @@ struct HowToView: View {
                                     .scaledToFit()
                                     .frame(width: 50, height: 50)
                                 Text("Les om overnaturlige vesener")
-                                    .font(.body)
+									.font(.textFont)
                                     .foregroundColor(.black)
                                 Spacer()
                             }
@@ -127,7 +127,7 @@ struct HowToView: View {
                                     .scaledToFit()
                                     .frame(width: 50, height: 50)
                                 Text("Spill")
-                                    .font(.body)
+                                    .font(.textFont)
                                     .foregroundColor(.black)
                                 Spacer()
                             }

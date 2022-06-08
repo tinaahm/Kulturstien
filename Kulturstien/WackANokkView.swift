@@ -30,10 +30,10 @@ struct WackANokkView: View {
 					ZStack {
 						VStack {
 							Button (action: {
-								//self.paused.toggle()
 								page.pageIndex = .resetView
 							}) {
 								Label("Start på nytt", systemImage: "arrow.clockwise")
+									.font(.subHeadlineFont)
 									.foregroundColor(page.lightMode ? .black : .black)
 									.frame(width: DeviceSize.width * 0.5)
 									.padding(20)
@@ -48,6 +48,7 @@ struct WackANokkView: View {
 								}
 							}) {
 								Label("Tilbake til kartet", systemImage: "")
+									.font(.subHeadlineFont)
 									.foregroundColor(page.lightMode ? .black : .black)
 									.frame(width: DeviceSize.width * 0.5)
 									.padding(20)
@@ -80,6 +81,7 @@ struct WackANokkView: View {
 					}) {
 						Image(systemName: "playpause.fill")
 							.foregroundColor(page.lightMode ? .black : .white)
+							.padding()
 					}
 					.padding(.leading, 25)
 					Spacer()
