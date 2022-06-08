@@ -18,9 +18,13 @@ struct Tag {
 
 class MillGameScene: SKScene, SKPhysicsContactDelegate
 {
-    var nodes: [SKSpriteNode] = []
+    var gravitySpeed: Int = 20
+    var netMoveDelay: Double = 0.2
     
+    var nodes: [SKSpriteNode] = []
     var partsCounter: Int = 0
+    
+    var requiredParts: Int = 6
     
     let nailTexture = SKTexture(imageNamed: "nail")
     let plankTexture = SKTexture(imageNamed: "nice-plank")
@@ -37,15 +41,22 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
         backgroundColor = UIColor.init(Color("WaterColor"))
         
         physicsWorld.contactDelegate = self
-        physicsWorld.gravity = CGVector(dx: 0, dy: -20)
+        physicsWorld.gravity = CGVector(dx: 0, dy: -gravitySpeed)
         
         makePlayer()
+        
+        drawText()
     
         // Generate assets
         Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(generateRandomAsset), userInfo: nil, repeats: true)
         
         // Clean-up
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(collectTrash), userInfo: nil, repeats: true)
+    }
+    
+    func drawText()
+    {
+        
     }
     
     
@@ -67,7 +78,7 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
         {
             let coords = touch.location(in: self)
             
-            playerSprite.run(SKAction.moveTo(x: coords.x, duration: 0.3))
+            playerSprite.run(SKAction.moveTo(x: coords.x, duration: netMoveDelay))
         }
 
     }
@@ -77,7 +88,7 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
         for touch in touches
         {
             let coords = touch.location(in: self)
-            playerSprite.run(SKAction.moveTo(x: coords.x, duration: 0.24))
+            playerSprite.run(SKAction.moveTo(x: coords.x, duration: netMoveDelay))
         }
     }
     
@@ -198,7 +209,6 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
                 {
                     scene.scaleMode = .fill
                     
-                
                     view?.presentScene(scene)
                 }
             }
