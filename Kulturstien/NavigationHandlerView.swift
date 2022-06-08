@@ -15,7 +15,7 @@ class DeviceSize {
 }
 
 enum UserDataKeys: String {
-	case userName, selectedColour, wackANokkGameScore, frightenHuldraGameScore, farmMemoryGameScore, fairtytaleMemoryGameScore, appStartPage
+	case userName, selectedColour, wackANokkGameScore, frightenHuldraGameScore, farmMemoryGameScore, fairtytaleMemoryGameScore, appStartPage, millGameScore
 	case readSawmillInformation, readMillInformation, readDamInformation, readLogBoomsInformation
 	case sawMillAnswers, millAnswers, damAnswers, logBoomsAnswers
 }
@@ -38,7 +38,7 @@ struct User {
 }
 
 enum Page: String {
-	case start, main, mainNight, profile, menu, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, achievements, avatarChanger, gameEnd, history, howTo, startGame, ar, memoryGameEnd, quizEnd, appTutorial
+	case start, main, mainNight, profile, menu, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, achievements, avatarChanger, gameEnd, history, howTo, startGame, ar, memoryGameEnd, quizEnd, appTutorial, millGame
 }
 
 enum Game: String {
@@ -46,6 +46,7 @@ enum Game: String {
 	case frightenHuldra = "Skrem Vekk Huldra"
 	case farmMemoryGame = "Bondens redskaper"
 	case fairytaleCreaturesMemoryGame = "Underjordiske vesener"
+	case millGame = "Mølle Spill"
 	case none = ""
 }
 
@@ -69,6 +70,7 @@ class ViewIndex: ObservableObject {
 	@AppStorage(UserDataKeys.frightenHuldraGameScore.rawValue) var frightenHuldraGameScore: Int = 0
 	@AppStorage(UserDataKeys.farmMemoryGameScore.rawValue) var farmMemoryGameScore: Int = 0
 	@AppStorage(UserDataKeys.fairtytaleMemoryGameScore.rawValue) var fairtytaleMemoryGameScore: Int = 0
+	@AppStorage(UserDataKeys.millGameScore.rawValue) var millGameScore: Int = 0
 	
 	@AppStorage(UserDataKeys.readMillInformation.rawValue) var readMillInformation: Bool = false
 	@AppStorage(UserDataKeys.readSawmillInformation.rawValue) var readSawmillInformation: Bool = false
@@ -148,6 +150,8 @@ struct NavigationHandlerView: View {
 				QuizEndView(resultArray: page.currentQuiz.questionAnswers, title: page.currentQuiz.name)
 			case .appTutorial:
 				AppTutorialView()
+			case .millGame:
+				MillGameView()
 			}
 		}
     }

@@ -16,8 +16,10 @@ struct Tag {
     static let other: UInt32 = 0b11
 }
 
-class MillGameScene: SKScene, SKPhysicsContactDelegate
-{
+class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
+	
+	@Published var gameOver = false
+	
     var gravitySpeed: Int = 20
     var netMoveDelay: Double = 0.2
     
@@ -28,7 +30,7 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
     var restartButton = SKSpriteNode()
         
     var nodes: [SKSpriteNode] = []
-    var partsCounter: Int = 0
+    @Published var partsCounter: Int = 0
     
     var gameRunning: Bool = true
     
@@ -80,13 +82,14 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate
     
     override func update(_ currentTime: TimeInterval) {
         label.text = "Samlede deler: \(partsCounter) / \(requiredParts)"
-        
+		
         if (partsCounter >= requiredParts)
         {
             gameRunning = false
             
             label.text = "Du klarte det!"
             restartButton.alpha = 100
+			self.gameOver = true
         }
     }
     

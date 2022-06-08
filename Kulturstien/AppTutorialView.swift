@@ -46,8 +46,7 @@ struct AppTutorialView: View {
 				}.padding(.bottom, DeviceSize.height * 0.06)
 			}
 		}
-			
-    }
+	}
 }
 
 struct AppTutorialView_Previews: PreviewProvider {
