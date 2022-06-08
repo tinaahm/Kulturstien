@@ -58,11 +58,12 @@ class GameScene: SKScene, ObservableObject {
                       gameScore.text = "Poeng: \(monstersDestroyed)"
                   }
               }
+	@Published var reset: Bool = false
 
     
   let player = SKSpriteNode(imageNamed: "TrondPlayer")
     
-  override func didMove(to view: SKView) {
+  override func didMove(to view: SKView) {/*
     // 2
     let background = SKSpriteNode(imageNamed: "background")
     background.blendMode = .replace
@@ -91,9 +92,44 @@ class GameScene: SKScene, ObservableObject {
       gameScore.text = "Poeng: 0"
       gameScore.position = CGPoint(x: (size.width / 2), y: 800)
       gameScore.fontSize = 25
-      addChild(gameScore)
-    
+      addChild(gameScore)*/
+	  loadScene()
   }
+	
+	func loadScene()
+		{
+		  // 2
+		  let background = SKSpriteNode(imageNamed: "background")
+		  background.blendMode = .replace
+		  background.zPosition = -1
+		  addChild(background)
+			
+		  // 3
+			player.position = CGPoint(x: (size.width / 2), y: (size.height * 0.1))
+			player.yScale = 0.35
+			player.xScale = 0.35
+			player.zPosition = 2
+		  // 4
+		  addChild(player)
+		  
+		  physicsWorld.gravity = .zero
+		  physicsWorld.contactDelegate = self
+		  
+		 run(SKAction.repeatForever(
+				SKAction.sequence([
+				  SKAction.run(addMonster),
+				  SKAction.wait(forDuration: 0.430)
+				  ])
+			  ))
+			
+			gameScore = SKLabelNode(fontNamed: "Chalkduster")
+			gameScore.text = "Poeng: 0"
+			gameScore.position = CGPoint(x: (size.width / 2), y: 800)
+			gameScore.fontSize = 25
+			addChild(gameScore)
+			
+			resetGame()
+		}
     
   
   func random() -> CGFloat {
@@ -138,15 +174,14 @@ class GameScene: SKScene, ObservableObject {
     }
     
     monster.run(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
-
-  }
+}
 
   
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     // 1 - Choose one of the touches to work with
     guard let touch = touches.first else {
       return
-    }
+}
     
     run(SKAction.playSoundFileNamed("Kastegaffel", waitForCompletion: false))
 
@@ -201,13 +236,27 @@ class GameScene: SKScene, ObservableObject {
     if monstersDestroyed > 99999 {
 		self.gameOverHuldra = true
     }
+	  if self.reset {
+		  self.removeAllChildren()
+		  self.removeAllActions()
+		  self.loadScene()
+	  }
   }
 
+	func resetGame() {
+		if self.reset {
+			self.removeAllChildren()
+			self.removeAllActions()
+			self.loadScene()
+		}
+	}
+	
 }
 
 extension GameScene: SKPhysicsContactDelegate {
   
   func didBegin(_ contact: SKPhysicsContact) {
+	 // resetGame()
     // 1
     var firstBody: SKPhysicsBody
     var secondBody: SKPhysicsBody

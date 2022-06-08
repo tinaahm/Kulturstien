@@ -38,7 +38,7 @@ struct User {
 }
 
 enum Page: String {
-	case start, main, mainNight, profile, menu, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, achievements, avatarChanger, gameEnd, history, howTo, startGame, ar, memoryGameEnd, quizEnd, appTutorial, millGame
+	case start, main, mainNight, profile, menu, texts, quiz, selection, information, farmMemoryGame, fairytaleCreaturesMemoryGame, wackANokk, huldraGame, personInformation, creatureInformation, contact, achievements, avatarChanger, gameEnd, history, howTo, startGame, ar, memoryGameEnd, quizEnd, appTutorial, millGame, resetView, secondReset
 }
 
 enum Game: String {
@@ -58,6 +58,7 @@ var gameSelection: Game = .none
 var quizes = Quizes()
 
 class ViewIndex: ObservableObject {
+	
 	@Published var pageIndex : Page = .main
 	@Published var previousPage : Page = .main
 	@Published var lightMode: Bool = true
@@ -152,6 +153,10 @@ struct NavigationHandlerView: View {
 				AppTutorialView()
 			case .millGame:
 				MillGameView()
+			case .resetView:
+				ResetView()
+			case .secondReset:
+				SecondReset()
 			}
 		}
     }

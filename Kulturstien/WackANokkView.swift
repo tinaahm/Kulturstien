@@ -15,18 +15,77 @@ struct WackANokkView: View {
 	
 	@EnvironmentObject var page : ViewIndex
 	@StateObject var gameScene = WackGameScene(size: DeviceSize.size)
+	@State var paused: Bool = false
 	
 	var body: some View {
 		
-		if !gameScene.gameOver {
-			SpriteView(scene: gameScene)
-				.ignoresSafeArea()
-		} else {
-			Image("")
-				.onAppear {
-					page.scorePlaceHolder = gameScene.score
-					page.pageIndex = .gameEnd
+		ZStack {
+			if !gameScene.gameOver {
+				SpriteView(scene: gameScene)
+					.ignoresSafeArea()
+				
+				if self.paused {
+					Color.gray.opacity(0.8)
+						.edgesIgnoringSafeArea(.all)
+					ZStack {
+						VStack {
+							Button (action: {
+								//self.paused.toggle()
+								page.pageIndex = .resetView
+							}) {
+								Label("Start på nytt", systemImage: "arrow.clockwise")
+									.foregroundColor(page.lightMode ? .black : .black)
+									.frame(width: DeviceSize.width * 0.5)
+									.padding(20)
+									.background(
+										RoundedRectangle(cornerRadius: 15).fill(.white))
+							}
+							Button (action: {
+								if page.lightMode {
+									page.pageIndex = .main
+								} else {
+									page.pageIndex = .mainNight
+								}
+							}) {
+								Label("Tilbake til kartet", systemImage: "")
+									.foregroundColor(page.lightMode ? .black : .black)
+									.frame(width: DeviceSize.width * 0.5)
+									.padding(20)
+									.background(
+										RoundedRectangle(cornerRadius: 15).fill(.white))
+							}
+						}
+						
+						
+					}
 				}
+				
+			} else {
+				Image("")
+					.onAppear {
+						page.scorePlaceHolder = gameScene.score
+						page.pageIndex = .gameEnd
+					}
+			}
+			
+			VStack {
+				HStack {
+					Button (action: {
+						if self.paused {
+							gameScene.isPaused = false
+						} else {
+							gameScene.isPaused = true
+						}
+						self.paused.toggle()
+					}) {
+						Image(systemName: "playpause.fill")
+							.foregroundColor(page.lightMode ? .black : .white)
+					}
+					.padding(.leading, 25)
+					Spacer()
+				}
+				Spacer()
+			}
 		}
 	}
 	

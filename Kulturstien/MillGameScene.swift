@@ -83,8 +83,7 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject {
     override func update(_ currentTime: TimeInterval) {
         label.text = "Samlede deler: \(partsCounter) / \(requiredParts)"
 		
-        if (partsCounter >= requiredParts)
-        {
+        if (partsCounter >= requiredParts) {
             gameRunning = false
             
             label.text = "Du klarte det!"
