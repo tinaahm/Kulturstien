@@ -19,7 +19,7 @@ struct DefaultThemes {
     static let theme0 = ThemeCollection.Theme (
         name: "Bondens redskaper",
         accentColor: UIColor(Color("MemoryGameYellow")),
-        emojiSet: ["WaterMillIcon", "Pitchfork", "HorseShoe", "SawmillIcon", "DamIcon", "Logs"]
+        emojiSet: ["WaterMillIcon", "Pitchfork", "Horseshoe", "SawmillIcon", "DamIcon", "Logs"]
     )
     
     static let theme1 = ThemeCollection.Theme (

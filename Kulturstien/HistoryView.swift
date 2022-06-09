@@ -16,7 +16,7 @@ struct HistoryView: View {
             
 			BackButtonView(buttonColour: page.lightMode ? .black : .white)
             
-            Image("RælingenKommune")
+            Image("Rælingen1")
             .resizable()
             .scaledToFit()
 			.frame(width: DeviceSize.width * 0.4, height: DeviceSize.width * 0.2)
@@ -109,7 +109,7 @@ struct HistoryView: View {
                         Image("LogBoomsIcon")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 90, height: 60)
+                        .frame(width: 90, height: 50)
                         Text("Lenseanlegg")
 							.font(.textFont)
                     }
