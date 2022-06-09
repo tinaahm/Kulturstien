@@ -27,10 +27,10 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject
 {
 	@Published var gameOver = false
 	
-    var gravitySpeed: Int = 20
-    var netMoveDelay: Double = 0.2
+    var gravitySpeed: Int = 18
+    var netMoveDelay: Double = 0.16
     
-    var requiredParts: Int = 2
+    var requiredParts: Int = 6
     
     let label = SKLabelNode(fontNamed: "Saira-Regular")
     
