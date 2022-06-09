@@ -46,21 +46,11 @@
 		267A77562829558200E0EB7A /* KulturstienTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77552829558200E0EB7A /* KulturstienTests.swift */; };
 		267A77602829558200E0EB7A /* KulturstienUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A775F2829558200E0EB7A /* KulturstienUITests.swift */; };
 		267A77622829558200E0EB7A /* KulturstienUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77612829558200E0EB7A /* KulturstienUITestsLaunchTests.swift */; };
-		267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */; };
 		26AAC9F7282D00E80057BBA6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F6282D00E80057BBA6 /* ProfileView.swift */; };
 		26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */; };
-		26D2D34F284B7FBD00BD68A0 /* SourceSansPro-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2B7284B7FBD00BD68A0 /* SourceSansPro-BlackItalic.ttf */; };
-		26D2D350284B7FBD00BD68A0 /* SourceSansPro-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2B8284B7FBD00BD68A0 /* SourceSansPro-SemiBoldItalic.ttf */; };
 		26D2D351284B7FBD00BD68A0 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2B9284B7FBD00BD68A0 /* SourceSansPro-Regular.ttf */; };
 		26D2D352284B7FBD00BD68A0 /* SourceSansPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2BA284B7FBD00BD68A0 /* SourceSansPro-Bold.ttf */; };
-		26D2D353284B7FBD00BD68A0 /* SourceSansPro-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2BB284B7FBD00BD68A0 /* SourceSansPro-LightItalic.ttf */; };
-		26D2D354284B7FBD00BD68A0 /* SourceSansPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2BC284B7FBD00BD68A0 /* SourceSansPro-Light.ttf */; };
-		26D2D355284B7FBD00BD68A0 /* SourceSansPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2BD284B7FBD00BD68A0 /* SourceSansPro-Black.ttf */; };
-		26D2D357284B7FBD00BD68A0 /* SourceSansPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2BF284B7FBD00BD68A0 /* SourceSansPro-ExtraLight.ttf */; };
-		26D2D358284B7FBD00BD68A0 /* SourceSansPro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2C0284B7FBD00BD68A0 /* SourceSansPro-BoldItalic.ttf */; };
 		26D2D359284B7FBD00BD68A0 /* SourceSansPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2C1284B7FBD00BD68A0 /* SourceSansPro-SemiBold.ttf */; };
-		26D2D35A284B7FBD00BD68A0 /* SourceSansPro-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2C2284B7FBD00BD68A0 /* SourceSansPro-ExtraLightItalic.ttf */; };
-		26D2D35B284B7FBD00BD68A0 /* SourceSansPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2C3284B7FBD00BD68A0 /* SourceSansPro-Italic.ttf */; };
 		26D2D375284B7FBD00BD68A0 /* Saira-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D2D2E1284B7FBD00BD68A0 /* Saira-Regular.ttf */; };
 		26D2D41D284CEC6000BD68A0 /* WaterMillNoWater.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 26D2D41C284CEC6000BD68A0 /* WaterMillNoWater.rcproject */; };
 		26D2D420284CECFF00BD68A0 /* WaterMillARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D2D41F284CECFF00BD68A0 /* WaterMillARView.swift */; };
@@ -160,21 +150,11 @@
 		267A775F2829558200E0EB7A /* KulturstienUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturstienUITests.swift; sourceTree = "<group>"; };
 		267A77612829558200E0EB7A /* KulturstienUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturstienUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		267A7783282AF8F600E0EB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Macondo-Regular.ttf"; sourceTree = "<group>"; };
 		26AAC9F6282D00E80057BBA6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIPhoneView.swift; sourceTree = "<group>"; };
-		26D2D2B7284B7FBD00BD68A0 /* SourceSansPro-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackItalic.ttf"; sourceTree = "<group>"; };
-		26D2D2B8284B7FBD00BD68A0 /* SourceSansPro-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		26D2D2B9284B7FBD00BD68A0 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
 		26D2D2BA284B7FBD00BD68A0 /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.ttf"; sourceTree = "<group>"; };
-		26D2D2BB284B7FBD00BD68A0 /* SourceSansPro-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-LightItalic.ttf"; sourceTree = "<group>"; };
-		26D2D2BC284B7FBD00BD68A0 /* SourceSansPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.ttf"; sourceTree = "<group>"; };
-		26D2D2BD284B7FBD00BD68A0 /* SourceSansPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Black.ttf"; sourceTree = "<group>"; };
-		26D2D2BF284B7FBD00BD68A0 /* SourceSansPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLight.ttf"; sourceTree = "<group>"; };
-		26D2D2C0284B7FBD00BD68A0 /* SourceSansPro-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BoldItalic.ttf"; sourceTree = "<group>"; };
 		26D2D2C1284B7FBD00BD68A0 /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
-		26D2D2C2284B7FBD00BD68A0 /* SourceSansPro-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
-		26D2D2C3284B7FBD00BD68A0 /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
 		26D2D2E1284B7FBD00BD68A0 /* Saira-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Regular.ttf"; sourceTree = "<group>"; };
 		26D2D41C284CEC6000BD68A0 /* WaterMillNoWater.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = WaterMillNoWater.rcproject; sourceTree = "<group>"; };
 		26D2D41F284CECFF00BD68A0 /* WaterMillARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterMillARView.swift; sourceTree = "<group>"; };
@@ -321,11 +301,19 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		265AF6152851D7520059CBA4 /* Games */ = {
+		265AF6152851D7520059CBA4 /* GameViews */ = {
 			isa = PBXGroup;
 			children = (
+				26D3DF82284A2875009EECE3 /* GameStartView.swift */,
+				26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */,
+				265AF6132850E4FB0059CBA4 /* SecondReset.swift */,
+				265AF6112850D8E30059CBA4 /* ResetView.swift */,
+				0E62D2D1283BAEED0002148D /* MemoryCardGame */,
+				A04024D12848C7F7001B4D18 /* WackANokk */,
+				A0EA0C382848B46D00A2B524 /* SkremBortHuldra */,
+				844A56622848EE6B009BF850 /* MillGame */,
 			);
-			name = Games;
+			name = GameViews;
 			sourceTree = "<group>";
 		};
 		2669457E2832562400B25AF7 /* Quiz */ = {
@@ -359,24 +347,18 @@
 		267A77432829558100E0EB7A /* Kulturstien */ = {
 			isa = PBXGroup;
 			children = (
-				265AF6152851D7520059CBA4 /* Games */,
 				267A7783282AF8F600E0EB7A /* Info.plist */,
 				267A77482829558200E0EB7A /* Assets.xcassets */,
 				267A774B2829558200E0EB7A /* Preview Assets.xcassets */,
+				265AF6152851D7520059CBA4 /* GameViews */,
 				26D2D41E284CECBB00BD68A0 /* AR */,
 				26D72FAF282E714F00BC3A8F /* MainViews */,
-				844A56622848EE6B009BF850 /* MillGame */,
-				A04024D12848C7F7001B4D18 /* WackANokk */,
-				A0EA0C382848B46D00A2B524 /* SkremBortHuldra */,
-				0E62D2D1283BAEED0002148D /* MemoryCardGame */,
 				26D4A4E32837ED3D0022D49F /* Data */,
 				26D4A4E22837EAD10022D49F /* ButtonViews */,
 				0E17588F283683D900E8F9C4 /* InfoViews */,
 				2669457E2832562400B25AF7 /* Quiz */,
 				26D72FB0282E716A00BC3A8F /* MenuViews */,
 				26D72FB1282E719000BC3A8F /* Fonts */,
-				265AF6112850D8E30059CBA4 /* ResetView.swift */,
-				265AF6132850E4FB0059CBA4 /* SecondReset.swift */,
 			);
 			path = Kulturstien;
 			sourceTree = "<group>";
@@ -439,8 +421,6 @@
 				26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */,
 				263B3E6928461C4E005919D7 /* MainNightTimeView.swift */,
 				26D4A4DC2837D5630022D49F /* SelectionView.swift */,
-				26D3DF82284A2875009EECE3 /* GameStartView.swift */,
-				26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */,
 			);
 			name = MainViews;
 			sourceTree = "<group>";
@@ -462,20 +442,10 @@
 		26D72FB1282E719000BC3A8F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				26D2D2B7284B7FBD00BD68A0 /* SourceSansPro-BlackItalic.ttf */,
-				26D2D2B8284B7FBD00BD68A0 /* SourceSansPro-SemiBoldItalic.ttf */,
 				26D2D2B9284B7FBD00BD68A0 /* SourceSansPro-Regular.ttf */,
 				26D2D2BA284B7FBD00BD68A0 /* SourceSansPro-Bold.ttf */,
-				26D2D2BB284B7FBD00BD68A0 /* SourceSansPro-LightItalic.ttf */,
-				26D2D2BC284B7FBD00BD68A0 /* SourceSansPro-Light.ttf */,
-				26D2D2BD284B7FBD00BD68A0 /* SourceSansPro-Black.ttf */,
-				26D2D2BF284B7FBD00BD68A0 /* SourceSansPro-ExtraLight.ttf */,
-				26D2D2C0284B7FBD00BD68A0 /* SourceSansPro-BoldItalic.ttf */,
 				26D2D2C1284B7FBD00BD68A0 /* SourceSansPro-SemiBold.ttf */,
-				26D2D2C2284B7FBD00BD68A0 /* SourceSansPro-ExtraLightItalic.ttf */,
-				26D2D2C3284B7FBD00BD68A0 /* SourceSansPro-Italic.ttf */,
 				26D2D2E1284B7FBD00BD68A0 /* Saira-Regular.ttf */,
-				267A7784282AFA0F00E0EB7A /* Macondo-Regular.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -636,7 +606,6 @@
 			files = (
 				A0EA0C4A2848B46D00A2B524 /* LaunchScreen.storyboard in Resources */,
 				A0EA0C4B2848B46D00A2B524 /* Main.storyboard in Resources */,
-				26D2D357284B7FBD00BD68A0 /* SourceSansPro-ExtraLight.ttf in Resources */,
 				2669457D283255B700B25AF7 /* QuizQuestions.json in Resources */,
 				A04024DC2848C81F001B4D18 /* WackMain.storyboard in Resources */,
 				263B3E7028462FF9005919D7 /* PersonInformation.json in Resources */,
@@ -645,26 +614,17 @@
 				A04024E12848C81F001B4D18 /* WhacANokkGameScene.sks in Resources */,
 				A074ABC4284F4F7E005AE129 /* Kastegaffel.mp3 in Resources */,
 				A0EA0C512848B46D00A2B524 /* Actions.sks in Resources */,
-				26D2D350284B7FBD00BD68A0 /* SourceSansPro-SemiBoldItalic.ttf in Resources */,
 				267A77492829558200E0EB7A /* Assets.xcassets in Resources */,
-				26D2D35A284B7FBD00BD68A0 /* SourceSansPro-ExtraLightItalic.ttf in Resources */,
 				26D2D359284B7FBD00BD68A0 /* SourceSansPro-SemiBold.ttf in Resources */,
 				A061FD5D284F831B00188CFA /* huldraskutt.wav in Resources */,
 				26D2D375284B7FBD00BD68A0 /* Saira-Regular.ttf in Resources */,
 				A04024E52848C81F001B4D18 /* whack.mp3 in Resources */,
-				26D2D35B284B7FBD00BD68A0 /* SourceSansPro-Italic.ttf in Resources */,
 				26D2D351284B7FBD00BD68A0 /* SourceSansPro-Regular.ttf in Resources */,
-				26D2D358284B7FBD00BD68A0 /* SourceSansPro-BoldItalic.ttf in Resources */,
-				26D2D34F284B7FBD00BD68A0 /* SourceSansPro-BlackItalic.ttf in Resources */,
 				A04024E32848C81F001B4D18 /* WackLaunchScreen.storyboard in Resources */,
-				26D2D355284B7FBD00BD68A0 /* SourceSansPro-Black.ttf in Resources */,
-				26D2D353284B7FBD00BD68A0 /* SourceSansPro-LightItalic.ttf in Resources */,
 				26F0498C283B82A200FBA117 /* Paragraphs.json in Resources */,
 				26D2D352284B7FBD00BD68A0 /* SourceSansPro-Bold.ttf in Resources */,
-				26D2D354284B7FBD00BD68A0 /* SourceSansPro-Light.ttf in Resources */,
 				A0EA0C4E2848B46D00A2B524 /* GameScene.sks in Resources */,
 				A04024DD2848C81F001B4D18 /* whackBad.mp3 in Resources */,
-				267A7785282AFA0F00E0EB7A /* Macondo-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

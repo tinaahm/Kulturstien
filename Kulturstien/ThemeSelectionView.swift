@@ -45,8 +45,9 @@ struct ThemeSelectionView: View {
 												   .frame(width: 100, height: 100)
 
 											   Text(theme.name)
+												   .font(.headlineFont)
 
-										   }.font(.headline).padding()
+										   }.padding()
 									   }
 
 									   .padding(20)
@@ -86,6 +87,6 @@ struct DestinationPageView: View {
 
 struct ThemeSelectionView_Previews: PreviewProvider {
     static var previews: some View {
-        ThemeSelectionView(tcManager: ThemeCollectionManager())
+        ThemeSelectionView(tcManager: ThemeCollectionManager()).environmentObject(ViewIndex())
     }
 }

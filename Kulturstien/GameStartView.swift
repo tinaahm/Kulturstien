@@ -27,7 +27,7 @@ struct GameStartView: View {
 						.multilineTextAlignment(.center)
 						.foregroundColor(page.lightMode ? .black : .white)
 						.padding(.bottom, 5)
-					Text("Prøv å få alle like!")
+					Text(getGameExplainationByGame(selection: gameSelection))
 						.font(.subHeadlineFont)
 						.foregroundColor(page.lightMode ? .black : .white)
 						.multilineTextAlignment(.center)
@@ -54,6 +54,23 @@ struct GameStartView: View {
 		}
 		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
     }
+}
+
+func getGameExplainationByGame(selection: Game) -> String {
+	switch selection {
+	case .whacANokk:
+		return "Slå nøkken og unngå dyrene!"
+	case .frightenHuldra:
+		return "Hjelp Trond å jage vekk Huldra!"
+	case .farmMemoryGame:
+		return "Samle opp alle redskapene på gården ved å finne de like kortene."
+	case .fairytaleCreaturesMemoryGame:
+		return "Fang alle de underjoridske vesnene ved å finne de like kortene."
+	case .millGame:
+		return "Fang alle delene i elva for å reparere mølla!\nUnngå å fange rusk, da må du starte på nytt."
+	case .none:
+		return ""
+	}
 }
 
 struct GameStartView_Previews: PreviewProvider {

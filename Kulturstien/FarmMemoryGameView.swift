@@ -17,7 +17,6 @@ struct FarmMemoryGameView: View {
 				.resizable()
 				.frame(width: 80, height: 60, alignment: .center)
 			DestinationPageView(theme: DefaultThemes.theme0)
-				//.edgesIgnoringSafeArea(.bottom)
 		}
 		.background(Color("BackgroundColour"))
     }

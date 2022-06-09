@@ -20,7 +20,7 @@ struct AvatarEditorView: View {
     var body: some View {
         VStack () {
             
-        BackButtonView()
+			BackButtonView(buttonColour: page.lightMode ? .black : .white)
         
         Text("Endre avatar")
 			.font(.headlineFont)

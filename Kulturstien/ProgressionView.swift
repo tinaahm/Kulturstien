@@ -24,11 +24,6 @@ struct ProgressionView: View {
         ZStack{
 			VStack {
             
-            VStack {
-                
-            }
-            .background(Color("DarkGrey"))
-            
             ScrollView {
             
             Text("Quiz progresjon")
@@ -47,13 +42,12 @@ struct ProgressionView: View {
 					ForEach(0 ..< quizAnswerArray.count) { outerIndex in
                     HStack (){
 						Text(quizArray[outerIndex].capitalized)
-							.font(.subHeadlineFont)
+							.font(.textFont)
                                 .padding()
                      
                             Spacer()
 						ForEach(0 ..< quizAnswerArray[outerIndex].count) { innerIndex in
                             VStack (alignment: .trailing) {
-                                //Image(page.quizesArray[outerIndex].questionAnswers[innerIndex] ? greenImageArray[innerIndex] : greyImageArray[innerIndex])
 								Image(quizAnswerArray[outerIndex][innerIndex] ? greenImageArray[innerIndex] : greyImageArray[innerIndex])
 									.resizable()
 									.scaledToFill()
@@ -112,17 +106,17 @@ struct ProgressionView: View {
                     VStack (alignment: .center){
                         
                         Text("Minnespill")
-                            .font(.headlineFont)
+                            .font(.subHeadlineFont)
                             .padding(5)
                         VStack {
                             HStack () {
                                 Text("Bondens Redskaper: " + String(page.farmMemoryGameScore) + " poeng")
-									.font(.subHeadlineFont)
+									.font(.textFont)
                                     .padding(2)
                             }
                             HStack () {
                                 Text("Underjordiske Vesen: " + String(page.fairtytaleMemoryGameScore) + " poeng")
-									.font(.subHeadlineFont)
+									.font(.textFont)
                                     .padding(2)
                             }
                         }
@@ -148,13 +142,13 @@ struct ProgressionView: View {
                     VStack (alignment: .center){
                         
                         Text("Wack a Nøkk")
-                            .font(.headlineFont)
+                            .font(.subHeadlineFont)
                             .padding(5)
                         VStack {
                             
                             HStack () {
                                 Text(String(page.wackANokkGameScore) + " poeng")
-									.font(.subHeadlineFont)
+									.font(.textFont)
                                     .padding(2)
                             }
                         }
@@ -179,13 +173,13 @@ struct ProgressionView: View {
                     VStack (alignment: .center){
                         
                         Text("Skrem Huldra")
-                            .font(.headlineFont)
+                            .font(.subHeadlineFont)
                             .padding(5)
                         VStack {
                             
                             HStack () {
                                 Text(String(page.frightenHuldraGameScore) + " poeng")
-									.font(.subHeadlineFont)
+									.font(.textFont)
                                     .padding(2)
                             }
                         }
@@ -210,13 +204,13 @@ struct ProgressionView: View {
 					VStack (alignment: .center){
 						
 						Text("Mølle Spill")
-							.font(.headlineFont)
+							.font(.subHeadlineFont)
 							.padding(5)
 						VStack {
 							
 							HStack () {
 								Text(String(page.millGameScore) + " poeng")
-									.font(.subHeadlineFont)
+									.font(.textFont)
 									.padding(2)
 							}
 						}
@@ -225,26 +219,17 @@ struct ProgressionView: View {
 						.cornerRadius(25)
 							
 								Spacer()
-			  
 					}
 					.padding(10)
 				}
 				.frame(width: rectangleWidth)
 				
-				
-				
-				
 			}
-            
             Spacer()
         }
-		
-        
     }
             VStack {
-                
-                
-                BackButtonView()
+				BackButtonView(buttonColour: page.lightMode ? .black : .white)
                 Spacer()
             }
         

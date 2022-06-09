@@ -13,7 +13,7 @@ struct HowToView: View {
 	
     var body: some View {
 		VStack {
-			BackButtonView()
+			BackButtonView(buttonColour: page.lightMode ? .black : .white)
 		ScrollView {
 			VStack {
 				Text("Slik bruker du appen")

@@ -17,7 +17,7 @@ struct ContactView: View {
         
         VStack (spacing: 25) {
 
-        BackButtonView()
+			BackButtonView(buttonColour: page.lightMode ? .black : .white)
         
         Image("RælingenKommune")
         

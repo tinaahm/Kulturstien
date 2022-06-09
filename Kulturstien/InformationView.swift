@@ -26,37 +26,37 @@ struct InformationView: View {
 		ZStack {
 			Color("BackgroundColour")
 			
-			VStack {
+			VStack(spacing: 0) {
 				
-				BackButtonView()
+				BackButtonView(buttonColour: page.lightMode ? .black : .white)
 				
-				VStack(alignment: .leading) {
+				VStack(alignment: .leading, spacing: 0) {
                     Text(self.title.uppercased())
 						.font(.headlineFont)
 				}
-				.padding(.bottom, 10)
+				//.padding(.bottom, 10)
 				
 				ZStack {
 					RoundedRectangle(cornerRadius: 25, style: .continuous)
 						.fill(.white)
-						.frame(width: (DeviceSize.width * 0.9), height: (DeviceSize.height * 0.7))
+						.frame(width: (DeviceSize.width * 0.9), height: (DeviceSize.height * 0.75))
 					
 					VStack(alignment: .center, spacing: 0) {
-						Spacer()
-						Image(self.information[self.selectedIndex].imageTitle)
-								.resizable()
-								.frame(width: (DeviceSize.width * 0.8), height: ((DeviceSize.height * 0.7)/2.5))
+						HStack {
+							Image(self.information[self.selectedIndex].imageTitle)
+									.resizable()
+									.frame(width: (DeviceSize.width * 0.8), height: ((DeviceSize.height * 0.7)/2.3))
+						}
+						HStack {
+							Text(self.information[self.selectedIndex].text)
+								.font(.textFont)
+								.foregroundColor(.black)
+								.multilineTextAlignment(.leading)
 								.padding()
-						
-						Text(self.information[self.selectedIndex].text) //FIXME: add multiline center?
-							.font(.textFont)
-							.foregroundColor(.black)
-							.multilineTextAlignment(.leading)
-							.padding()
-							.frame(width: (DeviceSize.width * 0.85), height: ((DeviceSize.height * 0.7)/2), alignment: .top)
-						Spacer()
+								.frame(width: (DeviceSize.width * 0.85), height: ((DeviceSize.height * 0.7)/1.7), alignment: .top)
+								.lineSpacing(1)
+						}
 					}
-					.frame(width: (DeviceSize.width * 0.9), height: (DeviceSize.height * 0.7))
 				}
 				.padding()
 				

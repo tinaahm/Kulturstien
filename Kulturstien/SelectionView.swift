@@ -23,7 +23,7 @@ struct SelectionView: View {
 		
 		VStack (spacing: 15) {
 			
-			BackButtonView()
+			BackButtonView(buttonColour: page.lightMode ? .black : .white)
             
             VStack {
                 Text(structureName.uppercased())

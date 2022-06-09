@@ -41,7 +41,7 @@ struct QuizView: View {
 			
 			VStack (spacing: 15) {
 			
-			BackButtonView()
+				BackButtonView(buttonColour: page.lightMode ? .black : .white)
 			HStack {
                 Text(self.quiz.name.uppercased())
 					.font(.headlineFont)

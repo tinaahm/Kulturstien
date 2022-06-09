@@ -14,7 +14,7 @@ struct ProfileView: View {
     var body: some View {
 		VStack {
 			
-			BackButtonView()
+			BackButtonView(buttonColour: page.lightMode ? .black : .white)
 			
 			Image(getImageTitleByColour(colour: page.selectedColour))
 			.resizable()

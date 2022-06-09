@@ -14,7 +14,7 @@ struct HistoryView: View {
     var body: some View {
         VStack () {
             
-        BackButtonView()
+			BackButtonView(buttonColour: page.lightMode ? .black : .white)
             
             Image("RælingenKommune")
             .resizable()
