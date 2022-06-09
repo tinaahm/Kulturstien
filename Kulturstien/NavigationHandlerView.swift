@@ -46,7 +46,7 @@ enum Game: String {
 	case frightenHuldra = "Skrem Vekk Huldra"
 	case farmMemoryGame = "Bondens redskaper"
 	case fairytaleCreaturesMemoryGame = "Underjordiske vesener"
-	case millGame = "Mølle Spill"
+	case millGame = "Reparer mølla"
 	case none = ""
 }
 
