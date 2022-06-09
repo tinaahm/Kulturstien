@@ -7,6 +7,8 @@
 import SpriteKit
 import UIKit
 
+/// Code adapted from [Hacking With Swift](https://github.com/twostraws/HackingWithSwift/tree/main/Classic/project14).
+
 class WhacANokkSlot: SKNode {
     
     //Creating variables
