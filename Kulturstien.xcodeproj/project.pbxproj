@@ -39,6 +39,7 @@
 		265AF6172851EC040059CBA4 /* QuizEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AF6162851EC040059CBA4 /* QuizEndView.swift */; };
 		265AF619285211F10059CBA4 /* ResetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AF618285211F10059CBA4 /* ResetViews.swift */; };
 		265AF61B28521B730059CBA4 /* ViewIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AF61A28521B730059CBA4 /* ViewIndex.swift */; };
+		265AF61D285225770059CBA4 /* HelperStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AF61C285225770059CBA4 /* HelperStructures.swift */; };
 		2669457D283255B700B25AF7 /* QuizQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2669457C283255B700B25AF7 /* QuizQuestions.json */; };
 		2669458028325DBA00B25AF7 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669457F28325DBA00B25AF7 /* QuizView.swift */; };
 		267A77452829558100E0EB7A /* KulturstienApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77442829558100E0EB7A /* KulturstienApp.swift */; };
@@ -140,6 +141,7 @@
 		265AF6162851EC040059CBA4 /* QuizEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEndView.swift; sourceTree = "<group>"; };
 		265AF618285211F10059CBA4 /* ResetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViews.swift; sourceTree = "<group>"; };
 		265AF61A28521B730059CBA4 /* ViewIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIndex.swift; sourceTree = "<group>"; };
+		265AF61C285225770059CBA4 /* HelperStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperStructures.swift; sourceTree = "<group>"; };
 		2669457C283255B700B25AF7 /* QuizQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuizQuestions.json; sourceTree = "<group>"; };
 		2669457F28325DBA00B25AF7 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		267A77412829558100E0EB7A /* Kulturstien.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kulturstien.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -424,6 +426,7 @@
 				26AAC9F8282D01560057BBA6 /* MainIPhoneView.swift */,
 				263B3E6928461C4E005919D7 /* MainNightTimeView.swift */,
 				26D4A4DC2837D5630022D49F /* SelectionView.swift */,
+				265AF61C285225770059CBA4 /* HelperStructures.swift */,
 			);
 			name = MainViews;
 			sourceTree = "<group>";
@@ -663,6 +666,7 @@
 				26F93BC52837AF98005F5F9E /* LoadJSON.swift in Sources */,
 				2669458028325DBA00B25AF7 /* QuizView.swift in Sources */,
 				26D2D422284DFCF900BD68A0 /* AppTutorialView.swift in Sources */,
+				265AF61D285225770059CBA4 /* HelperStructures.swift in Sources */,
 				26D4A4DD2837D5630022D49F /* SelectionView.swift in Sources */,
 				26D4A4E12837EA8D0022D49F /* BackButtonView.swift in Sources */,
 				0E62D2DD283BB07E0002148D /* ThemeCollection.swift in Sources */,

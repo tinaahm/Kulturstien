@@ -16,6 +16,27 @@ enum Structure: String, Codable {
 	case none = ""
 }
 
+/// Get the image that coincides with the specified structure.
+///
+/// - Parameters:
+/// 	- selectionType: The structure of the button pressed in the "day time"-map.
+///
+/// - Returns: The image title of the structure.
+func getImageTitleFromSelection(selectionType: Structure) -> String {
+	switch selectionType {
+	case .mill:
+		return "WaterMillIcon"
+	case .sawmill:
+		return "SawmillIcon"
+	case .dam:
+		return "DamIcon"
+	case .logBooms:
+		return "LogBoomsIcon"
+	case .none:
+		return ""
+	}
+}
+
 /// Struct containing all the quizes.
 struct Quizes {
 	var millQuiz : Quiz = Quiz(name: "Kvernhus Quiz", type: .mill, imageTitle: "WaterMillIcon")

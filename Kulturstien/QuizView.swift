@@ -71,7 +71,7 @@ struct QuizView: View {
 								.padding(20)
 								.foregroundColor(.black)
 								.background(
-										RoundedRectangle(cornerRadius: 15).fill(showAnswer(answered: self.answered, guessedAnswer: self.guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: self.guessedIndex, quiz: self.quiz, quizIndex: self.questionIndex))
+										RoundedRectangle(cornerRadius: 15).fill(showAnswer(answered: self.answered, guessedAnswer: self.guessedAnswer, correctAnswer: correctAnswer, currentIndex: index, guessedIndex: self.guessedIndex))
 											.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
 												
 						}
@@ -125,83 +125,49 @@ struct QuizView: View {
 		}
 		.background(Color("BackgroundColour"))
     }
-}
 
-/// Return the data given the JSON file.
-///
-/// - Parameters:
-/// 	- filename:  The name of the file to be read from.
-///
-/// - Returns: The data from the JSON file.
-func checkIfPastQuizAnswersAreCorrect(answerArray: [Bool]) -> Bool {
-	for answer in answerArray {
-		if !answer {
-			return false
+	/// Checks for any wrong answers in the given array.
+	///
+	/// - Parameters:
+	/// 	- answerArray:  The array containing the correctness of the users answers.
+	///
+	/// - Returns: True if the user has answered correctly on all questions; false otherwise.
+	func checkIfPastQuizAnswersAreCorrect(answerArray: [Bool]) -> Bool {
+		for answer in answerArray {
+			if !answer {
+				return false
+			}
 		}
+		return true
 	}
-	return true
-}
 
-func showAnswer(answered: Bool, guessedAnswer: String?, correctAnswer: String, currentIndex: Int, guessedIndex: Int?, quiz: Quiz, quizIndex: Int) -> Color {
-	if !answered {
-		return (Color.white)
-	} else {
-		
-		if guessedIndex != currentIndex {
+	/// Checks for any wrong answers in the given array.
+	///
+	/// - Parameters:
+	/// 	- answered:  Whether or not the user has answered.
+	/// 	- guessedAnswer:  The answer the user has guessed.
+	/// 	- correctAnswer:  The answer which is correct.
+	/// 	- currentIndex:  The index of the current button.
+	/// 	- guessedIndex:  The index of the button the user pressed.
+	///
+	/// - Returns: The colour relating to the validity of the answer.
+	func showAnswer(answered: Bool, guessedAnswer: String?, correctAnswer: String, currentIndex: Int, guessedIndex: Int?) -> Color {
+		if !answered {
 			return (Color.white)
-		}
-		
-		if guessedAnswer == correctAnswer {
-			answeredCorrectly = true
-			return Color.green
 		} else {
-			answeredCorrectly = false
-			return Color.red
+			
+			if guessedIndex != currentIndex {
+				return (Color.white)
+			}
+			
+			if guessedAnswer == correctAnswer {
+				answeredCorrectly = true
+				return Color.green
+			} else {
+				answeredCorrectly = false
+				return Color.red
+			}
 		}
-	}
-}
-
-func getNumberOfCorrectAnswers(resultArray: [Bool]) -> Int {
-	var i : Int = 0
-	for result in resultArray {
-		if result == true {
-			i += 1
-		}
-	}
-	return i
-}
-
-func setAnswersArray(page: ViewIndex, selection: Structure, answerArray: [Bool]) {
-	switch selection {
-	case .mill:
-		page.millAnswers.removeAll()
-		page.millAnswers.append(contentsOf: answerArray)
-	case .sawmill:
-		page.sawMillAnswers.removeAll()
-		page.sawMillAnswers.append(contentsOf: answerArray)
-	case .dam:
-		page.damAnswers.removeAll()
-		page.damAnswers.append(contentsOf: answerArray)
-	case .logBooms:
-		page.logBoomsAnswers.removeAll()
-		page.logBoomsAnswers.append(contentsOf: answerArray)
-	case .none:
-		return
-	}
-}
-
-func getAnswersArray(page: ViewIndex, selection: Structure) -> [Bool] {
-	switch selection {
-	case .mill:
-		return page.millAnswers
-	case .sawmill:
-		return page.sawMillAnswers
-	case .dam:
-		return page.damAnswers
-	case .logBooms:
-		return page.logBoomsAnswers
-	case .none:
-		return [Bool]()
 	}
 }
 

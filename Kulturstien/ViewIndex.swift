@@ -51,3 +51,94 @@ class ViewIndex: ObservableObject {
 	@Published var scorePlaceHolder: Int = 0
 	@Published var currentQuiz: Quiz = Quiz(name: "", type: .none, imageTitle: "")
 }
+
+/// Change the users quiz-answers in the @Appstorage to the given answers.
+///
+/// - Parameters:
+/// 	- page:  The environment object which keeps track of the app data.
+/// 	- selection:  The current quiz.
+/// 	- answerArray:  The array containing the users answers.
+///
+func setAnswersArray(page: ViewIndex, selection: Structure, answerArray: [Bool]) {
+	switch selection {
+	case .mill:
+		page.millAnswers.removeAll()
+		page.millAnswers.append(contentsOf: answerArray)
+	case .sawmill:
+		page.sawMillAnswers.removeAll()
+		page.sawMillAnswers.append(contentsOf: answerArray)
+	case .dam:
+		page.damAnswers.removeAll()
+		page.damAnswers.append(contentsOf: answerArray)
+	case .logBooms:
+		page.logBoomsAnswers.removeAll()
+		page.logBoomsAnswers.append(contentsOf: answerArray)
+	case .none:
+		return
+	}
+}
+
+/// Gets the users past answers for the given quiz.
+///
+/// - Parameters:
+/// 	- page:  The environment object which keeps track of the app data.
+/// 	- selection:  The selected quiz.
+///
+/// - Returns: An array of the users past answers.
+func getAnswersArray(page: ViewIndex, selection: Structure) -> [Bool] {
+	switch selection {
+	case .mill:
+		return page.millAnswers
+	case .sawmill:
+		return page.sawMillAnswers
+	case .dam:
+		return page.damAnswers
+	case .logBooms:
+		return page.logBoomsAnswers
+	case .none:
+		return [Bool]()
+	}
+}
+
+/// Sets the information page that user enters to "read".
+///
+/// - Parameters:
+/// 	- page: The environment object which keeps track of the app data.
+/// 	- selection: The selected structure.
+///
+func setInformationPageToRead(page: ViewIndex, selection: Structure) {
+	switch selection {
+	case .mill:
+		page.readMillInformation = true
+	case .sawmill:
+		page.readSawmillInformation = true
+	case .dam:
+		page.readDamInformation = true
+	case .logBooms:
+		page.readLogBoomsInformation = true
+	case .none:
+		return
+	}
+}
+
+/// See if the selected information page has been read.
+///
+/// - Parameters:
+/// 	- page: The environment object which keeps track of the app data.
+/// 	- selection: The selected structure.
+///
+///- Returns: Whether or not the information page has been read.
+func getInformationPageRead(page: ViewIndex, selection: Structure) -> Bool {
+	switch selection {
+	case .mill:
+		return page.readMillInformation
+	case .sawmill:
+		return page.readSawmillInformation
+	case .dam:
+		return page.readDamInformation
+	case .logBooms:
+		return page.readLogBoomsInformation
+	case .none:
+		return false
+	}
+}

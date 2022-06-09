@@ -20,11 +20,6 @@ struct Paragraph : Codable {
 	}
 }
 
-var millInformationTexts = getTextsByType(type: .mill)
-var sawmillInformationTexts = getTextsByType(type: .sawmill)
-var damInformationTexts = getTextsByType(type: .dam)
-var logBoomsInformationTexts = getTextsByType(type: .logBooms)
-
 /// Return the texts written to the paragraphs variable by type.
 ///
 /// - Parameters:

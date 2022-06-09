@@ -8,37 +8,17 @@
 import SwiftUI
 import UIKit
 
-class DeviceSize {
-	static var width = UIScreen.main.bounds.size.width
-	static var height = UIScreen.main.bounds.size.height
-	static var size = UIScreen.main.bounds.size
-}
-
-enum Colour: String, CaseIterable, Identifiable {
-	case pink = "rosa"
-	case yellow = "gul"
-	case green = "grønn"
-	case orange = "oransje"
-	case blue = "blå"
-	case none = "Hva er favoritt fargen din?"
-	var id: Self { self }
-}
-
-enum Game: String {
-	case whacANokk = "Slå nøkken"
-	case frightenHuldra = "Skrem vekk Huldra"
-	case farmMemoryGame = "Bondens redskaper"
-	case fairytaleCreaturesMemoryGame = "Underjordiske vesener"
-	case millGame = "Reparer mølla"
-	case none = ""
-}
-
 var quizSelection: Structure = .none
 var informationSelection: Structure = .none
 var personSelection: Person = .none
 var gameSelection: Game = .none
 
 var quizes = Quizes()
+
+var millInformationTexts = getTextsByType(type: .mill)
+var sawmillInformationTexts = getTextsByType(type: .sawmill)
+var damInformationTexts = getTextsByType(type: .dam)
+var logBoomsInformationTexts = getTextsByType(type: .logBooms)
 
 /// View that returns the view to be shown in the app.
 struct NavigationHandlerView: View {

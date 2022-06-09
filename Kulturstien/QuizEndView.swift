@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View that shows at the end of the quiz
 struct QuizEndView: View {
 	
 	@EnvironmentObject var page : ViewIndex
@@ -90,13 +91,36 @@ struct QuizEndView: View {
 		}
 		.background(Color("BackgroundColour"))
 	}
-}
+	
+	/// Return the image to be displayed depending on whether or not the user got all answers correct
+	///
+	/// - Parameters:
+	/// 	- numberOfCorrectAnswers: The number of answers the user got correct.
+	/// 	- numberOfQuestions: The number of questions in the quiz.
+	///
+	///- Returns: The title of the image to be displayed.
+	func resultImageToDisplay(numberOfCorrectAnswers: Int, numberOfQuestions: Int) -> String {
+		if numberOfCorrectAnswers == numberOfQuestions {
+			return "Trophy"
+		} else {
+			return "SadTroll"
+		}
+	}
 
-func resultImageToDisplay(numberOfCorrectAnswers: Int, numberOfQuestions: Int) -> String {
-	if numberOfCorrectAnswers == numberOfQuestions {
-		return "Trophy"
-	} else {
-		return "SadTroll"
+	/// Get the number of correct answers in the array.
+	///
+	/// - Parameters:
+	/// 	- resultArray: The array containing the users answers for the current round.
+	///
+	///- Returns: The number of answers that are correct.
+	func getNumberOfCorrectAnswers(resultArray: [Bool]) -> Int {
+		var i : Int = 0
+		for result in resultArray {
+			if result == true {
+				i += 1
+			}
+		}
+		return i
 	}
 }
 
