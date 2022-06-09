@@ -8,21 +8,24 @@
 import SpriteKit
 
 class WhacANokkGameScene: SKScene, ObservableObject {
+    
+    //Creating variables
 	@Published var gameOver: Bool = false
     
 	var gameScore: SKLabelNode!
-    var gameScore2: SKLabelNode!
 	
 	@Published var score = 0 {
         didSet {
-            gameScore.text = "Score: \(score)"
+            gameScore.text = "Poeng: \(score)"
         }
     }
     
+    // Variables
     var slots = [WhacANokkSlot]()
     var popupTime = 0.85
     var numRounds = 0
     
+    //Function for creating GameScene - Background and WhacHoles
     override func didMove(to view: SKView) {
       let background = SKSpriteNode(imageNamed: "WhacANokkBackground")
 		background.size = self.size
@@ -31,17 +34,19 @@ class WhacANokkGameScene: SKScene, ObservableObject {
         background.zPosition = -1
         addChild(background)
         
-
+        //Indicate points while whacking monster
         gameScore = SKLabelNode(fontNamed: "Saira-Regular")
         gameScore.text = "Poeng: 0"
 		gameScore.position = CGPoint(x: (size.width / 2), y: size.height * 0.6)
         gameScore.fontSize = 35
         addChild(gameScore)
 		
+        // Declaring height and width by half, 1/5 and 1/4
 		let halfOfScreenSize = (size.height / 2)
 		let rowHeight = (halfOfScreenSize / 5)
 		let nodeWidth = (size.width / 4)
         
+        // Create holes where creatures pop up
         for i in 0 ..< 3 {
 			createSlot(at: CGPoint(x: ((nodeWidth * 1) + (nodeWidth * CGFloat(i))), y: halfOfScreenSize - (rowHeight * 0)))
 		}
@@ -63,6 +68,7 @@ class WhacANokkGameScene: SKScene, ObservableObject {
         }
     }
     
+    //Function for registering user touch on screen and creating actions if tapped wrong or right
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let location = touch.location(in: self)
@@ -94,6 +100,7 @@ class WhacANokkGameScene: SKScene, ObservableObject {
         }
     }
     
+    //WhacHoles
     func createSlot(at position: CGPoint) {
         let slot = WhacANokkSlot()
         slot.configure(at: position)
@@ -101,6 +108,7 @@ class WhacANokkGameScene: SKScene, ObservableObject {
         slots.append(slot)
     }
     
+    //Summoning enemy
     func createEnemy() {
         numRounds += 1
         
@@ -118,6 +126,7 @@ class WhacANokkGameScene: SKScene, ObservableObject {
         slots.shuffle()
         slots[0].show(hideTime: popupTime)
         
+        //Random popup of creatures
         if Int.random(in: 0...12) > 4 { slots[1].show(hideTime: popupTime) }
         if Int.random(in: 0...12) > 8 { slots[2].show(hideTime: popupTime) }
         if Int.random(in: 0...12) > 10 { slots[3].show(hideTime: popupTime) }
