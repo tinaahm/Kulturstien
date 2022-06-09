@@ -20,7 +20,7 @@ struct GameStartView: View {
 				VStack {
 					BackButtonView(buttonColour: page.lightMode ? .black : .white)
 					if !(gameSelection == .millGame) {
-						Image("cardGames")
+						Image(page.lightMode ? "cardGames" : "Bonfire")
 							.resizable()
 							.frame(width: 100, height: 100, alignment: .center)
 							.padding()

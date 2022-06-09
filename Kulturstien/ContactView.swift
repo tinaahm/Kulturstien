@@ -12,8 +12,10 @@ struct ContactView: View {
     
     @EnvironmentObject var page : ViewIndex
     @State private var feedBack: String = ""
-    @State var sentFeedBAck: Bool = false
-    
+    @State var sentFeedBack: Bool = false
+	@State var written: Bool = false
+	@FocusState var focused: Bool
+
     var body: some View {
         
         VStack (spacing: 25) {
@@ -39,7 +41,7 @@ struct ContactView: View {
 			.font(.subHeadlineFont)
 			.foregroundColor(page.lightMode ? .black : .white)
             
-			if self.sentFeedBAck {
+			if self.sentFeedBack {
                 Text("Din tilbakemelding er sendt")
 					.font(.subHeadlineFont)
                     .padding()
@@ -52,7 +54,11 @@ struct ContactView: View {
 			/// [Source](https://stackoverflow.com/questions/62741851/how-to-add-placeholder-text-to-texteditor-in-swiftui).
             VStack (spacing: 25){
 				ZStack(alignment: .leading) {
-				TextEditor(text: $feedBack)
+					TextEditor(text: $feedBack)
+						.onTapGesture {
+							self.written = true
+						}
+						.focused($focused)
 						.padding()
 				if feedBack.isEmpty {
 					VStack {
@@ -75,7 +81,7 @@ struct ContactView: View {
 			)
             
             Button(action: {
-                self.sentFeedBAck = true
+                self.sentFeedBack = true
 				self.feedBack = ""
             }) {
                 Text("Send")
@@ -90,8 +96,23 @@ struct ContactView: View {
 			Spacer()
     }
 }
+		.onTapGesture {
+			if self.written {
+				focused = false
+			}
+		}
 		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
 }
+}
+
+///
+/// [Source](https://developer.apple.com/forums/thread/126894)
+///
+extension View {
+	func endEditing() {
+		//sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+		UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+	}
 }
 
 /*
