@@ -11,10 +11,10 @@ import SpriteKit
 
 import UIKit
 
-struct WackANokkView: View {
+struct WhacANokkView: View {
 	
 	@EnvironmentObject var page : ViewIndex
-	@StateObject var gameScene = WackGameScene(size: DeviceSize.size)
+	@StateObject var gameScene = WhacANokkGameScene(size: DeviceSize.size)
 	@State var paused: Bool = false
 	
 	var body: some View {
@@ -93,8 +93,8 @@ struct WackANokkView: View {
 	
 }
 
-struct WackANokkView_Previews: PreviewProvider {
+struct WhacANokkView_Previews: PreviewProvider {
 	static var previews: some View {
-		WackANokkView().environmentObject(ViewIndex())
+		WhacANokkView().environmentObject(ViewIndex())
 	}
 }

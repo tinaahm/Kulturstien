@@ -24,36 +24,36 @@ struct CreaturesInformationView: View {
 		
 		VStack {
 			BackButtonView(buttonColour: .white)
-		ScrollView {
-			VStack {
-				Image(creature.imageTitle)
-					.resizable()
-					.scaledToFit()
-					.frame(width: 100, height: 100)
-				Text(creature.type.rawValue)
-					.font(.headlineFont)
-					.padding(.top)
-				ForEach(0 ..< creatureParagraphs.count) {
-					index in
-						ZStack {
-							RoundedRectangle(cornerRadius: 25, style: .continuous)
-								.fill(Color("CreatureInformationTextboxBackground"))
-								.shadow(radius: 4, x: -2, y: 5)
+			ScrollView {
+				VStack {
+					Image(creature.imageTitle)
+						.resizable()
+						.scaledToFit()
+						.frame(width: 100, height: 100)
+					Text(creature.type.rawValue)
+						.font(.headlineFont)
+						.padding(.top)
+					ForEach(0 ..< creatureParagraphs.count) {
+						index in
+							ZStack {
+								RoundedRectangle(cornerRadius: 25, style: .continuous)
+									.fill(Color("CreatureInformationTextboxBackground"))
+									.shadow(radius: 4, x: -2, y: 5)
 
-							VStack(alignment: .center) {
-								Text(creatureParagraphs[index])
-									.font(.textFont)
-									.padding()
+								VStack(alignment: .center) {
+									Text(creatureParagraphs[index])
+										.font(.textFont)
+										.padding()
+								}
+								.padding(20)
+								.multilineTextAlignment(.leading)
 							}
-							.padding(20)
-							.multilineTextAlignment(.leading)
-						}
-						.frame(width: DeviceSize.width * 0.85)
-						.padding(10)
-				}
+							.frame(width: DeviceSize.width * 0.85)
+							.padding(10)
+					}
 			}
 		}
-		.foregroundColor(.white)
+			.foregroundColor(.white)
 		}
 		.background(Color("CreatureInformationBackground"))
     }

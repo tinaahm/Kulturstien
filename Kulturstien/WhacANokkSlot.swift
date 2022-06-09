@@ -1,6 +1,5 @@
 //
-//  WhackSlot.swift
-//  WhackANoekken
+//  WhacANokkSlot.swift
 //
 //  Created by Lucas on 19/05/2022.
 //
@@ -8,7 +7,7 @@
 import SpriteKit
 import UIKit
 
-class WhackSlot: SKNode {
+class WhacANokkSlot: SKNode {
     var charNode: SKSpriteNode!
     var random = [SKTexture]()
     

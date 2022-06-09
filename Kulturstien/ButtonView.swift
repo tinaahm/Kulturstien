@@ -52,8 +52,8 @@ struct ButtonView: View {
 
 func getPageByGameSelection(game: Game) -> Page {
 	switch game {
-	case .wackANokk:
-		return .wackANokk
+	case .whacANokk:
+		return .whacANokk
 	case .frightenHuldra:
 		return .huldraGame
 	case .farmMemoryGame:

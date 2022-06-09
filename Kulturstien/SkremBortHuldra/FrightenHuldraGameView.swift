@@ -110,7 +110,7 @@ struct HuldraGameOverView: View {
 						if page.frightenHuldraGameScore < score {
 							page.frightenHuldraGameScore = score
 						}
-					} else if gameSelection == .wackANokk {
+					} else if gameSelection == .whacANokk {
 						if page.wackANokkGameScore < score {
 							page.wackANokkGameScore = score
 						}
@@ -135,7 +135,7 @@ struct HuldraGameOverView: View {
 						if page.frightenHuldraGameScore < score {
 							page.frightenHuldraGameScore = score
 						}
-					} else if gameSelection == .wackANokk {
+					} else if gameSelection == .whacANokk {
 						if page.wackANokkGameScore < score {
 							page.wackANokkGameScore = score
 						}

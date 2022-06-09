@@ -62,10 +62,6 @@ extension ARView : ARCoachingOverlayViewDelegate {
 		let millAnchor = try! WaterMillNoWater.loadWaterMill()
 		self.scene.anchors.append(millAnchor)
 	}
-	/*
-	public func coachingOverlayViewWillActivate(_ coachingOverlayView: ARCoachingOverlayView) {
-		<#code#>
-	}*/
 	
 }
 

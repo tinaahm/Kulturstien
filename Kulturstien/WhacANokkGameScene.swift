@@ -7,7 +7,7 @@
 
 import SpriteKit
 
-class WackGameScene: SKScene, ObservableObject {
+class WhacANokkGameScene: SKScene, ObservableObject {
 	@Published var gameOver: Bool = false
     
 	var gameScore: SKLabelNode!
@@ -19,12 +19,12 @@ class WackGameScene: SKScene, ObservableObject {
         }
     }
     
-    var slots = [WhackSlot]()
+    var slots = [WhacANokkSlot]()
     var popupTime = 0.85
     var numRounds = 0
     
     override func didMove(to view: SKView) {
-      let background = SKSpriteNode(imageNamed: "13 Pro - 163")
+      let background = SKSpriteNode(imageNamed: "WhacANokk")
         background.blendMode = .replace
         background.zPosition = -1
         addChild(background)
@@ -69,21 +69,21 @@ class WackGameScene: SKScene, ObservableObject {
             for node in tappedNodes {
                 if node.name == "charFriend" {
                     // they shouldn't have whacked this char
-                    let whackSlot = node.parent!.parent as! WhackSlot
-                    if !whackSlot.isVisible { continue }
-                    if whackSlot.isHit { continue }
+                    let whacANokkSlot = node.parent!.parent as! WhacANokkSlot
+                    if !whacANokkSlot.isVisible { continue }
+                    if whacANokkSlot.isHit { continue }
                     
-                    whackSlot.hit()
+                    whacANokkSlot.hit()
                     score -= 3
                     
                     run(SKAction.playSoundFileNamed("whackBad.mp3", waitForCompletion:false))
                 } else if node.name == "charEnemy" {
                     // they should have whacked this one
-                    let whackSlot = node.parent!.parent as! WhackSlot
-                    if !whackSlot.isVisible { continue }
-                    if whackSlot.isHit { continue }
+                    let whacANokkSlot = node.parent!.parent as! WhacANokkSlot
+                    if !whacANokkSlot.isVisible { continue }
+                    if whacANokkSlot.isHit { continue }
                     
-                    whackSlot.hit()
+					whacANokkSlot.hit()
                     score += 1
                     
                     run(SKAction.playSoundFileNamed("whack.mp3", waitForCompletion:false))
@@ -93,7 +93,7 @@ class WackGameScene: SKScene, ObservableObject {
     }
     
     func createSlot(at position: CGPoint) {
-        let slot = WhackSlot()
+        let slot = WhacANokkSlot()
         slot.configure(at: position)
         addChild(slot)
         slots.append(slot)
