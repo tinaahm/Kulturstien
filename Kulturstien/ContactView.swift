@@ -8,6 +8,9 @@
 import SwiftUI
 
 /// View that returns the contact page.
+///
+/// Code for keyboard hiding from [StackOverFlow](https://stackoverflow.com/questions/63641642/how-to-be-notified-when-a-texteditor-loses-focus).
+///
 struct ContactView: View {
     
     @EnvironmentObject var page : ViewIndex
@@ -103,16 +106,6 @@ struct ContactView: View {
 		}
 		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
 }
-}
-
-///
-/// [Source](https://developer.apple.com/forums/thread/126894)
-///
-extension View {
-	func endEditing() {
-		//sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-		UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-	}
 }
 
 /*
