@@ -84,8 +84,8 @@ func selectedAvatar(currentColour: Colour, buttontColour: Colour) -> Color {
 	return .clear
 }
 
-struct AvatarEditorView_Previews: PreviewProvider {
+/*struct AvatarEditorView_Previews: PreviewProvider {
     static var previews: some View {
         AvatarEditorView().environmentObject(ViewIndex())
     }
-}
+}*/

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View for showing the Fairytale-Memory game.
 struct FairytaleMemoryGameView: View {
     var body: some View {
 		VStack {
@@ -23,8 +24,8 @@ struct FairytaleMemoryGameView: View {
     }
 }
 
-struct FairytaleMemoryGameView_Previews: PreviewProvider {
+/*struct FairytaleMemoryGameView_Previews: PreviewProvider {
     static var previews: some View {
         FairytaleMemoryGameView().environmentObject(ViewIndex())
     }
-}
+}*/

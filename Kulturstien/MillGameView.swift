@@ -91,8 +91,8 @@ struct MillGameView: View {
     }
 }
 
-struct MillGameView_Previews: PreviewProvider {
+/*struct MillGameView_Previews: PreviewProvider {
     static var previews: some View {
 		MillGameView().environmentObject(ViewIndex())
     }
-}
+}*/

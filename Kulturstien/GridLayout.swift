@@ -13,6 +13,8 @@
 //  Copyright © 2020 Stanford University. All rights reserved.
 //
 
+/// [Source](https://github.com/archie-lhd/memory-card-matching-game)
+
 import SwiftUI
 
 struct GridLayout {

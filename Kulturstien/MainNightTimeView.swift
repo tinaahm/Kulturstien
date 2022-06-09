@@ -74,8 +74,8 @@ struct MainNightTimeView: View {
 }
 
 
-struct MainNightTimeView_Previews: PreviewProvider {
+/*struct MainNightTimeView_Previews: PreviewProvider {
     static var previews: some View {
         MainNightTimeView().environmentObject(ViewIndex())
     }
-}
+}*/

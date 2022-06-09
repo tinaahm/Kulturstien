@@ -3,7 +3,6 @@
 //  Kulturstien
 //
 //  Created by Sigurd Graff Henrichsen on 23/05/2022.
-//
 
 //
 //  Grid.swift
@@ -11,6 +10,8 @@
 //
 //  Created by Archie Liu on 2021-04-29.
 //
+
+/// [Source](https://github.com/archie-lhd/memory-card-matching-game)
 
 import SwiftUI
 
@@ -34,7 +35,7 @@ struct Grid<Item, ItemView>: View where Item: Identifiable, ItemView: View{
     
     private func body(for item: Item, in layout: GridLayout) -> some View {
         let index = items.firstIndex(matching: item)
-        return Group { // return EmptyView if index == nil
+        return Group {
             if index != nil {
                 viewForItem(item)
                     .frame(width: layout.itemSize.width, height: layout.itemSize.height)

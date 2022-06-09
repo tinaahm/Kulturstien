@@ -94,28 +94,28 @@ struct GameStartView: View {
 		}
 		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
     }
-}
 
-/// Get the explaination for the game.
-///
-/// - Parameters:
-/// 	- selection:  The currently selected game.
-///
-/// - Returns: The game explaination.
-func getGameExplainationByGame(selection: Game) -> String {
-	switch selection {
-	case .whacANokk:
-		return "Slå nøkken og unngå dyrene!"
-	case .frightenHuldra:
-		return "Hjelp Trond å jage Huldra!"
-	case .farmMemoryGame:
-		return "Samle opp alle redskapene på gården ved å finne de like kortene."
-	case .fairytaleCreaturesMemoryGame:
-		return "Fang alle de underjoridske vesnene ved å finne de like kortene."
-	case .millGame:
-		return "Fang alle delene i elva for å reparere mølla!\nUnngå å fange rusk, da må du starte på nytt."
-	case .none:
-		return ""
+	/// Get the explaination for the game.
+	///
+	/// - Parameters:
+	/// 	- selection:  The currently selected game.
+	///
+	/// - Returns: The game explaination.
+	func getGameExplainationByGame(selection: Game) -> String {
+		switch selection {
+		case .whacANokk:
+			return "Slå nøkken og unngå dyrene!"
+		case .frightenHuldra:
+			return "Hjelp Trond å jage Huldra!"
+		case .farmMemoryGame:
+			return "Samle opp alle redskapene på gården ved å finne de like kortene."
+		case .fairytaleCreaturesMemoryGame:
+			return "Fang alle de underjoridske vesnene ved å finne de like kortene."
+		case .millGame:
+			return "Fang alle delene i elva for å reparere mølla!\nUnngå å fange rusk, da må du starte på nytt."
+		case .none:
+			return ""
+		}
 	}
 }
 

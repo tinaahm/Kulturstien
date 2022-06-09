@@ -11,6 +11,7 @@ import SpriteKit
 
 import UIKit
 
+/// View for showing the Whac-A-Nokk game.
 struct WhacANokkView: View {
 	
 	@EnvironmentObject var page : ViewIndex
@@ -93,8 +94,8 @@ struct WhacANokkView: View {
 	
 }
 
-struct WhacANokkView_Previews: PreviewProvider {
+/*struct WhacANokkView_Previews: PreviewProvider {
 	static var previews: some View {
 		WhacANokkView().environmentObject(ViewIndex())
 	}
-}
+}*/

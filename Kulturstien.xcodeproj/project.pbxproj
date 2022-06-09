@@ -40,6 +40,7 @@
 		265AF619285211F10059CBA4 /* ResetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AF618285211F10059CBA4 /* ResetViews.swift */; };
 		265AF61B28521B730059CBA4 /* ViewIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AF61A28521B730059CBA4 /* ViewIndex.swift */; };
 		265AF61D285225770059CBA4 /* HelperStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AF61C285225770059CBA4 /* HelperStructures.swift */; };
+		265AF61F28522A010059CBA4 /* GameHelperModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AF61E28522A010059CBA4 /* GameHelperModels.swift */; };
 		2669457D283255B700B25AF7 /* QuizQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2669457C283255B700B25AF7 /* QuizQuestions.json */; };
 		2669458028325DBA00B25AF7 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669457F28325DBA00B25AF7 /* QuizView.swift */; };
 		267A77452829558100E0EB7A /* KulturstienApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77442829558100E0EB7A /* KulturstienApp.swift */; };
@@ -57,7 +58,7 @@
 		26D2D41D284CEC6000BD68A0 /* WaterMillNoWater.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 26D2D41C284CEC6000BD68A0 /* WaterMillNoWater.rcproject */; };
 		26D2D420284CECFF00BD68A0 /* WaterMillARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D2D41F284CECFF00BD68A0 /* WaterMillARView.swift */; };
 		26D2D422284DFCF900BD68A0 /* AppTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D2D421284DFCF900BD68A0 /* AppTutorialView.swift */; };
-		26D3DF7F2848F7FC009EECE3 /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */; };
+		26D3DF7F2848F7FC009EECE3 /* GameEndViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3DF7E2848F7FC009EECE3 /* GameEndViews.swift */; };
 		26D3DF81284A06E7009EECE3 /* HowToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3DF80284A06E7009EECE3 /* HowToView.swift */; };
 		26D3DF83284A2875009EECE3 /* GameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3DF82284A2875009EECE3 /* GameStartView.swift */; };
 		26D4A4DD2837D5630022D49F /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4A4DC2837D5630022D49F /* SelectionView.swift */; };
@@ -77,13 +78,11 @@
 		A04024DF2848C81F001B4D18 /* WhacANokkSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04024D52848C81E001B4D18 /* WhacANokkSlot.swift */; };
 		A04024E02848C81F001B4D18 /* WackActions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A04024D62848C81F001B4D18 /* WackActions.sks */; };
 		A04024E12848C81F001B4D18 /* WhacANokkGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A04024D72848C81F001B4D18 /* WhacANokkGameScene.sks */; };
-		A04024E22848C81F001B4D18 /* WhacANokkGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04024D82848C81F001B4D18 /* WhacANokkGameViewController.swift */; };
 		A04024E32848C81F001B4D18 /* WackLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04024D92848C81F001B4D18 /* WackLaunchScreen.storyboard */; };
 		A04024E52848C81F001B4D18 /* whack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A04024DB2848C81F001B4D18 /* whack.mp3 */; };
 		A04024E72848C8F1001B4D18 /* FrightenHuldraGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04024E62848C8F1001B4D18 /* FrightenHuldraGameView.swift */; };
 		A061FD5D284F831B00188CFA /* huldraskutt.wav in Resources */ = {isa = PBXBuildFile; fileRef = A061FD5C284F831B00188CFA /* huldraskutt.wav */; };
 		A074ABC4284F4F7E005AE129 /* Kastegaffel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A074ABC3284F4F7E005AE129 /* Kastegaffel.mp3 */; };
-		A0EA0C472848B46D00A2B524 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA0C392848B46D00A2B524 /* GameViewController.swift */; };
 		A0EA0C4A2848B46D00A2B524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C3C2848B46D00A2B524 /* LaunchScreen.storyboard */; };
 		A0EA0C4B2848B46D00A2B524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C3E2848B46D00A2B524 /* Main.storyboard */; };
 		A0EA0C4E2848B46D00A2B524 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A0EA0C432848B46D00A2B524 /* GameScene.sks */; };
@@ -142,6 +141,7 @@
 		265AF618285211F10059CBA4 /* ResetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViews.swift; sourceTree = "<group>"; };
 		265AF61A28521B730059CBA4 /* ViewIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIndex.swift; sourceTree = "<group>"; };
 		265AF61C285225770059CBA4 /* HelperStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperStructures.swift; sourceTree = "<group>"; };
+		265AF61E28522A010059CBA4 /* GameHelperModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelperModels.swift; sourceTree = "<group>"; };
 		2669457C283255B700B25AF7 /* QuizQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuizQuestions.json; sourceTree = "<group>"; };
 		2669457F28325DBA00B25AF7 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		267A77412829558100E0EB7A /* Kulturstien.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kulturstien.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,7 +163,7 @@
 		26D2D41C284CEC6000BD68A0 /* WaterMillNoWater.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = WaterMillNoWater.rcproject; sourceTree = "<group>"; };
 		26D2D41F284CECFF00BD68A0 /* WaterMillARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterMillARView.swift; sourceTree = "<group>"; };
 		26D2D421284DFCF900BD68A0 /* AppTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTutorialView.swift; sourceTree = "<group>"; };
-		26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndView.swift; sourceTree = "<group>"; };
+		26D3DF7E2848F7FC009EECE3 /* GameEndViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndViews.swift; sourceTree = "<group>"; };
 		26D3DF80284A06E7009EECE3 /* HowToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToView.swift; sourceTree = "<group>"; };
 		26D3DF82284A2875009EECE3 /* GameStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartView.swift; sourceTree = "<group>"; };
 		26D4A4DC2837D5630022D49F /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
@@ -183,13 +183,11 @@
 		A04024D52848C81E001B4D18 /* WhacANokkSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhacANokkSlot.swift; sourceTree = "<group>"; };
 		A04024D62848C81F001B4D18 /* WackActions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WackActions.sks; sourceTree = "<group>"; };
 		A04024D72848C81F001B4D18 /* WhacANokkGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WhacANokkGameScene.sks; sourceTree = "<group>"; };
-		A04024D82848C81F001B4D18 /* WhacANokkGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhacANokkGameViewController.swift; sourceTree = "<group>"; };
 		A04024D92848C81F001B4D18 /* WackLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WackLaunchScreen.storyboard; sourceTree = "<group>"; };
 		A04024DB2848C81F001B4D18 /* whack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whack.mp3; sourceTree = "<group>"; };
 		A04024E62848C8F1001B4D18 /* FrightenHuldraGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrightenHuldraGameView.swift; sourceTree = "<group>"; };
 		A061FD5C284F831B00188CFA /* huldraskutt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = huldraskutt.wav; sourceTree = "<group>"; };
 		A074ABC3284F4F7E005AE129 /* Kastegaffel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Kastegaffel.mp3; sourceTree = "<group>"; };
-		A0EA0C392848B46D00A2B524 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A0EA0C3D2848B46D00A2B524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0EA0C3F2848B46D00A2B524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0EA0C432848B46D00A2B524 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -241,8 +239,6 @@
 				0E62D2D4283BAF2B0002148D /* Extensions */,
 				0E62D2D3283BAF180002148D /* Models */,
 				0E62D2D2283BAF0E0002148D /* ViewModels */,
-				263B3E732847A1AF005919D7 /* FarmMemoryGameView.swift */,
-				263B3E752847A2F4005919D7 /* FairytaleMemoryGameView.swift */,
 			);
 			name = MemoryCardGame;
 			sourceTree = "<group>";
@@ -309,8 +305,11 @@
 			isa = PBXGroup;
 			children = (
 				26D3DF82284A2875009EECE3 /* GameStartView.swift */,
-				26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */,
+				26D3DF7E2848F7FC009EECE3 /* GameEndViews.swift */,
 				265AF618285211F10059CBA4 /* ResetViews.swift */,
+				265AF61E28522A010059CBA4 /* GameHelperModels.swift */,
+				263B3E732847A1AF005919D7 /* FarmMemoryGameView.swift */,
+				263B3E752847A2F4005919D7 /* FairytaleMemoryGameView.swift */,
 				0E62D2D1283BAEED0002148D /* MemoryCardGame */,
 				A04024D12848C7F7001B4D18 /* WhacANokk */,
 				A0EA0C382848B46D00A2B524 /* SkremBortHuldra */,
@@ -470,14 +469,13 @@
 			children = (
 				26F0498F283CC16D00FBA117 /* WhacANokkView.swift */,
 				A04024D42848C81E001B4D18 /* WhacANokkGameScene.swift */,
-				A04024D82848C81F001B4D18 /* WhacANokkGameViewController.swift */,
+				A04024D52848C81E001B4D18 /* WhacANokkSlot.swift */,
 				A04024D62848C81F001B4D18 /* WackActions.sks */,
 				A04024D72848C81F001B4D18 /* WhacANokkGameScene.sks */,
 				A04024D92848C81F001B4D18 /* WackLaunchScreen.storyboard */,
 				A04024D22848C81E001B4D18 /* WackMain.storyboard */,
 				A04024DB2848C81F001B4D18 /* whack.mp3 */,
 				A04024D32848C81E001B4D18 /* whackBad.mp3 */,
-				A04024D52848C81E001B4D18 /* WhacANokkSlot.swift */,
 			);
 			name = WhacANokk;
 			sourceTree = "<group>";
@@ -487,7 +485,6 @@
 			children = (
 				A04024E62848C8F1001B4D18 /* FrightenHuldraGameView.swift */,
 				A0EA0C452848B46D00A2B524 /* GameScene.swift */,
-				A0EA0C392848B46D00A2B524 /* GameViewController.swift */,
 				A0EA0C3C2848B46D00A2B524 /* LaunchScreen.storyboard */,
 				A0EA0C3E2848B46D00A2B524 /* Main.storyboard */,
 				A0EA0C402848B46D00A2B524 /* Sounds */,
@@ -663,6 +660,7 @@
 				26D4A4DF2837EA230022D49F /* ButtonView.swift in Sources */,
 				263B3E742847A1AF005919D7 /* FarmMemoryGameView.swift in Sources */,
 				0E62D2D9283BAFDF0002148D /* EmojiMemoryGameViewModel.swift in Sources */,
+				265AF61F28522A010059CBA4 /* GameHelperModels.swift in Sources */,
 				26F93BC52837AF98005F5F9E /* LoadJSON.swift in Sources */,
 				2669458028325DBA00B25AF7 /* QuizView.swift in Sources */,
 				26D2D422284DFCF900BD68A0 /* AppTutorialView.swift in Sources */,
@@ -681,19 +679,17 @@
 				26F04990283CC16D00FBA117 /* WhacANokkView.swift in Sources */,
 				0E62D2E9283BB2A20002148D /* Int+RandomExcludingSome.swift in Sources */,
 				263B3E6828461831005919D7 /* PersonInformationView.swift in Sources */,
-				A0EA0C472848B46D00A2B524 /* GameViewController.swift in Sources */,
 				26F0498E283B830B00FBA117 /* Paragraph.swift in Sources */,
 				0E62D2E3283BB23A0002148D /* String+ToArray.swift in Sources */,
 				26D3DF81284A06E7009EECE3 /* HowToView.swift in Sources */,
 				0E62D2ED283BB3090002148D /* GridLayout.swift in Sources */,
 				0E62D2F9283BB5070002148D /* EmojiMemoryGameView.swift in Sources */,
-				A04024E22848C81F001B4D18 /* WhacANokkGameViewController.swift in Sources */,
 				26D2D41D284CEC6000BD68A0 /* WaterMillNoWater.rcproject in Sources */,
 				844A56612848EE64009BF850 /* MillGameView.swift in Sources */,
 				0E62D2EB283BB2C40002148D /* UIColor+RGBA.swift in Sources */,
 				0E17588E2836832B00E8F9C4 /* InformationView.swift in Sources */,
 				0E62D2F1283BB33C0002148D /* Pie.swift in Sources */,
-				26D3DF7F2848F7FC009EECE3 /* GameEndView.swift in Sources */,
+				26D3DF7F2848F7FC009EECE3 /* GameEndViews.swift in Sources */,
 				0E62D2E5283BB25E0002148D /* Array+Identifiable.swift in Sources */,
 				263B3E7228475A94005919D7 /* ProfilePickerView.swift in Sources */,
 				0E62D2DB283BB04E0002148D /* ThemeCollectionManager.swift in Sources */,

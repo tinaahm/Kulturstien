@@ -47,8 +47,8 @@ struct AppTutorialView: View {
 	}
 }
 
-struct AppTutorialView_Previews: PreviewProvider {
+/*struct AppTutorialView_Previews: PreviewProvider {
     static var previews: some View {
 		AppTutorialView().environmentObject(ViewIndex())
     }
-}
+}*/

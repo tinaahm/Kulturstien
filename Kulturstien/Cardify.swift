@@ -12,6 +12,8 @@
 //  Created by Archie Liu on 2021-05-01.
 //
 
+/// Code adapted from [Archie Liu](https://github.com/archie-lhd/memory-card-matching-game)
+
 import SwiftUI
 
 struct Cardify: AnimatableModifier { // == (ViewModifier, Animatable)

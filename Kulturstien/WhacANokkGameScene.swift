@@ -7,6 +7,10 @@
 
 import SpriteKit
 
+/// Class for running the Frighten Huldra game.
+///
+/// Code adpted from [omrobbie](https://github.com/omrobbie/ios-game-ninja-attack).
+///
 class WhacANokkGameScene: SKScene, ObservableObject {
     
     //Creating variables

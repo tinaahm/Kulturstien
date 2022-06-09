@@ -12,6 +12,8 @@
 //  Created by Archie Liu on 2021-05-07.
 //
 
+/// Code adapted from [Archie Liu](https://github.com/archie-lhd/memory-card-matching-game)
+
 import SwiftUI
 
 struct DefaultThemes {

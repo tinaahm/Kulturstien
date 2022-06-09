@@ -12,6 +12,8 @@
 //  Created by Archie Liu on 2021-04-23.
 //
 
+/// Code adapted from [Archie Liu](https://github.com/archie-lhd/memory-card-matching-game)
+
 import SwiftUI
 
 func endGame(handler: ViewIndex, gameTheme: String, score: Int) -> String {
@@ -115,7 +117,8 @@ struct CardView: View {
 
 }
 
-
+}
+/*
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let game = EmojiMemoryGameViewModel(theme: DefaultThemes.theme1)
@@ -124,4 +127,4 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-}
+}*/

@@ -12,6 +12,8 @@
 //  Created by Archie Liu on 2021-05-04.
 //
 
+/// Code adapted from [Archie Liu](https://github.com/archie-lhd/memory-card-matching-game)
+
 import SwiftUI
 
 struct ThemeSelectionView: View {
@@ -85,8 +87,9 @@ struct DestinationPageView: View {
     }
 }
 
+/*
 struct ThemeSelectionView_Previews: PreviewProvider {
     static var previews: some View {
         ThemeSelectionView(tcManager: ThemeCollectionManager()).environmentObject(ViewIndex())
     }
-}
+}*/

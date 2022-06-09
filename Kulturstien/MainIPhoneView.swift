@@ -74,11 +74,11 @@ struct MainIPhoneView: View {
 
 }
 
-struct MainIPhoneView_Previews: PreviewProvider {
+/*struct MainIPhoneView_Previews: PreviewProvider {
     static var previews: some View {
         MainIPhoneView().environmentObject(ViewIndex())
     }
-}
+}*/
 
 struct DraggableView: ViewModifier {
 	@State var offset = CGPoint(x: 0, y: 0)

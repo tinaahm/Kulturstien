@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View for showing the Farm-Memory game.
 struct FarmMemoryGameView: View {
     var body: some View {
 		VStack (alignment: .center) {
@@ -22,8 +23,8 @@ struct FarmMemoryGameView: View {
     }
 }
 
-struct FarmMemoryGameView_Previews: PreviewProvider {
+/*struct FarmMemoryGameView_Previews: PreviewProvider {
     static var previews: some View {
         FarmMemoryGameView().environmentObject(ViewIndex())
     }
-}
+}*/

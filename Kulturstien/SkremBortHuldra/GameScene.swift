@@ -8,60 +8,20 @@
 import SpriteKit
 import SwiftUI
 
-struct PhysicsCategory {
-  static let none      : UInt32 = 0
-  static let all       : UInt32 = UInt32.max
-  static let monster   : UInt32 = 0b1       // 1
-  static let projectile: UInt32 = 0b10      // 2
-}
-
-func +(left: CGPoint, right: CGPoint) -> CGPoint {
-  return CGPoint(x: left.x + right.x, y: left.y + right.y)
-}
-
-func -(left: CGPoint, right: CGPoint) -> CGPoint {
-  return CGPoint(x: left.x - right.x, y: left.y - right.y)
-}
-
-func *(point: CGPoint, scalar: CGFloat) -> CGPoint {
-  return CGPoint(x: point.x * scalar, y: point.y * scalar)
-}
-
-func /(point: CGPoint, scalar: CGFloat) -> CGPoint {
-  return CGPoint(x: point.x / scalar, y: point.y / scalar)
-}
-
-#if !(arch(x86_64) || arch(arm64))
-  func sqrt(a: CGFloat) -> CGFloat {
-    return CGFloat(sqrtf(Float(a)))
-  }
-#endif
-
-extension CGPoint {
-  func length() -> CGFloat {
-    return sqrt(x*x + y*y)
-  }
-  
-  func normalized() -> CGPoint {
-    return self / length()
-  }
-}
-
+/// Class for running the Frighten Huldra game.
+///
+/// Code adapted from [Hacking With Swift](https://github.com/twostraws/HackingWithSwift/tree/main/Classic/project14).
+///
 class GameScene: SKScene, ObservableObject {
     
-    //Variables
 	@Published var gameOverHuldra: Bool = false
-    
-	@Published var gameScore: SKLabelNode!
-    
+	var gameScore: SKLabelNode!
 	@Published var monstersDestroyed = 0 {
                   didSet {
                       gameScore.text = "Poeng: \(monstersDestroyed)"
                   }
               }
 	@Published var reset: Bool = false
-
-    
 
     // Declaring player and adding player
   let player = SKSpriteNode(imageNamed: "TrondPlayer")
@@ -80,18 +40,18 @@ class GameScene: SKScene, ObservableObject {
       player.yScale = 0.35
       player.xScale = 0.35
       player.zPosition = 2
-    addChild(player)
+	  addChild(player)
     
     physicsWorld.gravity = .zero
     physicsWorld.contactDelegate = self
     
       //Spawning monster forever
-   run(SKAction.repeatForever(
-          SKAction.sequence([
-            SKAction.run(addMonster),
-            SKAction.wait(forDuration: 0.430)
-            ])
-        ))
+	   run(SKAction.repeatForever(
+			  SKAction.sequence([
+				SKAction.run(addMonster),
+				SKAction.wait(forDuration: 0.430)
+				])
+			))
       
       gameScore = SKLabelNode(fontNamed: "Saira-Regular")
       gameScore.text = "Poeng: 0"
@@ -108,41 +68,40 @@ class GameScene: SKScene, ObservableObject {
     return random() * (max - min) + min
   }
 
-    // function for adding monster
+    /// Add monsters to the scene
   func addMonster() {
+	  let monster = SKSpriteNode(imageNamed: "SmallHuldra")
     
-    // Create sprite
-    let monster = SKSpriteNode(imageNamed: "SmallHuldra")
-    
-    monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size) // 1
-    monster.physicsBody?.isDynamic = true // 2
-    monster.physicsBody?.categoryBitMask = PhysicsCategory.monster // 3
-    monster.physicsBody?.contactTestBitMask = PhysicsCategory.projectile // 4
-    monster.physicsBody?.collisionBitMask = PhysicsCategory.none // 5
-    
-    // Determine where to spawn the monster along the top
+	  monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size) // 1
+	  monster.physicsBody?.isDynamic = true // 2
+	  monster.physicsBody?.categoryBitMask = PhysicsCategory.monster // 3
+	  monster.physicsBody?.contactTestBitMask = PhysicsCategory.projectile // 4
+		
+	  monster.physicsBody?.collisionBitMask = PhysicsCategory.none // 5
+			
+		// Determine where to spawn the monster along the top
 	  let xPosition = random(min: 5, max: (size.width - 5))
-    
-    // Position the monster slightly off-screen along the top,
-    // and along a random position along the X axis
+			
+		// Position the monster slightly off-screen along the top,
+		// and along a random position along the X axis
 	  monster.position = CGPoint(x: xPosition, y: size.height)
-    
-    // Add the monster to the scene
-    addChild(monster)
-    
-    // Determine speed of the monster
-    let actualDuration = random(min: CGFloat(2.0), max: CGFloat(4.0))
-    
-    // Create the actions
+			
+			// Add the monster to the scene
+	  addChild(monster)
+			
+			// Determine speed of the monster
+	  let actualDuration = random(min: CGFloat(2.0), max: CGFloat(4.0))
+			
+			// Create the actions
 	  let actionMove = SKAction.move(to: CGPoint(x: xPosition, y: (size.height * 0.1)),
-                                   duration: TimeInterval(actualDuration))
-    let actionMoveDone = SKAction.removeFromParent()
-    
-    let loseAction = SKAction.run() {
-		self.gameOverHuldra = true
-    }
-    
-    monster.run(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
+										   duration: TimeInterval(actualDuration))
+	  let actionMoveDone = SKAction.removeFromParent()
+			
+	  let loseAction = SKAction.run() {
+		  self.gameOverHuldra = true
+	  }
+		
+	  monster.run(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
 }
 
   

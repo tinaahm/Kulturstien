@@ -64,7 +64,7 @@ struct NavigationHandlerView: View {
 			case .avatarChanger:
 				AvatarEditorView()
 			case .memoryGameEnd:
-				GameEndView(gameType: gameSelection)
+				MemoryGameEndView(gameType: gameSelection)
 			case .history:
 				HistoryView()
 			case .howTo:
@@ -74,7 +74,7 @@ struct NavigationHandlerView: View {
 			case .ar:
 				WaterMillARView()
 			case .gameEnd:
-				HuldraGameOverView(score: page.scorePlaceHolder)
+				MainGamesOverView(score: page.scorePlaceHolder)
 			case .quizEnd:
 				QuizEndView(resultArray: page.currentQuiz.questionAnswers, title: page.currentQuiz.name)
 			case .appTutorial:
