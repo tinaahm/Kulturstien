@@ -17,7 +17,7 @@ class WhacANokkSlot: SKNode {
     func configure(at position: CGPoint) {
         self.position = position
         
-        let sprite = SKSpriteNode(imageNamed: "Group 69")
+        let sprite = SKSpriteNode(imageNamed: "WhacHole")
         addChild(sprite)
         
         let cropNode = SKCropNode()
@@ -56,7 +56,7 @@ class WhacANokkSlot: SKNode {
             charNode.texture = texture
             charNode.name = "charFriend"
         } else {
-            charNode.texture = SKTexture(imageNamed: "nkken2")
+            charNode.texture = SKTexture(imageNamed: "NokkenGame")
             charNode.xScale = 0.8
             charNode.yScale = 0.8
             charNode.name = "charEnemy"

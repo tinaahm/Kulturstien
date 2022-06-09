@@ -208,7 +208,7 @@ func getAnswersArray(page: ViewIndex, selection: Structure) -> [Bool] {
 
 func resultImageToDisplay(numberOfCorrectAnswers: Int, numberOfQuestions: Int) -> String {
 	if numberOfCorrectAnswers == numberOfQuestions {
-		return "Trophy-1"
+		return "Trophy"
 	} else {
 		return "SadTroll"
 	}

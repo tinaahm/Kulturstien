@@ -19,12 +19,12 @@ struct DefaultThemes {
     static let theme0 = ThemeCollection.Theme (
         name: "Bondens redskaper",
         accentColor: UIColor(Color("MemoryGameYellow")),
-        emojiSet: ["WaterMillIcon", "Pitchfork", "Horseshoe", "SawmillIcon", "DamIcon", "Logs"]
+        imageSet: ["WaterMillIcon", "Pitchfork", "Horseshoe", "SawmillIcon", "DamIcon", "Logs"]
     )
     
     static let theme1 = ThemeCollection.Theme (
         name: "Underjordiske vesener",
         accentColor: UIColor(Color("MemoryGameDarkBlue")),
-		emojiSet: ["Elf", "Troll", "Nokken", "HuldraWoman", "OldMan", "Frame"]
+		imageSet: ["Elf", "Troll", "Nokken", "Huldra", "OldMan", "Frame"]
     )
 }

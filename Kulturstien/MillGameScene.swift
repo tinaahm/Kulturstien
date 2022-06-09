@@ -43,8 +43,8 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject
     
     let nailTexture = SKTexture(imageNamed: "nail")
     let plankTexture = SKTexture(imageNamed: "nice-plank")
-    let smallTreeTexture = SKTexture(imageNamed: "small-tree")
-    let bigTreeTexture = SKTexture(imageNamed: "big-tree")
+    let smallTreeTexture = SKTexture(imageNamed: "TreeSmall")
+    let bigTreeTexture = SKTexture(imageNamed: "TreeBig")
     
     let playerSprite: SKSpriteNode =
         SKSpriteNode(texture: SKTexture(imageNamed: "net"))
@@ -53,7 +53,7 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject
     {
         size = view.frame.size
         
-        backgroundColor = UIColor.init(Color("WaterColor"))
+        backgroundColor = UIColor.init(Color("WaterColour"))
         
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = CGVector(dx: 0, dy: -gravitySpeed)

@@ -107,7 +107,7 @@ class GameScene: SKScene, ObservableObject {
   func addMonster() {
     
     // Create sprite
-    let monster = SKSpriteNode(imageNamed: "huldraliten")
+    let monster = SKSpriteNode(imageNamed: "SmallHuldra")
     
     monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size) // 1
     monster.physicsBody?.isDynamic = true // 2
