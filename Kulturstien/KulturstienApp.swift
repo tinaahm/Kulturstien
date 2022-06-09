@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/// General Sources:
+/// [Swift](https://www.swift.org/documentation/)
+/// & [Apple Developer](https://developer.apple.com/documentation/)
+
 @main
 struct KulturstienApp: App {
 	

@@ -49,6 +49,7 @@ struct ContactView: View {
                     .cornerRadius(15)
             }
                 
+			/// [Source](https://stackoverflow.com/questions/62741851/how-to-add-placeholder-text-to-texteditor-in-swiftui).
             VStack (spacing: 25){
 				ZStack(alignment: .leading) {
 				TextEditor(text: $feedBack)

@@ -21,6 +21,9 @@ enum Page: String {
 }
 
 /// Model for the object that handles the application's state.
+///
+/// Code for saving data to UserDefaults from [Hacking With Swift](https://www.hackingwithswift.com/quick-start/swiftui/what-is-the-appstorage-property-wrapper).
+///
 class ViewIndex: ObservableObject {
 	
 	@Published var pageIndex : Page = .main
@@ -85,6 +88,7 @@ func setAnswersArray(page: ViewIndex, selection: Structure, answerArray: [Bool])
 /// 	- selection:  The selected quiz.
 ///
 /// - Returns: An array of the users past answers.
+/// 
 func getAnswersArray(page: ViewIndex, selection: Structure) -> [Bool] {
 	switch selection {
 	case .mill:
@@ -128,6 +132,7 @@ func setInformationPageToRead(page: ViewIndex, selection: Structure) {
 /// 	- selection: The selected structure.
 ///
 ///- Returns: Whether or not the information page has been read.
+///
 func getInformationPageRead(page: ViewIndex, selection: Structure) -> Bool {
 	switch selection {
 	case .mill:

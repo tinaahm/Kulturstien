@@ -11,6 +11,9 @@ import SpriteKit
 import UIKit
 
 /// View for showing the Whac-A-Nokk game.
+///
+/// Code for showing a SpriteKit Scene as a View from [StackOverFlow](https://stackoverflow.com/questions/70084341/show-spritekit-score-in-swiftui-view) & [Medium](https://iself.medium.com/spritekit-swiftui-7fb24d3141aa).
+///
 struct FrightenHuldraGameView: View {
 	
 	@EnvironmentObject var page : ViewIndex

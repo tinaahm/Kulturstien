@@ -7,16 +7,15 @@
 
 import Foundation
 
-var quizQuestions: [QuizQuestion] = load("QuizQuestions.json")
-var paragraphs: [Paragraph] = load("Paragraphs.json")
-var personInformation: [PersonInformation] = load("PersonInformation.json")
-
 /// Return the data given the JSON file.
+///
+/// Code from [Apple](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation).
 ///
 /// - Parameters:
 /// 	- filename:  The name of the file to be read from.
 ///
 /// - Returns: The data from the JSON file.
+/// 
 func load<T: Decodable>(_ filename: String) -> T {
 	let data: Data
 

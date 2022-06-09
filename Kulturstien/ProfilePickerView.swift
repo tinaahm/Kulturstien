@@ -35,6 +35,7 @@ struct ProfilePickerView: View {
 							RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
 								.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
 					
+						/// [Source](https://medium.com/geekculture/custom-drop-down-text-field-in-swiftui-a748d2cebbeb).
 						Menu {
 							ForEach(Colour.allCases) { colour in
 								Button(action: {

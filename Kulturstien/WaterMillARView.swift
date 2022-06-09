@@ -10,6 +10,9 @@ import ARKit
 import RealityKit
 
 /// View that loads the view for the mill AR
+///
+/// Sources for AR implementation: [Apple](https://developer.apple.com/documentation/arkit/environmental_analysis/placing_objects_and_handling_3d_interaction), [StackOverFlow](https://stackoverflow.com/questions/62388053/reset-arview-and-run-coaching-overlay-again) & [Apple](https://developer.apple.com/documentation/arkit/arcoachingoverlayview#declaration)
+///
 struct WaterMillARView: View {
     var body: some View {
 		ZStack {

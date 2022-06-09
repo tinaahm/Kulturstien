@@ -29,7 +29,6 @@ struct MainNightTimeView: View {
 						.resizable()
 						.edgesIgnoringSafeArea(.all)
 				)
-			//.draggable()
 			
 			VStack {
 					HStack {

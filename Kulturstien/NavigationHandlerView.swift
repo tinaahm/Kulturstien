@@ -8,6 +8,10 @@
 import SwiftUI
 import UIKit
 
+var quizQuestions: [QuizQuestion] = load("QuizQuestions.json")
+var paragraphs: [Paragraph] = load("Paragraphs.json")
+var personInformation: [PersonInformation] = load("PersonInformation.json")
+
 var quizSelection: Structure = .none
 var informationSelection: Structure = .none
 var personSelection: Person = .none
@@ -21,6 +25,9 @@ var damInformationTexts = getTextsByType(type: .dam)
 var logBoomsInformationTexts = getTextsByType(type: .logBooms)
 
 /// View that returns the view to be shown in the app.
+///
+/// App navigation-code from: [Blckbirds](https://blckbirds.com/post/how-to-navigate-between-views-in-swiftui-by-using-an-environmentobject/)
+///
 struct NavigationHandlerView: View {
 	
 	@EnvironmentObject var page : ViewIndex
@@ -44,7 +51,6 @@ struct NavigationHandlerView: View {
 				SelectionView(selectionType: informationSelection)
 			case .information:
 				InformationView(type: informationSelection)
-					.transition(.backslide)
 			case .farmMemoryGame:
 				FarmMemoryGameView()
 			case .fairytaleCreaturesMemoryGame:
@@ -90,14 +96,10 @@ struct NavigationHandlerView: View {
     }
 }
 
-extension AnyTransition {
-	static var backslide: AnyTransition {
-		AnyTransition.asymmetric(
-			insertion: .move(edge: .trailing),
-			removal: .move(edge: .leading))
-	}
-}
-
+/// Extension for being able to save Arrays in the @AppStorage
+///
+/// Code from [StackOverFlow](https://stackoverflow.com/questions/62562534/swiftui-what-is-appstorage-property-wrapper)
+///
 extension Array: RawRepresentable where Element: Codable {
 	public init?(rawValue: String) {
 		guard let data = rawValue.data(using: .utf8),
@@ -119,12 +121,18 @@ extension Array: RawRepresentable where Element: Codable {
 }
 
 /// Extension of SwiftUI Font which adds the fonts and sizes used in the app.
+///
+/// [Source](https://stackoverflow.com/questions/58375481/how-to-set-a-custom-font-family-as-the-default-for-an-entire-app-in-swiftui)
+///
 extension Font {
 	static let headlineFont = Font.custom("SourceSansPro-SemiBold", size: Font.TextStyle.title3.size, relativeTo: .caption)
 	static let subHeadlineFont = Font.custom("SourceSansPro-Regular", size: 20, relativeTo: .caption)
 	static let textFont = Font.custom("SourceSansPro-Regular", size: Font.TextStyle.headline.size, relativeTo: .caption)
 }
 
+///
+/// [Source](https://stackoverflow.com/questions/58375481/how-to-set-a-custom-font-family-as-the-default-for-an-entire-app-in-swiftui)
+///
 extension Font.TextStyle {
 	var size: CGFloat {
 		switch self {

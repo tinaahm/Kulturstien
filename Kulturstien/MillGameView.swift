@@ -9,6 +9,10 @@ import UIKit
 import SpriteKit
 import SwiftUI
 
+/// View for showing the Mill game
+///
+/// Code for showing a SpriteKit Scene as a View from [StackOverFlow](https://stackoverflow.com/questions/70084341/show-spritekit-score-in-swiftui-view) & [Medium](https://iself.medium.com/spritekit-swiftui-7fb24d3141aa).
+///
 struct MillGameView: View {
 	
 	@EnvironmentObject var page : ViewIndex

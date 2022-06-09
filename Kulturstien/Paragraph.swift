@@ -8,6 +8,9 @@
 import Foundation
 
 /// Model for the texts in the information pages
+///
+/// JSON readable-code objects adapted from [StackOverFlow](https://stackoverflow.com/questions/48243445/swift-convert-a-string-json-file-to-an-enum-case)
+///
 struct Paragraph : Codable {
 	var type: Structure
 	var imageTitle: String

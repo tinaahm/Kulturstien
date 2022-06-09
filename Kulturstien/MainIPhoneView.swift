@@ -8,6 +8,12 @@
 import SwiftUI
 
 /// View showing the map in "day time"-mode.
+///
+///Sources for images: [cardGames](https://www.flaticon.com/free-icon/card-games_3813722?term=memory%20game&page=1&position=9&page=1&position=9&related_id=3813722&origin=tag),
+/// [Kirsti Images](https://www.flaticon.com/free-icon/german_164537),
+/// [Ragnhild Images](https://www.flaticon.com/free-icon/norwegian_164543?term=norwegian&page=1&position=20&page=1&position=20&related_id=164543&origin=search) &
+/// [Trond Images](https://www.flaticon.com/free-icon/norwegian_164545).
+///
 struct MainIPhoneView: View {
 	
 	@EnvironmentObject var page: ViewIndex
@@ -31,7 +37,6 @@ struct MainIPhoneView: View {
 						.resizable()
 						.edgesIgnoringSafeArea(.all)
 				)
-			//.draggable()
 			
 			VStack {
 					HStack {
@@ -79,23 +84,3 @@ struct MainIPhoneView: View {
         MainIPhoneView().environmentObject(ViewIndex())
     }
 }*/
-
-struct DraggableView: ViewModifier {
-	@State var offset = CGPoint(x: 0, y: 0)
-	
-	func body(content: Content) -> some View {
-		content
-			.gesture(DragGesture(minimumDistance: 0)
-				.onChanged { value in
-					self.offset.x += value.location.x - value.startLocation.x
-					self.offset.y += value.location.y - value.startLocation.y
-			})
-			.offset(x: offset.x, y: offset.y)
-	}
-}
-
-extension View {
-	func draggable() -> some View {
-		return modifier(DraggableView())
-	}
-}

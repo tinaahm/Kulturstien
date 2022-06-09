@@ -8,6 +8,9 @@
 import Foundation
 
 /// Enumeration representing the different persons/creatures on the map.
+///
+/// JSON readable-code objects adapted from [StackOverFlow](https://stackoverflow.com/questions/48243445/swift-convert-a-string-json-file-to-an-enum-case)
+///
 enum Person: String, Codable {
 	case kirsti = "Kirsti"
 	case trond = "Trond"

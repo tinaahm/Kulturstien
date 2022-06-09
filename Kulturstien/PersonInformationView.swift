@@ -7,10 +7,16 @@
 
 import SwiftUI
 
+///
+/// Code from [StackOverFlow](https://stackoverflow.com/questions/59109138/how-to-implement-a-left-or-right-draggesture-that-trigger-a-switch-case-in-swi).
+///
 enum SwipeHVDirection: String {
 	case left, right, up, down, none
 }
 
+///
+/// Code from [StackOverFlow](https://stackoverflow.com/questions/59109138/how-to-implement-a-left-or-right-draggesture-that-trigger-a-switch-case-in-swi).
+///
 func detectDirection(value: DragGesture.Value) -> SwipeHVDirection {
 if value.startLocation.x < value.location.x - 24 {
 			return .left
