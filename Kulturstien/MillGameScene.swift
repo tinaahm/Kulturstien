@@ -28,7 +28,7 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject
 	@Published var gameOver = false
 	
     var gravitySpeed: Int = 18
-    var netMoveDelay: Double = 0.16
+    var netMoveDelay: Double = 0.1
     
     var requiredParts: Int = 6
     
