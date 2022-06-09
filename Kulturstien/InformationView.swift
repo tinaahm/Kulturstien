@@ -61,7 +61,7 @@ struct InformationView: View {
 				.padding()
 				
 				HStack {
-					ForEach(0 ..< self.information.count) {
+                    ForEach(0 ..< self.information.count, id: \.self) {
 						index in
 						Button (action: {
 							self.selectedIndex = index

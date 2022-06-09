@@ -33,7 +33,7 @@ struct CreaturesInformationView: View {
 					Text(creature.type.rawValue)
 						.font(.headlineFont)
 						.padding(.top)
-					ForEach(0 ..< creatureParagraphs.count) {
+					ForEach(0 ..< creatureParagraphs.count, id: \.self) {
 						index in
 							ZStack {
 								RoundedRectangle(cornerRadius: 25, style: .continuous)

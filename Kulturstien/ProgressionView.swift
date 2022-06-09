@@ -39,7 +39,7 @@ struct ProgressionView: View {
 
                 VStack (alignment: .leading) {
                     
-					ForEach(0 ..< quizAnswerArray.count) { outerIndex in
+                    ForEach(0 ..< quizAnswerArray.count, id: \.self) { outerIndex in
                     HStack (){
 						Text(quizArray[outerIndex].capitalized)
 							.font(.textFont)
