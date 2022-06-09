@@ -40,7 +40,7 @@ struct HistoryView: View {
                         .resizable()
                         .frame(width: 50, height: 50)
                         Text("Kvernhus")
-							.font(.subHeadlineFont)
+							.font(.textFont)
                     }
 					.foregroundColor(.black)
 					.frame(width: DeviceSize.width * 0.25, height: DeviceSize.width * 0.25)
@@ -61,7 +61,7 @@ struct HistoryView: View {
                         .resizable()
                         .frame(width: 50, height: 50)
                         Text("Sagbruk")
-								.font(.subHeadlineFont)
+								.font(.textFont)
                     }
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.25, height: DeviceSize.width * 0.25)
@@ -88,7 +88,7 @@ struct HistoryView: View {
                         .resizable()
                         .frame(width: 50, height: 50)
                         Text("Demning")
-							.font(.subHeadlineFont)
+							.font(.textFont)
                     }
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.25, height: DeviceSize.width * 0.25)
@@ -111,7 +111,7 @@ struct HistoryView: View {
                         .scaledToFit()
                         .frame(width: 90, height: 60)
                         Text("Lenseanlegg")
-							.font(.subHeadlineFont)
+							.font(.textFont)
                     }
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.25, height: DeviceSize.width * 0.25)

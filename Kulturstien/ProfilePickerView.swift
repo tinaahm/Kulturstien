@@ -41,7 +41,7 @@ struct ProfilePickerView: View {
 							self.page.selectedColour = colour
 						}) {
 							Label(colour == .none ? colour.rawValue : colour.rawValue.capitalized, systemImage: "")
-								.font(.subHeadlineFont)
+								.font(.textFont)
 						}
 						.foregroundColor(.black)
 					}
@@ -68,7 +68,7 @@ struct ProfilePickerView: View {
 					self.pressedNext = true
 				}) {
 					Text("Neste")
-						.font(.subHeadlineFont)
+						.font(.textFont)
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.4)
 						.padding(20)
@@ -94,7 +94,7 @@ struct ProfilePickerView: View {
 					page.pageIndex = .appTutorial
 				}) {
 					Text("Start")
-						.font(.subHeadlineFont)
+						.font(.textFont)
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.4)
 						.padding(20)

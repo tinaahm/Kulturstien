@@ -53,7 +53,8 @@ struct QuizView: View {
 					.padding(.bottom)
 				Text(self.quiz.questions[questionIndex].question)
 					.font(.subHeadlineFont)
-					.padding(.bottom)
+					.multilineTextAlignment(.center)
+					.padding(20)
 			
 			Group {
                 ForEach(0 ..< numberOfQuestions, id: \.self) {
@@ -64,7 +65,7 @@ struct QuizView: View {
 						self.guessedIndex = index
 					}) {
 						Text(answers[index])
-							.font(.subHeadlineFont)
+							.font(.textFont)
 							.frame(width: DeviceSize.width * 0.7)
 							.padding(20)
                             .foregroundColor(.black)
@@ -107,7 +108,7 @@ struct QuizView: View {
 					}
 				}) {
 					Text(self.finished ? "Avslutt" : "Neste")
-						.font(.subHeadlineFont)
+						.font(.textFont)
 						.frame(width: DeviceSize.width * 0.4)
 						.padding()
 						.foregroundColor(.black)
@@ -157,95 +158,8 @@ func showAnswer(answered: Bool, guessedAnswer: String?, correctAnswer: String, c
 
 struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
-		QuizView(quizType: .sawmill).environmentObject(ViewIndex())
+		QuizView(quizType: .logBooms).environmentObject(ViewIndex())
     }
-}
-
-struct QuizEndView: View {
-	
-	@EnvironmentObject var page : ViewIndex
-	
-	var resultArray: [Bool]
-	var title: String
-	
-	var body: some View {
-		
-		let numberOfCorrectAnswers : Int = getNumberOfCorrectAnswers(resultArray: resultArray)
-		
-		ZStack {
-			Color("BackgroundColour")
-		VStack (spacing: 20) {
-			
-			Spacer()
-			Spacer()
-			Spacer()
-			VStack (spacing: 30) {
-				Image(resultImageToDisplay(numberOfCorrectAnswers: numberOfCorrectAnswers, numberOfQuestions: resultArray.count))
-					.padding(40)
-					.background(Circle().fill(.white))
-				VStack {
-					Text("Ditt resultat")
-						.font(.headlineFont)
-						.padding(.bottom, 10)
-					Text(String(numberOfCorrectAnswers) + "/" + String(resultArray.count))
-						.font(.subHeadlineFont)
-				}
-				
-				if numberOfCorrectAnswers != resultArray.count {
-					Button (action: {
-						page.previousPage = page.pageIndex
-						page.pageIndex = .information
-					}) {
-						Text("Les igjen")
-							.font(.subHeadlineFont)
-							.frame(width: DeviceSize.width * 0.5)
-							.padding(20)
-							.foregroundColor(.black)
-							.background(
-								RoundedRectangle(cornerRadius: 15).fill(.white)
-										.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4)
-							)
-					}
-				}
-				
-				Button (action: {
-					page.pageIndex = .quiz
-				}) {
-					Text("Ta quizen på nytt")
-						.font(.subHeadlineFont)
-						.frame(width: DeviceSize.width * 0.5)
-						.padding(20)
-						.foregroundColor(.black)
-						.background(
-							RoundedRectangle(cornerRadius: 15).fill(.white)
-									.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4)
-						)
-										
-				}
-				
-				Button (action: {
-					if page.lightMode {
-						page.pageIndex = .main
-					} else {
-						page.pageIndex = .mainNight
-					}
-				}) {
-					Text("Tilbake til kartet")
-						.font(.subHeadlineFont)
-						.frame(width: DeviceSize.width * 0.5)
-						.padding(20)
-						.foregroundColor(.black)
-						.background(
-							RoundedRectangle(cornerRadius: 15).fill(.white)
-									.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4)
-						)
-				}
-				Spacer()
-			}
-		}
-		}
-		.background(Color("BackgroundColour"))
-	}
 }
 
 func getNumberOfCorrectAnswers(resultArray: [Bool]) -> Int {
@@ -297,11 +211,5 @@ func resultImageToDisplay(numberOfCorrectAnswers: Int, numberOfQuestions: Int) -
 		return "Trophy-1"
 	} else {
 		return "SadTroll"
-	}
-}
-
-struct QuizEndViewPreviews: PreviewProvider {
-	static var previews: some View {
-		QuizEndView(resultArray: [], title: "Bye").environmentObject(ViewIndex())
 	}
 }

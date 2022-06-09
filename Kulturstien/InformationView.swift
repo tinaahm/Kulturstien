@@ -34,7 +34,6 @@ struct InformationView: View {
                     Text(self.title.uppercased())
 						.font(.headlineFont)
 				}
-				//.padding(.bottom, 10)
 				
 				ZStack {
 					RoundedRectangle(cornerRadius: 25, style: .continuous)

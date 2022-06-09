@@ -43,18 +43,13 @@ struct SelectionView: View {
 				}
 			
 				Button (action: {
-					/*for i in 0...(page.quizesArray.count - 1) {
-						if page.quizesArray[i].type == self.selectionType {
-							page.quizesArray[i].informationPageRead = true
-						}
-					}*/
 					setInformationPageToRead(page: page, selection: self.selectionType)
 					
 					page.previousPage = page.pageIndex
 					page.pageIndex = .information
 				}) {
 					Text("Les og lær")
-						.font(.subHeadlineFont)
+						.font(.textFont)
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.7)
 						.padding(20)
@@ -76,7 +71,7 @@ struct SelectionView: View {
 					}
 				}) {
 					Text("Ta quiz")
-						.font(.subHeadlineFont)
+						.font(.textFont)
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.7)
 						.padding(20)

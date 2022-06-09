@@ -74,7 +74,7 @@ struct ContactView: View {
 				self.feedBack = ""
             }) {
                 Text("Send")
-					.font(.subHeadlineFont)
+					.font(.textFont)
 					.foregroundColor(.black)
 					.frame(width: 200)
 					.padding()

@@ -33,7 +33,7 @@ struct WhacANokkView: View {
 								page.pageIndex = .resetView
 							}) {
 								Label("Start på nytt", systemImage: "arrow.clockwise")
-									.font(.subHeadlineFont)
+									.font(.textFont)
 									.foregroundColor(page.lightMode ? .black : .black)
 									.frame(width: DeviceSize.width * 0.5)
 									.padding(20)
@@ -48,7 +48,7 @@ struct WhacANokkView: View {
 								}
 							}) {
 								Label("Tilbake til kartet", systemImage: "")
-									.font(.subHeadlineFont)
+									.font(.textFont)
 									.foregroundColor(page.lightMode ? .black : .black)
 									.frame(width: DeviceSize.width * 0.5)
 									.padding(20)

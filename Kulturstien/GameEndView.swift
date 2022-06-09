@@ -34,7 +34,7 @@ struct GameEndView: View {
 					page.pageIndex = getPageByGameSelection(game: gameSelection)
 				}) {
 					Text("Spill på nytt")
-						.font(.subHeadlineFont)
+						.font(.textFont)
 						.foregroundColor(page.lightMode ? .black : .white)
 						.frame(width: DeviceSize.width * 0.5)
 						.padding(20)
@@ -52,7 +52,7 @@ struct GameEndView: View {
 					}
 				}) {
 					Text("Gå tilbake til kartet")
-						.font(.subHeadlineFont)
+						.font(.textFont)
 						.foregroundColor(page.lightMode ? .black : .white)
 						.frame(width: DeviceSize.width * 0.5)
 						.padding(20)
