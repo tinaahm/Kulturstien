@@ -27,7 +27,7 @@ struct GameStartView: View {
 						.multilineTextAlignment(.center)
 						.foregroundColor(page.lightMode ? .black : .white)
 						.padding(.bottom, 5)
-					Text("Prøv å få alle like!")
+					Text("Fang alle delene i elva for å reparere mølla!\nUnngå å fange rusk, da må du starte på nytt.")
 						.font(.subHeadlineFont)
 						.foregroundColor(page.lightMode ? .black : .white)
 						.multilineTextAlignment(.center)
