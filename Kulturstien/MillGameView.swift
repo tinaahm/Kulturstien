@@ -31,6 +31,7 @@ struct MillGameView: View {
 								page.pageIndex = .resetView
 							}) {
 								Label("Start på nytt", systemImage: "arrow.clockwise")
+									.font(.textFont)
 									.foregroundColor(page.lightMode ? .black : .black)
 									.frame(width: DeviceSize.width * 0.5)
 									.padding(20)
@@ -45,6 +46,7 @@ struct MillGameView: View {
 								}
 							}) {
 								Label("Tilbake til kartet", systemImage: "")
+									.font(.textFont)
 									.foregroundColor(page.lightMode ? .black : .black)
 									.frame(width: DeviceSize.width * 0.5)
 									.padding(20)

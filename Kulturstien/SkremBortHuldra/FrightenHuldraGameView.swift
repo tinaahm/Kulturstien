@@ -32,7 +32,7 @@ struct FrightenHuldraGameView: View {
 								page.pageIndex = .resetView
 							}) {
 								Label("Start på nytt", systemImage: "arrow.clockwise")
-									.font(.subHeadlineFont)
+									.font(.textFont)
 									.foregroundColor(page.lightMode ? .black : .black)
 									.frame(width: DeviceSize.width * 0.5)
 									.padding(20)
@@ -47,7 +47,7 @@ struct FrightenHuldraGameView: View {
 								}
 							}) {
 								Label("Tilbake til kartet", systemImage: "")
-									.font(.subHeadlineFont)
+									.font(.textFont)
 									.foregroundColor(page.lightMode ? .black : .black)
 									.frame(width: DeviceSize.width * 0.5)
 									.padding(20)
@@ -122,6 +122,7 @@ struct HuldraGameOverView: View {
 					page.pageIndex = getPageByGameSelection(game: gameSelection)
 				}) {
 					Text("Spill på nytt")
+						.font(.textFont)
 						.frame(width: DeviceSize.width * 0.5)
 						.foregroundColor(page.lightMode ? .black : .white)
 						.padding(20)
@@ -151,6 +152,7 @@ struct HuldraGameOverView: View {
 					}
 				}) {
 					Text("Gå tilbake til kartet")
+						.font(.textFont)
 						.frame(width: DeviceSize.width * 0.5)
 						.padding(20)
 						.foregroundColor(page.lightMode ? .black : .white)

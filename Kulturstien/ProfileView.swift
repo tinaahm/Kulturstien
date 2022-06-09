@@ -32,7 +32,7 @@ struct ProfileView: View {
                 page.pageIndex = .achievements
 			}) {
 				Text("Prestasjoner")
-					.font(.subHeadlineFont)
+					.font(.textFont)
 					.foregroundColor(.black)
 					.frame(width: DeviceSize.width * 0.7)
 					.padding(20)
@@ -46,7 +46,7 @@ struct ProfileView: View {
 				page.pageIndex = .history
 			}) {
 				Text("Byåas historie")
-					.font(.subHeadlineFont)
+					.font(.textFont)
 					.foregroundColor(.black)
 					.frame(width: DeviceSize.width * 0.7)
 					.padding(20)
@@ -60,7 +60,7 @@ struct ProfileView: View {
 				page.pageIndex = .avatarChanger
 			}) {
 				Text("Endre avatar")
-					.font(.subHeadlineFont)
+					.font(.textFont)
 					.foregroundColor(.black)
 					.frame(width: DeviceSize.width * 0.7)
 					.padding(20)
@@ -75,7 +75,7 @@ struct ProfileView: View {
 				page.pageIndex = .howTo
 			}) {
 				Text("Slik bruker du appen")
-					.font(.subHeadlineFont)
+					.font(.textFont)
 					.foregroundColor(.black)
 					.frame(width: DeviceSize.width * 0.7)
 					.padding(20)
@@ -90,7 +90,7 @@ struct ProfileView: View {
 				page.pageIndex = .contact
 			}) {
 				Text("Kontakt oss")
-					.font(.subHeadlineFont)
+					.font(.textFont)
 					.foregroundColor(.black)
 					.frame(width: DeviceSize.width * 0.7)
 					.padding(20)
