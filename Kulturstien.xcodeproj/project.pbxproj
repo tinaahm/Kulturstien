@@ -311,7 +311,7 @@
 				265AF6132850E4FB0059CBA4 /* SecondReset.swift */,
 				265AF6112850D8E30059CBA4 /* ResetView.swift */,
 				0E62D2D1283BAEED0002148D /* MemoryCardGame */,
-				A04024D12848C7F7001B4D18 /* WackANokk */,
+				A04024D12848C7F7001B4D18 /* WhacANokk */,
 				A0EA0C382848B46D00A2B524 /* SkremBortHuldra */,
 				844A56622848EE6B009BF850 /* MillGame */,
 			);
@@ -462,7 +462,7 @@
 			name = MillGame;
 			sourceTree = "<group>";
 		};
-		A04024D12848C7F7001B4D18 /* WackANokk */ = {
+		A04024D12848C7F7001B4D18 /* WhacANokk */ = {
 			isa = PBXGroup;
 			children = (
 				26F0498F283CC16D00FBA117 /* WhacANokkView.swift */,
@@ -476,7 +476,7 @@
 				A04024D32848C81E001B4D18 /* whackBad.mp3 */,
 				A04024D52848C81E001B4D18 /* WhacANokkSlot.swift */,
 			);
-			name = WackANokk;
+			name = WhacANokk;
 			sourceTree = "<group>";
 		};
 		A0EA0C382848B46D00A2B524 /* SkremBortHuldra */ = {
