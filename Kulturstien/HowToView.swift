@@ -75,7 +75,7 @@ struct HowToView: View {
                             .padding(.bottom, 10)
                             
                             HStack (){
-                                Image("trophy")
+                                Image("Trophy")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 50, height: 50)
