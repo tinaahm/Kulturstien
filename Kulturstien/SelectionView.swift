@@ -49,7 +49,7 @@ struct SelectionView: View {
 					page.previousPage = page.pageIndex
 					page.pageIndex = .information
 				}) {
-					Text("Les og lær")
+					Label("Les og lær", systemImage: "book.closed.fill")
 						.font(.textFont)
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.7)
@@ -71,7 +71,7 @@ struct SelectionView: View {
 						self.showQuizButtonInformationText = true
 					}
 				}) {
-					Text("Ta quiz")
+					Label("Ta quiz", systemImage: "questionmark.square.fill")
 						.font(.textFont)
 						.foregroundColor(.black)
 						.frame(width: DeviceSize.width * 0.7)
@@ -92,7 +92,7 @@ struct SelectionView: View {
 						page.previousPage = page.pageIndex
 						page.pageIndex = .ar
 					}) {
-						Text("Se i AR")
+						Label("Se i AR", systemImage: "arkit")
 							.font(.subHeadlineFont)
 							.foregroundColor(.black)
 							.frame(width: DeviceSize.width * 0.7)
