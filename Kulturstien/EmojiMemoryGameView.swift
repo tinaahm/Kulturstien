@@ -37,7 +37,7 @@ struct EmojiMemoryGameView: View {
     var body: some View {
         return VStack{
 			Text("Poeng: \(viewModel.getScore())")
-				.font(.subheadline)
+				.font(.subHeadlineFont)
             Grid(items: viewModel.cards) { card in
                 CardView(card: card).onTapGesture {
                     withAnimation(.easeInOut(duration: 0.3)) {

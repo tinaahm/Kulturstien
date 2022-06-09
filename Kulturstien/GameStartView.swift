@@ -40,7 +40,7 @@ struct GameStartView: View {
 					page.pageIndex = getPageByGameSelection(game: gameSelection)
 				}) {
 					Text("Start spill")
-						.font(.subheadline)
+						.font(.textFont)
 						.foregroundColor(page.lightMode ? .black : .white)
 						.frame(width: DeviceSize.width * 0.5)
 						.padding(20)
