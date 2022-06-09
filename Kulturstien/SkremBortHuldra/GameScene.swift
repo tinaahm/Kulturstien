@@ -48,7 +48,8 @@ extension CGPoint {
 }
 
 class GameScene: SKScene, ObservableObject {
-	
+    
+    //Variables
 	@Published var gameOverHuldra: Bool = false
     
 	@Published var gameScore: SKLabelNode!
@@ -62,26 +63,29 @@ class GameScene: SKScene, ObservableObject {
 
     
 
+    // Declaring player and adding player
   let player = SKSpriteNode(imageNamed: "TrondPlayer")
     
+    // Function for adding GameScene with nodes
   override func didMove(to view: SKView) {
-    // 2
+    
+      // Setting background
     let background = SKSpriteNode(imageNamed: "NightTimeMap")
     background.blendMode = .replace
     background.zPosition = -1
     addChild(background)
       
-    // 3
+    // Player positioning
 	  player.position = CGPoint(x: (size.width / 2), y: (size.height * 0.1))
       player.yScale = 0.35
       player.xScale = 0.35
       player.zPosition = 2
-    // 4
     addChild(player)
     
     physicsWorld.gravity = .zero
     physicsWorld.contactDelegate = self
     
+      //Spawning monster forever
    run(SKAction.repeatForever(
           SKAction.sequence([
             SKAction.run(addMonster),
@@ -104,6 +108,7 @@ class GameScene: SKScene, ObservableObject {
     return random() * (max - min) + min
   }
 
+    // function for adding monster
   func addMonster() {
     
     // Create sprite
@@ -115,11 +120,11 @@ class GameScene: SKScene, ObservableObject {
     monster.physicsBody?.contactTestBitMask = PhysicsCategory.projectile // 4
     monster.physicsBody?.collisionBitMask = PhysicsCategory.none // 5
     
-    // Determine where to spawn the monster along the X axis
+    // Determine where to spawn the monster along the top
 	  let xPosition = random(min: 5, max: (size.width - 5))
     
     // Position the monster slightly off-screen along the top,
-    // and along a random position along the X axis as calculated above
+    // and along a random position along the X axis
 	  monster.position = CGPoint(x: xPosition, y: size.height)
     
     // Add the monster to the scene
@@ -142,7 +147,7 @@ class GameScene: SKScene, ObservableObject {
 
   
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-    // 1 - Choose one of the touches to work with
+    //Register touch
     guard let touch = touches.first else {
       return
 }
@@ -151,7 +156,7 @@ class GameScene: SKScene, ObservableObject {
 
     let touchLocation = touch.location(in: self)
     
-    // 2 - Set up initial location of projectile
+    // 2 - Set up location for projectile
     let projectile = SKSpriteNode(imageNamed: "Pitchfork2")
     projectile.position = player.position
 	  projectile.yScale = 0.6
@@ -164,30 +169,31 @@ class GameScene: SKScene, ObservableObject {
     projectile.physicsBody?.collisionBitMask = PhysicsCategory.none
     projectile.physicsBody?.usesPreciseCollisionDetection = true
     
-    // 3 - Determine offset of location to projectile
+    // Determine offset of location to projectile
     let offset = touchLocation - projectile.position
     
-    // 4 - Bail out if you are shooting down or backwards
+    // Bail out if you are shooting down or backwards
     if offset.y < 0 { return }
     
-    // 5 - OK to add now - you've double checked position
+    // Adding projectile if the two above is right
     addChild(projectile)
     
-    // 6 - Get the direction of where to shoot
+    // Get the direction of where to shoot
     let direction = offset.normalized()
     
-    // 7 - Make it shoot far enough to be guaranteed off screen
+    // Make it shoot far enough to be guaranteed off screen
     let shootAmount = direction * 1000
     
-    // 8 - Add the shoot amount to the current position
+    // Add the shoot amount to the current position
     let realDest = shootAmount + projectile.position
     
-    // 9 - Create the actions
+    // Create the actions
       let actionMove = SKAction.move(to: realDest, duration: 0.8)
     let actionMoveDone = SKAction.removeFromParent()
     projectile.run(SKAction.sequence([actionMove, actionMoveDone]))
   }
   
+    //Check if projectile has collided with monster
   func projectileDidCollideWithMonster(projectile: SKSpriteNode, monster: SKSpriteNode) {
       
     run(SKAction.playSoundFileNamed("huldraskutt", waitForCompletion: false))
@@ -195,7 +201,7 @@ class GameScene: SKScene, ObservableObject {
     projectile.removeFromParent()
     monster.removeFromParent()
 
-    
+    //If 99999 monsters destroyed, end game.
     monstersDestroyed += 1
     if monstersDestroyed > 99999 {
 		self.gameOverHuldra = true
@@ -212,7 +218,6 @@ extension GameScene: SKPhysicsContactDelegate {
   
   func didBegin(_ contact: SKPhysicsContact) {
 	 // resetGame()
-    // 1
     var firstBody: SKPhysicsBody
     var secondBody: SKPhysicsBody
     if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
@@ -223,7 +228,6 @@ extension GameScene: SKPhysicsContactDelegate {
       secondBody = contact.bodyA
     }
    
-    // 2
     if ((firstBody.categoryBitMask & PhysicsCategory.monster != 0) &&
         (secondBody.categoryBitMask & PhysicsCategory.projectile != 0)) {
       if let monster = firstBody.node as? SKSpriteNode,
