@@ -27,9 +27,8 @@ class EmojiMemoryGameViewModel: ObservableObject {
     }
     
     private static func createMemoryGame(theme: ThemeCollection.Theme) -> MemoryGame<String> {
-        //return MemoryGame<String>(numberOfPairsOfCards: Int.random(in: 2...theme.emojiSet.count)) { pairIndex in
-		return MemoryGame<String>(numberOfPairsOfCards: theme.emojiSet.count, themeName: theme.name) { pairIndex in
-            return theme.emojiSet[pairIndex]
+		return MemoryGame<String>(numberOfPairsOfCards: theme.imageSet.count, themeName: theme.name) { pairIndex in
+            return theme.imageSet[pairIndex]
         }
     }
 

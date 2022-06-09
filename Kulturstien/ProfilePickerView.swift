@@ -119,7 +119,7 @@ func getImageTitleByColour(colour: Colour) -> String {
 	case .yellow:
 		return "Chicken"
 	case .green:
-		return "Troll-1"
+		return "TrollIcon"
 	case .orange:
 		return "Reindeer"
 	case .blue:

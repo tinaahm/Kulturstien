@@ -36,7 +36,7 @@ struct HistoryView: View {
 						page.pageIndex = .information
                     }) {
                         VStack () {
-                        Image("Corn")
+                        Image("Wheat")
                         .resizable()
                         .frame(width: 50, height: 50)
                         Text("Kvernhus")

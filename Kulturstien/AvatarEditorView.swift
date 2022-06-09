@@ -15,7 +15,7 @@ struct AvatarEditorView: View {
 	@Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject var page: ViewIndex
 	
-	var avatarArray = [["Cow", "blå"], ["Troll-1", "grønn"], ["Bunny", "rosa"], ["Reindeer", "oransje"], ["Chicken", "gul"]]
+	var avatarArray = [["Cow", "blå"], ["TrollIcon", "grønn"], ["Bunny", "rosa"], ["Reindeer", "oransje"], ["Chicken", "gul"]]
     
     var body: some View {
         VStack () {

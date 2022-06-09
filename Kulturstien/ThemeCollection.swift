@@ -20,13 +20,13 @@ struct ThemeCollection: Codable {
     struct Theme: Identifiable, Codable {
         var name: String
         var accentColor: UIColor.RGB
-        var emojiSet: [String]
+        var imageSet: [String]
         var id = UUID()//.uuidString
         
-        init(name: String, accentColor: UIColor, emojiSet: [String]) {
+        init(name: String, accentColor: UIColor, imageSet: [String]) {
             self.name = name
             self.accentColor = accentColor.rgb
-            self.emojiSet = emojiSet
+            self.imageSet = imageSet
         }
     }
     var json: Data? {
@@ -45,18 +45,18 @@ struct ThemeCollection: Codable {
         self.themes = [DefaultThemes.theme0, DefaultThemes.theme1]
     }
     
-    mutating func addTheme(name: String, accentColor: UIColor, emojiSet: [String]) {
-        themes.append(Theme(name: name, accentColor: accentColor, emojiSet: emojiSet))
+    mutating func addTheme(name: String, accentColor: UIColor, imageSet: [String]) {
+        themes.append(Theme(name: name, accentColor: accentColor, imageSet: imageSet))
     }
     mutating func moveTheme(fromOffsets: IndexSet, toOffset: Int) {
         themes.move(fromOffsets: fromOffsets, toOffset: toOffset)
     }
-    mutating func editTheme(id: UUID, name: String, accentColor: UIColor, emojiSet: [String]) {
+    mutating func editTheme(id: UUID, name: String, accentColor: UIColor, imageSet: [String]) {
         for index in themes.indices {
             if themes[index].id == id {
                 themes[index].name = name
                 themes[index].accentColor = accentColor.rgb
-                themes[index].emojiSet = emojiSet
+                themes[index].imageSet = imageSet
             }
         }
     }
