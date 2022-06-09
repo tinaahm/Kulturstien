@@ -5,6 +5,12 @@
 //  Created by Embla on 01/06/2022.
 //
 
+//
+// Sources:
+// https://www.nicepng.com/ourpic/u2q8t4u2i1a9q8q8_wood-board-wooden-plank-panel-sign-wood-wo/
+// https://www.vecteezy.com/free-vector/fishnet
+// https://www.vecteezy.com/free-vector/nail
+
 import SpriteKit
 import SwiftUI
 import GameplayKit
