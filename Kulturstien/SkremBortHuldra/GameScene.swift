@@ -154,8 +154,8 @@ class GameScene: SKScene, ObservableObject {
     // 2 - Set up initial location of projectile
     let projectile = SKSpriteNode(imageNamed: "Pitchfork2")
     projectile.position = player.position
-      projectile.yScale = 1.1
-      projectile.xScale = 1.1
+	  projectile.yScale = 0.6
+	  projectile.xScale = 0.6
     
     projectile.physicsBody = SKPhysicsBody(circleOfRadius: projectile.size.width/2)
     projectile.physicsBody?.isDynamic = true

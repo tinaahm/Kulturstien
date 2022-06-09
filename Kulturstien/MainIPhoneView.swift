@@ -26,7 +26,7 @@ struct MainIPhoneView: View {
 				}
 			
 			.background(
-					Image("13 Pro - 71")
+					Image("DayTimeBackground")
 						.resizable()
 						.edgesIgnoringSafeArea(.all)
 				)

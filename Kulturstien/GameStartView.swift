@@ -14,8 +14,8 @@ struct GameStartView: View {
 	
     var body: some View {
 		ZStack {
-			//Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground")
-			if (gameSelection == .whacANokk) {
+			Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground")
+			if !(gameSelection == .whacANokk) {
 				VStack {
 					BackButtonView(buttonColour: page.lightMode ? .black : .white)
 					Image(page.lightMode ? "cardGames" : "Bonfire")
@@ -91,7 +91,7 @@ struct GameStartView: View {
 				)
 			}
 		}
-		//.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
+		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
     }
 }
 

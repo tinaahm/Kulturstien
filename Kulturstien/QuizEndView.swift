@@ -21,7 +21,6 @@ struct QuizEndView: View {
 		ZStack {
 			Color("BackgroundColour")
 		VStack (spacing: 20) {
-			
 			Spacer()
 			Spacer()
 			Spacer()
