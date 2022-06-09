@@ -62,10 +62,14 @@ struct HowToView: View {
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 50, height: 50)
+                                
                                 Text("Les om driften i Byåa, ta quiz og se AR")
                                     .font(.textFont)
                                     .foregroundColor(.black)
-                                Spacer()
+                                    .multilineTextAlignment(.leading)
+                                    .frame(height: ((DeviceSize.height * 0.1)/1.7), alignment: .top)
+                            
+                                
                             }
                             .padding(.bottom, 10)
                             
@@ -102,7 +106,7 @@ struct HowToView: View {
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 50, height: 50)
-                                Text("Byaå om dagen. ")
+                                Text("Byaå om dagen")
 									.font(.textFont)
                                     .foregroundColor(.black)
                                 Spacer()
@@ -117,6 +121,8 @@ struct HowToView: View {
                                 Text("Les om overnaturlige vesener")
 									.font(.textFont)
                                     .foregroundColor(.black)
+                                    .multilineTextAlignment(.leading)
+                                    .frame(height: ((DeviceSize.height * 0.1)/1.7), alignment: .top)
                                 Spacer()
                             }
                             .padding(.bottom, 10)
