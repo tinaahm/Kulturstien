@@ -57,7 +57,7 @@ struct QuizView: View {
 					.padding(20)
 			
 			Group {
-				ForEach(0 ..< numberOfQuestions) {
+                ForEach(0 ..< numberOfQuestions, id: \.self) {
 					index in
 					Button (action: {
 						self.answered = true

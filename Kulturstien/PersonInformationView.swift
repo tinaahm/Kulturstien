@@ -68,7 +68,7 @@ struct PersonInformationView: View {
 										.padding([.leading, .trailing], 60)
 										.padding(.bottom, 20)
 								HStack {
-									ForEach(0 ..< personParagraphs.count) {
+									ForEach(0 ..< personParagraphs.count, id: \.self) {
 										index in
 										Button (action: {
 											self.selectedIndex = index
@@ -149,7 +149,7 @@ struct PersonInformationView: View {
 									.padding([.leading, .trailing], 60)
 									.padding(.bottom, 20)
 								HStack {
-									ForEach(0 ..< self.personParagraphs.count) {
+									ForEach(0 ..< self.personParagraphs.count, id: \.self) {
 										index in
 										Button (action: {
 											self.selectedIndex = index
