@@ -19,7 +19,10 @@ struct ContactView: View {
 
 			BackButtonView(buttonColour: page.lightMode ? .black : .white)
         
-        Image("RælingenKommune")
+        Image("Rælingen1")
+                .resizable()
+                .scaledToFit()
+                .frame(width: DeviceSize.width * 0.4, height: DeviceSize.width * 0.2)
         
         Text("Kontakt Rælingen Kommune")
 			.font(.headlineFont)

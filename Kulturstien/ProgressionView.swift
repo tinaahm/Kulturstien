@@ -21,8 +21,12 @@ struct ProgressionView: View {
 		
 		let quizAnswerArray = [page.millAnswers, page.sawMillAnswers, page.damAnswers, page.logBoomsAnswers]
 		
-        ZStack{
+        
 			VStack {
+            
+                    BackButtonView(buttonColour: page.lightMode ? .black : .white)
+                    
+                
             
             ScrollView {
             
@@ -94,6 +98,7 @@ struct ProgressionView: View {
 					.foregroundColor(page.lightMode ? .black : .white)
 					.font(.system(size: 25))
 					.padding(10)
+                    .padding(.top, 20)
                 
                
                 
@@ -227,15 +232,11 @@ struct ProgressionView: View {
 			}
             Spacer()
         }
-    }
-            VStack {
-				BackButtonView(buttonColour: page.lightMode ? .black : .white)
-                Spacer()
-            }
-        
+    
+
     }
 		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
-    }
+}
 }
 
 func getProgressionImage(quiz: Quiz, index: Int) -> Bool {
