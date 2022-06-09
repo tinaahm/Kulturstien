@@ -19,10 +19,12 @@ struct GameStartView: View {
 			if !(gameSelection == .whacANokk) {
 				VStack {
 					BackButtonView(buttonColour: page.lightMode ? .black : .white)
-					Image(page.lightMode ? "cardGames" : "Bonfire")
-						.resizable()
-						.frame(width: 100, height: 100, alignment: .center)
-						.padding()
+					if !(gameSelection == .millGame) {
+						Image("cardGames")
+							.resizable()
+							.frame(width: 100, height: 100, alignment: .center)
+							.padding()
+					}
 					VStack {
 						Text(gameSelection.rawValue)
 							.font(.headlineFont)
