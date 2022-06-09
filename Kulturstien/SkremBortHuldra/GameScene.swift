@@ -152,7 +152,7 @@ class GameScene: SKScene, ObservableObject {
     let touchLocation = touch.location(in: self)
     
     // 2 - Set up initial location of projectile
-    let projectile = SKSpriteNode(imageNamed: "Pitchfork")
+    let projectile = SKSpriteNode(imageNamed: "Pitchfork2")
     projectile.position = player.position
       projectile.yScale = 1.1
       projectile.xScale = 1.1
