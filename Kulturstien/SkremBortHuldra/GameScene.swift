@@ -10,7 +10,7 @@ import SwiftUI
 
 /// Class for running the Frighten Huldra game.
 ///
-/// Code adapted from [Hacking With Swift](https://github.com/twostraws/HackingWithSwift/tree/main/Classic/project14).
+/// Code adapted from [omrobbie](https://github.com/omrobbie/ios-game-ninja-attack).
 ///
 class GameScene: SKScene, ObservableObject {
     

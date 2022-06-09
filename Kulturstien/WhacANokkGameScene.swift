@@ -7,9 +7,9 @@
 
 import SpriteKit
 
-/// Class for running the Frighten Huldra game.
+/// Class for running the Whac-A-Nokk game.
 ///
-/// Code adpted from [omrobbie](https://github.com/omrobbie/ios-game-ninja-attack).
+/// Code adapted from [Hacking With Swift](https://github.com/twostraws/HackingWithSwift/tree/main/Classic/project14).
 ///
 class WhacANokkGameScene: SKScene, ObservableObject {
     
