@@ -24,7 +24,7 @@ class WhacANokkGameScene: SKScene, ObservableObject {
     var numRounds = 0
     
     override func didMove(to view: SKView) {
-      let background = SKSpriteNode(imageNamed: "WhacANokk")
+      let background = SKSpriteNode(imageNamed: "13 Pro - 201")
         background.blendMode = .replace
         background.zPosition = -1
         addChild(background)
