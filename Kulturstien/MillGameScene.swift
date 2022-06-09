@@ -7,14 +7,17 @@
 
 //
 // Sources:
+//
 // https://www.nicepng.com/ourpic/u2q8t4u2i1a9q8q8_wood-board-wooden-plank-panel-sign-wood-wo/
 // https://www.vecteezy.com/free-vector/fishnet
 // https://www.vecteezy.com/free-vector/nail
+//
 
+import GameplayKit
 import SpriteKit
 import SwiftUI
-import GameplayKit
 
+/// Bitmask for contact and collision detection
 struct Tag
 {
     static let trash: UInt32 = 0
@@ -23,24 +26,30 @@ struct Tag
     static let other: UInt32 = 0b11
 }
 
+/// SpriteKit Scene for the mill game
 class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject
 {
+    // Field accessed by View in MillGameView
 	@Published var gameOver = false
+    // Track points in MillGameView - store score outside of game
+    @Published var partsCounter: Int = 0
 	
+    // Game rules
     var gravitySpeed: Int = 18
     var netMoveDelay: Double = 0.1
-    
     var requiredParts: Int = 6
     
-    let label = SKLabelNode(fontNamed: "Saira-Regular")
+    // Should game stop or run?
+    var isRunning: Bool = true
     
-    var restartButton = SKSpriteNode()
-        
+    // Reference generated nodes (for garbage collection)
     var nodes: [SKSpriteNode] = []
-    @Published var partsCounter: Int = 0
     
-    var gameRunning: Bool = true
+    // Game text
+    let label = SKLabelNode(fontNamed: "Saira-Regular")
+    var restartButton = SKSpriteNode()
     
+    // Generated sprites' textures only load once
     let nailTexture = SKTexture(imageNamed: "nail")
     let plankTexture = SKTexture(imageNamed: "nice-plank")
     let smallTreeTexture = SKTexture(imageNamed: "TreeSmall")
@@ -49,6 +58,8 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject
     let playerSprite: SKSpriteNode =
         SKSpriteNode(texture: SKTexture(imageNamed: "net"))
     
+    /// Initial set-up, only runs once
+    /// - Parameter view: single View
     override func didMove(to view: SKView)
     {
         size = view.frame.size
@@ -86,19 +97,27 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(collectTrash), userInfo: nil, repeats: true)
     }
     
+    
+    /// Called once per frame
+    /// - Parameter currentTime: currentTime
     override func update(_ currentTime: TimeInterval)
     {
+        // Print current score
         label.text = "Samlede deler: \(partsCounter) / \(requiredParts)"
 
+        // Has player won?
         if (partsCounter >= requiredParts)
         {
+            isRunning = false
+            
+            // Delete falling sprites, game is done
             for node in nodes
             {
                 node.removeFromParent()
             }
-            gameRunning = false
             
             label.text = "Du klarte det!"
+            
             restartButton.alpha = 100
 			
             self.gameOver = true
@@ -118,6 +137,10 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject
         }
     }
     
+    /// Initial touch/tap
+    /// - Parameters:
+    ///   - touches: touches
+    ///   - event: event
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
         for touch in touches
@@ -127,7 +150,7 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject
             
             playerSprite.run(SKAction.moveTo(x: coords.x, duration: netMoveDelay))
             
-            if (gameRunning) { return }
+            if (isRunning) { return }
         
             let dx = coords.x - restartPos.x;
             let dy = coords.y - restartPos.y;
@@ -140,6 +163,10 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject
         }
     }
     
+    /// Touches were moved
+    /// - Parameters:
+    ///   - touches: touches
+    ///   - event: event
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?)
     {
         for touch in touches
@@ -168,40 +195,43 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject
     }
     
     
-    /// Programatically generate random assets
+    /// Programatically generate random assets, called periodically
     @objc private func generateRandomAsset()
     {
-        if (!gameRunning) { return }
+        // Don't run if game over
+        if (!isRunning) { return }
+        
+        var asset: SKSpriteNode = SKSpriteNode()
             
+        // Random index for which asset to generate
         let randomAssetNum = GKRandomDistribution(lowestValue: 0, highestValue: 4)
+        let currentAssetNum = randomAssetNum.nextInt()
         
-        var asset: SKSpriteNode
-        
-        let currentAsset = randomAssetNum.nextInt()
-        
-        if (currentAsset == 0)
+        // Is a mill part?
+        if (currentAssetNum == 0 || currentAssetNum == 1)
         {
-            asset = SKSpriteNode(texture: nailTexture)
-            asset.size = CGSize(width: 14, height: 80)
+            if (currentAssetNum == 0)
+            {
+                asset = SKSpriteNode(texture: nailTexture)
+                asset.size = CGSize(width: 14, height: 80)
+            }
+            
+            if (currentAssetNum == 1)
+            {
+                asset = SKSpriteNode(texture: plankTexture)
+                asset.size = CGSize(width: 68, height: 32)
+            }
             
             asset.physicsBody = SKPhysicsBody(rectangleOf: asset.size)
             asset.physicsBody?.categoryBitMask = Tag.parts
         }
         
-        else if (currentAsset == 1)
-        {
-            asset = SKSpriteNode(texture: plankTexture)
-            asset.size = CGSize(width: 68, height: 32)
-            
-            asset.physicsBody = SKPhysicsBody(rectangleOf: asset.size)
-            asset.physicsBody?.categoryBitMask = Tag.parts
-        }
-        
+        // Is trash
         else
         {
             let randomTree = randomAssetNum.nextInt()
             
-            if (randomTree < 4)
+            if (randomTree < 3)
             {
                 asset = SKSpriteNode(texture: smallTreeTexture)
                 asset.size = CGSize(width: 60, height: 60)
@@ -217,14 +247,16 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject
             asset.physicsBody?.categoryBitMask = Tag.trash
         }
         
+        // Detect contact and collision only with player
         asset.physicsBody?.contactTestBitMask = Tag.player
         asset.physicsBody?.collisionBitMask = Tag.player
         
         let randomPosition = GKRandomDistribution(lowestValue: 0, highestValue: Int(self.size.width - 40))
         
-        let randomRadian = GKRandomDistribution(lowestValue: 0, highestValue: 7)
-        
         asset.position = CGPoint(x: CGFloat(randomPosition.nextInt()), y: self.size.height)
+        
+        // Random rotation
+        let randomRadian = GKRandomDistribution(lowestValue: 0, highestValue: 7)
         
         asset.zRotation = CGFloat(randomRadian.nextInt())
     
@@ -285,9 +317,10 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject
         other.node?.removeFromParent()
     }
     
+    /// Reset game, reload scene manually
     private func reloadScene()
     {
-        gameRunning = true
+        isRunning = true
         restartButton.alpha = 0
         partsCounter = 0
         
@@ -297,16 +330,5 @@ class MillGameScene: SKScene, SKPhysicsContactDelegate, ObservableObject
         }
      
         playerSprite.run(SKAction.moveTo(x: frame.midX, duration: 0))
-        /*
-        let screenSize: CGRect = UIScreen.main.bounds
-        
-        let screenWidth = screenSize.width
-        let screenHeight = screenSize.height
-        
-        size = CGSize(width: screenWidth, height: screenHeight)
-        scaleMode = .fill
-        
-        view?.presentScene(MillGameScene())
-         */
     }
 }
