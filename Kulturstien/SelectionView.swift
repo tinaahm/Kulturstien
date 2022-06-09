@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View showing the individual pages for the structures.
 struct SelectionView: View {
 	
 	@EnvironmentObject var page : ViewIndex
@@ -110,6 +111,12 @@ struct SelectionView: View {
     }
 }
 
+/// Get the image that coincides with the specified structure.
+///
+/// - Parameters:
+/// 	- selectionType: The structure of the button pressed in the "day time"-map.
+///
+/// - Returns: The image title of the structure.
 func getImageTitleFromSelection(selectionType: Structure) -> String {
 	switch selectionType {
 	case .mill:
@@ -125,6 +132,12 @@ func getImageTitleFromSelection(selectionType: Structure) -> String {
 	}
 }
 
+/// Sets the information page that user enters to "read".
+///
+/// - Parameters:
+/// 	- page: The environment object which keeps track of the app data.
+/// 	- selection: The selected structure.
+///
 func setInformationPageToRead(page: ViewIndex, selection: Structure) {
 	switch selection {
 	case .mill:
@@ -140,6 +153,13 @@ func setInformationPageToRead(page: ViewIndex, selection: Structure) {
 	}
 }
 
+/// See if the selected information page has been read.
+///
+/// - Parameters:
+/// 	- page: The environment object which keeps track of the app data.
+/// 	- selection: The selected structure.
+///
+///- Returns: Whether or not the information page has been read.
 func getInformationPageRead(page: ViewIndex, selection: Structure) -> Bool {
 	switch selection {
 	case .mill:
@@ -155,8 +175,9 @@ func getInformationPageRead(page: ViewIndex, selection: Structure) -> Bool {
 	}
 }
 
+/*
 struct SelectionView_Previews: PreviewProvider {
     static var previews: some View {
 		SelectionView(selectionType: .sawmill).environmentObject(ViewIndex())
     }
-}
+}*/

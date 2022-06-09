@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View showing the map in "night time"-mode.
 struct MainNightTimeView: View {
 	
 	@EnvironmentObject var page: ViewIndex
@@ -37,7 +38,7 @@ struct MainNightTimeView: View {
 							page.previousPage = page.pageIndex
 							page.pageIndex = .profile
 						}) {
-							Image(getImageTitleByColour(colour: page.selectedColour))
+							Image(getAvatarByColour(colour: page.selectedColour))
 							.resizable()
 							.frame(width: 60, height: 60)
 							.background(Circle().fill(.white).shadow(color: .black, radius: 1, x: 2, y: 3)

@@ -36,9 +36,9 @@
 		263B3E742847A1AF005919D7 /* FarmMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E732847A1AF005919D7 /* FarmMemoryGameView.swift */; };
 		263B3E762847A2F4005919D7 /* FairytaleMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E752847A2F4005919D7 /* FairytaleMemoryGameView.swift */; };
 		263B3E782847AD7F005919D7 /* CreaturesInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B3E772847AD7F005919D7 /* CreaturesInformationView.swift */; };
-		265AF6122850D8E30059CBA4 /* ResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AF6112850D8E30059CBA4 /* ResetView.swift */; };
-		265AF6142850E4FB0059CBA4 /* SecondReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AF6132850E4FB0059CBA4 /* SecondReset.swift */; };
 		265AF6172851EC040059CBA4 /* QuizEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AF6162851EC040059CBA4 /* QuizEndView.swift */; };
+		265AF619285211F10059CBA4 /* ResetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AF618285211F10059CBA4 /* ResetViews.swift */; };
+		265AF61B28521B730059CBA4 /* ViewIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AF61A28521B730059CBA4 /* ViewIndex.swift */; };
 		2669457D283255B700B25AF7 /* QuizQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2669457C283255B700B25AF7 /* QuizQuestions.json */; };
 		2669458028325DBA00B25AF7 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669457F28325DBA00B25AF7 /* QuizView.swift */; };
 		267A77452829558100E0EB7A /* KulturstienApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267A77442829558100E0EB7A /* KulturstienApp.swift */; };
@@ -137,9 +137,9 @@
 		263B3E732847A1AF005919D7 /* FarmMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmMemoryGameView.swift; sourceTree = "<group>"; };
 		263B3E752847A2F4005919D7 /* FairytaleMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairytaleMemoryGameView.swift; sourceTree = "<group>"; };
 		263B3E772847AD7F005919D7 /* CreaturesInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreaturesInformationView.swift; sourceTree = "<group>"; };
-		265AF6112850D8E30059CBA4 /* ResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetView.swift; sourceTree = "<group>"; };
-		265AF6132850E4FB0059CBA4 /* SecondReset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondReset.swift; sourceTree = "<group>"; };
 		265AF6162851EC040059CBA4 /* QuizEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEndView.swift; sourceTree = "<group>"; };
+		265AF618285211F10059CBA4 /* ResetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViews.swift; sourceTree = "<group>"; };
+		265AF61A28521B730059CBA4 /* ViewIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIndex.swift; sourceTree = "<group>"; };
 		2669457C283255B700B25AF7 /* QuizQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuizQuestions.json; sourceTree = "<group>"; };
 		2669457F28325DBA00B25AF7 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		267A77412829558100E0EB7A /* Kulturstien.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kulturstien.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -308,8 +308,7 @@
 			children = (
 				26D3DF82284A2875009EECE3 /* GameStartView.swift */,
 				26D3DF7E2848F7FC009EECE3 /* GameEndView.swift */,
-				265AF6132850E4FB0059CBA4 /* SecondReset.swift */,
-				265AF6112850D8E30059CBA4 /* ResetView.swift */,
+				265AF618285211F10059CBA4 /* ResetViews.swift */,
 				0E62D2D1283BAEED0002148D /* MemoryCardGame */,
 				A04024D12848C7F7001B4D18 /* WhacANokk */,
 				A0EA0C382848B46D00A2B524 /* SkremBortHuldra */,
@@ -411,6 +410,7 @@
 				26F0498D283B830B00FBA117 /* Paragraph.swift */,
 				26D72FB4282E7ED800BC3A8F /* QuizStructures.swift */,
 				263B3E6D28462ECD005919D7 /* PersonInformation.swift */,
+				265AF61A28521B730059CBA4 /* ViewIndex.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -666,6 +666,7 @@
 				26D4A4DD2837D5630022D49F /* SelectionView.swift in Sources */,
 				26D4A4E12837EA8D0022D49F /* BackButtonView.swift in Sources */,
 				0E62D2DD283BB07E0002148D /* ThemeCollection.swift in Sources */,
+				265AF61B28521B730059CBA4 /* ViewIndex.swift in Sources */,
 				26AAC9F9282D01560057BBA6 /* MainIPhoneView.swift in Sources */,
 				26D2D420284CECFF00BD68A0 /* WaterMillARView.swift in Sources */,
 				265AF6172851EC040059CBA4 /* QuizEndView.swift in Sources */,
@@ -678,7 +679,6 @@
 				263B3E6828461831005919D7 /* PersonInformationView.swift in Sources */,
 				A0EA0C472848B46D00A2B524 /* GameViewController.swift in Sources */,
 				26F0498E283B830B00FBA117 /* Paragraph.swift in Sources */,
-				265AF6142850E4FB0059CBA4 /* SecondReset.swift in Sources */,
 				0E62D2E3283BB23A0002148D /* String+ToArray.swift in Sources */,
 				26D3DF81284A06E7009EECE3 /* HowToView.swift in Sources */,
 				0E62D2ED283BB3090002148D /* GridLayout.swift in Sources */,
@@ -701,7 +701,7 @@
 				A04024DF2848C81F001B4D18 /* WhacANokkSlot.swift in Sources */,
 				844A56602848EE64009BF850 /* MillGameScene.swift in Sources */,
 				0E62D2E7283BB2800002148D /* Array+Only.swift in Sources */,
-				265AF6122850D8E30059CBA4 /* ResetView.swift in Sources */,
+				265AF619285211F10059CBA4 /* ResetViews.swift in Sources */,
 				26D3DF83284A2875009EECE3 /* GameStartView.swift in Sources */,
 				26D72FA4282E573200BC3A8F /* NavigationHandlerView.swift in Sources */,
 				263B3E6A28461C4E005919D7 /* MainNightTimeView.swift in Sources */,

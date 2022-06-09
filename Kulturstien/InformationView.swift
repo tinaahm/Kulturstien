@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View that shows the information for the structure.
 struct InformationView: View {
     
     @EnvironmentObject var page : ViewIndex
@@ -106,27 +107,9 @@ struct InformationView: View {
     }
 }
 
-func getInformationByType(type: Structure) -> [Paragraph] {
-	
-	switch type {
-	case .mill:
-		return millInformationTexts
-	case .sawmill:
-		return sawmillInformationTexts
-	case .dam:
-		return damInformationTexts
-	case .logBooms:
-		return logBoomsInformationTexts
-	case .none:
-		return []
-	}
-}
-
+/*
 struct InformationView_Previews: PreviewProvider {
     static var previews: some View {
 		InformationView(type: .sawmill).environmentObject(ViewIndex())
     }
-}
-
-
-
+}*/

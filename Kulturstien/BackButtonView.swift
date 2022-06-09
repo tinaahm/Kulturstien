@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View for the button that goes back to the previous page.
 struct BackButtonView: View {
 	
 	@EnvironmentObject var page : ViewIndex

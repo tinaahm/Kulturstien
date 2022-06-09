@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Enumeration representing the different structures on the map.
 enum Structure: String, Codable {
 	case mill = "kvernhus"
 	case sawmill = "sagbruk"
@@ -15,6 +16,7 @@ enum Structure: String, Codable {
 	case none = ""
 }
 
+/// Struct containing all the quizes.
 struct Quizes {
 	var millQuiz : Quiz = Quiz(name: "Kvernhus Quiz", type: .mill, imageTitle: "WaterMillIcon")
 	var sawmillQuiz : Quiz  = Quiz(name: "Sagbruk Quiz", type: .sawmill, imageTitle: "SawmillIcon")
@@ -22,6 +24,7 @@ struct Quizes {
 	var logBoomsQuiz : Quiz  = Quiz(name: "Lenseanlegg Quiz", type: .logBooms, imageTitle: "LogBoomsIcon")
 }
 
+/// Model representing a quiz.
 class Quiz: ObservableObject {
 	let name: String
 	let type: Structure
@@ -43,15 +46,21 @@ class Quiz: ObservableObject {
 	
 }
 
+/// Model representing the questions of the quiz.
 struct QuizQuestion: Codable {
 	var type: Structure
 	var question: String
 	var correctOption: String
 	var wrongOptionOne: String
 	var wrongOptionTwo: String
-	
 }
 
+/// Shuffles the questions in the quiz.
+///
+/// - Parameters:
+/// 	- questions:  The array of questions.
+///
+/// - Returns: An array of the shuffled questions.
 func shuffleArray(questions : [QuizQuestion]) -> [[String]] {
 	var array = [[String]]()
 	
@@ -65,6 +74,12 @@ func shuffleArray(questions : [QuizQuestion]) -> [[String]] {
 	return array
 }
 
+/// Get the quiz questions that belong to the structure.
+///
+/// - Parameters:
+/// 	- quizType:  The selected structure.
+///
+/// - Returns: An array of the QuizQuestions.
 func sortQuizQuestionsByType(quizType: Structure) -> [QuizQuestion] {
 	
 	var sortedQuiz: [QuizQuestion] = []
@@ -74,10 +89,15 @@ func sortQuizQuestionsByType(quizType: Structure) -> [QuizQuestion] {
 			sortedQuiz.append(question)
 		}
 	}
-	
 	return sortedQuiz
 }
 
+/// Get the quiz beloning to the structure.
+///
+/// - Parameters:
+/// 	- quizType:  The selected structure.
+///
+/// - Returns: A Quiz.
 func getQuizByType(quizType: Structure) -> Quiz {
 	switch quizType {
 	case .mill:

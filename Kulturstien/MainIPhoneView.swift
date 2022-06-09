@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View showing the map in "day time"-mode.
 struct MainIPhoneView: View {
 	
 	@EnvironmentObject var page: ViewIndex
@@ -39,7 +40,7 @@ struct MainIPhoneView: View {
 							page.previousPage = page.pageIndex
 							page.pageIndex = .profile
 						}) {
-							Image(getImageTitleByColour(colour: page.selectedColour))
+							Image(getAvatarByColour(colour: page.selectedColour))
 							.resizable()
 							.frame(width: 60, height: 60)
 							.background(Circle().fill(.white).shadow(radius: 1, x: 2, y: 3)

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View that returns the contact page.
 struct ContactView: View {
     
     @EnvironmentObject var page : ViewIndex
@@ -91,9 +92,10 @@ struct ContactView: View {
 		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
 }
 }
+
+/*
 struct ContactView_Previews: PreviewProvider {
     static var previews: some View {
         ContactView().environmentObject(ViewIndex())
     }
-}
-
+}*/

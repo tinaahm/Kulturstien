@@ -7,10 +7,7 @@
 
 import SwiftUI
 
-struct PageInformation: Codable {
-	var imageTitle: String
-	var pageExplaination: String
-}
+/// View returning the apps "tutorial".
 
 struct AppTutorialView: View {
 	

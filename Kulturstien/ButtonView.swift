@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View that returns the buttons on the maps.
 struct ButtonView: View {
 	
 	@EnvironmentObject var page : ViewIndex
@@ -50,6 +51,12 @@ struct ButtonView: View {
 	}
 }
 
+/// Go to the page for the selected game.
+///
+/// - Parameters:
+/// 	- game:  The game selected.
+///
+/// - Returns: The page for the game.
 func getPageByGameSelection(game: Game) -> Page {
 	switch game {
 	case .whacANokk:
@@ -67,8 +74,9 @@ func getPageByGameSelection(game: Game) -> Page {
 	}
 }
 
+/*
 struct ButtonView_Previews: PreviewProvider {
 	static var previews: some View {
 		ButtonView(selectedStructure: .logBooms, selectedPerson: .none, image: "LogboomsButton", width: 71, height: 59, posX: 210, posY: 190).environmentObject(ViewIndex())
 	}
-}
+}*/

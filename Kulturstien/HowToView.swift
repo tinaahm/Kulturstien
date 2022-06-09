@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View that shows the page of the app "explaination".
 struct HowToView: View {
 	
 	@EnvironmentObject var page: ViewIndex
@@ -159,8 +160,9 @@ struct HowToView: View {
     }
 }
 
+/*
 struct HowToView_Previews: PreviewProvider {
     static var previews: some View {
         HowToView().environmentObject(ViewIndex())
     }
-}
+}*/

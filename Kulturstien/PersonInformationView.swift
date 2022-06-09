@@ -25,8 +25,9 @@ if value.startLocation.x < value.location.x - 24 {
 			return .up
 		  }
   return .none
-  }
+}
 
+/// View for the information of the person selected by the user.
 struct PersonInformationView: View {
 	
 	@State var personType: Person
@@ -228,34 +229,9 @@ struct PersonInformationView: View {
     }
 }
 
-func getPersonBySelection(selection: Person) -> PersonInformation {
-	for person in personInformation {
-		if person.type == selection {
-			return person
-		}
-	}
-	return PersonInformation(type: .none, imageTitle: "", p1: "", p2: "", p3: "")
-}
-
-func getInformationArrayFromSelection(selection: Person) -> [String] {
-	var array = [String]()
-	for person in personInformation {
-		if person.type == selection {
-			array.append(person.p1)
-			array.append(person.p2)
-			if person.p3.isEmpty {
-				break
-			} else {
-				array.append(person.p3)
-			}
-		}
-	}
-	return array
-}
-
+/*
 struct PersonInformationView_Previews: PreviewProvider {
     static var previews: some View {
 		PersonInformationView(personType: .trond).environmentObject(ViewIndex())
     }
-}
-
+}*/

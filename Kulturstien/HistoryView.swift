@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View that shows a page in which the user can go to the different information pages.
 struct HistoryView: View {
     
     @EnvironmentObject var page: ViewIndex
@@ -138,8 +139,9 @@ struct HistoryView: View {
     }
 }
 
+/*
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
         HistoryView().environmentObject(ViewIndex())
     }
-}
+}*/

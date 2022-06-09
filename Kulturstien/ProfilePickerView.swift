@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-
+/// View in the beginning of the app that allows the user to create a "User".
 struct ProfilePickerView: View {
 	
 	@EnvironmentObject var page : ViewIndex
@@ -17,39 +17,15 @@ struct ProfilePickerView: View {
 		ZStack {
 			
 			Color("BackgroundColour")
-			VStack {
-				if !self.pressedNext {
-				Spacer()
-				Text("Velkommen til Byåa Kultursti!")
-						.font(.headlineFont)
-					.padding(.bottom, 50)
 				VStack {
-					HStack {
-						TextField("Hva er navnet ditt?", text: $page.userName)
-					}
-					.font(.subHeadlineFont)
-					.foregroundColor(.black)
-					.frame(width: DeviceSize.width * 0.7)
-					.padding(20)
-					.background(
-						RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
-							.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
-				
-					Menu {
-						ForEach(Colour.allCases) { colour in
-							Button(action: {
-								self.page.selectedColour = colour
-							}) {
-								Label(colour == .none ? colour.rawValue : colour.rawValue.capitalized, systemImage: "")
-									.font(.textFont)
-							}
-							.foregroundColor(.black)
-						}
-					} label: {
+					if !self.pressedNext {
+					Spacer()
+					Text("Velkommen til Byåa Kultursti!")
+							.font(.headlineFont)
+						.padding(.bottom, 50)
+					VStack {
 						HStack {
-							Text(self.page.selectedColour == .none ? self.page.selectedColour.rawValue : self.page.selectedColour.rawValue.capitalized)
-							Spacer()
-							Image(systemName: "chevron.down")
+							TextField("Hva er navnet ditt?", text: $page.userName)
 						}
 						.font(.subHeadlineFont)
 						.foregroundColor(.black)
@@ -58,53 +34,77 @@ struct ProfilePickerView: View {
 						.background(
 							RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
 								.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
-					}
-				}
-				Spacer()
-				Spacer()
-				
-					if !page.userName.isEmpty && page.selectedColour != .none {
-					Button(action: {
-						self.pressedNext = true
-					}) {
-						Text("Neste")
-							.font(.textFont)
-							.foregroundColor(.black)
-							.frame(width: DeviceSize.width * 0.4)
-							.padding(20)
-							.background(
-								RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
-									.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
-					}
-				}
-				Spacer()
-				} else {
 					
-					Image(getImageTitleByColour(colour: page.selectedColour))
-						.resizable()
-						.scaledToFit()
-						.padding([.leading, .top, .trailing], 90)
-						.padding(.bottom, 20)
-					Text("Velkommen " + page.userName.capitalized)
-						.font(.headlineFont)
-						.padding([.leading, .top, .trailing])
-						.padding(.bottom, 90)
-					Button(action: {
-						page.appStartPage = .main
-						page.pageIndex = .appTutorial
-					}) {
-						Text("Start")
-							.font(.textFont)
+						Menu {
+							ForEach(Colour.allCases) { colour in
+								Button(action: {
+									self.page.selectedColour = colour
+								}) {
+									Label(colour == .none ? colour.rawValue : colour.rawValue.capitalized, systemImage: "")
+										.font(.textFont)
+								}
+								.foregroundColor(.black)
+							}
+						} label: {
+							HStack {
+								Text(self.page.selectedColour == .none ? self.page.selectedColour.rawValue : self.page.selectedColour.rawValue.capitalized)
+								Spacer()
+								Image(systemName: "chevron.down")
+							}
+							.font(.subHeadlineFont)
 							.foregroundColor(.black)
-							.frame(width: DeviceSize.width * 0.4)
+							.frame(width: DeviceSize.width * 0.7)
 							.padding(20)
 							.background(
 								RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
 									.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
+						}
 					}
 					Spacer()
+					Spacer()
+					
+						if !page.userName.isEmpty && page.selectedColour != .none {
+						Button(action: {
+							self.pressedNext = true
+						}) {
+							Text("Neste")
+								.font(.textFont)
+								.foregroundColor(.black)
+								.frame(width: DeviceSize.width * 0.4)
+								.padding(20)
+								.background(
+									RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+										.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
+						}
+					}
+					Spacer()
+					} else {
+						
+						Image(getAvatarByColour(colour: page.selectedColour))
+							.resizable()
+							.scaledToFit()
+							.padding([.leading, .top, .trailing], 90)
+							.padding(.bottom, 20)
+						Text("Velkommen " + page.userName.capitalized)
+							.font(.headlineFont)
+							.padding([.leading, .top, .trailing])
+							.padding(.bottom, 90)
+						Button(action: {
+							page.appStartPage = .main
+							page.pageIndex = .appTutorial
+						}) {
+							Text("Start")
+								.font(.textFont)
+								.foregroundColor(.black)
+								.frame(width: DeviceSize.width * 0.4)
+								.padding(20)
+								.background(
+									RoundedRectangle(cornerRadius: 15).fill(Color(red: 0.984, green: 0.984, blue: 0.984))
+										.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
+						}
+						Spacer()
+					}
 				}
-			}
 	}
 		.edgesIgnoringSafeArea(.all)
 		
@@ -112,7 +112,13 @@ struct ProfilePickerView: View {
     }
 }
 
-func getImageTitleByColour(colour: Colour) -> String {
+/// Get the avatar that coincides with the specified colour.
+///
+/// - Parameters:
+/// 	- colour: The colour chosen by the user.
+///
+/// - Returns: The image title of the avatar beloning to the colour.
+func getAvatarByColour(colour: Colour) -> String {
 	switch colour {
 	case .pink:
 		return "Bunny"
@@ -129,8 +135,9 @@ func getImageTitleByColour(colour: Colour) -> String {
 	}
 }
 
+/*
 struct ProfilePickerView_Previews: PreviewProvider {
     static var previews: some View {
         ProfilePickerView().environmentObject(ViewIndex())
     }
-}
+}*/

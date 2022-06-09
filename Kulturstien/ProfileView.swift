@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View that returns the profile page of the user.
 struct ProfileView: View {
 	
 	@EnvironmentObject var page : ViewIndex
@@ -16,7 +17,7 @@ struct ProfileView: View {
 			
 			BackButtonView(buttonColour: page.lightMode ? .black : .white)
 			
-			Image(getImageTitleByColour(colour: page.selectedColour))
+			Image(getAvatarByColour(colour: page.selectedColour))
 			.resizable()
 			.frame(width: 100, height: 100)
 			.padding(5)
@@ -105,8 +106,9 @@ struct ProfileView: View {
     }
 }
 
+/*
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView().environmentObject(ViewIndex())
     }
-}
+}*/

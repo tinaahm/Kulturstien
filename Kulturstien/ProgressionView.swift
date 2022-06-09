@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View that shows the users progression in the quizes and games.
 struct ProgressionView: View {
     
     @EnvironmentObject var page: ViewIndex
@@ -239,6 +240,12 @@ struct ProgressionView: View {
 }
 }
 
+/// Get image coinciding with the correctetness of the quiz progression.
+///
+/// - Parameters:
+/// 	- quiz: The quiz which is currently chosen.
+///
+/// - Returns: Wheter or not the image to be shown should be green/gray.
 func getProgressionImage(quiz: Quiz, index: Int) -> Bool {
 	if quiz.questionAnswers[index] {
 		return true
@@ -246,8 +253,9 @@ func getProgressionImage(quiz: Quiz, index: Int) -> Bool {
 	return false
 }
 
+/*
 struct ProgressionView_Previews: PreviewProvider {
     static var previews: some View {
         ProgressionView().environmentObject(ViewIndex())
     }
-}
+}*/

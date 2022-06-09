@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View that shows before game start.
 struct GameStartView: View {
 	
 	@EnvironmentObject var page : ViewIndex
@@ -95,6 +96,12 @@ struct GameStartView: View {
     }
 }
 
+/// Get the explaination for the game.
+///
+/// - Parameters:
+/// 	- selection:  The currently selected game.
+///
+/// - Returns: The game explaination.
 func getGameExplainationByGame(selection: Game) -> String {
 	switch selection {
 	case .whacANokk:
@@ -112,8 +119,9 @@ func getGameExplainationByGame(selection: Game) -> String {
 	}
 }
 
+/*
 struct GameStartView_Previews: PreviewProvider {
     static var previews: some View {
         GameStartView().environmentObject(ViewIndex())
     }
-}
+}*/

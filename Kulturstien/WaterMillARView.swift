@@ -9,6 +9,7 @@ import SwiftUI
 import ARKit
 import RealityKit
 
+/// View that loads the view for the mill AR
 struct WaterMillARView: View {
     var body: some View {
 		ZStack {
@@ -21,13 +22,7 @@ struct WaterMillARView: View {
     }
 }
 
-struct LoadWaterMillARView: View {
-	var body: some View {
-		return
-			ARViewContainer().edgesIgnoringSafeArea(.all)
-	}
-}
-
+/// The container for the ARView
 struct ARViewContainer: UIViewRepresentable {
 	
 	func makeUIView(context: Context) -> ARView {
@@ -36,7 +31,6 @@ struct ARViewContainer: UIViewRepresentable {
 		arView.setUpARCoaching()
 		
 		let arConfiguration = ARWorldTrackingConfiguration()
-		//arConfiguration.isCollaborationEnabled ??
 		arConfiguration.planeDetection = .horizontal
 		arView.session.run(arConfiguration, options: [])
 		return arView
@@ -46,9 +40,8 @@ struct ARViewContainer: UIViewRepresentable {
 	
 }
 
+/// Extension ARView for showing the ARCoachingOverlay.
 extension ARView : ARCoachingOverlayViewDelegate {
-	
-	
 	func setUpARCoaching(){
 		let coachingOverlay = ARCoachingOverlayView()
 		coachingOverlay.delegate = self
@@ -58,16 +51,10 @@ extension ARView : ARCoachingOverlayViewDelegate {
 		coachingOverlay.goal = .horizontalPlane
 	}
 	
+	/// When the ARCoachingOverlay is finished load the water mill.
 	public func coachingOverlayViewDidDeactivate(_ coachingOverlayView: ARCoachingOverlayView) {
 		let millAnchor = try! WaterMillNoWater.loadWaterMill()
 		self.scene.anchors.append(millAnchor)
 	}
 	
-}
-
-
-struct WaterMillARView_Previews: PreviewProvider {
-    static var previews: some View {
-        WaterMillARView()
-    }
 }

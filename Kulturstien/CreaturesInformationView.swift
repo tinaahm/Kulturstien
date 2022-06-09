@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View that shows the information for the creature chosen by the user on the map.
 struct CreaturesInformationView: View {
 	
 	@State var creatureType: Person
@@ -59,8 +60,9 @@ struct CreaturesInformationView: View {
     }
 }
 
+/*
 struct CreaturesInformationView_Previews: PreviewProvider {
     static var previews: some View {
 		CreaturesInformationView(creatureType: .huldra)
     }
-}
+}*/

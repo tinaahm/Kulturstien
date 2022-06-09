@@ -92,8 +92,17 @@ struct QuizEndView: View {
 	}
 }
 
+func resultImageToDisplay(numberOfCorrectAnswers: Int, numberOfQuestions: Int) -> String {
+	if numberOfCorrectAnswers == numberOfQuestions {
+		return "Trophy"
+	} else {
+		return "SadTroll"
+	}
+}
+
+/*
 struct QuizEndViewPreviews: PreviewProvider {
 	static var previews: some View {
 		QuizEndView(resultArray: [], title: "Bye").environmentObject(ViewIndex())
 	}
-}
+}*/

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View that appears once the game has ended.
 struct GameEndView: View {
 	
 	@EnvironmentObject var page : ViewIndex
@@ -67,8 +68,9 @@ struct GameEndView: View {
     }
 }
 
+/*
 struct GameEndView_Previews: PreviewProvider {
     static var previews: some View {
 		GameEndView(gameType: .none).environmentObject(ViewIndex())
     }
-}
+}*/
