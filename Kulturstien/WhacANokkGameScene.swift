@@ -24,7 +24,9 @@ class WhacANokkGameScene: SKScene, ObservableObject {
     var numRounds = 0
     
     override func didMove(to view: SKView) {
-      let background = SKSpriteNode(imageNamed: "13 Pro - 201")
+      let background = SKSpriteNode(imageNamed: "WhacANokkBackground")
+		background.size = self.size
+		background.position = CGPoint(x: frame.size.width / 2, y: frame.size.height / 2)
         background.blendMode = .replace
         background.zPosition = -1
         addChild(background)
@@ -32,7 +34,7 @@ class WhacANokkGameScene: SKScene, ObservableObject {
 
         gameScore = SKLabelNode(fontNamed: "Saira-Regular")
         gameScore.text = "Poeng: 0"
-		gameScore.position = CGPoint(x: (size.width / 2), y: 750)
+		gameScore.position = CGPoint(x: (size.width / 2), y: size.height * 0.6)
         gameScore.fontSize = 35
         addChild(gameScore)
 		

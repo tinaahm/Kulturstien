@@ -14,45 +14,84 @@ struct GameStartView: View {
 	
     var body: some View {
 		ZStack {
-			Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground")
-			VStack {
-				BackButtonView(buttonColour: page.lightMode ? .black : .white)
-				Image(page.lightMode ? "cardGames" : "bonfire 3")
-					.resizable()
-					.frame(width: 100, height: 100, alignment: .center)
-					.padding()
+			//Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground")
+			if (gameSelection == .whacANokk) {
 				VStack {
-					Text(gameSelection.rawValue)
-						.font(.headlineFont)
-						.multilineTextAlignment(.center)
-						.foregroundColor(page.lightMode ? .black : .white)
-						.padding(.bottom, 5)
-					Text(getGameExplainationByGame(selection: gameSelection))
-						.font(.subHeadlineFont)
-						.foregroundColor(page.lightMode ? .black : .white)
-						.multilineTextAlignment(.center)
+					BackButtonView(buttonColour: page.lightMode ? .black : .white)
+					Image(page.lightMode ? "cardGames" : "Bonfire")
+						.resizable()
+						.frame(width: 100, height: 100, alignment: .center)
+						.padding()
+					VStack {
+						Text(gameSelection.rawValue)
+							.font(.headlineFont)
+							.multilineTextAlignment(.center)
+							.foregroundColor(page.lightMode ? .black : .white)
+							.padding(.bottom, 5)
+						Text(getGameExplainationByGame(selection: gameSelection))
+							.font(.subHeadlineFont)
+							.foregroundColor(page.lightMode ? .black : .white)
+							.multilineTextAlignment(.center)
+					}
+					.padding([.top, .leading, .trailing])
+					.padding(.bottom, 30)
+					
+					Button(action: {
+						page.previousPage = page.pageIndex
+						page.pageIndex = getPageByGameSelection(game: gameSelection)
+					}) {
+						Text("Start spill")
+							.font(.textFont)
+							.foregroundColor(page.lightMode ? .black : .white)
+							.frame(width: DeviceSize.width * 0.5)
+							.padding(20)
+							.background(
+								RoundedRectangle(cornerRadius: 15).fill(page.lightMode ? Color(red: 0.984, green: 0.984, blue: 0.984) : Color("CreatureInformationTextboxBackground"))
+									.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
+					}
+					.padding()
+					Spacer()
 				}
-				.padding([.top, .leading, .trailing])
-				.padding(.bottom, 30)
-				
-				Button(action: {
-					page.previousPage = page.pageIndex
-					page.pageIndex = getPageByGameSelection(game: gameSelection)
-				}) {
-					Text("Start spill")
-						.font(.textFont)
-						.foregroundColor(page.lightMode ? .black : .white)
-						.frame(width: DeviceSize.width * 0.5)
-						.padding(20)
-						.background(
-							RoundedRectangle(cornerRadius: 15).fill(page.lightMode ? Color(red: 0.984, green: 0.984, blue: 0.984) : Color("CreatureInformationTextboxBackground"))
-								.shadow(color: .gray.opacity(0.25), radius: 4, x: 0, y: 4))
+			} else {
+				ZStack {
+					VStack(spacing: 40) {
+						BackButtonView(buttonColour: page.lightMode ? .black : .white)
+						Spacer()
+							Text(getGameExplainationByGame(selection: .whacANokk))
+								.font(.subHeadlineFont)
+								.foregroundColor(page.lightMode ? .black : .white)
+								.multilineTextAlignment(.center)
+								.padding()
+						
+						Button(action: {
+							page.previousPage = page.pageIndex
+							page.pageIndex = getPageByGameSelection(game: gameSelection)
+						}) {
+							Text("Start spill")
+								.font(.textFont)
+								.foregroundColor(page.lightMode ? .black : .white)
+								.frame(width: DeviceSize.width * 0.5)
+								.padding(20)
+								.background(
+									RoundedRectangle(cornerRadius: 15).fill( Color("LightGreen"))
+										.shadow(color: .black.opacity(0.5), radius: 4, x: 0, y: 4))
+						}
+						.padding()
+						Image("Bonfire")
+							.resizable()
+							.frame(width: 100, height: 100, alignment: .center)
+							.padding()
+						Spacer()
+					}
 				}
-				.padding()
-				Spacer()
+				.background(
+					Image("WhacANokkBackground")
+					.resizable()
+					.edgesIgnoringSafeArea(.all)
+				)
 			}
 		}
-		.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
+		//.background(Color(page.lightMode ? "BackgroundColour" : "CreatureInformationBackground"))
     }
 }
 
@@ -61,7 +100,7 @@ func getGameExplainationByGame(selection: Game) -> String {
 	case .whacANokk:
 		return "Slå nøkken og unngå dyrene!"
 	case .frightenHuldra:
-		return "Hjelp Trond å jage vekk Huldra!"
+		return "Hjelp Trond å jage Huldra!"
 	case .farmMemoryGame:
 		return "Samle opp alle redskapene på gården ved å finne de like kortene."
 	case .fairytaleCreaturesMemoryGame:
