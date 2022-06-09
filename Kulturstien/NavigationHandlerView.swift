@@ -43,7 +43,7 @@ enum Page: String {
 
 enum Game: String {
 	case whacANokk = "Slå nøkken"
-	case frightenHuldra = "Skrem Vekk Huldra"
+	case frightenHuldra = "Skrem vekk Huldra"
 	case farmMemoryGame = "Bondens redskaper"
 	case fairytaleCreaturesMemoryGame = "Underjordiske vesener"
 	case millGame = "Reparer mølla"

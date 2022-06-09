@@ -203,7 +203,7 @@ struct ProgressionView: View {
 
 					VStack (alignment: .center){
 						
-						Text("Mølle Spill")
+						Text("Reparer mølla")
 							.font(.subHeadlineFont)
 							.padding(5)
 						VStack {
