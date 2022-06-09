@@ -46,7 +46,7 @@ struct ProgressionView: View {
                                 .padding()
                      
                             Spacer()
-						ForEach(0 ..< quizAnswerArray[outerIndex].count) { innerIndex in
+                        ForEach(0 ..< quizAnswerArray[outerIndex].count, id: \.self) { innerIndex in
                             VStack (alignment: .trailing) {
 								Image(quizAnswerArray[outerIndex][innerIndex] ? greenImageArray[innerIndex] : greyImageArray[innerIndex])
 									.resizable()
