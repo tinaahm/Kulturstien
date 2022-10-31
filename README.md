@@ -1,10 +1,5 @@
 # Kulturstien
 
-### FIGMA LINK ###
-https://www.figma.com/file/wNVlcQLepgUoTc6yrb9aOf/Prototype?node-id=0%3A1
+An iOS application created for Rælingen Kommune for our second year project with the aim of engaging and teaching both locals and visitors about the history of the surrounding area.
 
-- AR spill
-- Spill
-- iPad og iPhone
-- Dashboard
-- tilføye mer
+### FIGMA LINK ###
